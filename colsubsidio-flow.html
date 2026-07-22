@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfilamiento Inteligente de Leads — Colsubsidio Vivienda</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0f1a2e;
+    --navy-mid: #1a2844;
+    --navy-light: #243352;
+    --gold: #e5a530;
+    --gold-soft: #f0c96a;
+    --teal: #22c9a0;
+    --teal-dim: rgba(34, 201, 160, 0.12);
+    --coral: #e8564a;
+    --white: #f4f6f9;
+    --gray: #8e99ab;
+    --card-bg: #16243d;
+    --connector: #2e4268;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    text-align: center;
+    padding: 48px 24px 20px;
+    position: relative;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .badge {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teal);
+    border: 1px solid rgba(34, 201, 160, 0.3);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  header h1 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+  }
+  header h1 span { color: var(--gold); }
+  header p {
+    color: var(--gray);
+    font-size: 15px;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ─── PROBLEM STATEMENT ─── */
+  .problem {
+    max-width: 720px;
+    margin: 32px auto 12px;
+    padding: 0 24px;
+  }
+  .problem-box {
+    background: linear-gradient(135deg, rgba(232, 86, 74, 0.08), rgba(232, 86, 74, 0.02));
+    border: 1px solid rgba(232, 86, 74, 0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .problem-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: rgba(232, 86, 74, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .problem-box h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--coral);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .problem-box p {
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 1.55;
+  }
+  .problem-box strong { color: var(--white); font-weight: 500; }
+
+  /* ─── FLOW CONTAINER ─── */
+  .flow {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    position: relative;
+  }
+
+  /* Vertical connector line */
+  .flow::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    bottom: 60px;
+    width: 2px;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--connector) 0px,
+      var(--connector) 8px,
+      transparent 8px,
+      transparent 16px
+    );
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  /* ─── PHASE DIVIDERS ─── */
+  .phase-label {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 8px 0 20px;
+  }
+  .phase-label span {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--navy);
+    padding: 6px 20px;
+    border: 1px solid rgba(229, 165, 48, 0.25);
+    border-radius: 20px;
+  }
+
+  /* ─── NODE ─── */
+  .node {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+
+  .node-card {
+    background: var(--card-bg);
+    border: 1px solid var(--connector);
+    border-radius: 14px;
+    padding: 20px 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .node-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 14px 0 0 14px;
+  }
+  .node:hover .node-card {
+    border-color: var(--gold);
+    box-shadow: 0 4px 24px rgba(229, 165, 48, 0.08);
+  }
+  .node.active .node-card {
+    border-color: var(--gold);
+    box-shadow: 0 8px 32px rgba(229, 165, 48, 0.12);
+  }
+
+  /* Color-coded left bar per phase */
+  .node[data-phase="research"] .node-card::before { background: var(--teal); }
+  .node[data-phase="ai"] .node-card::before { background: var(--gold); }
+  .node[data-phase="activation"] .node-card::before { background: #7c6cf0; }
+  .node[data-phase="conversion"] .node-card::before { background: var(--coral); }
+
+  .node-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .node-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .node[data-phase="research"] .node-number { background: var(--teal-dim); color: var(--teal); }
+  .node[data-phase="ai"] .node-number { background: rgba(229, 165, 48, 0.12); color: var(--gold); }
+  .node[data-phase="activation"] .node-number { background: rgba(124, 108, 240, 0.12); color: #7c6cf0; }
+  .node[data-phase="conversion"] .node-number { background: rgba(232, 86, 74, 0.12); color: var(--coral); }
+
+  .node-title-group { flex: 1; min-width: 0; }
+  .node-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .node-subtitle {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 2px;
+  }
+  .node-toggle {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--connector);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: var(--gray);
+    font-size: 14px;
+  }
+  .node.active .node-toggle {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy);
+    transform: rotate(45deg);
+  }
+
+  /* ─── EXPANDED DETAIL ─── */
+  .node-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, padding 0.3s ease;
+  }
+  .node.active .node-detail {
+    max-height: 1200px;
+    padding-top: 18px;
+  }
+  .node-detail-inner {
+    border-top: 1px solid rgba(46, 66, 104, 0.6);
+    padding-top: 18px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .detail-section h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .detail-section h4 .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+  }
+  .detail-section[data-type="what"] h4 { color: var(--white); }
+  .detail-section[data-type="what"] .dot { background: var(--white); }
+  .detail-section[data-type="tech"] h4 { color: var(--teal); }
+  .detail-section[data-type="tech"] .dot { background: var(--teal); }
+  .detail-section[data-type="ai"] h4 { color: var(--gold); }
+  .detail-section[data-type="ai"] .dot { background: var(--gold); }
+  .detail-section[data-type="io"] h4 { color: #7c6cf0; }
+  .detail-section[data-type="io"] .dot { background: #7c6cf0; }
+
+  .detail-section p, .detail-section li {
+    font-size: 13.5px;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+  .detail-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .detail-section li {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .detail-section li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--connector);
+    font-size: 12px;
+  }
+  .detail-section code {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    background: rgba(34, 201, 160, 0.08);
+    color: var(--teal);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .io-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .io-box {
+    background: rgba(15, 26, 46, 0.6);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .io-box strong {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .io-box.input strong { color: var(--gray); }
+  .io-box.output strong { color: var(--teal); }
+  .io-box p { font-size: 12.5px; }
+
+  /* ─── CONNECTOR ARROWS ─── */
+  .arrow {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--connector);
+    stroke-width: 2;
+  }
+
+  /* ─── RESULT BANNER ─── */
+  .result {
+    max-width: 780px;
+    margin: 0 auto 48px;
+    padding: 0 24px;
+  }
+  .result-box {
+    background: linear-gradient(135deg, rgba(34, 201, 160, 0.06), rgba(229, 165, 48, 0.06));
+    border: 1px solid rgba(34, 201, 160, 0.25);
+    border-radius: 14px;
+    padding: 28px 28px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .result-box h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--teal);
+  }
+  .result-box p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto 18px;
+  }
+  .result-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .metric {
+    text-align: center;
+  }
+  .metric .val {
+    font-family: 'DM Mono', monospace;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .metric .label {
+    font-size: 11px;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* ─── LEGEND ─── */
+  .legend {
+    max-width: 780px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+  }
+  .legend-inner {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--gray);
+  }
+  .legend-color {
+    width: 12px; height: 12px; border-radius: 3px;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    text-align: center;
+    padding: 24px;
+    border-top: 1px solid var(--connector);
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 1px;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 600px) {
+    .io-grid { grid-template-columns: 1fr; }
+    .result-metrics { gap: 20px; }
+    .node-card { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Hackathon Colsubsidio 2026</div>
+  <h1>Perfilamiento <span>Inteligente</span> de Leads</h1>
+  <p>Que los leads pagos se parezcan a los orgánicos: un pipeline de IA que aprende de los compradores reales para atraer a los correctos.</p>
+</header>
+
+<div class="problem">
+  <div class="problem-box">
+    <div class="problem-icon">⚠</div>
+    <div>
+      <h3>El problema</h3>
+      <p>Colsubsidio invierte en pauta digital para <strong>múltiples proyectos de vivienda</strong>, pero solo una fracción de leads pagos tiene capacidad real de compra. Además, <strong>cada proyecto encaja con un segmento distinto</strong> y hoy no hay un sistema que dirija al lead correcto al proyecto correcto. Los orgánicos convierten bien porque llegan motivados al proyecto que les sirve. El reto: replicar eso con pauta.</p>
+    </div>
+  </div>
+</div>
+
+<div class="flow" id="flow">
+
+  <!-- ═══ FASE 1: INVESTIGACIÓN ═══ -->
+  <div class="phase-label"><span>Fase 1 — Investigación</span></div>
+
+  <div class="node" data-phase="research" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">01</div>
+        <div class="node-title-group">
+          <div class="node-title">Recolección de datos de clientes orgánicos</div>
+          <div class="node-subtitle">Base de compradores reales de vivienda Colsubsidio</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <p>Consolidar todos los datos de clientes que compraron vivienda de forma orgánica: datos demográficos, historial de interacción, canal de llegada, tipo de inmueble comprado, subsidios aplicados, y comportamiento previo a la compra.</p>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Acceso al <code>CRM</code> de Colsubsidio (Salesforce / HubSpot / interno)</li>
+              <li>Exportar datos del ERP con histórico de ventas inmobiliarias</li>
+              <li>Acceso a <code>Google Analytics</code> / <code>Meta Ads</code> para tracking de touchpoints</li>
+              <li>Pipeline de ingesta: <code>Python + Pandas</code> para limpiar y unificar fuentes</li>
+              <li>Base de datos unificada: <code>PostgreSQL</code> o <code>BigQuery</code></li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude procesa datos no estructurados (notas de vendedores, correos, llamadas) y los convierte en atributos estructurados del cliente usando <code>NLP</code>.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>CRM, ERP, Analytics, registros de ventas, notas de asesores</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Dataset limpio de clientes orgánicos con +30 atributos por cliente</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <div class="node" data-phase="research" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">02</div>
+        <div class="node-title-group">
+          <div class="node-title">Análisis cuantitativo y cualitativo</div>
+          <div class="node-subtitle">Entender qué motiva la compra y qué patrones se repiten</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li><strong>Cuantitativo:</strong> Rango salarial, estrato, edad, composición familiar, tipo de subsidio, ticket promedio, tiempo desde primer contacto hasta compra</li>
+              <li><strong>Cualitativo:</strong> Motivaciones de compra (independencia, inversión, familia, cambio de ciudad), objeciones frecuentes, lenguaje usado en conversaciones, canales preferidos</li>
+              <li>Cruce: qué combinaciones de atributos tienen mayor tasa de conversión</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Análisis estadístico: <code>Python (scikit-learn, scipy)</code></li>
+              <li>Clustering: <code>K-Means</code> o <code>DBSCAN</code> para agrupar perfiles similares</li>
+              <li>Análisis de sentimiento en notas/llamadas con <code>Claude API</code></li>
+              <li>Visualización exploratoria: <code>Plotly / Streamlit</code></li>
+              <li>Feature importance para identificar variables predictivas de conversión</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude analiza transcripciones de llamadas y notas de venta para extraer motivaciones y objeciones. Genera resúmenes temáticos y encuentra patrones no obvios entre los perfiles que compran.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Dataset limpio, notas de asesores, transcripciones, encuestas post-venta</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Clusters de clientes, ranking de variables predictivas, mapa de motivaciones</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <!-- ═══ FASE 2: MOTOR IA ═══ -->
+  <div class="phase-label"><span>Fase 2 — Motor de IA</span></div>
+
+  <div class="node" data-phase="ai" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">03</div>
+        <div class="node-title-group">
+          <div class="node-title">Generación de Buyer Personas con IA</div>
+          <div class="node-subtitle">Perfiles dinámicos que se actualizan con cada venta</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <p>La IA toma los clusters del paso anterior y construye buyer personas detallados: no solo demográficos, sino con motivaciones, miedos, objeciones, canales preferidos, horarios de actividad digital, tipo de contenido que consume, y las combinaciones de atributos que mejor predicen conversión.</p>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li><code>Claude API</code> con prompt estructurado que recibe clusters y genera personas</li>
+              <li>Template de buyer persona con campos obligatorios: nombre ficticio, demografía, motivación primaria, objeciones, canal preferido, tipo de contenido, rango de capacidad adquisitiva, timeline de compra</li>
+              <li>Sistema de versionado: las personas se actualizan con cada venta nueva</li>
+              <li>Base de datos de personas: <code>JSON/NoSQL</code> para consulta rápida</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude es el motor central: recibe datos agregados de los clusters, genera narrativas de buyer persona, y propone el mix óptimo de características para cada segmento. Se re-entrena con cada ciclo de ventas.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Clusters, variables predictivas, mapa de motivaciones, datos de conversión</p></div>
+              <div class="io-box output"><strong>Output</strong><p>3-6 Buyer Personas con mix de atributos, scoring de relevancia por proyecto</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <div class="node" data-phase="ai" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">04</div>
+        <div class="node-title-group">
+          <div class="node-title">Mapeo de proyectos × segmentos</div>
+          <div class="node-subtitle">Cada proyecto de vivienda se cruza con las personas que mejor le encajan</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li>Catalogar todos los proyectos activos de vivienda Colsubsidio con sus atributos: ubicación, estrato, rango de precio, tipo de unidad (apto, casa), metraje, subsidios aplicables, amenities, fecha de entrega</li>
+              <li>Cruzar cada proyecto contra los buyer personas: ¿qué persona encaja naturalmente con cada proyecto?</li>
+              <li>Generar una <strong>matriz proyecto × persona</strong> con score de afinidad: no todos los proyectos se muestran a todos, cada persona ve el que más le conviene</li>
+              <li>Definir reglas de negocio: inventario disponible, prioridad comercial, margen por proyecto</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Catálogo de proyectos estructurado: <code>API del ERP inmobiliario</code> o base propia</li>
+              <li>Cada proyecto tiene un vector de atributos comparable con el vector de cada persona</li>
+              <li>Algoritmo de afinidad: <code>cosine similarity</code> o <code>weighted scoring</code> entre proyecto y persona</li>
+              <li>Dashboard de afinidad: qué proyectos le pegan a qué personas y con qué score</li>
+              <li>Sincronización con inventario en tiempo real: si se agota un tipo de unidad, se reasigna</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude analiza los atributos de cada proyecto y los cruza con las motivaciones y capacidad de cada buyer persona. Genera la narrativa de por qué un proyecto específico es ideal para una persona específica, y esa narrativa alimenta el contenido de la fase siguiente.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Catálogo de proyectos con atributos, buyer personas con scoring, inventario disponible</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Matriz proyecto × persona con score de afinidad + narrativa de match por combinación</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <div class="node" data-phase="ai" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">05</div>
+        <div class="node-title-group">
+          <div class="node-title">Banco de características para contenido</div>
+          <div class="node-subtitle">Matriz de atributos que la IA combina para cada pieza</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li>Crear un banco de componentes modulares: hooks de texto, visuales de proyecto, beneficios clave, CTAs, tonos de comunicación, formatos (carrusel, video corto, render, testimonio)</li>
+              <li>Cada componente está tagueado por buyer persona, etapa del funnel, y canal</li>
+              <li>La IA puede combinar estos componentes en miles de variantes únicas</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Base de datos de assets tagueados: <code>Airtable / Supabase</code></li>
+              <li>Sistema de templates para cada formato: email, ad imagen, ad video, landing</li>
+              <li>API de generación de imágenes: <code>DALL·E / Midjourney API / Stable Diffusion</code></li>
+              <li>API de generación de video: <code>Runway / Pika / HeyGen</code></li>
+              <li>Motor de combinación: lógica que recibe persona + proyecto + canal → genera pieza</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude decide la combinación óptima de componentes para cada persona y canal. Genera copy, sugiere ángulos visuales, adapta el tono. Funciona como un director creativo automatizado.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Buyer personas, catálogo de proyectos, banco de assets, reglas de marca</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Matriz de combinaciones priorizadas por persona × canal × etapa</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <!-- ═══ FASE 3: ACTIVACIÓN ═══ -->
+  <div class="phase-label"><span>Fase 3 — Activación</span></div>
+
+  <div class="node" data-phase="activation" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">06</div>
+        <div class="node-title-group">
+          <div class="node-title">Generación de contenido hiperpersonalizado</div>
+          <div class="node-subtitle">Videos, imágenes, textos y emails por buyer persona</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li><strong>Imágenes:</strong> Renders del proyecto adaptados al estilo de vida de cada persona (familia, pareja joven, inversionista)</li>
+              <li><strong>Videos:</strong> Clips cortos con narrativa personalizada por motivación (seguridad, cercanía al trabajo, valorización)</li>
+              <li><strong>Textos:</strong> Copy de ads con hooks específicos por objeción y motivación</li>
+              <li><strong>Emails:</strong> Secuencias de nurturing adaptadas al timeline de compra del lead</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li><code>Claude API</code> para generación de copy y estructura de emails</li>
+              <li><code>DALL·E / Stable Diffusion</code> para variaciones de imágenes</li>
+              <li><code>HeyGen / Synthesia</code> para videos con avatar personalizado</li>
+              <li>Plataforma de email marketing: <code>SendGrid / Mailchimp API</code></li>
+              <li>Sistema de versionado de creativos: cada pieza tiene ID + tags de persona/canal</li>
+              <li>Generación batch: producir 50-200 variantes por campaña</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude orquesta todo el flujo: escribe los briefs creativos, genera el copy, define los prompts para imágenes/video, y valida que cada pieza sea coherente con la persona y el proyecto inmobiliario.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Matriz de combinaciones, assets del proyecto, guía de marca, personas</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Pack de creativos: 50-200 variantes tagueadas por persona × canal × formato</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <div class="node" data-phase="activation" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">07</div>
+        <div class="node-title-group">
+          <div class="node-title">Pauta digital con testing multivariant</div>
+          <div class="node-subtitle">Desplegar combinaciones y medir cuáles convierten</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li>Lanzar las variantes de creativos como campañas en Meta, Google, TikTok con audiences lookalike basados en los clusters orgánicos</li>
+              <li>Testing A/B/n: cada combinación (imagen + copy + CTA + formato) compite contra las demás</li>
+              <li>Medir: CTR, costo por lead, tasa de calificación, engagement por pieza</li>
+              <li>Reasignar presupuesto automáticamente hacia las combinaciones ganadoras</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li><code>Meta Ads API</code> + <code>Google Ads API</code> para despliegue programático</li>
+              <li><code>UTM tracking</code> con parámetros de persona + variante + canal</li>
+              <li>Dashboard de performance en tiempo real: <code>Looker Studio / Metabase</code></li>
+              <li>Reglas de auto-optimización: pausar variantes con CPA > umbral</li>
+              <li>Pixel + <code>Conversion API</code> para tracking server-side</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude analiza el rendimiento en tiempo real, identifica qué combinaciones están ganando y por qué, y sugiere nuevas variantes basadas en los patrones exitosos. Aprende qué resuena con cada persona.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Pack de creativos, presupuesto, audiences lookalike, reglas de negocio</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Ranking de combinaciones ganadoras, leads entrantes con metadata de variante</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <!-- ═══ FASE 4: CONVERSIÓN ═══ -->
+  <div class="phase-label"><span>Fase 4 — Conversión</span></div>
+
+  <div class="node" data-phase="conversion" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">08</div>
+        <div class="node-title-group">
+          <div class="node-title">Scoring inteligente de leads</div>
+          <div class="node-subtitle">Capacidad adquisitiva, intención, timeline y match</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li><strong>Capacidad adquisitiva:</strong> Estimar ingresos por datos de formulario + enriquecimiento con datos abiertos + subsidio aplicable</li>
+              <li><strong>Intención:</strong> Scoring basado en interacciones (qué piezas vio, cuántas veces, tiempo en landing, si descargó brochure)</li>
+              <li><strong>Timeline:</strong> Clasificar si busca comprar en 0-3, 3-6, 6-12, o +12 meses</li>
+              <li><strong>Match con proyecto:</strong> Qué tan bien encaja el lead con los proyectos disponibles</li>
+              <li>Score compuesto: leads se clasifican como Hot / Warm / Cold</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Modelo de scoring: <code>XGBoost / LightGBM</code> entrenado con datos de orgánicos</li>
+              <li>Features: interacciones + formulario + enriquecimiento + comportamiento web</li>
+              <li>Integración con CRM para push de leads calificados al equipo comercial</li>
+              <li>Formulario inteligente progresivo: solo pide lo que falta</li>
+              <li>Enriquecimiento de datos: <code>API de cédula / RUES</code> para validación</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude enriquece el perfil del lead con análisis de sus interacciones: qué piezas lo atrajeron revela sus motivaciones. Predice el timeline de compra y sugiere qué proyecto mostrarle primero.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Lead con datos de formulario + historial de interacciones + metadata de variante</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Lead score (Hot/Warm/Cold) + proyecto recomendado + brief para el asesor</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <div class="node" data-phase="conversion" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">09</div>
+        <div class="node-title-group">
+          <div class="node-title">Remarketing inteligente para perfiles validados</div>
+          <div class="node-subtitle">Re-impactar a los leads con capacidad real hasta que estén listos para comprar</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li>Todos los leads que pasaron el scoring como <strong>aptos para compra</strong> (capacidad adquisitiva + interés validado) entran a un pool de remarketing segmentado</li>
+              <li><strong>Hot leads:</strong> Secuencia urgente — recorrido virtual del apto, simulación financiera personalizada, agenda con asesor. Frecuencia alta (24-72h)</li>
+              <li><strong>Warm leads:</strong> Nurturing por timeline — contenido de valorización, testimoniales de compradores similares, alertas de inventario ("quedan 3 unidades de tu tipo"). Frecuencia media (semanal)</li>
+              <li><strong>Cold con capacidad:</strong> Remarketing de largo plazo — contenido educativo sobre compra de vivienda, cambios en tasas de interés, nuevos lanzamientos de proyectos que encajen. Frecuencia baja (quincenal)</li>
+              <li>Cada segmento recibe piezas distintas adaptadas a su proyecto ideal (de la matriz proyecto × persona)</li>
+              <li>Canales: <strong>Meta remarketing, Google Display, email drip, WhatsApp secuenciado, YouTube pre-roll</strong></li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Audiences personalizadas en <code>Meta Ads</code> y <code>Google Ads</code> sincronizadas con el CRM por score</li>
+              <li><code>Customer Match</code>: subir listas de leads validados para remarketing cross-platform</li>
+              <li>Secuencias de email automatizadas: <code>SendGrid / ActiveCampaign</code> con triggers por comportamiento</li>
+              <li><code>WhatsApp Business API</code> con templates aprobados y secuencia por timeline del lead</li>
+              <li>Frequency capping inteligente: no sobre-impactar, ajustar frecuencia según engagement</li>
+              <li>Pixel de retargeting + <code>Conversion API</code> para tracking sin cookies</li>
+              <li>Reglas de supresión: sacar del pool cuando agenda cita, compra, o pide no ser contactado</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude decide qué pieza mostrar a cada lead en cada momento basándose en su historial de interacciones, qué contenido ya vio, qué lo enganchó más, y cuánto tiempo lleva en el funnel. Adapta el mensaje según la etapa: un lead warm que lleva 3 semanas recibe un ángulo distinto al de la semana 1. También detecta señales de compra (visitas repetidas a simulador, apertura de emails de precio) y escala leads de warm a hot automáticamente.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Leads validados con score + historial de interacciones + matriz proyecto × persona + inventario</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Secuencias activas por canal, escalamiento automático de leads, señales de compra al equipo comercial</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 20 20"><path d="M10 4 L10 16 M6 12 L10 16 L14 12"/></svg></div>
+
+  <div class="node" data-phase="conversion" onclick="toggleNode(this)">
+    <div class="node-card">
+      <div class="node-header">
+        <div class="node-number">10</div>
+        <div class="node-title-group">
+          <div class="node-title">Match final: apartamento → persona correcta</div>
+          <div class="node-subtitle">El inmueble ideal llega a quien puede y quiere comprarlo</div>
+        </div>
+        <div class="node-toggle">+</div>
+      </div>
+      <div class="node-detail">
+        <div class="node-detail-inner">
+          <div class="detail-section" data-type="what">
+            <h4><span class="dot"></span>Qué se hace</h4>
+            <ul>
+              <li>Cruzar el perfil enriquecido del lead (capacidad + motivación + timeline) con el inventario de unidades disponibles</li>
+              <li>Generar una recomendación personalizada: "Este es tu apartamento" con render personalizado, plan de pagos simulado, y beneficios relevantes</li>
+              <li>Email/WhatsApp automatizado con la recomendación antes de que el asesor llame</li>
+              <li>Brief para el asesor comercial: qué sabe el lead, qué lo motiva, qué objeciones anticipar</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="tech">
+            <h4><span class="dot"></span>Requerimientos técnicos</h4>
+            <ul>
+              <li>Motor de recomendación: <code>filtrado colaborativo + reglas de negocio</code></li>
+              <li>Integración con inventario de unidades: <code>API del ERP inmobiliario</code></li>
+              <li>Generación de simulación financiera: cuota, subsidio, separación</li>
+              <li>Landing personalizada por lead: <code>Next.js + dynamic routes</code></li>
+              <li>Integración <code>WhatsApp Business API</code> para envío automatizado</li>
+              <li>Dashboard de asesor con ficha del lead pre-armada</li>
+            </ul>
+          </div>
+          <div class="detail-section" data-type="ai">
+            <h4><span class="dot"></span>Rol de la IA</h4>
+            <p>Claude genera la narrativa personalizada de venta: escribe el email/WhatsApp con el tono correcto, arma el brief del asesor, y genera el prompt para el render personalizado del apartamento en el contexto de vida del lead.</p>
+          </div>
+          <div class="detail-section" data-type="io">
+            <h4><span class="dot"></span>Entrada / Salida</h4>
+            <div class="io-grid">
+              <div class="io-box input"><strong>Input</strong><p>Lead calificado + inventario + scoring + buyer persona match</p></div>
+              <div class="io-box output"><strong>Output</strong><p>Recomendación personalizada enviada al lead + ficha para el asesor comercial</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══ RESULTADO ═══ -->
+<div class="result">
+  <div class="result-box">
+    <h3>Resultado esperado</h3>
+    <p>Los leads pagos llegan al equipo comercial con el mismo nivel de perfilamiento y calidad que los orgánicos. Menos desperdicio de pauta, más conversiones reales.</p>
+    <div class="result-metrics">
+      <div class="metric"><div class="val">↑ CR%</div><div class="label">Tasa de conversión</div></div>
+      <div class="metric"><div class="val">↓ CPA</div><div class="label">Costo por lead calificado</div></div>
+      <div class="metric"><div class="val">↑ ROI</div><div class="label">Retorno de pauta</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-inner">
+    <div class="legend-item"><div class="legend-color" style="background:var(--teal)"></div>Investigación</div>
+    <div class="legend-item"><div class="legend-color" style="background:var(--gold)"></div>Motor de IA</div>
+    <div class="legend-item"><div class="legend-color" style="background:#7c6cf0"></div>Activación</div>
+    <div class="legend-item"><div class="legend-color" style="background:var(--coral)"></div>Conversión</div>
+  </div>
+</div>
+
+<footer>
+  <p>Haz clic en cada paso para ver el detalle técnico</p>
+</footer>
+
+<script>
+function toggleNode(node) {
+  const wasActive = node.classList.contains('active');
+  // Close all
+  document.querySelectorAll('.node').forEach(n => n.classList.remove('active'));
+  // Toggle clicked
+  if (!wasActive) {
+    node.classList.add('active');
+    // Smooth scroll into view
+    setTimeout(() => {
+      node.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+  }
+}
+</script>
+
+</body>
+</html>
