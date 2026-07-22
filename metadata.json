@@ -1,0 +1,6 @@
+{
+  "name": "Colsubsidio Lead Intelligence",
+  "description": "Plataforma comercial para la gestión, calificación y priorización de leads de vivienda VIS y No VIS de Colsubsidio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
