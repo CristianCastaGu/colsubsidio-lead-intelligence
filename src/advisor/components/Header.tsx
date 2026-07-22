@@ -29,21 +29,18 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Left: Colsubsidio Branding & Institutional Segments */}
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2.5">
-            {/* Colsubsidio Symbol Icon Mock */}
-            <div className="w-9 h-9 rounded-lg bg-[#003DA5] flex items-center justify-center text-white font-bold text-lg shadow-sm">
-              <span className="text-white font-extrabold tracking-tighter">C</span>
-              <div className="w-2 h-2 rounded-full bg-[#FFD200] -ml-0.5 -mt-2"></div>
+            {/* Colsubsidio Diamond Logo */}
+            <div className="relative w-8 h-8 flex items-center justify-center shrink-0">
+              <div className="absolute w-6 h-6 bg-[#FFD200] transform rotate-45 rounded-sm"></div>
+              <div className="absolute w-3.5 h-3.5 bg-[#003DA5] transform rotate-45 translate-x-1.5 translate-y-1.5 rounded-sm"></div>
             </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-[#003DA5] font-extrabold text-lg tracking-tight">Colsubsidio</span>
-                <span className="bg-slate-100 text-[#003DA5] text-[10px] font-bold px-1.5 py-0.5 rounded border border-slate-200">
-                  VIVIENDA
-                </span>
-              </div>
-              <p className="text-[11px] font-medium text-slate-500 leading-none">
-                Lead Intelligence Platform
-              </p>
+            <div className="flex flex-col leading-none">
+              <span className="text-lg font-black tracking-tight text-[#003DA5] leading-none">
+                Colsubsidio
+              </span>
+              <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
+                Vivienda · Lead Intelligence
+              </span>
             </div>
           </div>
 
