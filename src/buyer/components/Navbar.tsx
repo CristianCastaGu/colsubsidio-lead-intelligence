@@ -184,16 +184,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate, onOpenC
       {/* 4. Dark Nav Bar */}
       <nav className="bg-[#0f172a] text-white px-4 sm:px-8 py-0 overflow-x-auto scrollbar-none">
         <ul className="flex items-center space-x-1 sm:space-x-3 text-xs sm:text-sm font-medium whitespace-nowrap">
-          <li>
-            <button onClick={() => onOpenChat("Servicios de Salud Colsubsidio")} className="px-3 py-3 hover:bg-white/10 transition-colors rounded-none block text-gray-300 hover:text-white">
-              Salud
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Información de Subsidios Colsubsidio")} className="px-3 py-3 hover:bg-white/10 transition-colors rounded-none block text-gray-300 hover:text-white">
-              Subsidios
-            </button>
-          </li>
           {/* Active Navigation tab: Vivienda */}
           <li>
             <div className="relative group">
@@ -237,41 +227,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPath, onNavigate, onOpenC
                 </button>
               </div>
             </div>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Créditos de libre inversión y vivienda")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Créditos
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Seguros Colsubsidio")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Seguros
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Centros deportivos")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Deportes
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Hoteles y turismo Colsubsidio")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Turismo
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Parques de recreación")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Recreación
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Colegios y educación")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Educación
-            </button>
-          </li>
-          <li>
-            <button onClick={() => onOpenChat("Otros servicios Colsubsidio")} className="px-3 py-3 hover:bg-white/10 transition-colors block text-gray-300 hover:text-white">
-              Otros servicios
-            </button>
           </li>
         </ul>
       </nav>

@@ -25,3 +25,35 @@
     animation: none;
   }
 }
+
+/* Catalog card "open book" ambient motion — used by BrochureViewerModal's card icon */
+@keyframes brochureCoverFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-3px) rotate(-1deg); }
+}
+@keyframes brochurePageA {
+  0%, 100% { transform: rotate(-8deg) translateX(-4px); }
+  50% { transform: rotate(-11deg) translateX(-5px); }
+}
+@keyframes brochurePageB {
+  0%, 100% { transform: rotate(6deg) translateX(3px); }
+  50% { transform: rotate(9deg) translateX(4px); }
+}
+
+.animate-brochure-cover {
+  animation: brochureCoverFloat 3.2s ease-in-out infinite;
+}
+.animate-brochure-page-a {
+  animation: brochurePageA 4s ease-in-out infinite;
+}
+.animate-brochure-page-b {
+  animation: brochurePageB 4.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-brochure-cover,
+  .animate-brochure-page-a,
+  .animate-brochure-page-b {
+    animation: none;
+  }
+}

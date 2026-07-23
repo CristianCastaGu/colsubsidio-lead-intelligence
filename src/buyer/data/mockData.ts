@@ -1,4 +1,4 @@
-import { Project, CategoryCard, CityCard, AlliedConstructor } from '../types';
+import { Project, CategoryCard, CityCard, AlliedConstructor, OfficialBrochure } from '../types';
 
 export const PROJECTS_DATA: Project[] = [
   {
@@ -247,4 +247,26 @@ export const ALLIED_CONSTRUCTORS: AlliedConstructor[] = [
   { id: 'oikos', name: 'Oikos', tagline: 'Construyendo futuro', accentColor: '#003DA5' },
   { id: 'bolivar', name: 'Bolívar', tagline: 'Constructora Bolívar', accentColor: '#E60000' },
   { id: 'capital', name: 'Capital', tagline: 'Constructora Capital', accentColor: '#FF6B00' },
+];
+
+// Brochures digitales oficiales (Heyzine) compartidos por Colsubsidio para este hackathon.
+export const OFFICIAL_BROCHURES: OfficialBrochure[] = [
+  { id: 'maipore-versalles', location: 'Ciudadela Maiporé', project: 'Versalles', brochureUrl: 'https://heyzine.com/flip-book/be784b0d5c.html', imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'maipore-pamplona', location: 'Ciudadela Maiporé', project: 'Pamplona', brochureUrl: 'https://heyzine.com/flip-book/c159d5d733.html', imageUrl: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'maipore-zarzal', location: 'Ciudadela Maiporé', project: 'Zarzal', brochureUrl: 'https://heyzine.com/flip-book/56764c1e33.html', imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'maipore-la-macarena', location: 'Ciudadela Maiporé', project: 'La Macarena', brochureUrl: 'https://heyzine.com/flip-book/b168b2f5ba.html', imageUrl: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'maipore-mongui', location: 'Ciudadela Maiporé', project: 'Monguí', brochureUrl: 'https://heyzine.com/flip-book/866af8f6a6.html', imageUrl: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'tocancipa-arrayan', location: 'Tocancipá', project: 'Bosque de Arrayán', brochureUrl: 'https://heyzine.com/flip-book/7f3c85cf46.html', imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'tocancipa-turpial', location: 'Tocancipá', project: 'Bosque de Turpial', brochureUrl: 'https://heyzine.com/flip-book/5eec0a2afc.html', imageUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'chia-inari', location: 'Chía', project: 'Inari', brochureUrl: 'https://heyzine.com/flip-book/8b6615372f.html', imageUrl: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'girardot-aguayacan', location: 'Girardot', project: 'Reserva de Aguayacán', brochureUrl: 'https://heyzine.com/flip-book/aa430852c2.html', imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'ricaurte-saman', location: 'Ricaurte', project: 'Samán', brochureUrl: 'https://heyzine.com/flip-book/1daa8c80c5.html', imageUrl: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'ricaurte-payande', location: 'Ricaurte', project: 'Payandé', brochureUrl: 'https://heyzine.com/flip-book/34ac4d8a9e.html', imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'ricaurte-vibo-once', location: 'Ricaurte', project: 'Vibo Once', brochureUrl: 'https://heyzine.com/flip-book/d3d1f61d6b.html', imageUrl: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'ricaurte-karakali', location: 'Ricaurte', project: 'Karakalí', brochureUrl: 'https://heyzine.com/flip-book/5083a3d46c.html', imageUrl: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'calle80-araucaria', location: 'Ciudadela Calle 80', project: 'Araucaria', brochureUrl: 'https://heyzine.com/flip-book/26d2b013cf.html', imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'calle80-nogales', location: 'Ciudadela Calle 80', project: 'Los Nogales', brochureUrl: 'https://heyzine.com/flip-book/9dd9bf814e.html', imageUrl: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'ubate-verde-esperanza', location: 'Ubaté', project: 'Verde Esperanza', brochureUrl: 'https://heyzine.com/flip-book/ea1997d7ae.html', imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'multiproyecto-general', location: 'Multiproyecto', project: 'Multiproyecto General', brochureUrl: 'https://heyzine.com/flip-book/1de36642fc.html', imageUrl: 'https://images.unsplash.com/photo-1583531172005-814191b8b6c0?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
+  { id: 'multiproyecto-revista', location: 'Multiproyecto', project: 'Revista Colsubsidio Vivienda', brochureUrl: 'https://heyzine.com/flip-book/1cdf69c6d5.html', imageUrl: 'https://images.unsplash.com/photo-1583531172005-814191b8b6c0?auto=format&fit=crop&w=800&q=80', status: 'Aprobado' },
 ];

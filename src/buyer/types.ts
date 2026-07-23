@@ -58,3 +58,12 @@ export interface FilterState {
   searchName: string;
   visOnly: boolean;
 }
+
+export interface OfficialBrochure {
+  id: string;
+  location: string;
+  project: string;
+  brochureUrl: string;
+  imageUrl: string;
+  status: 'Aprobado' | 'En revisión';
+}

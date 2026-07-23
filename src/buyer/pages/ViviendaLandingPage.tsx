@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { ChevronRight, ChevronLeft, ArrowRight, Play, Pause, ShieldCheck, CheckCircle, Calculator, Building2, Award } from 'lucide-react';
-import { CATEGORY_CARDS, PROJECTS_DATA } from '../data/mockData';
-import { Project } from '../types';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { ChevronRight, ChevronLeft, ArrowRight, Play, Pause, ShieldCheck, CheckCircle, Calculator, Building2, Award, BookOpen, MapPin, ExternalLink } from 'lucide-react';
+import { CATEGORY_CARDS, PROJECTS_DATA, OFFICIAL_BROCHURES } from '../data/mockData';
+import { Project, OfficialBrochure } from '../types';
+import { BrochureViewerModal } from '../components/BrochureViewerModal';
 
 interface ViviendaLandingPageProps {
   onNavigateToProyectos: (query?: string) => void;
@@ -16,6 +18,21 @@ export const ViviendaLandingPage: React.FC<ViviendaLandingPageProps> = ({
 }) => {
   const [carouselPlaying, setCarouselPlaying] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedBrochureLocation, setSelectedBrochureLocation] = useState<string>('Todas');
+  const [activeBrochure, setActiveBrochure] = useState<OfficialBrochure | null>(null);
+
+  const brochureLocations = useMemo(
+    () => Array.from(new Set(OFFICIAL_BROCHURES.map((b) => b.location))),
+    []
+  );
+
+  const filteredBrochures = useMemo(
+    () =>
+      selectedBrochureLocation === 'Todas'
+        ? OFFICIAL_BROCHURES
+        : OFFICIAL_BROCHURES.filter((b) => b.location === selectedBrochureLocation),
+    [selectedBrochureLocation]
+  );
 
   const heroSlides = [
     {
@@ -201,6 +218,119 @@ export const ViviendaLandingPage: React.FC<ViviendaLandingPageProps> = ({
         </div>
       </section>
 
+      {/* SECTION 3.5: Catálogo Oficial de Brochures (material real compartido por Colsubsidio) */}
+      <section className="py-14 px-4 sm:px-8 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-8 border-b border-gray-100 pb-4">
+          <div>
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#003DA5]">
+              <BookOpen size={14} />
+              Material Oficial Colsubsidio
+            </span>
+            <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">
+              Catálogo oficial de brochures por proyecto
+            </h2>
+            <p className="text-sm text-gray-600 max-w-2xl mt-1">
+              Consulta el brochure digital real de cada etapa y proyecto aprobado, organizado por ubicación. Se abre en una pestaña nueva.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-1.5 self-start bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold px-3 py-1.5 rounded-full shrink-0">
+            <CheckCircle size={13} />
+            {OFFICIAL_BROCHURES.length} proyectos aprobados
+          </span>
+        </div>
+
+        {/* Location filter pills */}
+        <div className="flex flex-wrap gap-2 mb-7">
+          <button
+            onClick={() => setSelectedBrochureLocation('Todas')}
+            className={`px-4 py-2 rounded-full text-xs font-bold border transition-all ${
+              selectedBrochureLocation === 'Todas'
+                ? 'bg-[#0f172a] text-white border-[#0f172a] shadow-sm'
+                : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400'
+            }`}
+          >
+            Todas las ubicaciones
+          </button>
+          {brochureLocations.map((loc) => (
+            <button
+              key={loc}
+              onClick={() => setSelectedBrochureLocation(loc)}
+              className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold border transition-all ${
+                selectedBrochureLocation === loc
+                  ? 'bg-[#0f172a] text-white border-[#0f172a] shadow-sm'
+                  : 'bg-white text-gray-700 border-gray-200 hover:border-gray-400'
+              }`}
+            >
+              <MapPin size={12} className={selectedBrochureLocation === loc ? 'text-[#FFD200]' : 'text-[#003DA5]'} />
+              {loc}
+            </button>
+          ))}
+        </div>
+
+        {/* Brochure cards grid */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedBrochureLocation}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          >
+            {filteredBrochures.map((brochure, idx) => (
+              <motion.button
+                key={brochure.id}
+                onClick={() => setActiveBrochure(brochure)}
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, delay: Math.min(idx, 8) * 0.04, ease: 'easeOut' }}
+                whileHover={{ y: -3 }}
+                className="group text-left bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:border-[#FFD200] transition-shadow overflow-hidden flex flex-col"
+              >
+                {/* Animated "open catalog" illustration — CSS only, no external images */}
+                <div className="relative h-36 w-full overflow-hidden bg-gradient-to-br from-slate-50 to-amber-50/70 flex items-center justify-center">
+                  {/* Ambient decorative dots, echoing the RoleSelector motif */}
+                  <span className="absolute top-4 left-6 w-1.5 h-1.5 rounded-full bg-[#FFD200]/60" />
+                  <span className="absolute bottom-5 right-8 w-1 h-1 rounded-full bg-[#003DA5]/40" />
+                  <span className="absolute top-6 right-10 w-1 h-1 rounded-full bg-[#003DA5]/30" />
+
+                  <span className="absolute top-2.5 right-2.5 inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 text-[10px] font-black uppercase px-2 py-1 rounded-full shadow-sm z-10">
+                    <CheckCircle size={11} />
+                    {brochure.status}
+                  </span>
+
+                  {/* Stacked "book" made of layered pages, subtle idle sway + hover fan-out */}
+                  <div className="relative w-14 h-16 group-hover:scale-105 transition-transform duration-300">
+                    <div className="animate-brochure-page-a absolute inset-0 w-11 h-14 mx-auto bg-white border border-[#003DA5]/15 rounded-md shadow-sm group-hover:[transform:rotate(-14deg)_translateX(-7px)]" />
+                    <div className="animate-brochure-page-b absolute inset-0 w-11 h-14 mx-auto bg-white border border-[#003DA5]/20 rounded-md shadow-sm group-hover:[transform:rotate(11deg)_translateX(6px)]" />
+                    <div className="animate-brochure-cover absolute inset-0 w-11 h-14 mx-auto bg-[#003DA5] rounded-md shadow-md flex items-center justify-center">
+                      <BookOpen size={18} className="text-[#FFD200]" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-5 flex flex-col gap-4 flex-1">
+                  <div className="flex-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#003DA5] flex items-center gap-1">
+                      <MapPin size={11} />
+                      {brochure.location}
+                    </span>
+                    <h3 className="font-display font-bold text-gray-900 text-base mt-0.5 group-hover:text-[#003DA5] transition-colors">
+                      {brochure.project}
+                    </h3>
+                  </div>
+
+                  <span className="inline-flex items-center justify-center gap-1.5 bg-gray-100 group-hover:bg-[#0f172a] text-gray-700 group-hover:text-white font-bold text-xs py-2.5 rounded-xl transition-colors">
+                    Ver brochure digital
+                    <ExternalLink size={13} />
+                  </span>
+                </div>
+              </motion.button>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </section>
+
       {/* SECTION 4: Más opciones para ti */}
       <section className="bg-gray-50 py-12 px-4 sm:px-8 border-t border-b border-gray-200/60">
         <div className="max-w-7xl mx-auto space-y-8">
@@ -283,6 +413,9 @@ export const ViviendaLandingPage: React.FC<ViviendaLandingPageProps> = ({
           </div>
         </div>
       </section>
+
+      {/* Brochure viewer: stays inside the app, iframe-embedded */}
+      <BrochureViewerModal brochure={activeBrochure} onClose={() => setActiveBrochure(null)} />
     </div>
   );
 };
