@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { animate } from 'motion/react';
 import {
   Flame,
   UserPlus,
@@ -31,6 +32,21 @@ interface InicioViewProps {
   onToggleTaskComplete: (taskId: string) => void;
 }
 
+function useCountUp(target: number, decimals = 0) {
+  const [display, setDisplay] = useState(0);
+
+  useEffect(() => {
+    const controls = animate(0, target, {
+      duration: 1,
+      ease: 'easeOut',
+      onUpdate: (v) => setDisplay(Number(v.toFixed(decimals))),
+    });
+    return () => controls.stop();
+  }, [target, decimals]);
+
+  return display;
+}
+
 export const InicioView: React.FC<InicioViewProps> = ({
   advisorName,
   leads,
@@ -58,10 +74,15 @@ export const InicioView: React.FC<InicioViewProps> = ({
 
   const rotationAlertProjects = projects.filter((p) => p.rotationAlert);
 
+  const animatedNewLeads = useCountUp(newLeadsToday);
+  const animatedHot = useCountUp(hotLeads.length);
+  const animatedPending = useCountUp(pendingTasks.length);
+  const animatedConversion = useCountUp(18.4, 1);
+
   return (
     <div className="space-y-6 animate-fadeIn">
       {/* TOP HERO BANNER - COLSUBSIDIO STYLED */}
-      <div className="bg-gradient-to-r from-[#003DA5] via-[#002B75] to-[#0B192C] text-white rounded-2xl p-6 lg:p-8 shadow-md relative overflow-hidden">
+      <div className="bg-gradient-to-r from-[#15161A] via-[#1D1E23] to-[#0A0A0C] text-white rounded-2xl p-6 lg:p-8 shadow-md relative overflow-hidden">
         {/* Abstract Colsubsidio Yellow Accent Geometric Graphic */}
         <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-[#FFD200]/10 transform skew-x-12 translate-x-12 pointer-events-none"></div>
         <div className="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-[#FFD200]/15 blur-2xl pointer-events-none"></div>
@@ -76,7 +97,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
             Buenos días, <span className="font-bold text-white">{advisorName}</span> 👋
           </p>
 
-          <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="font-display text-2xl lg:text-3xl font-extrabold tracking-tight text-white leading-tight">
             Varios pasos te acercan a cerrar más ventas de vivienda hoy.
           </h1>
 
@@ -336,7 +357,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
               <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
                 <p className="text-[11px] font-medium text-slate-500">Leads nuevos hoy</p>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-2xl font-extrabold text-slate-900">{newLeadsToday}</span>
+                  <span className="font-display text-2xl font-extrabold text-slate-900">{animatedNewLeads}</span>
                   <span className="text-[10px] text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded">
                     +18% vs ayer
                   </span>
@@ -346,7 +367,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
               <div className="p-3 bg-amber-50/80 border border-amber-200 rounded-xl space-y-1">
                 <p className="text-[11px] font-medium text-amber-800">Hot sin contactar</p>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-2xl font-extrabold text-amber-900">{hotLeads.length}</span>
+                  <span className="font-display text-2xl font-extrabold text-amber-900">{animatedHot}</span>
                   <span className="text-xs">🔥</span>
                 </div>
               </div>
@@ -354,7 +375,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
               <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
                 <p className="text-[11px] font-medium text-slate-500">Tareas pendientes</p>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-2xl font-extrabold text-slate-900">{pendingTasks.length}</span>
+                  <span className="font-display text-2xl font-extrabold text-slate-900">{animatedPending}</span>
                   <span className="text-[10px] text-slate-500">de {tasks.length}</span>
                 </div>
               </div>
@@ -362,7 +383,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
               <div className="p-3 bg-blue-50/80 border border-blue-200/80 rounded-xl space-y-1">
                 <p className="text-[11px] font-medium text-[#003DA5]">Tasa conversión</p>
                 <div className="flex items-baseline justify-between">
-                  <span className="text-2xl font-extrabold text-[#003DA5]">18.4%</span>
+                  <span className="font-display text-2xl font-extrabold text-[#003DA5]">{animatedConversion}%</span>
                   <span className="text-[10px] text-emerald-600 font-bold">↑ 2.3%</span>
                 </div>
               </div>

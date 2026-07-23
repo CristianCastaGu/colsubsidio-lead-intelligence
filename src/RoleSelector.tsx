@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { Search, MessageCircle, Target, Briefcase, Sparkles, ArrowRight } from 'lucide-react';
 
 interface RoleSelectorProps {
@@ -88,7 +89,7 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
             <div className="absolute w-4 h-4 bg-[#003DA5] transform rotate-45 translate-x-1.5 translate-y-1.5 rounded-sm"></div>
           </div>
           <div className="flex flex-col">
-            <span className="text-2xl font-black tracking-tight text-[#003DA5] leading-none">
+            <span className="font-display text-2xl font-extrabold tracking-tight text-[#003DA5] leading-none">
               Colsubsidio
             </span>
             <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
@@ -101,24 +102,33 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
       {/* Main selector content */}
       <main className="flex-1 flex items-center justify-center px-4 sm:px-8 pb-16">
         <div className="max-w-4xl w-full text-center space-y-10">
-          <div className="space-y-3">
+          <motion.div
+            className="space-y-3"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
             <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/70 text-slate-900 border border-[#FFD200] rounded-full text-xs font-bold backdrop-blur-sm">
               <Sparkles size={14} className="text-[#003DA5]" />
               Plataforma inteligente de vivienda
             </span>
-            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 leading-tight">
+            <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
               ¿Cómo quieres continuar?
             </h1>
             <p className="text-sm sm:text-base text-slate-700 max-w-xl mx-auto">
               Elige tu perfil para llevarte a la experiencia diseñada para ti.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Comprador card */}
-            <button
+            <motion.button
               onClick={() => onSelectRole('buyer')}
-              className="group text-left bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#003DA5] transition-all overflow-hidden flex flex-col"
+              className="group text-left bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#FFD200] transition-shadow overflow-hidden flex flex-col"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
+              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
             >
               {/* Gradient banner echoing the Colsubsidio hero illustration */}
               <div
@@ -131,7 +141,7 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
               </div>
 
               <div className="p-8 pt-6 flex flex-col gap-5 flex-1">
-                <h2 className="text-xl font-black text-slate-900">Soy Comprador</h2>
+                <h2 className="font-display text-xl font-bold text-slate-900">Soy Comprador</h2>
                 <div className="flex flex-wrap gap-2 text-[11px] text-slate-500">
                   <span className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-full">
                     <Search size={12} /> Proyectos y precios
@@ -140,17 +150,21 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
                     <MessageCircle size={12} /> Asistente IA
                   </span>
                 </div>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#003DA5]">
+                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 group-hover:text-[#B38A00] transition-colors">
                   Entrar como comprador
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
-            </button>
+            </motion.button>
 
             {/* Asesor card */}
-            <button
+            <motion.button
               onClick={() => onSelectRole('advisor')}
-              className="group text-left bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#003DA5] transition-all overflow-hidden flex flex-col"
+              className="group text-left bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#FFD200] transition-shadow overflow-hidden flex flex-col"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
+              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
             >
               {/* Institutional blue gradient banner echoing the achievement-badge collage */}
               <div
@@ -163,7 +177,7 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
               </div>
 
               <div className="p-8 pt-6 flex flex-col gap-5 flex-1">
-                <h2 className="text-xl font-black text-slate-900">Soy Asesor Comercial</h2>
+                <h2 className="font-display text-xl font-bold text-slate-900">Soy Asesor Comercial</h2>
                 <div className="flex flex-wrap gap-2 text-[11px] text-slate-500">
                   <span className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-full">
                     <Briefcase size={12} /> Pipeline comercial
@@ -172,12 +186,12 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
                     <Target size={12} /> Score 360
                   </span>
                 </div>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#003DA5]">
+                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 group-hover:text-[#B38A00] transition-colors">
                   Entrar como asesor
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>
-            </button>
+            </motion.button>
           </div>
         </div>
       </main>

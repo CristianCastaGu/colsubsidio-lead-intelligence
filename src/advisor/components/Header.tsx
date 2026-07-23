@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="absolute w-3.5 h-3.5 bg-[#003DA5] transform rotate-45 translate-x-1.5 translate-y-1.5 rounded-sm"></div>
             </div>
             <div className="flex flex-col leading-none">
-              <span className="text-lg font-black tracking-tight text-[#003DA5] leading-none">
+              <span className="font-display text-lg font-extrabold tracking-tight text-[#003DA5] leading-none">
                 Colsubsidio
               </span>
               <span className="text-[9px] font-bold uppercase tracking-widest text-slate-500 mt-0.5">
@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Action Button - Primary New Lead */}
           <button
             onClick={onOpenNewLeadModal}
-            className="bg-[#003DA5] hover:bg-[#002B75] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-xs transition-all cursor-pointer active:scale-95"
+            className="bg-slate-900 hover:bg-black text-white px-3.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-xs transition-all cursor-pointer active:scale-95"
           >
             <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
             <span className="hidden sm:inline">Nuevo Lead</span>
