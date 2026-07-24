@@ -183,6 +183,30 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
+// Proxy for the live Agente Sofía (WhatsApp) leads feed. Runs server-to-server
+// (no browser involved), so ngrok's browser-warning interstitial never triggers —
+// that page only intercepts requests carrying a real browser User-Agent, and it
+// blocks the CORS preflight a direct browser fetch with a custom header would need.
+// If Iván's ngrok tunnel URL changes, update it here only.
+const SOFIA_LEADS_API_URL = "https://pyromania-oversweet-unburned.ngrok-free.dev/api/leads";
+
+app.get("/api/sofia-leads", async (req, res) => {
+  try {
+    const response = await fetch(SOFIA_LEADS_API_URL, {
+      headers: { "ngrok-skip-browser-warning": "true" },
+    });
+    if (!response.ok) {
+      res.status(502).json({ error: `Agente Sofía respondió ${response.status}` });
+      return;
+    }
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error("Error consultando el Agente Sofía:", error);
+    res.status(502).json({ error: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
+  }
+});
+
 // Vite middleware / Production static serve
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {

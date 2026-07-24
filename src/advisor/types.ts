@@ -54,6 +54,44 @@ export interface Lead {
     device: string;
   }[];
   notes?: string[];
+  /** Perfilamiento del agente conversacional Sofía (WhatsApp) — ver CONTRATO DE DATOS.
+   *  Siempre presente, pero viaja con valores "pendiente" hasta que Sofía perfile al lead. */
+  sofia: SofiaProfile;
+}
+
+export interface DataCreditoInfo {
+  consultado: boolean;
+  puntaje: number | null; // escala DataCrédito 150-950
+  nivelRiesgo: 'Bajo' | 'Medio' | 'Alto' | null;
+  fechaConsulta: string | null;
+}
+
+export interface SofiaProfile {
+  fuente: string | null; // "Meta Ads (Click to WhatsApp)" | "WhatsApp directo"
+  proyectoInteresOriginal: string | null;
+  esAfiliado: boolean | null;
+  rangoEdad: string | null;
+  segmento: 'Básico' | 'Medio' | 'Joven' | 'Alto' | 'Desconocido';
+  categoriaAfiliado: 'A' | 'B' | 'C' | 'Desconocida';
+  rangoSalarial: string;
+  composicionFamiliar: string | null;
+  profesion: string | null;
+  primeraVivienda: boolean | null;
+  motivacion: string | null;
+  zonaActual: string | null;
+  timeline: '0-3 meses' | '3-6 meses' | '6-12 meses' | '+12 meses' | 'explorando' | null;
+  creditoPrevio: boolean | null;
+  fuenteCuotaInicial: 'ahorro' | 'cesantías' | 'ayuda familiar' | 'ninguno mencionado' | 'no preguntado';
+  proyectoRecomendado: string[];
+  score: 'hot' | 'warm' | 'cold' | null;
+  scoreNumerico: number | null;
+  briefAsesor: string | null;
+  remarketingTrack: 'none — hot lead, pasa directo a asesor' | 'warm_nurturing' | 'cold_educacion' | 'cold_afiliacion' | null;
+  perfilEstadistico: string;
+  perfilEstadisticoRiesgoDesistimiento: number | null;
+  datacredito: DataCreditoInfo;
+  brochureEnviado: string | null;
+  timestamp: string | null;
 }
 
 export interface HousingProject {

@@ -14,7 +14,9 @@ import {
   FileText,
   UserCheck,
   ChevronDown,
-  Award
+  Award,
+  Bot,
+  CreditCard
 } from 'lucide-react';
 import { Lead, HousingProject } from '../../types';
 
@@ -25,6 +27,19 @@ interface Score360ViewProps {
   projects: HousingProject[];
   onOpenWhatsAppModal: (lead: Lead) => void;
 }
+
+/** One label/value tag for the Sofía profile grid — renders a muted "—" for anything not yet captured. */
+const SofiaField: React.FC<{ label: string; value: React.ReactNode }> = ({ label, value }) => {
+  const isEmpty = value === null || value === undefined || value === '';
+  return (
+    <div className="p-2.5 bg-slate-50 rounded-lg border border-slate-200">
+      <span className="text-[10px] text-slate-500 font-semibold block">{label}</span>
+      <span className={isEmpty ? 'text-slate-400 italic' : 'font-bold text-slate-800'}>
+        {isEmpty ? 'Sin dato aún' : value}
+      </span>
+    </div>
+  );
+};
 
 export const Score360View: React.FC<Score360ViewProps> = ({
   leads,
@@ -378,6 +393,82 @@ export const Score360View: React.FC<Score360ViewProps> = ({
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* SOFÍA (WHATSAPP AGENT) PROFILE — CONTRATO DE DATOS. Este lead vino por pauta
+          Meta/Google, no por WhatsApp, así que Sofía todavía no lo ha perfilado: el bloque
+          existe y se muestra, pero con sus valores en el estado "pendiente" del contrato. */}
+      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
+          <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
+            <Bot className="w-4 h-4 text-[#003DA5]" />
+            <span>Perfil del Agente Sofía (WhatsApp)</span>
+          </h3>
+          <span className="text-[10px] font-bold bg-slate-100 text-slate-500 px-2.5 py-1 rounded-full w-fit">
+            {currentLead.sofia.timestamp ? `Perfilado ${currentLead.sofia.timestamp}` : 'Pendiente de perfilar por WhatsApp'}
+          </span>
+        </div>
+
+        <div>
+          <h4 className="text-[11px] font-bold uppercase tracking-wide text-slate-400 mb-2">Perfil sociodemográfico</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <SofiaField label="Segmento" value={currentLead.sofia.segmento !== 'Desconocido' ? currentLead.sofia.segmento : null} />
+            <SofiaField label="Categoría afiliado" value={currentLead.sofia.categoriaAfiliado !== 'Desconocida' ? currentLead.sofia.categoriaAfiliado : null} />
+            <SofiaField label="Rango salarial" value={currentLead.sofia.rangoSalarial !== 'Desconocido' ? currentLead.sofia.rangoSalarial : null} />
+            <SofiaField label="Rango de edad" value={currentLead.sofia.rangoEdad} />
+            <SofiaField label="Composición familiar" value={currentLead.sofia.composicionFamiliar} />
+            <SofiaField label="Profesión" value={currentLead.sofia.profesion} />
+            <SofiaField label="Zona actual" value={currentLead.sofia.zonaActual} />
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-[11px] font-bold uppercase tracking-wide text-slate-400 mb-2">Intención de compra</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <SofiaField label="Primera vivienda" value={currentLead.sofia.primeraVivienda === null ? null : currentLead.sofia.primeraVivienda ? 'Sí' : 'No'} />
+            <SofiaField label="Motivación" value={currentLead.sofia.motivacion} />
+            <SofiaField label="Timeline de compra" value={currentLead.sofia.timeline} />
+            <SofiaField label="Crédito previo" value={currentLead.sofia.creditoPrevio === null ? null : currentLead.sofia.creditoPrevio ? 'Sí' : 'No'} />
+            <SofiaField label="Fuente cuota inicial" value={currentLead.sofia.fuenteCuotaInicial !== 'no preguntado' ? currentLead.sofia.fuenteCuotaInicial : null} />
+            <SofiaField label="Proyecto visto en el ad" value={currentLead.sofia.proyectoInteresOriginal} />
+          </div>
+        </div>
+
+        <div>
+          <h4 className="text-[11px] font-bold uppercase tracking-wide text-slate-400 mb-2">Resultado del agente</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <SofiaField label="Score Sofía" value={currentLead.sofia.scoreNumerico} />
+            <SofiaField
+              label="Perfil estadístico"
+              value={currentLead.sofia.perfilEstadistico !== 'No clasificado (falta edad)' ? currentLead.sofia.perfilEstadistico : null}
+            />
+            <SofiaField
+              label="Riesgo de desistimiento"
+              value={currentLead.sofia.perfilEstadisticoRiesgoDesistimiento !== null ? `${currentLead.sofia.perfilEstadisticoRiesgoDesistimiento}%` : null}
+            />
+            <SofiaField label="Track de remarketing" value={currentLead.sofia.remarketingTrack} />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+            <span className="text-[10px] text-slate-500 font-semibold block mb-1">Brief automático para el asesor</span>
+            <p className={currentLead.sofia.briefAsesor ? 'text-slate-700' : 'text-slate-400 italic'}>
+              {currentLead.sofia.briefAsesor || 'Sofía aún no ha generado un brief para este lead.'}
+            </p>
+          </div>
+
+          <div className="p-3 bg-slate-50 border border-slate-200 rounded-lg text-xs space-y-1.5">
+            <span className="text-[10px] text-slate-500 font-semibold flex items-center gap-1.5">
+              <CreditCard className="w-3 h-3" /> DataCrédito
+            </span>
+            <p className="text-slate-400 italic">
+              {currentLead.sofia.datacredito.consultado
+                ? `Puntaje ${currentLead.sofia.datacredito.puntaje} · Riesgo ${currentLead.sofia.datacredito.nivelRiesgo}`
+                : 'No disponible — pendiente de conectar la integración real.'}
+            </p>
           </div>
         </div>
       </div>

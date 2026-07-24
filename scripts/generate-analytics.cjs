@@ -400,6 +400,40 @@ function buildRationale(e) {
   return `${afiliacion} ${subsidio} Su señal más fuerte es ${strongest} (${strongestVal}/100).${journeyNote}`;
 }
 
+// Perfilamiento del agente Sofía (WhatsApp) — CONTRATO DE DATOS (01_contrato_datos_json_2.txt).
+// Ninguno de estos 200 leads de Meta/Google Ads ha pasado todavía por Sofía (es un
+// canal distinto, WhatsApp), así que el bloque siempre viaja en su estado "pendiente" —
+// tal como el propio contrato especifica para el sub-campo `datacredito`.
+function defaultSofiaProfile() {
+  return {
+    fuente: null,
+    proyectoInteresOriginal: null,
+    esAfiliado: null,
+    rangoEdad: null,
+    segmento: 'Desconocido',
+    categoriaAfiliado: 'Desconocida',
+    rangoSalarial: 'Desconocido',
+    composicionFamiliar: null,
+    profesion: null,
+    primeraVivienda: null,
+    motivacion: null,
+    zonaActual: null,
+    timeline: null,
+    creditoPrevio: null,
+    fuenteCuotaInicial: 'no preguntado',
+    proyectoRecomendado: [],
+    score: null,
+    scoreNumerico: null,
+    briefAsesor: null,
+    remarketingTrack: null,
+    perfilEstadistico: 'No clasificado (falta edad)',
+    perfilEstadisticoRiesgoDesistimiento: null,
+    datacredito: { consultado: false, puntaje: null, nivelRiesgo: null, fechaConsulta: null },
+    brochureEnviado: null,
+    timestamp: null,
+  };
+}
+
 const realLeads = enrichedAll.map((e) => {
   const budgetCOP = Math.round(
     (e.proyecto.rango_precio_min + (e.proyecto.rango_precio_max - e.proyecto.rango_precio_min) * clamp(e.capacidad / 100, 0.15, 0.9)) * 1_000_000
@@ -438,6 +472,7 @@ const realLeads = enrichedAll.map((e) => {
       details: STEP_DETAILS[step.key] || '',
       device: pick(DEVICES),
     })),
+    sofia: defaultSofiaProfile(),
   };
 });
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ViewType, Lead, LeadStatus, Task } from './types';
 import {
   MOCK_LEADS,
@@ -8,6 +8,8 @@ import {
   MOCK_CAMPAIGNS,
   MOCK_DEALS
 } from './data/mockData';
+import { useSofiaLeads } from './hooks/useSofiaLeads';
+import { mergeSofiaLeads } from './data/sofiaMapper';
 
 // Layout Components
 import { Header } from './components/Header';
@@ -37,6 +39,14 @@ export default function AdvisorApp() {
   // Main Data States
   const [leads, setLeads] = useState<Lead[]>(MOCK_LEADS);
   const [projects] = useState(MOCK_PROJECTS);
+
+  // Agente Sofía (WhatsApp) — leads en vivo, integrados al CRM sin bloquear el resto de la app.
+  const { rawLeads: sofiaRawLeads, status: sofiaStatus } = useSofiaLeads();
+  useEffect(() => {
+    if (sofiaRawLeads.length === 0) return;
+    setLeads((prev) => mergeSofiaLeads(prev, sofiaRawLeads, projects));
+  }, [sofiaRawLeads, projects]);
+
   const [buyerPersonas] = useState(MOCK_BUYER_PERSONAS);
   const [tasks, setTasks] = useState<Task[]>(MOCK_TASKS);
   const [deals] = useState(MOCK_DEALS);
@@ -149,6 +159,7 @@ export default function AdvisorApp() {
           leadsCount={leads.length}
           dealsCount={deals.length}
           projectsCount={projects.length}
+          sofiaStatus={sofiaStatus}
         />
 
         {/* Dynamic View Canvas */}

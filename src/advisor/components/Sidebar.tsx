@@ -15,6 +15,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { ViewType } from '../types';
+import { SofiaConnectionStatus } from '../hooks/useSofiaLeads';
 
 interface SidebarProps {
   currentView: ViewType;
@@ -23,7 +24,14 @@ interface SidebarProps {
   leadsCount: number;
   dealsCount: number;
   projectsCount: number;
+  sofiaStatus: SofiaConnectionStatus;
 }
+
+const SOFIA_STATUS_META: Record<SofiaConnectionStatus, { dot: string; label: string }> = {
+  connecting: { dot: 'bg-slate-500', label: 'Conectando…' },
+  connected: { dot: 'bg-emerald-400 animate-pulse', label: 'En vivo' },
+  error: { dot: 'bg-red-500', label: 'Sin conexión' },
+};
 
 export const Sidebar: React.FC<SidebarProps> = ({
   currentView,
@@ -32,6 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   leadsCount,
   dealsCount,
   projectsCount,
+  sofiaStatus,
 }) => {
   const menuItems: { id: ViewType; label: string; icon: React.FC<{ className?: string }>; badge?: number | string; badgeColor?: string }[] = [
     { id: 'inicio', label: 'Inicio', icon: Home },
@@ -49,14 +58,23 @@ export const Sidebar: React.FC<SidebarProps> = ({
   return (
     <aside className="w-64 bg-[#15161A] text-slate-300 flex flex-col shrink-0 min-h-[calc(100vh-53px)] border-r border-slate-800 transition-all duration-200">
       {/* Top Sidebar Header Badge */}
-      <div className="p-4 border-b border-slate-800/80 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-          <span className="text-xs font-semibold text-slate-300">Motor de Inteligencia Activo</span>
+      <div className="p-4 border-b border-slate-800/80 space-y-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+            <span className="text-xs font-semibold text-slate-300">Motor de Inteligencia Activo</span>
+          </div>
+          <span className="text-[10px] text-[#FFD200] font-bold bg-[#FFD200]/10 px-2 py-0.5 rounded border border-[#FFD200]/20">
+            v2.4 MVP
+          </span>
         </div>
-        <span className="text-[10px] text-[#FFD200] font-bold bg-[#FFD200]/10 px-2 py-0.5 rounded border border-[#FFD200]/20">
-          v2.4 MVP
-        </span>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className={`w-2 h-2 rounded-full ${SOFIA_STATUS_META[sofiaStatus].dot}`}></div>
+            <span className="text-xs font-semibold text-slate-300">Agente Sofía (WhatsApp)</span>
+          </div>
+          <span className="text-[10px] text-slate-400 font-bold">{SOFIA_STATUS_META[sofiaStatus].label}</span>
+        </div>
       </div>
 
       {/* Navigation List */}
