@@ -1,0 +1,526 @@
+[
+  {
+    "id": "bosque-arrayan",
+    "nombre": "Bosque de Arrayán",
+    "ubicacion": "Tocancipá",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 177,
+    "rango_precio_max": 215,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35",
+      "salario": "Hasta 2 SMLV",
+      "afiliado_pct": 63,
+      "joven_pct": 29,
+      "familia": "44% sin grupo, 35% monoparental"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/7f3c85cf46.html",
+    "tour_360": "https://storage.net-fs.com/hosting/8270899/1/",
+    "descripcion_corta": "Proyecto VIS en Tocancipá, ideal para jóvenes y familias pequeñas que trabajan en zona norte de Bogotá. Buena valorización."
+  },
+  {
+    "id": "bosque-turpial",
+    "nombre": "Bosque de Turpial",
+    "ubicacion": "Tocancipá",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 210,
+    "rango_precio_max": 263,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio/Joven",
+      "edad": "20-35 (70%)",
+      "salario": "Hasta 2 SMLV (82%)",
+      "afiliado_pct": 64,
+      "joven_pct": 41,
+      "familia": "54% sin grupo, 33% monoparental"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero"
+    ],
+    "brochure": "https://heyzine.com/flip-book/5eec0a2afc.html",
+    "tour_360": "https://salasdeventas.com/Turpial_Apto_B/",
+    "descripcion_corta": "Proyecto VIS en Tocancipá con alta concentración de compradores jóvenes sin grupo familiar. Perfecto para primer hogar."
+  },
+  {
+    "id": "la-macarena",
+    "nombre": "La Macarena",
+    "ubicacion": "Ciudadela Maiporé",
+    "ciudadela": "Maiporé",
+    "tipo": "Apartamento",
+    "rango_precio_min": 134,
+    "rango_precio_max": 157,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico",
+      "edad": "20-35 (54%)",
+      "salario": "Hasta 2 SMLV (91%)",
+      "afiliado_pct": 56,
+      "joven_pct": 27,
+      "familia": "50% sin grupo, 38% monoparental"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Zona infantil",
+      "Zona BBQ"
+    ],
+    "brochure": "https://heyzine.com/flip-book/b168b2f5ba.html",
+    "tour_360": null,
+    "descripcion_corta": "El más económico de Maiporé. Ideal para familias de ingresos básicos. Alta concentración de compradores desde Soacha y sur de Bogotá."
+  },
+  {
+    "id": "mongui",
+    "nombre": "Monguí",
+    "ubicacion": "Ciudadela Maiporé",
+    "ciudadela": "Maiporé",
+    "tipo": "Apartamento",
+    "rango_precio_min": 158,
+    "rango_precio_max": 200,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico/Medio",
+      "edad": "20-35 (56%)",
+      "salario": "Hasta 2 SMLV (87%)",
+      "afiliado_pct": 66,
+      "joven_pct": 22,
+      "familia": "46% monoparental, 40% sin grupo"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/866af8f6a6.html",
+    "tour_360": "https://storage.net-fs.com/hosting/7532170/19/",
+    "descripcion_corta": "Proyecto VIS en Maiporé con buen balance de familias monoparentales. Compradores principalmente desde Bogotá y Soacha."
+  },
+  {
+    "id": "pamplona",
+    "nombre": "Pamplona I",
+    "ubicacion": "Ciudadela Maiporé",
+    "ciudadela": "Maiporé",
+    "tipo": "Apartamento",
+    "rango_precio_min": 178,
+    "rango_precio_max": 236,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico/Medio",
+      "edad": "20-35 (46%)",
+      "salario": "Hasta 2 SMLV (87%)",
+      "afiliado_pct": 65,
+      "joven_pct": 18,
+      "familia": "45% monoparental, 35% sin grupo"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/c159d5d733.html",
+    "tour_360": "https://storage.net-fs.com/hosting/7532170/18/",
+    "descripcion_corta": "Proyecto VIS en Maiporé con familias más establecidas. Compradores desde Soacha (13%) y Bogotá."
+  },
+  {
+    "id": "versalles",
+    "nombre": "Versalles",
+    "ubicacion": "Ciudadela Maiporé",
+    "ciudadela": "Maiporé",
+    "tipo": "Apartamento",
+    "rango_precio_min": 198,
+    "rango_precio_max": 231,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35 (61%)",
+      "salario": "100% hasta 2 SMLV",
+      "afiliado_pct": 71,
+      "joven_pct": 20,
+      "familia": "51% monoparental, 34% sin grupo"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/be784b0d5c.html",
+    "tour_360": "https://shape.com.co/360/COLSUBSIDIO-Versalles_APTOA",
+    "descripcion_corta": "Proyecto VIS en Maiporé. 100% de compradores ganan hasta 2 SMLV. Alto porcentaje de afiliados (71%). Ideal para madres cabeza de hogar."
+  },
+  {
+    "id": "inari",
+    "nombre": "INARI",
+    "ubicacion": "Chía",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 250,
+    "rango_precio_max": 292,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico/Joven",
+      "edad": "20-35 (56%)",
+      "salario": "Hasta 2 SMLV (72%)",
+      "afiliado_pct": 64,
+      "joven_pct": 34,
+      "familia": "57% sin grupo, 29% monoparental"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona BBQ",
+      "Gimnasio"
+    ],
+    "brochure": "https://heyzine.com/flip-book/8b6615372f.html",
+    "tour_360": "https://umbra3d.studio/recorridos/colsubsidio/inari/41.60mt/",
+    "descripcion_corta": "Proyecto en Chía, zona de alta valorización. Mayoría de compradores jóvenes sin grupo familiar. Cercanía a Bogotá por Autopista Norte."
+  },
+  {
+    "id": "reserva-guayacan",
+    "nombre": "Reserva de Guayacán",
+    "ubicacion": "Girardot",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 236,
+    "rango_precio_max": 236,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35 (56%)",
+      "salario": "Hasta 2 SMLV (68%)",
+      "afiliado_pct": 69,
+      "joven_pct": 22,
+      "familia": "46% sin grupo, 26% monoparental, 16% monoparental ampliada"
+    },
+    "amenities": [
+      "Piscina",
+      "Zonas verdes",
+      "Salón comunal",
+      "Zona BBQ",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/aa430852c2.html",
+    "tour_360": "https://storage.net-fs.com/hosting/8270899/0/",
+    "descripcion_corta": "Proyecto en Girardot con amenities de clima cálido (piscina). Ideal para inversión o segunda vivienda. Alta proporción de familias ampliadas."
+  },
+  {
+    "id": "saman",
+    "nombre": "Samán",
+    "ubicacion": "Ricaurte",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 253,
+    "rango_precio_max": 255,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35 (41%), 36-45 (31%)",
+      "salario": "Hasta 2 SMLV (64%)",
+      "afiliado_pct": 77,
+      "joven_pct": 20,
+      "familia": "41% monoparental, 37% sin grupo"
+    },
+    "amenities": [
+      "Piscina",
+      "Zonas verdes",
+      "Salón comunal",
+      "Zona BBQ"
+    ],
+    "brochure": "https://heyzine.com/flip-book/1daa8c80c5.html",
+    "tour_360": "https://storage.net-fs.com/hosting/8321237/0/",
+    "descripcion_corta": "Proyecto en Ricaurte (tierra caliente). El más alto % de afiliados (77%). Perfil de familias establecidas. Clima cálido con piscina."
+  },
+  {
+    "id": "payande",
+    "nombre": "Payandé",
+    "ubicacion": "Ricaurte",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 128,
+    "rango_precio_max": 202,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35 (37%), 36-45 (31%)",
+      "salario": "Hasta 2 SMLV (65%)",
+      "afiliado_pct": 64,
+      "joven_pct": 22,
+      "familia": "51% sin grupo, 31% monoparental"
+    },
+    "amenities": [
+      "Piscina",
+      "Zonas verdes",
+      "Salón comunal",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/34ac4d8a9e.html",
+    "tour_360": "https://storage.net-fs.com/hosting/6021405/17/",
+    "descripcion_corta": "Proyecto económico en Ricaurte. Clima cálido. Compradores mayoritariamente desde Bogotá (50%). Opción de inversión."
+  },
+  {
+    "id": "karakali",
+    "nombre": "Karakalí",
+    "ubicacion": "Ricaurte",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 236,
+    "rango_precio_max": 245,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio/Joven",
+      "edad": "20-35 (57%)",
+      "salario": "53% más de 2 SMLV",
+      "afiliado_pct": 59,
+      "joven_pct": 37,
+      "familia": "68% sin grupo, 10% monoparental"
+    },
+    "amenities": [
+      "Piscina",
+      "Zonas verdes",
+      "Salón comunal",
+      "Zona BBQ",
+      "Gimnasio"
+    ],
+    "brochure": "https://heyzine.com/flip-book/5083a3d46c.html",
+    "tour_360": "https://umbra3d.studio/masterplans/colsubsidio/karakali/",
+    "descripcion_corta": "Proyecto premium en Ricaurte. Mayoría jóvenes sin grupo familiar con ingresos sobre 2 SMLV. Alta proporción de no afiliados."
+  },
+  {
+    "id": "araucaria",
+    "nombre": "Araucaria",
+    "ubicacion": "Ciudadela Calle 80",
+    "ciudadela": "Calle 80",
+    "tipo": "Apartamento",
+    "rango_precio_min": 608,
+    "rango_precio_max": 608,
+    "unidad": "millones COP",
+    "subsidio_aplicable": false,
+    "vis": false,
+    "perfil_dominante": {
+      "segmento": "Medio (56%)",
+      "edad": "20-35 (38%)",
+      "salario": "Entre 3-8 SMLV",
+      "afiliado_pct": 38,
+      "joven_pct": 38,
+      "familia": "47% sin grupo, 28% monoparental"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Gimnasio",
+      "Zona infantil",
+      "Coworking"
+    ],
+    "brochure": "https://heyzine.com/flip-book/26d2b013cf.html",
+    "tour_360": "https://shape.com.co/360/COLSUBSIDIO-AMARILO_ARAUCARIA/",
+    "descripcion_corta": "Proyecto No VIS en Bogotá (Calle 80). El más costoso. Perfil de ingresos altos, muchos no afiliados (62%). Zona urbana consolidada."
+  },
+  {
+    "id": "los-nogales",
+    "nombre": "Los Nogales",
+    "ubicacion": "Ciudadela Calle 80",
+    "ciudadela": "Calle 80",
+    "tipo": "Apartamento",
+    "rango_precio_min": 523,
+    "rango_precio_max": 563,
+    "unidad": "millones COP",
+    "subsidio_aplicable": false,
+    "vis": false,
+    "perfil_dominante": {
+      "segmento": "Medio (80%)",
+      "edad": "36-45 (40%)",
+      "salario": "67% más de 4 SMLV",
+      "afiliado_pct": 40,
+      "joven_pct": 11,
+      "familia": "35% sin grupo, 24% nuclear integrada, 22% pareja conyugal"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Gimnasio",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/9dd9bf814e.html",
+    "tour_360": "https://shape.com.co/360/COLSUBSIDIO-AMARILO_LOSNOGALES/",
+    "descripcion_corta": "Proyecto No VIS en Bogotá (Calle 80). Perfil de familias establecidas con buenos ingresos. Mayoría no afiliados (60%). Zona Engativá."
+  },
+  {
+    "id": "la-arboleda",
+    "nombre": "La Arboleda",
+    "ubicacion": "Bogotá",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 164,
+    "rango_precio_max": 241,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico (47%)",
+      "edad": "20-35 (53%)",
+      "salario": "Hasta 2 SMLV (90%)",
+      "afiliado_pct": 64,
+      "joven_pct": 16,
+      "familia": "54% monoparental, 30% sin grupo"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona infantil"
+    ],
+    "brochure": null,
+    "tour_360": "https://umbra3d.studio/recorridos/promotora-convivienda/la-arboleda-apto-tipo-a/",
+    "descripcion_corta": "Proyecto VIS en Bogotá (San Cristóbal). 90% gana hasta 2 SMLV. Alto % de madres cabeza de hogar. El proyecto más accesible en Bogotá."
+  },
+  {
+    "id": "verde-esperanza",
+    "nombre": "Verde Esperanza El Dorado",
+    "ubicacion": "Ubaté",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 157,
+    "rango_precio_max": 175,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico (59%)",
+      "edad": "20-35 (52%)",
+      "salario": "Hasta 2 SMLV (94%)",
+      "afiliado_pct": 64,
+      "joven_pct": 11,
+      "familia": "45% monoparental, 25% sin grupo, 22% nuclear integrada"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/ea1997d7ae.html",
+    "tour_360": null,
+    "descripcion_corta": "Proyecto VIS en Ubaté. 99% financia con Colsubsidio. Compradores de empresas locales (flores, minas). Perfil muy básico."
+  },
+  {
+    "id": "vibo-once",
+    "nombre": "VIBO Once",
+    "ubicacion": "Ricaurte",
+    "ciudadela": null,
+    "tipo": "Apartamento",
+    "rango_precio_min": 281,
+    "rango_precio_max": 281,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Básico/Joven",
+      "edad": "20-35 (50%)",
+      "salario": "Hasta 2 SMLV",
+      "afiliado_pct": 64,
+      "joven_pct": 50,
+      "familia": "50% sin grupo, 50% monoparental"
+    },
+    "amenities": [
+      "Piscina",
+      "Zonas verdes",
+      "Salón comunal"
+    ],
+    "brochure": "https://heyzine.com/flip-book/d3d1f61d6b.html",
+    "tour_360": "https://umbra3d.studio/recorridos/colsubsidio/vibo/tipo-a/",
+    "descripcion_corta": "Proyecto nuevo en Ricaurte. Pocos datos aún. Perfil joven. Clima cálido con piscina."
+  },
+  {
+    "id": "villa-fiorita",
+    "nombre": "Villa Fiorita",
+    "ubicacion": "Ciudadela Maiporé",
+    "ciudadela": "Maiporé",
+    "tipo": "Apartamento",
+    "rango_precio_min": 198,
+    "rango_precio_max": 213,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35",
+      "salario": "Hasta 2 SMLV",
+      "afiliado_pct": 65,
+      "joven_pct": 20,
+      "familia": "Mixto"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero"
+    ],
+    "brochure": null,
+    "tour_360": null,
+    "descripcion_corta": "Proyecto VIS en Maiporé. Perfil medio, familias mixtas."
+  },
+  {
+    "id": "zarzal",
+    "nombre": "Zarzal",
+    "ubicacion": "Ciudadela Maiporé",
+    "ciudadela": "Maiporé",
+    "tipo": "Apartamento",
+    "rango_precio_min": 180,
+    "rango_precio_max": 220,
+    "unidad": "millones COP",
+    "subsidio_aplicable": true,
+    "vis": true,
+    "perfil_dominante": {
+      "segmento": "Medio",
+      "edad": "20-35",
+      "salario": "Hasta 2 SMLV",
+      "afiliado_pct": 65,
+      "joven_pct": 20,
+      "familia": "Mixto"
+    },
+    "amenities": [
+      "Zonas verdes",
+      "Salón comunal",
+      "Parqueadero",
+      "Zona infantil"
+    ],
+    "brochure": "https://heyzine.com/flip-book/56764c1e33.html",
+    "tour_360": "https://zarzal.shape.com.co",
+    "descripcion_corta": "Proyecto VIS en Maiporé. Nuevo lanzamiento."
+  }
+]

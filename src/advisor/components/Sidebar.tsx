@@ -20,18 +20,24 @@ interface SidebarProps {
   currentView: ViewType;
   setCurrentView: (view: ViewType) => void;
   hotLeadsCount: number;
+  leadsCount: number;
+  dealsCount: number;
+  projectsCount: number;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
   currentView,
   setCurrentView,
   hotLeadsCount,
+  leadsCount,
+  dealsCount,
+  projectsCount,
 }) => {
   const menuItems: { id: ViewType; label: string; icon: React.FC<{ className?: string }>; badge?: number | string; badgeColor?: string }[] = [
     { id: 'inicio', label: 'Inicio', icon: Home },
-    { id: 'leads', label: 'Leads', icon: Users, badge: 6 },
-    { id: 'negocios', label: 'Negocios / Oportunidades', icon: Briefcase, badge: 4 },
-    { id: 'proyectos', label: 'Proyectos de Vivienda', icon: Building, badge: '6 VIS/No VIS' },
+    { id: 'leads', label: 'Leads', icon: Users, badge: leadsCount },
+    { id: 'negocios', label: 'Negocios / Oportunidades', icon: Briefcase, badge: dealsCount },
+    { id: 'proyectos', label: 'Proyectos de Vivienda', icon: Building, badge: `${projectsCount} VIS/No VIS` },
     { id: 'buyer_personas', label: 'Buyer Personas IA', icon: UserCheck },
     { id: 'score360', label: 'Score 360', icon: Target, badge: hotLeadsCount > 0 ? `${hotLeadsCount} Hot` : undefined, badgeColor: 'bg-amber-400 text-slate-900 font-extrabold' },
     { id: 'campanas', label: 'Campañas & Contenido', icon: Megaphone },

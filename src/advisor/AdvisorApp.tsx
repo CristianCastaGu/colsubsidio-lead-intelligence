@@ -146,6 +146,9 @@ export default function AdvisorApp() {
           currentView={currentView}
           setCurrentView={setCurrentView}
           hotLeadsCount={hotLeadsCount}
+          leadsCount={leads.length}
+          dealsCount={deals.length}
+          projectsCount={projects.length}
         />
 
         {/* Dynamic View Canvas */}
@@ -217,7 +220,7 @@ export default function AdvisorApp() {
           )}
 
           {currentView === 'paneles' && (
-            <PanelesView leads={leads} projects={projects} />
+            <PanelesView />
           )}
 
           {currentView === 'configuracion' && <ConfiguracionView />}
