@@ -1,6 +1,39 @@
 import { Lead, HousingProject, SofiaProfile } from '../types';
 import { SofiaApiLead } from './sofiaApiTypes';
 
+/** The "not profiled by Sofía yet" state — same shape scripts/generate-analytics.cjs
+ * uses for the 200 synthetic leads. Also used when the advisor creates a lead by hand
+ * (NuevoLeadModal), since that lead hasn't gone through WhatsApp either. */
+export function defaultSofiaProfile(): SofiaProfile {
+  return {
+    fuente: null,
+    proyectoInteresOriginal: null,
+    esAfiliado: null,
+    rangoEdad: null,
+    segmento: 'Desconocido',
+    categoriaAfiliado: 'Desconocida',
+    rangoSalarial: 'Desconocido',
+    composicionFamiliar: null,
+    profesion: null,
+    primeraVivienda: null,
+    motivacion: null,
+    zonaActual: null,
+    timeline: null,
+    creditoPrevio: null,
+    fuenteCuotaInicial: 'no preguntado',
+    proyectoRecomendado: [],
+    score: null,
+    scoreNumerico: null,
+    briefAsesor: null,
+    remarketingTrack: null,
+    perfilEstadistico: 'No clasificado (falta edad)',
+    perfilEstadisticoRiesgoDesistimiento: null,
+    datacredito: { consultado: false, puntaje: null, nivelRiesgo: null, fechaConsulta: null },
+    brochureEnviado: null,
+    timestamp: null,
+  };
+}
+
 /** The live feed sends one snapshot per turn of the conversation, same lead_id
  * repeated with more fields filled in each time. Keep only the latest per id. */
 export function dedupeLatestByLeadId(raw: SofiaApiLead[]): SofiaApiLead[] {

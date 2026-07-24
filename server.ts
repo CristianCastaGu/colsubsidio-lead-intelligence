@@ -207,6 +207,56 @@ app.get("/api/sofia-leads", async (req, res) => {
   }
 });
 
+// ----------------------------------------------------------------------------
+// Handoff a asesor humano — el asesor retoma la conversación real de WhatsApp
+// que el lead ya tuvo con Sofía, en vez de abrirle un chat nuevo desde el
+// número personal del asesor. Mismo patrón de proxy server-to-server que arriba.
+// ----------------------------------------------------------------------------
+const SOFIA_BASE_URL = "https://pyromania-oversweet-unburned.ngrok-free.dev";
+
+app.post("/api/retomar-conversacion", async (req, res) => {
+  try {
+    const response = await fetch(`${SOFIA_BASE_URL}/api/retomar-conversacion`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" },
+      body: JSON.stringify(req.body),
+    });
+    const data = await response.json();
+    res.status(response.status).json(data);
+  } catch (error) {
+    console.error("Error retomando conversación con el Agente Sofía:", error);
+    res.status(502).json({ ok: false, mensaje: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
+  }
+});
+
+app.post("/api/enviar-mensaje-asesor", async (req, res) => {
+  try {
+    const response = await fetch(`${SOFIA_BASE_URL}/api/enviar-mensaje-asesor`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" },
+      body: JSON.stringify(req.body),
+    });
+    const data = await response.json();
+    res.status(response.status).json(data);
+  } catch (error) {
+    console.error("Error enviando mensaje por WhatsApp vía Agente Sofía:", error);
+    res.status(502).json({ ok: false, mensaje: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
+  }
+});
+
+app.get("/api/conversacion/:telefono", async (req, res) => {
+  try {
+    const response = await fetch(`${SOFIA_BASE_URL}/api/conversacion/${encodeURIComponent(req.params.telefono)}`, {
+      headers: { "ngrok-skip-browser-warning": "true" },
+    });
+    const data = await response.json();
+    res.status(response.status).json(data);
+  } catch (error) {
+    console.error("Error consultando la conversación de WhatsApp:", error);
+    res.status(502).json({ ok: false, history: [], modoHumano: false, asesorAsignado: null, ultimaActividad: null });
+  }
+});
+
 // Vite middleware / Production static serve
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {

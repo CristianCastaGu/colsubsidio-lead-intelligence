@@ -1,54 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import { X, MessageSquare, Send, CheckCircle2, Copy, Sparkles, Building2, Phone } from 'lucide-react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { X, MessageSquare, Send, Copy, Loader2, AlertTriangle, UserCheck, Bot } from 'lucide-react';
 import { Lead, HousingProject } from '../../types';
+import { normalizePhoneForWhatsApp } from '../../data/phone';
+import { useWhatsAppConversation } from '../../hooks/useWhatsAppConversation';
 
 interface WhatsAppModalProps {
   isOpen: boolean;
   onClose: () => void;
   lead: Lead | null;
   projects: HousingProject[];
+  advisorName: string;
 }
 
-export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
-  isOpen,
-  onClose,
-  lead,
-  projects,
-}) => {
+const TEMPLATES: Record<string, (lead: Lead, project: HousingProject) => string> = {
+  subsidio: (lead, project) =>
+    `¡Hola ${lead.name}! 👋 Te habla un asesor de Vivienda Colsubsidio.\n\n` +
+    `Validamos tu solicitud y confirmamos que como afiliado (${lead.afiliacionCategoria || 'Colsubsidio'}) tienes un beneficio potencial de hasta $39.000.000 COP en Subsidio Familiar de Vivienda para tu primer hogar en *${project.name}* (${project.municipality}). 🏠\n\n` +
+    `¿Te gustaría que agendemos una llamada rápida de 5 minutos o te envíe la simulación en PDF a este número?`,
+  cita: (lead, project) =>
+    `Hola ${lead.name}, ¡excelente día! 🌞 Confirmo tu cita en nuestra Sala de Ventas de *${project.name}* en ${project.municipality}.\n\n` +
+    `🗓️ *Ubicación:* ${project.address}\n\n` +
+    `Favor confirmar si esta hora te queda perfecta o si prefieres reprogramar.`,
+  credito: (lead, project) =>
+    `Estimado(a) ${lead.name}, de parte de Colsubsidio Vivienda esperamos que estés teniendo un excelente día.\n\n` +
+    `Te escribimos para dar seguimiento a la pre-aprobación del crédito para tu apartamento en *${project.name}*. Ya tenemos lista la proyección financiera.\n\n` +
+    `¿Nos regalas un momento para revisar los detalles por aquí?`,
+};
+
+export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, lead, projects, advisorName }) => {
+  const telefono = useMemo(() => (lead ? normalizePhoneForWhatsApp(lead.phone) : null), [lead]);
+  const { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion } =
+    useWhatsAppConversation(isOpen ? telefono : null);
+
+  const [messageText, setMessageText] = useState('');
+  const [sendError, setSendError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setMessageText('');
+    setSendError(null);
+  }, [lead?.id]);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
+  }, [history.length]);
+
   if (!isOpen || !lead) return null;
 
   const project = projects.find((p) => p.id === lead.recommendedProjectId) || projects[0];
 
-  const [selectedTemplate, setSelectedTemplate] = useState<string>('subsidio');
-  const [messageText, setMessageText] = useState('');
-  const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    if (selectedTemplate === 'subsidio') {
-      setMessageText(
-        `¡Hola ${lead.name}! 👋 Te habla Carlos Rodríguez, asesor comercial de Vivienda Colsubsidio.\n\n` +
-          `Validamos tu solicitud y confirmamos que como afiliado (${lead.afiliacionCategoria || 'Colsubsidio'}) tienes un beneficio potencial de hasta $39.000.000 COP en Subsidio Familiar de Vivienda para tu primer hogar en *${project.name}* (${project.municipality}). 🏠\n\n` +
-          `📍 *Detalles del proyecto:*\n` +
-          `• Unidades VIS de 3 alcobas con balcón.\n` +
-          `• Entrega: ${project.deliveryDate}.\n` +
-          `• Cuota inicial diferida en plazos cómodos.\n\n` +
-          `¿Te gustaría que agendemos una llamada rápida de 5 minutos o te envíe la simulación en PDF a este número?`
-      );
-    } else if (selectedTemplate === 'cita') {
-      setMessageText(
-        `Hola ${lead.name}, ¡excelente día! 🌞 Confirmo tu cita agendada en nuestra Sala de Ventas de *${project.name}* en ${project.municipality}.\n\n` +
-          `🗓️ *Ubicación:* ${project.address}\n` +
-          `🚗 Contamos con parqueadero privado para visitantes.\n\n` +
-          `Favor confirmar si esta hora te queda perfecta o si prefieres reprogramar.`
-      );
-    } else {
-      setMessageText(
-        `Estimado(a) ${lead.name}, de parte de Colsubsidio Vivienda esperamos que estés teniendo un excelente día.\n\n` +
-          `Te escribimos para realizar el seguimiento a la pre-aprobación del crédito para tu apartamento en *${project.name}*. Ya tenemos lista la proyección financiera con tus aportes acumulados.\n\n` +
-          `¿Nos regalas un momento para revisar los detalles por aquí?`
-      );
-    }
-  }, [selectedTemplate, lead, project]);
+  const applyTemplate = (key: keyof typeof TEMPLATES) => {
+    setMessageText(TEMPLATES[key](lead, project));
+  };
 
   const handleCopy = () => {
     navigator.clipboard.writeText(messageText);
@@ -56,110 +60,159 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const cleanPhone = lead.phone.replace(/[^0-9]/g, '');
-  const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(messageText)}`;
+  const handleSend = async () => {
+    if (!messageText.trim()) return;
+    setSendError(null);
+    const result = await sendMessage(messageText.trim(), advisorName);
+    if (result.ok) {
+      setMessageText('');
+    } else {
+      setSendError(result.mensaje || 'No se pudo enviar el mensaje.');
+    }
+  };
+
+  const handleRetomar = async () => {
+    setSendError(null);
+    const result = await retomarConversacion(advisorName);
+    if (!result.ok) setSendError(result.mensaje || 'No se pudo retomar la conversación.');
+  };
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
-      <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden border border-slate-200 space-y-0">
+      <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden border border-slate-200 flex flex-col max-h-[85vh]">
         {/* Header */}
-        <div className="bg-[#075E54] text-white p-4 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm">
+        <div className="bg-[#075E54] text-white p-4 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm shrink-0">
               <MessageSquare className="w-4 h-4 fill-current" />
             </div>
-            <div>
-              <h2 className="font-extrabold text-sm leading-tight">Contacto WhatsApp Directo</h2>
-              <p className="text-[11px] text-emerald-100">
-                {lead.name} ({lead.phone})
+            <div className="min-w-0">
+              <h2 className="font-extrabold text-sm leading-tight truncate">{lead.name}</h2>
+              <p className="text-[11px] text-emerald-100 truncate">
+                {telefono ? lead.phone : 'Sin número de WhatsApp registrado'}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="text-white/80 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+            className="text-white/80 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors cursor-pointer shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Modal Content */}
-        <div className="p-5 space-y-4 text-xs">
-          {/* Template Selector */}
-          <div>
-            <label className="font-bold text-slate-800 block mb-1">Plantilla Comercial Colsubsidio:</label>
-            <div className="grid grid-cols-3 gap-2">
-              <button
-                type="button"
-                onClick={() => setSelectedTemplate('subsidio')}
-                className={`p-2 rounded-lg border font-bold text-[11px] transition-all cursor-pointer ${
-                  selectedTemplate === 'subsidio'
-                    ? 'bg-[#003DA5] text-white border-[#003DA5]'
-                    : 'bg-slate-50 text-slate-700 border-slate-200'
-                }`}
-              >
-                1. Subsidio + Proyecto
-              </button>
-              <button
-                type="button"
-                onClick={() => setSelectedTemplate('cita')}
-                className={`p-2 rounded-lg border font-bold text-[11px] transition-all cursor-pointer ${
-                  selectedTemplate === 'cita'
-                    ? 'bg-[#003DA5] text-white border-[#003DA5]'
-                    : 'bg-slate-50 text-slate-700 border-slate-200'
-                }`}
-              >
-                2. Cita Sala de Ventas
-              </button>
-              <button
-                type="button"
-                onClick={() => setSelectedTemplate('credito')}
-                className={`p-2 rounded-lg border font-bold text-[11px] transition-all cursor-pointer ${
-                  selectedTemplate === 'credito'
-                    ? 'bg-[#003DA5] text-white border-[#003DA5]'
-                    : 'bg-slate-50 text-slate-700 border-slate-200'
-                }`}
-              >
-                3. Pre-Aprobación
-              </button>
-            </div>
+        {!telefono ? (
+          // Sin teléfono real — no fingir que el chat funciona
+          <div className="p-6 text-center space-y-2 text-xs text-slate-600">
+            <AlertTriangle className="w-6 h-6 text-amber-500 mx-auto" />
+            <p className="font-bold text-slate-800">Este lead no tiene un número de WhatsApp registrado.</p>
+            <p>
+              Los leads capturados en vivo por el Agente Sofía todavía no incluyen el teléfono en el listado —
+              pide a Iván que lo agregue a <code className="bg-slate-100 px-1 rounded">/api/leads</code> para poder retomar su chat real.
+            </p>
           </div>
-
-          {/* WhatsApp Chat Speech Bubble */}
-          <div className="bg-[#E5DDD5] p-4 rounded-xl border border-slate-300 space-y-2 relative">
-            <div className="flex justify-between items-center text-[10px] text-slate-600 font-bold">
-              <span>Vista Previa del Mensaje</span>
-              <span>Enviado por: Carlos Rodríguez (Asesor)</span>
+        ) : (
+          <>
+            {/* Status banner */}
+            <div
+              className={`px-4 py-2 text-[11px] font-semibold flex items-center justify-between gap-2 shrink-0 border-b ${
+                modoHumano ? 'bg-blue-50 border-blue-100 text-[#003DA5]' : 'bg-amber-50 border-amber-100 text-amber-800'
+              }`}
+            >
+              <span className="flex items-center gap-1.5">
+                {modoHumano ? <UserCheck className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
+                {modoHumano ? `Modo humano — atendido por ${asesorAsignado || advisorName}` : 'Sofía está atendiendo esta conversación automáticamente'}
+              </span>
+              {!modoHumano && (
+                <button
+                  onClick={handleRetomar}
+                  className="text-[10px] font-bold underline hover:no-underline cursor-pointer shrink-0"
+                >
+                  Retomar chat
+                </button>
+              )}
             </div>
 
-            <textarea
-              value={messageText}
-              onChange={(e) => setMessageText(e.target.value)}
-              className="w-full bg-[#DCF8C6] text-slate-900 p-3 rounded-lg border border-emerald-300 text-xs font-sans leading-relaxed focus:outline-none focus:ring-2 focus:ring-emerald-500 h-44 resize-none shadow-xs"
-            ></textarea>
-          </div>
+            {/* Message history */}
+            <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-2 bg-[#E5DDD5] min-h-[240px]">
+              {loading ? (
+                <div className="h-full flex items-center justify-center text-slate-500 text-xs gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin" /> Cargando conversación…
+                </div>
+              ) : loadError ? (
+                <div className="h-full flex items-center justify-center text-center text-xs text-red-600 px-4">{loadError}</div>
+              ) : history.length === 0 ? (
+                <div className="h-full flex items-center justify-center text-center text-xs text-slate-500 px-4">
+                  Sofía todavía no ha hablado con este lead por WhatsApp.
+                </div>
+              ) : (
+                history.map((msg, idx) => (
+                  <div key={idx} className={`flex ${msg.role === 'assistant' ? 'justify-end' : 'justify-start'}`}>
+                    <div
+                      className={`max-w-[80%] p-2.5 rounded-lg text-xs leading-relaxed shadow-xs whitespace-pre-wrap ${
+                        msg.role === 'assistant' ? 'bg-[#DCF8C6] text-slate-900' : 'bg-white text-slate-900'
+                      }`}
+                    >
+                      {msg.content}
+                      {msg.timestamp && (
+                        <p className="text-[9px] text-slate-500 text-right mt-1">
+                          {new Date(msg.timestamp).toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' })}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center justify-between pt-2">
-            <button
-              onClick={handleCopy}
-              className="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-3 py-2 rounded-lg text-xs flex items-center gap-1.5 border border-slate-300 transition-colors cursor-pointer"
-            >
-              <Copy className="w-3.5 h-3.5" />
-              <span>{copied ? '✓ Texto Copiado' : 'Copiar Texto'}</span>
-            </button>
+            {/* Composer */}
+            <div className="p-3 space-y-2 border-t border-slate-200 shrink-0">
+              <div className="grid grid-cols-3 gap-1.5">
+                {(['subsidio', 'cita', 'credito'] as const).map((key) => (
+                  <button
+                    key={key}
+                    type="button"
+                    onClick={() => applyTemplate(key)}
+                    className="p-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-700 font-bold text-[10px] hover:border-[#003DA5] transition-colors cursor-pointer"
+                  >
+                    {key === 'subsidio' ? 'Subsidio' : key === 'cita' ? 'Cita' : 'Pre-Aprobación'}
+                  </button>
+                ))}
+              </div>
 
-            <a
-              href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-black px-5 py-2 rounded-lg text-xs flex items-center gap-2 shadow-md transition-transform active:scale-95 cursor-pointer text-decoration-none"
-            >
-              <Send className="w-4 h-4 fill-current" />
-              <span>Abrir en WhatsApp</span>
-            </a>
-          </div>
-        </div>
+              {sendError && (
+                <p className="text-[11px] text-red-600 font-semibold flex items-center gap-1">
+                  <AlertTriangle className="w-3 h-3" /> {sendError}
+                </p>
+              )}
+
+              <div className="flex items-end gap-2">
+                <textarea
+                  value={messageText}
+                  onChange={(e) => setMessageText(e.target.value)}
+                  placeholder="Escribe tu mensaje…"
+                  className="flex-1 text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003DA5]/20 h-16 resize-none"
+                />
+                <button
+                  onClick={handleCopy}
+                  title="Copiar texto"
+                  className="p-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg border border-slate-300 transition-colors cursor-pointer shrink-0"
+                >
+                  <Copy className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={handleSend}
+                  disabled={sending || !messageText.trim()}
+                  className="p-2.5 bg-[#25D366] hover:bg-[#20bd5a] disabled:opacity-50 disabled:cursor-not-allowed text-slate-950 rounded-lg shadow-md transition-colors cursor-pointer shrink-0"
+                  title="Enviar por WhatsApp"
+                >
+                  {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4 fill-current" />}
+                </button>
+              </div>
+              {copied && <p className="text-[10px] text-emerald-600 font-bold">✓ Texto copiado</p>}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

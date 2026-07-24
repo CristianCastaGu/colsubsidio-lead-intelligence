@@ -9,7 +9,7 @@ import {
   MOCK_DEALS
 } from './data/mockData';
 import { useSofiaLeads } from './hooks/useSofiaLeads';
-import { mergeSofiaLeads } from './data/sofiaMapper';
+import { mergeSofiaLeads, defaultSofiaProfile } from './data/sofiaMapper';
 
 // Layout Components
 import { Header } from './components/Header';
@@ -112,7 +112,8 @@ export default function AdvisorApp() {
       assignedAdvisor: advisorName,
       createdAt: 'Hace un momento',
       lastInteraction: 'Hace un momento',
-      behaviorLogs: partialLead.behaviorLogs || []
+      behaviorLogs: partialLead.behaviorLogs || [],
+      sofia: partialLead.sofia || defaultSofiaProfile(),
     };
 
     setLeads([newLeadObj, ...leads]);
@@ -255,6 +256,7 @@ export default function AdvisorApp() {
         onClose={() => setIsWhatsAppModalOpen(false)}
         lead={whatsAppModalLead}
         projects={projects}
+        advisorName={advisorName}
       />
     </div>
   );

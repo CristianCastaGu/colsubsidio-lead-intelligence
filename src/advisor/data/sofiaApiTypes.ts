@@ -45,3 +45,31 @@ export interface SofiaApiResponse {
   total: number;
   leads: SofiaApiLead[];
 }
+
+// ---- Handoff a asesor humano (retomar conversación real de WhatsApp) ----
+
+export interface ConversationMessage {
+  role: 'user' | 'assistant';
+  content: string;
+  timestamp?: string;
+}
+
+export interface ConversacionResponse {
+  ok: boolean;
+  leadInfo?: Partial<SofiaApiLead>;
+  history: ConversationMessage[];
+  modoHumano: boolean;
+  asesorAsignado: string | null;
+  ultimaActividad: string | null;
+}
+
+export interface RetomarConversacionResponse {
+  ok: boolean;
+  mensaje: string;
+  telefono: string;
+}
+
+export interface EnviarMensajeResponse {
+  ok: boolean;
+  mensaje?: string; // presente cuando falla el envío
+}
