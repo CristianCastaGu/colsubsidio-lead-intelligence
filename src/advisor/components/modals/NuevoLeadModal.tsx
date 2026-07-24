@@ -79,7 +79,7 @@ export const NuevoLeadModal: React.FC<NuevoLeadModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
+    <div className="fixed inset-0 z-[150] bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 animate-fadeIn">
       <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl overflow-hidden border border-slate-200">
         {/* Header */}
         <div className="bg-[#003DA5] text-white p-4 flex items-center justify-between">

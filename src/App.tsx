@@ -14,9 +14,9 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen w-full">
+    <div className="h-screen w-full flex flex-col overflow-hidden">
       {/* Slim switcher bar: lets reviewers jump back to the role picker without a full reload */}
-      <div className="bg-slate-900 text-white text-xs px-4 sm:px-8 py-1.5 flex items-center justify-between gap-3">
+      <div className="bg-slate-900 text-white text-xs px-4 sm:px-8 py-1.5 flex items-center justify-between gap-3 shrink-0 z-50">
         <span className="text-slate-300">
           Vista actual: <span className="font-bold text-[#FFD200]">{role === 'buyer' ? 'Comprador' : 'Asesor Comercial'}</span>
         </span>

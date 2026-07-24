@@ -139,7 +139,7 @@ export default function AdvisorApp() {
   const hotLeadsCount = leads.filter((l) => l.temperature === 'Hot').length;
 
   return (
-    <div className="min-h-screen bg-[#F5F6F8] font-sans text-slate-800 flex flex-col selection:bg-[#FFD200] selection:text-[#003DA5]">
+    <div className="flex-1 flex flex-col bg-[#F5F6F8] font-sans text-slate-800 overflow-hidden selection:bg-[#FFD200] selection:text-[#003DA5]">
       {/* Colsubsidio Top Branded Header Bar */}
       <Header
         onOpenNewLeadModal={() => setIsNewLeadModalOpen(true)}
@@ -147,6 +147,10 @@ export default function AdvisorApp() {
         setAdvisorName={setAdvisorName}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        leads={leads}
+        projects={projects}
+        onSelectLeadForScore360={handleSelectLeadForScore360}
+        onNavigateToView={(view) => setCurrentView(view)}
       />
 
       {/* Main Body with Sidebar + View Content */}
