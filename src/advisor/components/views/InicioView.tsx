@@ -21,7 +21,10 @@ import {
   Search,
   X,
   Plus,
-  User
+  User,
+  ShieldCheck,
+  Target,
+  Info
 } from 'lucide-react';
 import { Lead, Task, HousingProject } from '../../types';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
@@ -256,7 +259,9 @@ export const InicioView: React.FC<InicioViewProps> = ({
         </motion.div>
       </div>
 
-      {/* 2. MAIN SECTION: LEADS QUE REQUIEREN ATENCIÓN COMERCIAL */}
+      {/* 2 + 4. TWO-COLUMN WORKSPACE: leads table (wide) alongside the day's operation (sidebar) */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-start">
+      <div className="xl:col-span-2 space-y-4">
       <div className="px-1">
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#003DA5] tracking-tight font-display">
           Leads que Requieren Atención Comercial
@@ -423,12 +428,12 @@ export const InicioView: React.FC<InicioViewProps> = ({
                   <tr
                     key={lead.id}
                     onClick={() => setSelectedLeadId(lead.id)}
-                    className={`transition-colors cursor-pointer group ${
+                    className={`transition-all cursor-pointer group border-l-4 ${
                       leadEsc.active
-                        ? 'bg-[#FFD200]/15 hover:bg-[#FFD200]/25 border-l-4 border-l-[#FFD200]'
+                        ? 'bg-[#FFD200]/15 hover:bg-[#FFD200]/25 border-l-[#FFD200]'
                         : isSelected
-                        ? 'bg-[#003DA5]/5 hover:bg-[#003DA5]/10 border-l-4 border-l-[#003DA5]'
-                        : 'hover:bg-slate-50/80'
+                        ? 'bg-[#003DA5]/5 hover:bg-[#003DA5]/10 border-l-[#003DA5]'
+                        : 'border-l-transparent hover:border-l-[#003DA5]/40 hover:bg-slate-50 hover:shadow-[inset_0_0_0_1px_rgba(0,61,165,0.08)]'
                     }`}
                   >
                     {/* Lead Name & City */}
@@ -564,6 +569,9 @@ export const InicioView: React.FC<InicioViewProps> = ({
                         >
                           360
                         </button>
+
+                        {/* Hover affordance: hints the whole row opens a detail bubble on click */}
+                        <ChevronRight className="w-4 h-4 text-[#003DA5]/60 shrink-0 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
                       </div>
                     </td>
                   </tr>
@@ -575,15 +583,10 @@ export const InicioView: React.FC<InicioViewProps> = ({
       </div>
 
         {/* Footer Counter */}
-        <div className="flex items-center justify-between text-xs text-slate-500 pt-1 px-1">
-          <span>
-            Mostrando <strong className="text-slate-900 font-black">{sortedLeads.length}</strong> leads disponibles en la base de datos
-          </span>
-          <span className="text-[11px] text-[#003DA5] font-bold flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            Clic en cualquier lead para desplegar su resumen en ventana flotante
-          </span>
+        <div className="text-xs text-slate-500 font-semibold pt-1 px-1">
+          Mostrando {sortedLeads.length} leads
         </div>
+      </div>
       </div>
 
       {/* 3. FLOATING BUBBLE MODAL: DETAILED LEAD INTELLIGENCE — no backdrop dimming,
@@ -608,38 +611,34 @@ export const InicioView: React.FC<InicioViewProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 16 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="relative bg-[#0B132B] text-white rounded-3xl border border-slate-700/80 shadow-2xl ring-1 ring-black/10 max-w-4xl w-full mx-auto my-6 sm:my-10 p-6 sm:p-8 overflow-hidden space-y-6"
+              className="relative bg-white text-slate-900 rounded-3xl border border-slate-200 shadow-2xl max-w-4xl w-full mx-auto my-6 sm:my-10 p-6 sm:p-8 overflow-hidden space-y-6"
             >
               {/* Close Button */}
               <button
                 onClick={() => setSelectedLeadId(null)}
-                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-all cursor-pointer border border-slate-700 hover:scale-110 shadow-md z-20"
+                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition-all cursor-pointer hover:scale-110 z-20"
                 title="Cerrar ventana flotante"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              {/* Glow accent effect */}
-              <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#003DA5]/30 rounded-full blur-3xl pointer-events-none" />
-              <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[#FFD200]/15 rounded-full blur-3xl pointer-events-none" />
-
               {/* Panel Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4 relative z-10 pr-10">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4 pr-10">
                 <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-[#003DA5] text-[#FFD200] font-black flex items-center justify-center text-base border-2 border-[#FFD200]/60 shadow-md">
+                  <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-800 font-black flex items-center justify-center text-base shrink-0">
                     {activeSelectedLead.name.slice(0, 2).toUpperCase()}
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="text-lg font-black text-white font-sans tracking-tight">{activeSelectedLead.name}</h3>
+                      <h3 className="text-lg font-black text-slate-900 font-sans tracking-tight">{activeSelectedLead.name}</h3>
                       {escalation.active && (
-                        <span className="text-[10px] bg-[#FFD200]/20 text-[#FFD200] font-black px-2.5 py-0.5 rounded-full border border-[#FFD200]/40 flex items-center gap-1">
-                          <Zap className="w-3 h-3 fill-[#FFD200]" />
+                        <span className="text-[10px] bg-amber-50 text-amber-800 font-black px-2.5 py-0.5 rounded-full border border-amber-200 flex items-center gap-1">
+                          <Zap className="w-3 h-3 fill-amber-800" />
                           <span>Auto-Resaltado por Sofía</span>
                         </span>
                       )}
                     </div>
-                    <p className="text-xs text-slate-400 font-medium mt-0.5">
+                    <p className="text-xs text-slate-500 font-medium mt-0.5">
                       {activeSelectedLead.city} • {activeSelectedLead.channel} • Actualizado: {activeSelectedLead.lastInteraction}
                     </p>
                   </div>
@@ -651,9 +650,9 @@ export const InicioView: React.FC<InicioViewProps> = ({
                       onOpenWhatsAppModal(activeSelectedLead);
                       setSelectedLeadId(null);
                     }}
-                    className="bg-[#25D366] hover:bg-[#20ba5a] text-slate-950 px-3.5 py-2 rounded-xl text-xs font-black flex items-center gap-2 transition-all shadow-sm hover:scale-105 cursor-pointer"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 px-3.5 py-2 rounded-xl text-xs font-black flex items-center gap-2 transition-all cursor-pointer border border-emerald-200"
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-slate-950" />
+                    <WhatsAppIcon className="w-4 h-4 fill-emerald-800" />
                     <span>Abrir WhatsApp</span>
                   </button>
                   <button
@@ -661,7 +660,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
                       onSelectLeadForScore360(activeSelectedLead);
                       setSelectedLeadId(null);
                     }}
-                    className="bg-[#003DA5] hover:bg-blue-700 text-white px-3.5 py-2 rounded-xl text-xs font-black transition-all shadow-sm hover:scale-105 cursor-pointer flex items-center gap-1.5 border border-blue-400/30"
+                    className="bg-white hover:bg-blue-50 text-[#003DA5] px-3.5 py-2 rounded-xl text-xs font-black transition-all cursor-pointer flex items-center gap-1.5 border border-[#003DA5]/30"
                   >
                     <span>Ver Score 360</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -670,18 +669,23 @@ export const InicioView: React.FC<InicioViewProps> = ({
               </div>
 
               {/* 3 CARDS GRID (Previabilidad, Intención, Proyectos) */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Card A: Previabilidad Financiera */}
-                <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4.5 space-y-3 shadow-md">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-3">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-extrabold text-slate-300 uppercase tracking-wider">
-                      Previabilidad Financiera
-                    </h4>
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                        <ShieldCheck className="w-4 h-4" />
+                      </div>
+                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                        Previabilidad Financiera
+                      </h4>
+                    </div>
                     <span
-                      className={`text-[10px] font-black px-2.5 py-0.5 rounded-full border ${
+                      className={`text-[10px] font-black px-2.5 py-0.5 rounded-full border shrink-0 ${
                         financial.status === 'potencialmente_viable'
-                          ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                          : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-amber-50 text-amber-800 border-amber-200'
                       }`}
                     >
                       {financial.label}
@@ -690,11 +694,11 @@ export const InicioView: React.FC<InicioViewProps> = ({
 
                   {/* Positive Signals */}
                   <div className="space-y-1.5 text-xs">
-                    <p className="text-[10px] text-slate-400 uppercase font-extrabold tracking-wider">Señales Positivas:</p>
+                    <p className="text-[11px] text-emerald-700 font-extrabold">Señales Positivas</p>
                     {financial.positiveSignals.length > 0 ? (
                       financial.positiveSignals.map((sig, i) => (
-                        <div key={i} className="flex items-start gap-2 text-emerald-300 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                        <div key={i} className="flex items-start gap-2 text-slate-700 font-medium">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                           <span>{sig}</span>
                         </div>
                       ))
@@ -704,11 +708,11 @@ export const InicioView: React.FC<InicioViewProps> = ({
                   </div>
 
                   {/* Pending Alerts */}
-                  <div className="space-y-1.5 text-xs pt-2 border-t border-slate-700/60">
-                    <p className="text-[10px] text-slate-400 uppercase font-extrabold tracking-wider">Pendientes por Validar:</p>
+                  <div className="space-y-1.5 text-xs pt-2 border-t border-slate-200">
+                    <p className="text-[11px] text-amber-700 font-extrabold">Pendientes por Validar</p>
                     {financial.pendingAlerts.map((alt, i) => (
-                      <div key={i} className="flex items-start gap-2 text-amber-200/90 font-medium">
-                        <AlertCircle className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2 text-slate-700 font-medium">
+                        <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
                         <span>{alt}</span>
                       </div>
                     ))}
@@ -716,16 +720,21 @@ export const InicioView: React.FC<InicioViewProps> = ({
                 </div>
 
                 {/* Card B: Intención de Compra */}
-                <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4.5 space-y-3 shadow-md">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-3">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-extrabold text-slate-300 uppercase tracking-wider">
-                      Intención de Compra
-                    </h4>
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-blue-100 text-[#003DA5] flex items-center justify-center shrink-0">
+                        <Target className="w-4 h-4" />
+                      </div>
+                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                        Intención de Compra
+                      </h4>
+                    </div>
                     <span
-                      className={`text-[10px] font-black px-2.5 py-0.5 rounded-full border ${
+                      className={`text-[10px] font-black px-2.5 py-0.5 rounded-full border shrink-0 ${
                         intent.status === 'alta'
-                          ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
-                          : 'bg-blue-500/20 text-blue-300 border-blue-500/40'
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                          : 'bg-blue-50 text-[#003DA5] border-blue-200'
                       }`}
                     >
                       Intención {intent.label}
@@ -734,21 +743,21 @@ export const InicioView: React.FC<InicioViewProps> = ({
 
                   <div className="space-y-2 text-xs">
                     <div>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Horizonte temporal:</p>
-                      <p className="text-white font-extrabold">{activeSelectedLead.sofia.timeline || 'No informado'}</p>
+                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Horizonte temporal</p>
+                      <p className="text-slate-900 font-extrabold">{activeSelectedLead.sofia.timeline || 'No informado'}</p>
                     </div>
 
                     <div>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Motivación principal:</p>
-                      <p className="text-slate-200 font-medium">{activeSelectedLead.sofia.motivacion || 'Sin motivación registrada'}</p>
+                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Motivación principal</p>
+                      <p className="text-slate-700 font-medium">{activeSelectedLead.sofia.motivacion || 'Sin motivación registrada'}</p>
                     </div>
 
-                    <div className="pt-2 border-t border-slate-700/60">
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Perfil Estadístico & Desistimiento:</p>
-                      <p className="text-slate-200 font-semibold">{activeSelectedLead.sofia.perfilEstadistico}</p>
+                    <div className="pt-2 border-t border-slate-200">
+                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Perfil Estadístico & Desistimiento</p>
+                      <p className="text-slate-700 font-semibold">{activeSelectedLead.sofia.perfilEstadistico}</p>
                       {activeSelectedLead.sofia.perfilEstadisticoRiesgoDesistimiento !== null && (
                         <p
-                          className="text-[11px] text-amber-300 font-bold mt-0.5"
+                          className="text-[11px] text-amber-700 font-bold mt-0.5"
                           title="Estimación histórica basada en el perfil estadístico del lead"
                         >
                           Riesgo histórico desistimiento: {activeSelectedLead.sofia.perfilEstadisticoRiesgoDesistimiento}%
@@ -759,29 +768,33 @@ export const InicioView: React.FC<InicioViewProps> = ({
                 </div>
 
                 {/* Card C: Proyecto de Interés y Recomendación */}
-                <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4.5 space-y-3 shadow-md">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-3">
                   <div className="flex items-center justify-between">
-                    <h4 className="text-xs font-extrabold text-slate-300 uppercase tracking-wider">
-                      Proyectos & Recomendación
-                    </h4>
-                    <Building2 className="w-4 h-4 text-[#FFD200]" />
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-blue-100 text-[#003DA5] flex items-center justify-center shrink-0">
+                        <Building2 className="w-4 h-4" />
+                      </div>
+                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                        Proyectos & Recomendación
+                      </h4>
+                    </div>
                   </div>
 
                   <div className="space-y-2 text-xs">
                     <div>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Interés Original en Pauta:</p>
-                      <p className="text-white font-black">{activeSelectedLead.sofia.proyectoInteresOriginal || 'No especificado'}</p>
+                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Interés Original en Pauta</p>
+                      <p className="text-slate-900 font-black">{activeSelectedLead.sofia.proyectoInteresOriginal || 'No especificado'}</p>
                     </div>
 
                     <div>
-                      <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Recomendado por Sofía:</p>
+                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Recomendado por Sofía</p>
                       {activeSelectedLead.sofia.proyectoRecomendado.length > 0 ? (
                         <div className="space-y-1 mt-0.5">
-                          <span className="inline-block bg-[#003DA5]/40 text-blue-200 font-extrabold px-2.5 py-0.5 rounded-full border border-[#003DA5]/60">
+                          <span className="inline-block bg-blue-100 text-[#003DA5] font-extrabold px-2.5 py-0.5 rounded-full">
                             1º {activeSelectedLead.sofia.proyectoRecomendado[0]}
                           </span>
                           {activeSelectedLead.sofia.proyectoRecomendado[1] && (
-                            <span className="block text-[11px] text-slate-400 font-medium">
+                            <span className="block text-[11px] text-slate-500 font-medium">
                               2º {activeSelectedLead.sofia.proyectoRecomendado[1]}
                             </span>
                           )}
@@ -793,12 +806,12 @@ export const InicioView: React.FC<InicioViewProps> = ({
 
                     {/* Brochure Link */}
                     {activeSelectedLead.sofia.brochureEnviado && (
-                      <div className="pt-2 border-t border-slate-700/60">
+                      <div className="pt-2 border-t border-slate-200">
                         <a
                           href={activeSelectedLead.sofia.brochureEnviado}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 font-extrabold underline"
+                          className="inline-flex items-center gap-1.5 text-xs text-[#003DA5] hover:text-blue-700 font-extrabold underline"
                         >
                           <ExternalLink className="w-3.5 h-3.5" />
                           <span>Ver Brochure Digital Enviado</span>
@@ -810,24 +823,25 @@ export const InicioView: React.FC<InicioViewProps> = ({
               </div>
 
               {/* PRÓXIMA MEJOR ACCIÓN & DATOS CRÍTICOS PENDIENTES */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
                 {/* Próxima mejor acción (2 cols) */}
-                <div className="md:col-span-2 bg-[#003DA5]/30 border border-[#003DA5]/60 rounded-2xl p-4.5 space-y-2.5 shadow-md">
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-4.5 h-4.5 text-[#FFD200]" />
-                    <h4 className="text-xs font-black text-white uppercase tracking-wider">
+                <div className="md:col-span-2 relative bg-blue-50 border border-blue-100 rounded-2xl p-4.5 space-y-2.5 overflow-hidden">
+                  <WhatsAppIcon className="absolute -bottom-4 -right-4 w-24 h-24 text-[#003DA5]/10 fill-current pointer-events-none" />
+                  <div className="relative flex items-center gap-2">
+                    <Sparkles className="w-4.5 h-4.5 text-amber-500" />
+                    <h4 className="text-xs font-black text-[#003DA5] uppercase tracking-wider">
                       Próxima Mejor Acción Sugerida
                     </h4>
                   </div>
-                  <p className="text-sm font-black text-[#FFD200]">{nextAction.action}</p>
-                  <p className="text-xs text-slate-200 font-medium">{nextAction.objective}</p>
-                  <div className="flex items-center gap-2 pt-1">
+                  <p className="relative text-sm font-black text-[#003DA5]">{nextAction.action}</p>
+                  <p className="relative text-xs text-slate-600 font-medium">{nextAction.objective}</p>
+                  <div className="relative flex items-center gap-2 pt-1">
                     <button
                       onClick={() => {
                         onOpenWhatsAppModal(activeSelectedLead);
                         setSelectedLeadId(null);
                       }}
-                      className="bg-[#003DA5] hover:bg-blue-600 text-white text-xs font-extrabold px-3.5 py-1.5 rounded-xl transition-all cursor-pointer shadow-sm hover:scale-105 border border-blue-400/40"
+                      className="bg-[#003DA5] hover:bg-blue-700 text-white text-xs font-extrabold px-3.5 py-1.5 rounded-xl transition-all cursor-pointer shadow-sm hover:scale-105"
                     >
                       {nextAction.followUpAction}
                     </button>
@@ -835,21 +849,21 @@ export const InicioView: React.FC<InicioViewProps> = ({
                 </div>
 
                 {/* Datos críticos pendientes (1 col) */}
-                <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700/80 rounded-2xl p-4.5 space-y-2 shadow-md">
-                  <div className="flex items-center gap-1.5 text-amber-400">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-2">
+                  <div className="flex items-center gap-1.5 text-amber-700">
                     <HelpCircle className="w-4 h-4 shrink-0" />
                     <h4 className="text-xs font-extrabold uppercase tracking-wider">Datos por Confirmar</h4>
                   </div>
-                  <ul className="space-y-1.5 text-xs text-slate-300 font-medium">
+                  <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
                     {pendingData.length > 0 ? (
                       pendingData.map((d, i) => (
                         <li key={i} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
                           <span>{d}</span>
                         </li>
                       ))
                     ) : (
-                      <li className="text-emerald-400 font-bold">¡Perfil conversacional completo!</li>
+                      <li className="text-emerald-700 font-bold">¡Perfil conversacional completo!</li>
                     )}
                   </ul>
                 </div>
@@ -857,23 +871,23 @@ export const InicioView: React.FC<InicioViewProps> = ({
 
               {/* BRIEF DEL ASESOR (SOFÍA) */}
               {activeSelectedLead.sofia.briefAsesor && (
-                <div className="bg-slate-800/90 border border-slate-700 rounded-2xl p-4.5 space-y-2 relative z-10">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-2">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-emerald-400" />
-                      <h4 className="text-xs font-black text-white uppercase tracking-wider">
+                      <FileText className="w-4 h-4 text-emerald-600" />
+                      <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
                         Brief Comercial Generado por Sofía (WhatsApp)
                       </h4>
                     </div>
                     <button
                       onClick={() => setBriefExpanded(!briefExpanded)}
-                      className="text-[11px] text-blue-400 hover:text-blue-300 font-bold underline cursor-pointer"
+                      className="text-[11px] text-[#003DA5] hover:text-blue-700 font-bold underline cursor-pointer"
                     >
                       {briefExpanded ? 'Ver menos' : 'Ver completo'}
                     </button>
                   </div>
                   <p
-                    className={`text-xs text-slate-200 leading-relaxed italic ${
+                    className={`text-xs text-slate-600 leading-relaxed italic ${
                       !briefExpanded ? 'line-clamp-2' : ''
                     }`}
                   >
@@ -881,6 +895,24 @@ export const InicioView: React.FC<InicioViewProps> = ({
                   </p>
                 </div>
               )}
+
+              {/* Helper Footer Note */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-4 border-t border-slate-100 text-[11px] text-slate-500">
+                <span className="flex items-center gap-1.5">
+                  <Info className="w-3.5 h-3.5 shrink-0" />
+                  La información se actualiza automáticamente con cada interacción o cambio relevante.
+                </span>
+                <span>
+                  ¿Necesitas ayuda?{' '}
+                  <button
+                    type="button"
+                    onClick={() => onNavigateToView('configuracion')}
+                    className="text-[#003DA5] font-bold underline hover:text-blue-700 cursor-pointer"
+                  >
+                    Ver guía rápida
+                  </button>
+                </span>
+              </div>
             </motion.div>
           </div>
         )}
@@ -888,82 +920,97 @@ export const InicioView: React.FC<InicioViewProps> = ({
         document.body
       )}
 
-      {/* 4. TAREAS COMERCIALES DEL DÍA & ALERTA DE INVENTARIOS */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-          <div className="flex items-center gap-2.5">
-            <CheckSquare className="w-4 h-4 text-[#003DA5]" />
-            <h2 className="text-sm font-extrabold text-slate-900 font-display">Operación Comercial del Día</h2>
-          </div>
-          <span className="text-[10px] font-black bg-[#FFD200] text-[#003DA5] px-2.5 py-0.5 rounded-full shadow-2xs">
-            Hoy
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-1">
-          {/* Tasks List */}
-          <div className="lg:col-span-2 space-y-2">
-            <div className="flex items-center justify-between">
-              <p className="text-xs font-bold text-slate-800">Tareas pendientes asignadas</p>
-              <span className="text-[10px] text-slate-500 font-medium">Clic para marcar como completada</span>
+      {/* 4. TAREAS COMERCIALES DEL DÍA & ALERTA DE INVENTARIOS — right-hand sidebar
+          alongside the leads table, matching the reference two-column workspace layout */}
+      <div className="xl:col-span-1 space-y-4">
+        <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs space-y-3">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+            <div className="flex items-center gap-2.5">
+              <CheckSquare className="w-4 h-4 text-[#003DA5]" />
+              <h2 className="text-sm font-extrabold text-slate-900 font-display">Operación Comercial del Día</h2>
             </div>
+            <span className="text-[10px] font-black bg-[#FFD200] text-[#003DA5] px-2.5 py-0.5 rounded-full shadow-2xs">
+              Hoy
+            </span>
+          </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {tasks.map((task) => (
-                <div
-                  key={task.id}
-                  onClick={() => onToggleTaskComplete(task.id)}
-                  className={`p-3 rounded-xl border text-xs transition-all cursor-pointer flex items-start gap-2.5 ${
-                    task.completed
-                      ? 'bg-slate-50 border-slate-200 opacity-60'
-                      : 'bg-white border-slate-200 hover:border-[#003DA5] shadow-2xs hover:shadow-xs'
-                  }`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={task.completed}
-                    onChange={() => {}}
-                    className="mt-0.5 rounded border-slate-300 text-[#003DA5] focus:ring-[#003DA5] cursor-pointer"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <p
-                      className={`font-bold truncate ${
-                        task.completed ? 'line-through text-slate-400' : 'text-slate-900'
-                      }`}
-                    >
-                      {task.title}
-                    </p>
-                    <div className="flex items-center gap-2 text-[10px] text-slate-500 mt-1">
-                      <span className="font-extrabold text-[#003DA5] truncate">{task.leadName}</span>
-                      <span>•</span>
-                      <span className="shrink-0">{task.dueTime}</span>
-                    </div>
+          <div className="flex items-center justify-between pt-1">
+            <p className="text-xs font-bold text-slate-800">Tareas pendientes asignadas</p>
+            <span className="text-[10px] text-slate-500 font-medium">Clic para completar</span>
+          </div>
+
+          <div className="space-y-2">
+            {tasks.slice(0, 6).map((task) => (
+              <div
+                key={task.id}
+                onClick={() => onToggleTaskComplete(task.id)}
+                className={`p-3 rounded-xl border text-xs transition-all cursor-pointer flex items-start gap-2.5 ${
+                  task.completed
+                    ? 'bg-slate-50 border-slate-200 opacity-60'
+                    : 'bg-white border-slate-200 hover:border-[#003DA5] shadow-2xs hover:shadow-xs'
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={task.completed}
+                  onChange={() => {}}
+                  className="mt-0.5 rounded border-slate-300 text-[#003DA5] focus:ring-[#003DA5] cursor-pointer"
+                />
+                <div className="flex-1 min-w-0">
+                  <p
+                    className={`font-bold truncate ${
+                      task.completed ? 'line-through text-slate-400' : 'text-slate-900'
+                    }`}
+                  >
+                    {task.title}
+                  </p>
+                  <div className="flex items-center gap-2 text-[10px] text-slate-500 mt-1">
+                    <span className="font-extrabold text-[#003DA5] truncate">{task.leadName}</span>
+                    <span>•</span>
+                    <span className="shrink-0">{task.dueTime}</span>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          {/* Inventory Push Alert Box */}
-          <div className="p-4 bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-transparent border border-amber-300/60 rounded-2xl space-y-2.5 flex flex-col justify-between shadow-2xs">
-            <div>
-              <div className="flex items-center gap-2 text-amber-950 font-black text-xs mb-1">
-                <Building2 className="w-4 h-4 text-amber-600 shrink-0" />
-                <span>Alerta de Inventario Vivienda</span>
-              </div>
-              <p className="text-xs text-slate-700 leading-relaxed font-medium">
-                <strong>Altos de Mosquera</strong> tiene 85 unidades VIS disponibles. Se activó bonificación comercial para cierres este mes.
-              </p>
-            </div>
+          {tasks.length > 6 && (
             <button
-              onClick={() => onNavigateToView('proyectos')}
-              className="text-xs text-[#003DA5] font-extrabold hover:underline flex items-center gap-1 cursor-pointer pt-2"
+              onClick={() => onNavigateToView('inicio')}
+              className="text-xs text-[#003DA5] font-extrabold hover:underline flex items-center gap-1 cursor-pointer pt-1"
             >
-              <span>Ver catálogo de proyectos</span>
+              <span>Ver todas las tareas ({tasks.length})</span>
               <ChevronRight className="w-3.5 h-3.5" />
             </button>
-          </div>
+          )}
         </div>
+
+        {/* Inventory Push Alert Box — with modern architectural housing towers illustration */}
+        <div className="relative p-4 bg-gradient-to-br from-amber-50/90 via-amber-100/50 to-orange-50/60 border border-amber-200/80 rounded-2xl space-y-2.5 overflow-hidden shadow-2xs">
+          <img
+            src="/housing_buildings.jpg"
+            alt="Ilustración Proyectos de Vivienda"
+            className="absolute bottom-0 right-0 w-36 h-32 object-contain object-bottom pointer-events-none select-none mix-blend-multiply"
+          />
+
+          <div className="relative z-10 max-w-[70%]">
+            <div className="flex items-center gap-2 text-amber-950 font-black text-xs mb-1">
+              <Building2 className="w-4 h-4 text-amber-600 shrink-0" />
+              <span>Alerta de Inventario Vivienda</span>
+            </div>
+            <p className="text-xs text-slate-700 leading-relaxed font-medium">
+              <strong>Altos de Mosquera</strong> tiene 85 unidades VIS disponibles. Se activó bonificación comercial para cierres este mes.
+            </p>
+          </div>
+          <button
+            onClick={() => onNavigateToView('proyectos')}
+            className="relative z-10 text-xs text-[#003DA5] font-extrabold hover:underline flex items-center gap-1 cursor-pointer pt-1"
+          >
+            <span>Ver catálogo de proyectos</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </div>
       </div>
     </div>
   );

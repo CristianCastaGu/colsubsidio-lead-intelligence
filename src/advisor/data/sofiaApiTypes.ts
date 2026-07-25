@@ -14,6 +14,7 @@ export interface SofiaApiDataCredito {
 export interface SofiaApiLead {
   lead_id: string;
   nombre: string;
+  telefono?: string;
   fuente?: string;
   proyecto_interes_original?: string;
   es_afiliado?: boolean | null;

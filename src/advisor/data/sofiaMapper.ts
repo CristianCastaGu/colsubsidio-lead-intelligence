@@ -47,6 +47,16 @@ export function dedupeLatestByLeadId(raw: SofiaApiLead[]): SofiaApiLead[] {
   return [...latest.values()];
 }
 
+/** Sofía sends the phone as bare digits with country code (e.g. "573124320140").
+ * Format it the same way the rest of the CRM displays Colombian numbers: "+57 312 432 0140". */
+function formatSofiaPhone(raw: string): string {
+  const digits = raw.replace(/\D/g, '');
+  if (digits.length === 12 && digits.startsWith('57')) {
+    return `+57 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8)}`;
+  }
+  return `+${digits}`;
+}
+
 function relativeLabel(iso: string): string {
   const diffMs = Date.now() - new Date(iso).getTime();
   const diffMin = diffMs / 60000;
@@ -124,7 +134,7 @@ export function mapToNewLead(raw: SofiaApiLead, projects: HousingProject[]): Lea
     id: raw.lead_id,
     name: raw.nombre,
     email: 'No disponible (canal WhatsApp)',
-    phone: 'Disponible en el hilo de WhatsApp',
+    phone: raw.telefono ? formatSofiaPhone(raw.telefono) : 'Disponible en el hilo de WhatsApp',
     city: raw.zona_actual || 'No especificado',
     channel: raw.fuente || 'WhatsApp Directo',
     campaign: 'Agente Sofía (WhatsApp)',
@@ -181,7 +191,11 @@ export function mergeSofiaLeads(existing: Lead[], rawLeads: SofiaApiLead[], proj
       changed = true;
     } else if (next[idx].sofia.timestamp !== raw.timestamp) {
       if (!changed) next = [...next];
-      next[idx] = { ...next[idx], sofia: mapToSofiaProfile(raw) };
+      next[idx] = {
+        ...next[idx],
+        sofia: mapToSofiaProfile(raw),
+        phone: raw.telefono ? formatSofiaPhone(raw.telefono) : next[idx].phone,
+      };
       changed = true;
     }
   }
