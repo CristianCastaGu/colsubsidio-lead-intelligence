@@ -2,7 +2,7 @@
 // route in server.ts (which only runs locally via `tsx server.ts`). Without
 // this file, Vercel deploys the app as a static site with no backend at all,
 // so this endpoint 404s and the advisor CRM shows "Sofía WhatsApp: Sin Conexión".
-import { fetchSofiaLeads } from "../lib/sofiaClient";
+import { fetchSofiaLeads } from "../lib/sofiaClient.js";
 
 export default async function handler(req: any, res: any) {
   try {

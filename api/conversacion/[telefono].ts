@@ -1,6 +1,6 @@
 // Vercel serverless function — production equivalent of the matching route in
 // server.ts. See api/sofia-leads.ts for why this file needs to exist at all.
-import { fetchConversacion } from "../../lib/sofiaClient";
+import { fetchConversacion } from "../../lib/sofiaClient.js";
 
 export default async function handler(req: any, res: any) {
   try {
