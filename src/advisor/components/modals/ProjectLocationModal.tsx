@@ -32,13 +32,25 @@ const POI_META: Record<PoiCategory, { label: string; color: string; Icon: React.
 // Real nearby points of interest from OpenStreetMap via the free, no-API-key Overpass
 // endpoint — not synthetic/made-up data. Radius kept small (1.2km) since this is meant
 // to answer "what's actually walkable/close by", not a general area search.
-const OVERPASS_URL = 'https://overpass-api.de/api/interpreter';
+//
+// The public Overpass instances are shared, free infrastructure — they get overloaded
+// and time out under load, which is exactly the "works sometimes" symptom. There's no
+// paid/reliable single endpoint to fall back to, so instead we try several known public
+// mirrors in order (each with its own short timeout) and only surface an error if every
+// single one fails — this is what actually fixes the intermittent failures, not a config
+// tweak on one URL.
+const OVERPASS_MIRRORS = [
+  'https://overpass-api.de/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+  'https://overpass.openstreetmap.ru/api/interpreter',
+];
 const SEARCH_RADIUS_M = 1200;
+const PER_MIRROR_TIMEOUT_MS = 8000;
 
 function buildOverpassQuery(lat: number, lng: number): string {
   const around = `around:${SEARCH_RADIUS_M},${lat},${lng}`;
   return `
-    [out:json][timeout:15];
+    [out:json][timeout:12];
     (
       node["shop"="mall"](${around});
       node["shop"="supermarket"](${around});
@@ -49,6 +61,31 @@ function buildOverpassQuery(lat: number, lng: number): string {
     );
     out center 20;
   `;
+}
+
+async function fetchOverpass(query: string): Promise<any> {
+  let lastError: unknown = null;
+  for (const url of OVERPASS_MIRRORS) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), PER_MIRROR_TIMEOUT_MS);
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        body: `data=${encodeURIComponent(query)}`,
+        signal: controller.signal,
+      });
+      clearTimeout(timer);
+      if (!res.ok) {
+        lastError = new Error(`${url} respondió ${res.status}`);
+        continue; // rate-limited or overloaded — try the next mirror
+      }
+      return await res.json();
+    } catch (err) {
+      clearTimeout(timer);
+      lastError = err; // timed out or network error — try the next mirror
+    }
+  }
+  throw lastError instanceof Error ? lastError : new Error('Todos los espejos de Overpass fallaron');
 }
 
 function categorize(tags: Record<string, string>): PoiCategory | null {
@@ -94,14 +131,7 @@ export const ProjectLocationModal: React.FC<ProjectLocationModalProps> = ({ proj
     setError(null);
     setPois([]);
 
-    fetch(OVERPASS_URL, {
-      method: 'POST',
-      body: `data=${encodeURIComponent(buildOverpassQuery(project.lat, project.lng))}`,
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error(`Overpass respondió ${res.status}`);
-        return res.json();
-      })
+    fetchOverpass(buildOverpassQuery(project.lat, project.lng))
       .then((data) => {
         if (cancelled) return;
         const found: Poi[] = (data.elements || [])
