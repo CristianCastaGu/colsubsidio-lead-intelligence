@@ -19,7 +19,7 @@ export const ConfiguracionView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2">
             <Settings className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Configuración del Motor de Inteligencia</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Configuración del Motor de Inteligencia</h1>
           </div>
           <p className="text-xs text-slate-500">
             Ajusta los umbrales de scoring, reglas de asignación comercial e integración con APIs de Colsubsidio.

@@ -57,7 +57,7 @@ export default function BuyerApp() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-[#FFD200] selection:text-gray-900">
+    <div className="h-full w-full overflow-y-auto bg-white flex flex-col font-sans selection:bg-[#FFD200] selection:text-gray-900">
       {/* Colsubsidio Header Navigation */}
       <Navbar
         currentPath={currentPath}
@@ -72,6 +72,7 @@ export default function BuyerApp() {
             initialSearchQuery={searchQuery}
             onOpenProjectModal={(p) => setSelectedProject(p)}
             onAskAI={handleAskAI}
+            onNavigateHome={() => handleNavigate('/vivienda')}
           />
         ) : (
           <ViviendaLandingPage

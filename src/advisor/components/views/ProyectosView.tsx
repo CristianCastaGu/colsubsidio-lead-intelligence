@@ -55,7 +55,7 @@ export const ProyectosView: React.FC<ProyectosViewProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <Building className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Catálogo de Proyectos de Vivienda Colsubsidio</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Catálogo de Proyectos de Vivienda Colsubsidio</h1>
           </div>
           <p className="text-xs text-slate-500">
             Inventario activo de proyectos VIS y No VIS en Bogotá y Cundinamarca con subsidios aplicables.

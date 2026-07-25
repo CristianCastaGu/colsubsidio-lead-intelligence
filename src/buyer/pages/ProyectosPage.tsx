@@ -7,12 +7,14 @@ interface ProyectosPageProps {
   initialSearchQuery?: string;
   onOpenProjectModal: (project: Project) => void;
   onAskAI: (query: string) => void;
+  onNavigateHome: () => void;
 }
 
 export const ProyectosPage: React.FC<ProyectosPageProps> = ({
   initialSearchQuery = '',
   onOpenProjectModal,
-  onAskAI
+  onAskAI,
+  onNavigateHome
 }) => {
   const [filters, setFilters] = useState<FilterState>({
     region: initialSearchQuery === 'Bogotá' || initialSearchQuery === 'Cundinamarca' ? initialSearchQuery : 'Todos',
@@ -69,9 +71,9 @@ export const ProyectosPage: React.FC<ProyectosPageProps> = ({
       {/* Breadcrumb */}
       <div className="bg-gray-100/80 border-b border-gray-200/60 py-2.5 px-4 sm:px-8 text-xs font-medium text-gray-600">
         <div className="max-w-7xl mx-auto flex items-center space-x-2">
-          <span className="hover:underline cursor-pointer text-[#003DA5]">Inicio</span>
+          <span onClick={onNavigateHome} className="hover:underline cursor-pointer text-[#003DA5]">Inicio</span>
           <span>/</span>
-          <span className="hover:underline cursor-pointer text-[#003DA5]">Vivienda</span>
+          <span onClick={onNavigateHome} className="hover:underline cursor-pointer text-[#003DA5]">Vivienda</span>
           <span>/</span>
           <span className="font-bold text-gray-900">Proyectos de Vivienda</span>
         </div>

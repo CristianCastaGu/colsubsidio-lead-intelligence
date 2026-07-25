@@ -14,6 +14,7 @@ import {
   UserPlus
 } from 'lucide-react';
 import { Lead, LeadStatus, LeadTemperature, HousingCategory } from '../../types';
+import { WhatsAppIcon } from '../icons/WhatsAppIcon';
 
 interface LeadsViewProps {
   leads: Lead[];
@@ -87,7 +88,7 @@ export const LeadsView: React.FC<LeadsViewProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <Users className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Directorio General de Leads (Contactos)</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Directorio General de Leads (Contactos)</h1>
           </div>
           <p className="text-xs text-slate-500">
             {leads.length} prospectos capturados de canales digitales, feria y afiliados a la Caja.
@@ -258,10 +259,18 @@ export const LeadsView: React.FC<LeadsViewProps> = ({
                     <div className="flex items-center justify-end gap-1.5">
                       <button
                         onClick={() => onOpenWhatsAppModal(lead)}
-                        className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-lg font-bold text-[11px] flex items-center gap-1 border border-emerald-200 cursor-pointer transition-colors"
+                        className="p-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg border border-[#25D366]/30 cursor-pointer transition-colors flex items-center justify-center"
+                        title="Enviar WhatsApp"
                       >
-                        <MessageSquare className="w-3 h-3 text-emerald-600" />
-                        <span>WhatsApp</span>
+                        <WhatsAppIcon className="w-4 h-4 fill-[#25D366]" />
+                      </button>
+
+                      <button
+                        onClick={() => alert(`Iniciando llamada comercial a ${lead.name} (${lead.phone})`)}
+                        className="p-1.5 bg-[#003DA5]/10 hover:bg-[#003DA5]/20 text-[#003DA5] rounded-lg border border-[#003DA5]/20 cursor-pointer transition-colors flex items-center justify-center"
+                        title="Llamar directamente"
+                      >
+                        <Phone className="w-4 h-4 text-[#003DA5]" />
                       </button>
 
                       <button

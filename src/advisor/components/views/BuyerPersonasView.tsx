@@ -33,7 +33,7 @@ export const BuyerPersonasView: React.FC<BuyerPersonasViewProps> = ({ personas }
         <div>
           <div className="flex items-center gap-2">
             <UserCheck className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Buyer Personas IA — Arquetipos de Compradores</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Buyer Personas IA — Arquetipos de Compradores</h1>
           </div>
           <p className="text-xs text-slate-500">
             Perfiles generados por IA mediante clustering de datos reales de afiliados y compradores de Colsubsidio Vivienda.

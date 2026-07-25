@@ -47,7 +47,7 @@ export const CampanasView: React.FC<CampanasViewProps> = ({ campaigns }) => {
         <div>
           <div className="flex items-center gap-2">
             <Megaphone className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Campañas & Contenido Generado con IA</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Campañas & Contenido Generado con IA</h1>
           </div>
           <p className="text-xs text-slate-500">
             Rendimiento de pauta digital y generador de copys optimizados para proyectos de vivienda Colsubsidio.

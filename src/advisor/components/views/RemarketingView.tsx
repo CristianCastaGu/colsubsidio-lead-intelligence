@@ -19,7 +19,7 @@ export const RemarketingView: React.FC<RemarketingViewProps> = ({ leads, onOpenW
         <div>
           <div className="flex items-center gap-2">
             <Repeat className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Remarketing & Secuencias de Nurturing</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Remarketing & Secuencias de Nurturing</h1>
           </div>
           <p className="text-xs text-slate-500">
             Automatización de mensajes segmentados por temperatura de lead (Hot / Warm / Cold) para reacelerar compra.

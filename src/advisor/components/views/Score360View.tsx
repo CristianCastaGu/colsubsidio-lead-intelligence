@@ -68,7 +68,7 @@ export const Score360View: React.FC<Score360ViewProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <Target className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-bold text-slate-900">Score 360° — Análisis Predictivo de Lead</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Score 360° — Análisis Predictivo de Lead</h1>
           </div>
           <p className="text-xs text-slate-500">
             Ficha unificada de calificación con modelo de machine learning para ventas de vivienda Colsubsidio.
@@ -105,7 +105,7 @@ export const Score360View: React.FC<Score360ViewProps> = ({
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="text-xl font-bold text-slate-900">{currentLead.name}</h2>
+                    <h2 className="text-xl font-black text-slate-900 font-sans tracking-tight">{currentLead.name}</h2>
                     <span
                       className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${
                         currentLead.temperature === 'Hot'

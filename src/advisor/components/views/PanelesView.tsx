@@ -43,7 +43,7 @@ export const PanelesView: React.FC = () => {
         <div>
           <div className="flex items-center gap-2">
             <BarChart3 className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="font-display text-lg font-bold text-slate-900">Paneles & Analítica de Gestión Comercial</h1>
+            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Paneles & Analítica de Gestión Comercial</h1>
           </div>
           <p className="text-xs text-slate-500">
             Cruce de {totalLeads} leads reales de pauta (Meta/Google Ads) con la base de afiliados y el catálogo de proyectos — perfilamiento

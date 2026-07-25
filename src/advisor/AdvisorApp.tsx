@@ -34,7 +34,6 @@ import { WhatsAppModal } from './components/modals/WhatsAppModal';
 export default function AdvisorApp() {
   const [currentView, setCurrentView] = useState<ViewType>('inicio');
   const [advisorName, setAdvisorName] = useState<string>('Carlos Rodríguez');
-  const [searchQuery, setSearchQuery] = useState<string>('');
 
   // Main Data States
   const [leads, setLeads] = useState<Lead[]>(MOCK_LEADS);
@@ -143,15 +142,8 @@ export default function AdvisorApp() {
     <div className="flex-1 flex flex-col bg-[#F5F6F8] font-sans text-slate-800 overflow-hidden selection:bg-[#FFD200] selection:text-[#003DA5]">
       {/* Colsubsidio Top Branded Header Bar */}
       <Header
-        onOpenNewLeadModal={() => setIsNewLeadModalOpen(true)}
         advisorName={advisorName}
         setAdvisorName={setAdvisorName}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-        leads={leads}
-        projects={projects}
-        onSelectLeadForScore360={handleSelectLeadForScore360}
-        onNavigateToView={(view) => setCurrentView(view)}
       />
 
       {/* Main Body with Sidebar + View Content */}
@@ -167,8 +159,12 @@ export default function AdvisorApp() {
           sofiaStatus={sofiaStatus}
         />
 
-        {/* Dynamic View Canvas */}
-        <main className="flex-1 p-4 lg:p-6 overflow-y-auto max-w-7xl mx-auto w-full">
+        {/* Dynamic View Canvas — the scrollable box spans the full remaining width (sidebar
+            to right edge), so scrolling works over the side gutters too, not just the
+            centered content; the centering/max-width lives on the inner wrapper instead.
+            Scrollbar hidden for clean UX, scrolling itself stays fully functional. */}
+        <main className="flex-1 overflow-y-auto scrollbar-hide">
+        <div className="p-4 lg:p-6 max-w-7xl mx-auto w-full">
           {currentView === 'inicio' && (
             <InicioView
               advisorName={advisorName}
@@ -240,6 +236,7 @@ export default function AdvisorApp() {
           )}
 
           {currentView === 'configuracion' && <ConfiguracionView />}
+        </div>
         </main>
       </div>
 
