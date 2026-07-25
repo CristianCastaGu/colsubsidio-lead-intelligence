@@ -100,6 +100,8 @@ export interface HousingProject {
   type: HousingCategory;
   municipality: string;
   address: string;
+  lat: number;
+  lng: number;
   minPriceCOP: number;
   maxPriceCOP: number;
   smmlvPrice?: string;

@@ -13,6 +13,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { HousingProject, HousingCategory, Lead } from '../../types';
+import { ProjectLocationModal } from '../modals/ProjectLocationModal';
 
 interface ProyectosViewProps {
   projects: HousingProject[];
@@ -29,6 +30,7 @@ export const ProyectosView: React.FC<ProyectosViewProps> = ({
   const [selectedMunicipality, setSelectedMunicipality] = useState<string>('todos');
   const [onlyRotationAlert, setOnlyRotationAlert] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [locationProject, setLocationProject] = useState<HousingProject | null>(null);
 
   // Extract unique municipalities
   const municipalities = Array.from(new Set(projects.map((p) => p.municipality)));
@@ -236,10 +238,18 @@ export const ProyectosView: React.FC<ProyectosViewProps> = ({
               </div>
 
               {/* Card Footer Action */}
-              <div className="p-4 pt-0 border-t border-slate-100 mt-2">
+              <div className="p-4 pt-0 border-t border-slate-100 mt-2 space-y-2">
+                <button
+                  onClick={() => setLocationProject(project)}
+                  className="w-full mt-3 bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-bold text-xs py-2 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-[#003DA5]" />
+                  <span>Ver Ubicación y Puntos de Interés</span>
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
                 <button
                   onClick={() => onSelectProjectForLeads(project.id)}
-                  className="w-full mt-3 bg-slate-50 hover:bg-[#003DA5] hover:text-white text-[#003DA5] border border-slate-200 font-bold text-xs py-2 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-slate-50 hover:bg-[#003DA5] hover:text-white text-[#003DA5] border border-slate-200 font-bold text-xs py-2 rounded-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <Users className="w-3.5 h-3.5" />
                   <span>Ver {interestedLeadsCount} Leads Interesados</span>
@@ -250,6 +260,8 @@ export const ProyectosView: React.FC<ProyectosViewProps> = ({
           );
         })}
       </div>
+
+      <ProjectLocationModal project={locationProject} onClose={() => setLocationProject(null)} />
     </div>
   );
 };

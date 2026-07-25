@@ -8,7 +8,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1000",
     "name": "Camilo Rojas Castro",
-    "email": "camilo.rojas@outlook.com",
+    "email": "camilo.rojas@gmail.com",
     "phone": "+57 359 652 8081",
     "city": "Chía",
     "channel": "Meta Ads",
@@ -25,14 +25,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "inari",
     "matchPercentage": 40,
     "scores": {
-      "fit": 9,
-      "intent": 45,
-      "engagement": 37,
-      "conversion": 29,
-      "total": 30
+      "fit": 13,
+      "intent": 48,
+      "engagement": 51,
+      "conversion": 35,
+      "total": 35
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (45/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (48/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Ayer",
@@ -41,19 +41,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -109,14 +109,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "saman",
     "matchPercentage": 40,
     "scores": {
-      "fit": 9,
-      "intent": 47,
-      "engagement": 32,
-      "conversion": 28,
-      "total": 29
+      "fit": 15,
+      "intent": 55,
+      "engagement": 49,
+      "conversion": 47,
+      "total": 41
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (47/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (55/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 21 horas",
     "lastInteraction": "Hace 1 min",
@@ -125,25 +125,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -187,65 +187,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 223780000,
-    "downPaymentCOP": 17902400,
+    "budgetCOP": 220070000,
+    "downPaymentCOP": 17605600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 55,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 26,
-      "intent": 83,
-      "engagement": 67,
-      "conversion": 59,
-      "total": 58
+      "fit": 19,
+      "intent": 69,
+      "engagement": 37,
+      "conversion": 40,
+      "total": 42
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (83/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -284,13 +272,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1003",
     "name": "Santiago Rojas Vargas",
-    "email": "santiago.rojas@outlook.com",
+    "email": "santiago.rojas@hotmail.com",
     "phone": "+57 353 232 8873",
     "city": "Ricaurte",
     "channel": "Google Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 253300000,
     "downPaymentCOP": 20264000,
@@ -299,43 +287,49 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 6,
-      "intent": 65,
-      "engagement": 39,
-      "conversion": 46,
-      "total": 39
+      "fit": 4,
+      "intent": 77,
+      "engagement": 56,
+      "conversion": 48,
+      "total": 46
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (77/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
         "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -374,16 +368,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1004",
     "name": "Miguel Ortiz Moreno",
-    "email": "miguel.ortiz@gmail.com",
+    "email": "miguel.ortiz@hotmail.com",
     "phone": "+57 305 249 6800",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Perdido",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 253320000,
-    "downPaymentCOP": 20265600,
+    "budgetCOP": 253300000,
+    "downPaymentCOP": 20264000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -391,29 +385,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "saman",
     "matchPercentage": 40,
     "scores": {
-      "fit": 16,
-      "intent": 61,
-      "engagement": 47,
-      "conversion": 34,
-      "total": 39
+      "fit": 11,
+      "intent": 59,
+      "engagement": 35,
+      "conversion": 28,
+      "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
         "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -452,52 +452,46 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1005",
     "name": "Sebastián Pineda Díaz",
-    "email": "sebastian.pineda@gmail.com",
+    "email": "sebastian.pineda@hotmail.com",
     "phone": "+57 304 172 6318",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
     "status": "Perdido",
-    "temperature": "Warm",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 185560000,
-    "downPaymentCOP": 14844800,
+    "budgetCOP": 177860000,
+    "downPaymentCOP": 14228800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 52,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 28,
-      "intent": 76,
-      "engagement": 58,
-      "conversion": 51,
-      "total": 53
+      "fit": 18,
+      "intent": 69,
+      "engagement": 38,
+      "conversion": 42,
+      "total": 43
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100).",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -541,7 +535,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Fusagasugá",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "En Calificación",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 529000000,
@@ -553,29 +547,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 12,
-      "intent": 53,
-      "engagement": 39,
-      "conversion": 29,
-      "total": 33
+      "fit": 10,
+      "intent": 46,
+      "engagement": 43,
+      "conversion": 27,
+      "total": 31
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (53/100).",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (46/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 20 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
@@ -628,8 +628,8 @@ export const REAL_LEADS: Lead[] = [
     "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 189600000,
-    "downPaymentCOP": 15168000,
+    "budgetCOP": 187280000,
+    "downPaymentCOP": 14982400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
@@ -637,24 +637,18 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "pamplona",
     "matchPercentage": 40,
     "scores": {
-      "fit": 20,
-      "intent": 59,
-      "engagement": 48,
+      "fit": 16,
+      "intent": 44,
+      "engagement": 20,
       "conversion": 35,
-      "total": 40
+      "total": 30
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100).",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (44/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
-      },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
@@ -665,7 +659,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -704,7 +698,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1008",
     "name": "Ángela Reyes Castro",
-    "email": "angela.reyes@outlook.com",
+    "email": "angela.reyes@hotmail.com",
     "phone": "+57 323 248 2565",
     "city": "Chía",
     "channel": "Google Ads",
@@ -712,23 +706,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 214830000,
-    "downPaymentCOP": 17186400,
+    "budgetCOP": 216480000,
+    "downPaymentCOP": 17318400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 57,
+    "matchPercentage": 68,
     "scores": {
-      "fit": 51,
-      "intent": 63,
-      "engagement": 56,
-      "conversion": 60,
-      "total": 58
+      "fit": 56,
+      "intent": 79,
+      "engagement": 63,
+      "conversion": 69,
+      "total": 67
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -743,31 +737,31 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -806,58 +800,64 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1009",
     "name": "Valentina Moreno Rincón",
-    "email": "valentina.moreno@hotmail.com",
+    "email": "valentina.moreno@gmail.com",
     "phone": "+57 302 871 3077",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "Pre-Aprobado",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 179400000,
-    "downPaymentCOP": 14352000,
+    "budgetCOP": 182480000,
+    "downPaymentCOP": 14598400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 46,
+    "matchPercentage": 52,
     "scores": {
-      "fit": 20,
-      "intent": 72,
-      "engagement": 56,
-      "conversion": 45,
-      "total": 48
+      "fit": 24,
+      "intent": 80,
+      "engagement": 52,
+      "conversion": 61,
+      "total": 55
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (80/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -901,47 +901,59 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "En Calificación",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 181710000,
-    "downPaymentCOP": 14536800,
+    "budgetCOP": 182480000,
+    "downPaymentCOP": 14598400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 40,
+    "matchPercentage": 47,
     "scores": {
-      "fit": 23,
-      "intent": 46,
-      "engagement": 25,
-      "conversion": 40,
-      "total": 34
+      "fit": 24,
+      "intent": 69,
+      "engagement": 47,
+      "conversion": 42,
+      "total": 46
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (46/100).",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -980,13 +992,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1011",
     "name": "Juan Hernández Ospina",
-    "email": "juan.hernandez@hotmail.com",
+    "email": "juan.hernandez@outlook.com",
     "phone": "+57 352 172 7533",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
     "budgetCOP": 529000000,
     "downPaymentCOP": 105800000,
@@ -995,37 +1007,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 40,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 9,
-      "intent": 53,
-      "engagement": 54,
-      "conversion": 35,
-      "total": 36
+      "fit": 15,
+      "intent": 71,
+      "engagement": 61,
+      "conversion": 54,
+      "total": 49
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -1070,31 +1088,31 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1012",
     "name": "Javier Romero Ruiz",
-    "email": "javier.romero@gmail.com",
+    "email": "javier.romero@hotmail.com",
     "phone": "+57 359 991 3412",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
     "status": "Pre-Aprobado",
-    "temperature": "Hot",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 195570000,
-    "downPaymentCOP": 15645600,
+    "budgetCOP": 188640000,
+    "downPaymentCOP": 15091200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 58,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 41,
-      "intent": 74,
-      "engagement": 57,
-      "conversion": 58,
-      "total": 58
+      "fit": 32,
+      "intent": 63,
+      "engagement": 39,
+      "conversion": 50,
+      "total": 47
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (74/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 23 horas",
     "lastInteraction": "Hace 1 min",
@@ -1103,7 +1121,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
@@ -1115,19 +1133,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -1166,7 +1184,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1013",
     "name": "Yolanda Cárdenas Cárdenas",
-    "email": "yolanda.cardenas@outlook.com",
+    "email": "yolanda.cardenas@gmail.com",
     "phone": "+57 325 551 1258",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -1184,13 +1202,13 @@ export const REAL_LEADS: Lead[] = [
     "matchPercentage": 40,
     "scores": {
       "fit": 20,
-      "intent": 51,
-      "engagement": 26,
-      "conversion": 37,
-      "total": 35
+      "intent": 52,
+      "engagement": 32,
+      "conversion": 30,
+      "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (51/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (52/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
@@ -1199,25 +1217,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -1256,67 +1274,49 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1014",
     "name": "Adriana Herrera Vargas",
-    "email": "adriana.herrera@gmail.com",
+    "email": "adriana.herrera@hotmail.com",
     "phone": "+57 316 688 5794",
     "city": "Ubaté",
     "channel": "Google Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Ganado",
-    "temperature": "Hot",
+    "status": "Cita Agendada",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 162220000,
-    "downPaymentCOP": 12977600,
+    "budgetCOP": 162400000,
+    "downPaymentCOP": 12992000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 53,
+    "matchPercentage": 51,
     "scores": {
-      "fit": 29,
-      "intent": 76,
-      "engagement": 57,
-      "conversion": 62,
-      "total": 56
+      "fit": 30,
+      "intent": 72,
+      "engagement": 40,
+      "conversion": 45,
+      "total": 48
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 7 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Promesa de compraventa firmada",
-        "details": "Firmó promesa de compraventa.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Móvil Chrome"
@@ -1325,7 +1325,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -1369,35 +1369,41 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 531000000,
-    "downPaymentCOP": 106200000,
+    "budgetCOP": 532600000,
+    "downPaymentCOP": 106520000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 20,
-      "intent": 54,
-      "engagement": 31,
-      "conversion": 32,
-      "total": 35
+      "fit": 24,
+      "intent": 66,
+      "engagement": 64,
+      "conversion": 52,
+      "total": 50
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (54/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
@@ -1406,7 +1412,7 @@ export const REAL_LEADS: Lead[] = [
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "iPhone"
@@ -1415,7 +1421,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -1454,7 +1460,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1016",
     "name": "Héctor Moreno Ruiz",
-    "email": "hector.moreno@outlook.com",
+    "email": "hector.moreno@hotmail.com",
     "phone": "+57 354 709 5573",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -1462,8 +1468,8 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 205920000,
-    "downPaymentCOP": 16473600,
+    "budgetCOP": 206910000,
+    "downPaymentCOP": 16552800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
@@ -1471,14 +1477,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "versalles",
     "matchPercentage": 40,
     "scores": {
-      "fit": 24,
-      "intent": 51,
-      "engagement": 37,
-      "conversion": 37,
-      "total": 38
+      "fit": 27,
+      "intent": 50,
+      "engagement": 47,
+      "conversion": 38,
+      "total": 40
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (51/100).",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (50/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 16 horas",
     "lastInteraction": "Hace 1 min",
@@ -1538,13 +1544,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1017",
     "name": "Daniel Ruiz Suárez",
-    "email": "daniel.ruiz@outlook.com",
+    "email": "daniel.ruiz@hotmail.com",
     "phone": "+57 328 433 8760",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
     "status": "Perdido",
-    "temperature": "Cold",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
     "downPaymentCOP": 121600000,
@@ -1553,37 +1559,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 40,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 8,
-      "intent": 69,
-      "engagement": 48,
-      "conversion": 34,
-      "total": 40
+      "fit": 13,
+      "intent": 72,
+      "engagement": 54,
+      "conversion": 50,
+      "total": 47
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (69/100).",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (72/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -1622,16 +1634,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1018",
     "name": "Juan García Álvarez",
-    "email": "juan.garcia@gmail.com",
+    "email": "juan.garcia@outlook.com",
     "phone": "+57 325 028 8055",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 181710000,
-    "downPaymentCOP": 14536800,
+    "budgetCOP": 184020000,
+    "downPaymentCOP": 14721600,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -1639,47 +1651,53 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "la-arboleda",
     "matchPercentage": 53,
     "scores": {
-      "fit": 23,
-      "intent": 82,
-      "engagement": 44,
-      "conversion": 57,
-      "total": 53
+      "fit": 26,
+      "intent": 79,
+      "engagement": 48,
+      "conversion": 59,
+      "total": 54
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (82/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Android"
+      },
       {
         "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -1723,7 +1741,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Perdido",
+    "status": "Nuevo",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 217950000,
@@ -1735,29 +1753,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "bosque-turpial",
     "matchPercentage": 40,
     "scores": {
-      "fit": 12,
+      "fit": 15,
       "intent": 39,
-      "engagement": 24,
-      "conversion": 20,
-      "total": 24
+      "engagement": 26,
+      "conversion": 29,
+      "total": 28
     },
     "priority": "Baja",
     "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (39/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -1801,50 +1819,44 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 204930000,
-    "downPaymentCOP": 16394400,
+    "budgetCOP": 206910000,
+    "downPaymentCOP": 16552800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 45,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 21,
-      "intent": 68,
-      "engagement": 54,
-      "conversion": 56,
-      "total": 49
+      "fit": 27,
+      "intent": 59,
+      "engagement": 39,
+      "conversion": 36,
+      "total": 41
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (68/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
         "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "WhatsApp Web"
@@ -1892,58 +1904,46 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1021",
     "name": "Javier Gómez Romero",
-    "email": "javier.gomez@gmail.com",
+    "email": "javier.gomez@outlook.com",
     "phone": "+57 302 961 4192",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 193660000,
-    "downPaymentCOP": 15492800,
+    "budgetCOP": 190760000,
+    "downPaymentCOP": 15260800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 44,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 27,
-      "intent": 60,
-      "engagement": 61,
-      "conversion": 42,
-      "total": 46
+      "fit": 22,
+      "intent": 51,
+      "engagement": 24,
+      "conversion": 41,
+      "total": 36
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (51/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
         "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -1990,23 +1990,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 237890000,
-    "downPaymentCOP": 19031200,
+    "budgetCOP": 238250000,
+    "downPaymentCOP": 19060000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 42,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 21,
-      "intent": 63,
-      "engagement": 54,
-      "conversion": 44,
+      "fit": 25,
+      "intent": 64,
+      "engagement": 37,
+      "conversion": 52,
       "total": 45
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Ayer",
@@ -2018,28 +2018,28 @@ export const REAL_LEADS: Lead[] = [
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -2078,64 +2078,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1023",
     "name": "Andrés Torres Pardo",
-    "email": "andres.torres@gmail.com",
+    "email": "andres.torres@outlook.com",
     "phone": "+57 322 621 3828",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Calificación",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 142510000,
-    "downPaymentCOP": 11400800,
+    "budgetCOP": 141360000,
+    "downPaymentCOP": 11308800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 46,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 37,
-      "intent": 55,
-      "engagement": 50,
-      "conversion": 43,
-      "total": 46
+      "fit": 32,
+      "intent": 42,
+      "engagement": 44,
+      "conversion": 38,
+      "total": 39
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (55/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (42/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -2174,35 +2162,47 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1024",
     "name": "Mónica Ospina Castro",
-    "email": "monica.ospina@outlook.com",
+    "email": "monica.ospina@gmail.com",
     "phone": "+57 307 567 9047",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "No VIS",
-    "budgetCOP": 529800000,
-    "downPaymentCOP": 105960000,
+    "budgetCOP": 531400000,
+    "downPaymentCOP": 106280000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 41,
+    "matchPercentage": 51,
     "scores": {
-      "fit": 17,
-      "intent": 65,
-      "engagement": 52,
-      "conversion": 42,
-      "total": 44
+      "fit": 21,
+      "intent": 80,
+      "engagement": 63,
+      "conversion": 53,
+      "total": 54
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (80/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
+      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -2213,10 +2213,10 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "iPhone"
@@ -2225,7 +2225,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -2264,12 +2264,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1025",
     "name": "Paola Ospina Mora",
-    "email": "paola.ospina@hotmail.com",
+    "email": "paola.ospina@outlook.com",
     "phone": "+57 322 928 9438",
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 256300000,
@@ -2281,24 +2281,18 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "inari",
     "matchPercentage": 40,
     "scores": {
-      "fit": 9,
-      "intent": 63,
-      "engagement": 43,
-      "conversion": 47,
-      "total": 40
+      "fit": 15,
+      "intent": 61,
+      "engagement": 51,
+      "conversion": 42,
+      "total": 42
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
-      },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
@@ -2309,7 +2303,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -2348,64 +2342,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1026",
     "name": "Tatiana Herrera Rodríguez",
-    "email": "tatiana.herrera@gmail.com",
+    "email": "tatiana.herrera@hotmail.com",
     "phone": "+57 309 920 1885",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 171860000,
-    "downPaymentCOP": 13748800,
+    "budgetCOP": 174800000,
+    "downPaymentCOP": 13984000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 46,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 33,
-      "intent": 58,
-      "engagement": 53,
-      "conversion": 55,
-      "total": 49
+      "fit": 40,
+      "intent": 55,
+      "engagement": 27,
+      "conversion": 41,
+      "total": 43
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (55/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -2444,7 +2426,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1027",
     "name": "Nicolás Ríos González",
-    "email": "nicolas.rios@hotmail.com",
+    "email": "nicolas.rios@outlook.com",
     "phone": "+57 302 761 3681",
     "city": "Chía",
     "channel": "Meta Ads",
@@ -2461,14 +2443,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "inari",
     "matchPercentage": 40,
     "scores": {
-      "fit": 6,
-      "intent": 66,
+      "fit": 13,
+      "intent": 62,
       "engagement": 44,
-      "conversion": 45,
-      "total": 40
+      "conversion": 48,
+      "total": 42
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
@@ -2483,13 +2465,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
@@ -2539,65 +2521,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "No VIS",
-    "budgetCOP": 533400000,
-    "downPaymentCOP": 106680000,
+    "budgetCOP": 533000000,
+    "downPaymentCOP": 106600000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 56,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 26,
-      "intent": 85,
-      "engagement": 52,
-      "conversion": 50,
-      "total": 54
+      "fit": 25,
+      "intent": 70,
+      "engagement": 40,
+      "conversion": 38,
+      "total": 44
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (85/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (70/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -2636,7 +2606,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1029",
     "name": "Katherine Jiménez Ríos",
-    "email": "katherine.jimenez@hotmail.com",
+    "email": "katherine.jimenez@gmail.com",
     "phone": "+57 355 199 6390",
     "city": "Soacha",
     "channel": "Meta Ads",
@@ -2644,23 +2614,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Ganado",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 154700000,
-    "downPaymentCOP": 12376000,
+    "budgetCOP": 154010000,
+    "downPaymentCOP": 12320800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": false,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 77,
+    "matchPercentage": 73,
     "scores": {
-      "fit": 93,
-      "intent": 61,
-      "engagement": 53,
-      "conversion": 68,
-      "total": 70
+      "fit": 87,
+      "intent": 58,
+      "engagement": 41,
+      "conversion": 62,
+      "total": 64
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (93/100). Ya completó 7 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (87/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -2675,37 +2645,37 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -2744,7 +2714,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1030",
     "name": "Diego Gutiérrez González",
-    "email": "diego.gutierrez@gmail.com",
+    "email": "diego.gutierrez@hotmail.com",
     "phone": "+57 324 853 0827",
     "city": "Soacha",
     "channel": "Google Ads",
@@ -2752,23 +2722,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 180260000,
-    "downPaymentCOP": 14420800,
+    "budgetCOP": 181100000,
+    "downPaymentCOP": 14488000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 61,
+    "matchPercentage": 63,
     "scores": {
-      "fit": 53,
-      "intent": 69,
-      "engagement": 41,
+      "fit": 55,
+      "intent": 70,
+      "engagement": 49,
       "conversion": 59,
-      "total": 57
+      "total": 59
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (70/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 1 min",
@@ -2777,16 +2747,16 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "Desktop Chrome"
@@ -2807,7 +2777,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -2846,13 +2816,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1031",
     "name": "Ana Torres Díaz",
-    "email": "ana.torres@gmail.com",
+    "email": "ana.torres@hotmail.com",
     "phone": "+57 309 855 5359",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Perdido",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
     "budgetCOP": 529000000,
     "downPaymentCOP": 105800000,
@@ -2861,37 +2831,37 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 14,
-      "intent": 60,
-      "engagement": 46,
-      "conversion": 32,
-      "total": 38
+      "fit": 7,
+      "intent": 74,
+      "engagement": 59,
+      "conversion": 52,
+      "total": 47
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (74/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
@@ -2936,7 +2906,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1032",
     "name": "Lina Rincón Romero",
-    "email": "lina.rincon@gmail.com",
+    "email": "lina.rincon@hotmail.com",
     "phone": "+57 319 364 6063",
     "city": "Fusagasugá",
     "channel": "Google Ads",
@@ -2944,44 +2914,44 @@ export const REAL_LEADS: Lead[] = [
     "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 259240000,
-    "downPaymentCOP": 20739200,
+    "budgetCOP": 259660000,
+    "downPaymentCOP": 20772800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "inari",
-    "matchPercentage": 46,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 22,
-      "intent": 69,
-      "engagement": 46,
-      "conversion": 50,
-      "total": 47
+      "fit": 23,
+      "intent": 62,
+      "engagement": 54,
+      "conversion": 43,
+      "total": 45
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
@@ -3026,7 +2996,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1033",
     "name": "Andrés Rincón Muñoz",
-    "email": "andres.rincon@hotmail.com",
+    "email": "andres.rincon@gmail.com",
     "phone": "+57 358 006 7590",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -3034,23 +3004,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 208740000,
-    "downPaymentCOP": 16699200,
+    "budgetCOP": 207000000,
+    "downPaymentCOP": 16560000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 63,
+    "matchPercentage": 59,
     "scores": {
-      "fit": 53,
-      "intent": 72,
-      "engagement": 45,
-      "conversion": 62,
-      "total": 60
+      "fit": 50,
+      "intent": 67,
+      "engagement": 38,
+      "conversion": 53,
+      "total": 54
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -3059,19 +3029,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
@@ -3080,16 +3050,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -3128,7 +3098,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1034",
     "name": "Tatiana Jiménez Álvarez",
-    "email": "tatiana.jimenez@gmail.com",
+    "email": "tatiana.jimenez@hotmail.com",
     "phone": "+57 313 753 9747",
     "city": "Bogotá",
     "channel": "Google Ads",
@@ -3136,23 +3106,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 532600000,
-    "downPaymentCOP": 106520000,
+    "budgetCOP": 530600000,
+    "downPaymentCOP": 106120000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 45,
+    "matchPercentage": 49,
     "scores": {
-      "fit": 24,
-      "intent": 66,
-      "engagement": 43,
-      "conversion": 52,
-      "total": 47
+      "fit": 19,
+      "intent": 78,
+      "engagement": 59,
+      "conversion": 50,
+      "total": 51
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (78/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -3161,31 +3131,31 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -3224,64 +3194,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1035",
     "name": "Sofía Castillo Vargas",
-    "email": "sofia.castillo@gmail.com",
+    "email": "sofia.castillo@outlook.com",
     "phone": "+57 317 222 0513",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Bogota No Vis",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 253540000,
-    "downPaymentCOP": 20283200,
+    "budgetCOP": 253460000,
+    "downPaymentCOP": 20276800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 52,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 27,
-      "intent": 76,
-      "engagement": 69,
-      "conversion": 50,
-      "total": 55
+      "fit": 23,
+      "intent": 66,
+      "engagement": 46,
+      "conversion": 52,
+      "total": 47
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -3326,7 +3290,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1036",
     "name": "Héctor Ospina García",
-    "email": "hector.ospina@gmail.com",
+    "email": "hector.ospina@hotmail.com",
     "phone": "+57 303 872 4658",
     "city": "Ciudadela Calle 80",
     "channel": "Google Ads",
@@ -3341,16 +3305,16 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 50,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 13,
-      "intent": 86,
-      "engagement": 54,
-      "conversion": 48,
-      "total": 51
+      "fit": 10,
+      "intent": 70,
+      "engagement": 63,
+      "conversion": 52,
+      "total": 48
     },
     "priority": "Media",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (86/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (70/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -3359,25 +3323,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -3421,8 +3385,8 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 146190000,
     "downPaymentCOP": 11695200,
@@ -3435,27 +3399,21 @@ export const REAL_LEADS: Lead[] = [
     "scores": {
       "fit": 53,
       "intent": 62,
-      "engagement": 47,
-      "conversion": 60,
-      "total": 56
+      "engagement": 36,
+      "conversion": 53,
+      "total": 53
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 22 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
@@ -3473,13 +3431,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -3526,62 +3484,62 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 142050000,
-    "downPaymentCOP": 11364000,
+    "budgetCOP": 143200000,
+    "downPaymentCOP": 11456000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 61,
+    "matchPercentage": 63,
     "scores": {
-      "fit": 35,
-      "intent": 86,
-      "engagement": 66,
-      "conversion": 60,
-      "total": 62
+      "fit": 40,
+      "intent": 85,
+      "engagement": 73,
+      "conversion": 59,
+      "total": 64
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (86/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (85/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Hace 2 días",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -3620,7 +3578,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1039",
     "name": "Hernán Pardo Acosta",
-    "email": "hernan.pardo@hotmail.com",
+    "email": "hernan.pardo@outlook.com",
     "phone": "+57 323 996 2391",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -3638,40 +3596,40 @@ export const REAL_LEADS: Lead[] = [
     "matchPercentage": 40,
     "scores": {
       "fit": 13,
-      "intent": 60,
-      "engagement": 51,
-      "conversion": 45,
-      "total": 42
+      "intent": 59,
+      "engagement": 41,
+      "conversion": 30,
+      "total": 36
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -3710,58 +3668,46 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1040",
     "name": "Fernando Ospina Ruiz",
-    "email": "fernando.ospina@hotmail.com",
+    "email": "fernando.ospina@gmail.com",
     "phone": "+57 316 884 8427",
     "city": "Girardot",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 205590000,
-    "downPaymentCOP": 16447200,
+    "budgetCOP": 204270000,
+    "downPaymentCOP": 16341600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 40,
+    "matchPercentage": 42,
     "scores": {
-      "fit": 23,
-      "intent": 43,
-      "engagement": 49,
-      "conversion": 39,
-      "total": 37
+      "fit": 19,
+      "intent": 65,
+      "engagement": 43,
+      "conversion": 47,
+      "total": 44
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (43/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -3805,7 +3751,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Ganado",
+    "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
     "budgetCOP": 244100000,
@@ -3815,43 +3761,37 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": false,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 77,
+    "matchPercentage": 81,
     "scores": {
-      "fit": 99,
-      "intent": 55,
-      "engagement": 28,
-      "conversion": 59,
-      "total": 64
+      "fit": 98,
+      "intent": 64,
+      "engagement": 49,
+      "conversion": 80,
+      "total": 75
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (99/100). Ya completó 7 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (98/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Promesa de compraventa firmada",
-        "details": "Firmó promesa de compraventa.",
-        "device": "WhatsApp Web"
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
@@ -3863,7 +3803,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
@@ -3913,38 +3853,32 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "En Calificación",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 184020000,
-    "downPaymentCOP": 14721600,
+    "budgetCOP": 180940000,
+    "downPaymentCOP": 14475200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 49,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 26,
-      "intent": 71,
-      "engagement": 37,
-      "conversion": 39,
-      "total": 45
+      "fit": 22,
+      "intent": 51,
+      "engagement": 43,
+      "conversion": 47,
+      "total": 41
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (51/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
         "timestamp": "Hace 2 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Desktop Chrome"
@@ -3953,13 +3887,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -4013,16 +3947,16 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": false,
     "recommendedProjectId": "saman",
-    "matchPercentage": 83,
+    "matchPercentage": 88,
     "scores": {
-      "fit": 97,
-      "intent": 69,
-      "engagement": 58,
-      "conversion": 74,
-      "total": 76
+      "fit": 99,
+      "intent": 76,
+      "engagement": 65,
+      "conversion": 86,
+      "total": 83
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (97/100). Ya completó 7 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (99/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -4031,13 +3965,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Promesa de compraventa firmada",
         "details": "Firmó promesa de compraventa.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
@@ -4046,7 +3980,7 @@ export const REAL_LEADS: Lead[] = [
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "WhatsApp Web"
@@ -4055,19 +3989,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -4111,7 +4045,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Girardot",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
@@ -4123,35 +4057,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "reserva-guayacan",
     "matchPercentage": 40,
     "scores": {
-      "fit": 9,
-      "intent": 65,
-      "engagement": 51,
-      "conversion": 35,
-      "total": 39
+      "fit": 4,
+      "intent": 59,
+      "engagement": 41,
+      "conversion": 32,
+      "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
@@ -4196,12 +4124,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1045",
     "name": "Tatiana Medina Rojas",
-    "email": "tatiana.medina@hotmail.com",
+    "email": "tatiana.medina@gmail.com",
     "phone": "+57 359 947 9873",
     "city": "Ricaurte",
     "channel": "Google Ads",
     "campaign": "Familia Maipore",
-    "status": "Perdido",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 253300000,
@@ -4211,31 +4139,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 40,
+    "matchPercentage": 42,
     "scores": {
-      "fit": 13,
-      "intent": 62,
-      "engagement": 48,
-      "conversion": 41,
-      "total": 41
+      "fit": 9,
+      "intent": 75,
+      "engagement": 39,
+      "conversion": 47,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Chrome"
+      },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -4274,7 +4214,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1046",
     "name": "Marcela Hernández Delgado",
-    "email": "marcela.hernandez@gmail.com",
+    "email": "marcela.hernandez@outlook.com",
     "phone": "+57 321 347 1527",
     "city": "Soacha",
     "channel": "Meta Ads",
@@ -4282,23 +4222,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 213180000,
-    "downPaymentCOP": 17054400,
+    "budgetCOP": 213510000,
+    "downPaymentCOP": 17080800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 60,
+    "matchPercentage": 62,
     "scores": {
-      "fit": 46,
-      "intent": 74,
-      "engagement": 66,
-      "conversion": 68,
-      "total": 63
+      "fit": 47,
+      "intent": 76,
+      "engagement": 51,
+      "conversion": 65,
+      "total": 61
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (74/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -4307,37 +4247,37 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -4376,13 +4316,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1047",
     "name": "Camilo Rodríguez Ruiz",
-    "email": "camilo.rodriguez@gmail.com",
+    "email": "camilo.rodriguez@hotmail.com",
     "phone": "+57 359 114 5880",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 181710000,
     "downPaymentCOP": 14536800,
@@ -4391,31 +4331,25 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 46,
+    "matchPercentage": 41,
     "scores": {
       "fit": 23,
-      "intent": 68,
-      "engagement": 59,
-      "conversion": 48,
-      "total": 49
+      "intent": 58,
+      "engagement": 56,
+      "conversion": 39,
+      "total": 43
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (68/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -4427,13 +4361,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -4487,16 +4421,16 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 40,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 4,
-      "intent": 72,
-      "engagement": 66,
-      "conversion": 52,
-      "total": 47
+      "fit": 10,
+      "intent": 75,
+      "engagement": 67,
+      "conversion": 57,
+      "total": 51
     },
     "priority": "Media",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (72/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (75/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -4505,31 +4439,31 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -4568,13 +4502,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1049",
     "name": "Tatiana Reyes Moreno",
-    "email": "tatiana.reyes@gmail.com",
+    "email": "tatiana.reyes@hotmail.com",
     "phone": "+57 327 718 7530",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 222190000,
     "downPaymentCOP": 17775200,
@@ -4583,37 +4517,25 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 47,
+    "matchPercentage": 46,
     "scores": {
       "fit": 23,
-      "intent": 71,
-      "engagement": 61,
-      "conversion": 47,
-      "total": 50
+      "intent": 69,
+      "engagement": 40,
+      "conversion": 42,
+      "total": 44
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
@@ -4664,13 +4586,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1050",
     "name": "Paola Rodríguez Hernández",
-    "email": "paola.rodriguez@hotmail.com",
+    "email": "paola.rodriguez@gmail.com",
     "phone": "+57 351 165 6329",
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
     "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
     "downPaymentCOP": 121600000,
@@ -4681,47 +4603,47 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "araucaria",
     "matchPercentage": 42,
     "scores": {
-      "fit": 22,
-      "intent": 62,
-      "engagement": 49,
-      "conversion": 43,
+      "fit": 24,
+      "intent": 60,
+      "engagement": 45,
+      "conversion": 48,
       "total": 44
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (62/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (60/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -4765,11 +4687,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 202950000,
-    "downPaymentCOP": 16236000,
+    "budgetCOP": 205590000,
+    "downPaymentCOP": 16447200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -4777,41 +4699,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "versalles",
     "matchPercentage": 41,
     "scores": {
-      "fit": 9,
-      "intent": 72,
-      "engagement": 54,
-      "conversion": 44,
-      "total": 44
+      "fit": 23,
+      "intent": 58,
+      "engagement": 32,
+      "conversion": 40,
+      "total": 39
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -4850,12 +4766,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1052",
     "name": "Mauricio Moreno Suárez",
-    "email": "mauricio.moreno@outlook.com",
+    "email": "mauricio.moreno@gmail.com",
     "phone": "+57 313 688 3353",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Perdido",
+    "status": "Ganado",
     "temperature": "Hot",
     "housingInterest": "VIS",
     "budgetCOP": 233300000,
@@ -4865,49 +4781,61 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": false,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 78,
+    "matchPercentage": 75,
     "scores": {
-      "fit": 98,
-      "intent": 58,
-      "engagement": 30,
-      "conversion": 57,
-      "total": 64
+      "fit": 99,
+      "intent": 51,
+      "engagement": 42,
+      "conversion": 66,
+      "total": 67
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (98/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (99/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 19 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Promesa de compraventa firmada",
+        "details": "Firmó promesa de compraventa.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -4946,31 +4874,31 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1053",
     "name": "Javier Romero Ruiz",
-    "email": "javier.romero@outlook.com",
+    "email": "javier.romero@gmail.com",
     "phone": "+57 359 991 3412",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 237710000,
-    "downPaymentCOP": 19016800,
+    "budgetCOP": 238430000,
+    "downPaymentCOP": 19074400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 19,
-      "intent": 59,
-      "engagement": 40,
-      "conversion": 39,
-      "total": 40
+      "fit": 27,
+      "intent": 54,
+      "engagement": 51,
+      "conversion": 43,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 18 horas",
     "lastInteraction": "Hace 1 min",
@@ -4979,25 +4907,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -5036,40 +4964,46 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1054",
     "name": "Yolanda Cárdenas Cárdenas",
-    "email": "yolanda.cardenas@hotmail.com",
+    "email": "yolanda.cardenas@outlook.com",
     "phone": "+57 325 551 1258",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 186700000,
-    "downPaymentCOP": 14936000,
+    "budgetCOP": 187280000,
+    "downPaymentCOP": 14982400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 41,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 13,
-      "intent": 68,
-      "engagement": 38,
-      "conversion": 48,
-      "total": 43
+      "fit": 16,
+      "intent": 70,
+      "engagement": 64,
+      "conversion": 57,
+      "total": 51
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (68/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (70/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
@@ -5078,16 +5012,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -5131,11 +5065,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 161320000,
-    "downPaymentCOP": 12905600,
+    "budgetCOP": 159700000,
+    "downPaymentCOP": 12776000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -5143,35 +5077,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "verde-esperanza",
     "matchPercentage": 40,
     "scores": {
-      "fit": 24,
-      "intent": 47,
-      "engagement": 45,
-      "conversion": 38,
-      "total": 38
+      "fit": 15,
+      "intent": 60,
+      "engagement": 54,
+      "conversion": 46,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (47/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -5222,10 +5150,10 @@ export const REAL_LEADS: Lead[] = [
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
     "status": "Cita Agendada",
-    "temperature": "Warm",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 237350000,
-    "downPaymentCOP": 18988000,
+    "budgetCOP": 237890000,
+    "downPaymentCOP": 19031200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -5233,41 +5161,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 15,
-      "intent": 62,
-      "engagement": 62,
-      "conversion": 41,
-      "total": 44
+      "fit": 21,
+      "intent": 50,
+      "engagement": 27,
+      "conversion": 33,
+      "total": 34
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (50/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -5306,64 +5234,64 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1057",
     "name": "Germán González Castillo",
-    "email": "german.gonzalez@hotmail.com",
+    "email": "german.gonzalez@gmail.com",
     "phone": "+57 305 531 1134",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 168920000,
-    "downPaymentCOP": 13513600,
+    "budgetCOP": 168080000,
+    "downPaymentCOP": 13446400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 49,
+    "matchPercentage": 50,
     "scores": {
-      "fit": 26,
-      "intent": 72,
-      "engagement": 69,
-      "conversion": 51,
-      "total": 53
+      "fit": 24,
+      "intent": 76,
+      "engagement": 66,
+      "conversion": 62,
+      "total": 56
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -5407,7 +5335,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 237350000,
@@ -5419,14 +5347,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 5,
-      "intent": 59,
-      "engagement": 34,
-      "conversion": 29,
-      "total": 32
+      "fit": 10,
+      "intent": 62,
+      "engagement": 33,
+      "conversion": 41,
+      "total": 37
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
@@ -5441,13 +5369,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -5486,7 +5414,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1059",
     "name": "Claudia Torres García",
-    "email": "claudia.torres@gmail.com",
+    "email": "claudia.torres@hotmail.com",
     "phone": "+57 307 976 1254",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -5494,8 +5422,8 @@ export const REAL_LEADS: Lead[] = [
     "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 183460000,
-    "downPaymentCOP": 14676800,
+    "budgetCOP": 184220000,
+    "downPaymentCOP": 14737600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -5503,14 +5431,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "bosque-arrayan",
     "matchPercentage": 40,
     "scores": {
-      "fit": 17,
-      "intent": 45,
-      "engagement": 33,
-      "conversion": 30,
-      "total": 31
+      "fit": 19,
+      "intent": 60,
+      "engagement": 50,
+      "conversion": 48,
+      "total": 44
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (45/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
@@ -5519,19 +5447,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -5576,16 +5504,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1060",
     "name": "Diana Pineda González",
-    "email": "diana.pineda@hotmail.com",
+    "email": "diana.pineda@gmail.com",
     "phone": "+57 324 202 8739",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 238070000,
-    "downPaymentCOP": 19045600,
+    "budgetCOP": 237710000,
+    "downPaymentCOP": 19016800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -5593,41 +5521,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 23,
-      "intent": 46,
+      "fit": 19,
+      "intent": 54,
       "engagement": 34,
-      "conversion": 43,
+      "conversion": 37,
       "total": 37
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (46/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
         "timestamp": "Hace 2 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -5674,23 +5596,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 204930000,
-    "downPaymentCOP": 16394400,
+    "budgetCOP": 204600000,
+    "downPaymentCOP": 16368000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 51,
+    "matchPercentage": 47,
     "scores": {
-      "fit": 21,
-      "intent": 80,
-      "engagement": 58,
-      "conversion": 49,
-      "total": 52
+      "fit": 20,
+      "intent": 73,
+      "engagement": 56,
+      "conversion": 42,
+      "total": 48
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (80/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -5699,31 +5621,31 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -5762,13 +5684,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1062",
     "name": "Fernando Reyes Sánchez",
-    "email": "fernando.reyes@hotmail.com",
+    "email": "fernando.reyes@gmail.com",
     "phone": "+57 308 602 4718",
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
     "status": "Cita Agendada",
-    "temperature": "Cold",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 217950000,
     "downPaymentCOP": 17436000,
@@ -5777,31 +5699,31 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 40,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 10,
-      "intent": 70,
-      "engagement": 45,
-      "conversion": 45,
-      "total": 43
+      "fit": 12,
+      "intent": 73,
+      "engagement": 39,
+      "conversion": 51,
+      "total": 45
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (70/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
@@ -5813,7 +5735,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -5852,46 +5774,40 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1063",
     "name": "Andrés Moreno Herrera",
-    "email": "andres.moreno@gmail.com",
+    "email": "andres.moreno@hotmail.com",
     "phone": "+57 316 082 5385",
     "city": "Fusagasugá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 204930000,
-    "downPaymentCOP": 16394400,
+    "budgetCOP": 203280000,
+    "downPaymentCOP": 16262400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 44,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 21,
-      "intent": 66,
-      "engagement": 53,
-      "conversion": 52,
-      "total": 48
+      "fit": 16,
+      "intent": 63,
+      "engagement": 52,
+      "conversion": 36,
+      "total": 41
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 17 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
@@ -5903,7 +5819,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
@@ -5953,11 +5869,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "En Calificación",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 237440000,
-    "downPaymentCOP": 18995200,
+    "budgetCOP": 238250000,
+    "downPaymentCOP": 19060000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
@@ -5965,29 +5881,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 16,
-      "intent": 54,
-      "engagement": 51,
-      "conversion": 42,
+      "fit": 25,
+      "intent": 46,
+      "engagement": 46,
+      "conversion": 47,
       "total": 40
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (46/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 17 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
@@ -6032,46 +5954,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1065",
     "name": "Lina Muñoz Vargas",
-    "email": "lina.munoz@outlook.com",
+    "email": "lina.munoz@gmail.com",
     "phone": "+57 308 516 5988",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "Cita Agendada",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 257980000,
-    "downPaymentCOP": 20638400,
+    "budgetCOP": 260500000,
+    "downPaymentCOP": 20840000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "inari",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 19,
-      "intent": 44,
-      "engagement": 24,
-      "conversion": 37,
-      "total": 32
+      "fit": 25,
+      "intent": 65,
+      "engagement": 52,
+      "conversion": 56,
+      "total": 49
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (44/100).",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "timestamp": "Ayer",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
@@ -6116,13 +6044,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1066",
     "name": "Juliana Díaz Herrera",
-    "email": "juliana.diaz@hotmail.com",
+    "email": "juliana.diaz@outlook.com",
     "phone": "+57 353 926 0335",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
     "downPaymentCOP": 18880000,
@@ -6131,37 +6059,49 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 44,
+    "matchPercentage": 47,
     "scores": {
-      "fit": 26,
-      "intent": 61,
-      "engagement": 31,
+      "fit": 22,
+      "intent": 72,
+      "engagement": 62,
       "conversion": 44,
-      "total": 42
+      "total": 49
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -6200,7 +6140,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1067",
     "name": "Martha Salazar López",
-    "email": "martha.salazar@outlook.com",
+    "email": "martha.salazar@hotmail.com",
     "phone": "+57 315 889 2118",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
@@ -6217,14 +6157,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "araucaria",
     "matchPercentage": 40,
     "scores": {
-      "fit": 10,
-      "intent": 69,
-      "engagement": 40,
-      "conversion": 50,
-      "total": 43
+      "fit": 5,
+      "intent": 58,
+      "engagement": 39,
+      "conversion": 29,
+      "total": 33
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (58/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -6239,19 +6179,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -6290,7 +6230,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1068",
     "name": "Carlos Rojas Martínez",
-    "email": "carlos.rojas@hotmail.com",
+    "email": "carlos.rojas@outlook.com",
     "phone": "+57 322 177 1255",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -6298,23 +6238,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 141590000,
-    "downPaymentCOP": 11327200,
+    "budgetCOP": 141360000,
+    "downPaymentCOP": 11308800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 52,
+    "matchPercentage": 51,
     "scores": {
-      "fit": 33,
-      "intent": 71,
-      "engagement": 64,
-      "conversion": 47,
+      "fit": 32,
+      "intent": 70,
+      "engagement": 54,
+      "conversion": 55,
       "total": 53
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (70/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -6323,22 +6263,22 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Móvil Chrome"
@@ -6347,7 +6287,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -6386,47 +6326,35 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1069",
     "name": "Cristian Delgado Gutiérrez",
-    "email": "cristian.delgado@hotmail.com",
+    "email": "cristian.delgado@outlook.com",
     "phone": "+57 305 828 3485",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 253520000,
-    "downPaymentCOP": 20281600,
+    "budgetCOP": 253380000,
+    "downPaymentCOP": 20270400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 50,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 26,
-      "intent": 74,
-      "engagement": 57,
-      "conversion": 58,
-      "total": 54
+      "fit": 19,
+      "intent": 69,
+      "engagement": 46,
+      "conversion": 40,
+      "total": 44
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (74/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
@@ -6437,19 +6365,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -6488,12 +6416,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1070",
     "name": "Patricia Díaz Jiménez",
-    "email": "patricia.diaz@outlook.com",
+    "email": "patricia.diaz@gmail.com",
     "phone": "+57 313 669 2577",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
@@ -6503,43 +6431,49 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 48,
+    "matchPercentage": 47,
     "scores": {
-      "fit": 24,
-      "intent": 72,
-      "engagement": 63,
-      "conversion": 48,
-      "total": 51
+      "fit": 27,
+      "intent": 67,
+      "engagement": 35,
+      "conversion": 49,
+      "total": 46
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 21 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -6583,7 +6517,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Tocancipá",
     "channel": "Google Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 217950000,
@@ -6595,41 +6529,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "bosque-turpial",
     "matchPercentage": 40,
     "scores": {
-      "fit": 4,
-      "intent": 60,
-      "engagement": 59,
-      "conversion": 38,
+      "fit": 8,
+      "intent": 64,
+      "engagement": 44,
+      "conversion": 40,
       "total": 39
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -6673,7 +6601,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Perdido",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
@@ -6683,37 +6611,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 27,
-      "intent": 53,
-      "engagement": 25,
-      "conversion": 28,
-      "total": 35
+      "fit": 22,
+      "intent": 59,
+      "engagement": 51,
+      "conversion": 42,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (53/100).",
+    "priorityRationale": "Afiliado Categoría B con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
+      },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -6752,35 +6686,47 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1073",
     "name": "Alejandro Salazar Torres",
-    "email": "alejandro.salazar@outlook.com",
+    "email": "alejandro.salazar@hotmail.com",
     "phone": "+57 315 888 4978",
     "city": "Soacha",
     "channel": "Google Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
+    "status": "Ganado",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 241040000,
-    "downPaymentCOP": 19283200,
+    "budgetCOP": 240770000,
+    "downPaymentCOP": 19261600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 56,
+    "matchPercentage": 63,
     "scores": {
-      "fit": 56,
-      "intent": 55,
-      "engagement": 55,
-      "conversion": 53,
-      "total": 55
+      "fit": 53,
+      "intent": 72,
+      "engagement": 66,
+      "conversion": 64,
+      "total": 64
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (56/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Promesa de compraventa firmada",
+        "details": "Firmó promesa de compraventa.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "WhatsApp Web"
+      },
       {
         "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
@@ -6791,25 +6737,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -6848,64 +6794,70 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1074",
     "name": "Luis Moreno Salazar",
-    "email": "luis.moreno@gmail.com",
+    "email": "luis.moreno@outlook.com",
     "phone": "+57 308 005 5957",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Bogota No Vis",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 179400000,
-    "downPaymentCOP": 14352000,
+    "budgetCOP": 186330000,
+    "downPaymentCOP": 14906400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 48,
+    "matchPercentage": 55,
     "scores": {
-      "fit": 20,
-      "intent": 76,
-      "engagement": 55,
-      "conversion": 60,
-      "total": 53
+      "fit": 29,
+      "intent": 80,
+      "engagement": 59,
+      "conversion": 48,
+      "total": 54
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (80/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -6944,7 +6896,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1075",
     "name": "Julián Mora Ruiz",
-    "email": "julian.mora@outlook.com",
+    "email": "julian.mora@gmail.com",
     "phone": "+57 327 766 0514",
     "city": "Fusagasugá",
     "channel": "Google Ads",
@@ -6952,23 +6904,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 141360000,
-    "downPaymentCOP": 11308800,
+    "budgetCOP": 142050000,
+    "downPaymentCOP": 11364000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 58,
+    "matchPercentage": 57,
     "scores": {
-      "fit": 32,
-      "intent": 84,
-      "engagement": 55,
-      "conversion": 52,
-      "total": 57
+      "fit": 35,
+      "intent": 79,
+      "engagement": 66,
+      "conversion": 55,
+      "total": 58
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (84/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -6977,37 +6929,37 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -7051,56 +7003,44 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "En Negociación",
+    "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 164020000,
-    "downPaymentCOP": 13121600,
+    "budgetCOP": 162760000,
+    "downPaymentCOP": 13020800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 48,
+    "matchPercentage": 53,
     "scores": {
-      "fit": 39,
-      "intent": 56,
-      "engagement": 54,
-      "conversion": 56,
-      "total": 51
+      "fit": 32,
+      "intent": 73,
+      "engagement": 43,
+      "conversion": 59,
+      "total": 53
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (56/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "iPhone"
@@ -7109,7 +7049,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -7153,56 +7093,50 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 205920000,
-    "downPaymentCOP": 16473600,
+    "budgetCOP": 206910000,
+    "downPaymentCOP": 16552800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 49,
+    "matchPercentage": 46,
     "scores": {
-      "fit": 24,
-      "intent": 73,
-      "engagement": 64,
-      "conversion": 56,
-      "total": 54
+      "fit": 27,
+      "intent": 64,
+      "engagement": 41,
+      "conversion": 52,
+      "total": 47
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Desktop Chrome"
@@ -7211,7 +7145,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -7250,31 +7184,31 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1078",
     "name": "Natalia Ramírez Pardo",
-    "email": "natalia.ramirez@hotmail.com",
+    "email": "natalia.ramirez@gmail.com",
     "phone": "+57 302 401 5162",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
     "status": "Pre-Aprobado",
-    "temperature": "Hot",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 147800000,
-    "downPaymentCOP": 11824000,
+    "budgetCOP": 148490000,
+    "downPaymentCOP": 11879200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 60,
+    "matchPercentage": 59,
     "scores": {
-      "fit": 60,
-      "intent": 60,
-      "engagement": 37,
-      "conversion": 54,
-      "total": 55
+      "fit": 63,
+      "intent": 54,
+      "engagement": 32,
+      "conversion": 56,
+      "total": 53
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (63/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 18 horas",
     "lastInteraction": "Hace 1 min",
@@ -7283,13 +7217,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
@@ -7298,16 +7232,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -7346,40 +7280,40 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1079",
     "name": "Diego Rincón Peña",
-    "email": "diego.rincon@outlook.com",
+    "email": "diego.rincon@gmail.com",
     "phone": "+57 321 282 8532",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Bogota No Vis",
     "status": "Cita Agendada",
-    "temperature": "Warm",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 178630000,
-    "downPaymentCOP": 14290400,
+    "budgetCOP": 184020000,
+    "downPaymentCOP": 14721600,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 47,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 19,
-      "intent": 75,
-      "engagement": 50,
-      "conversion": 52,
-      "total": 49
+      "fit": 26,
+      "intent": 62,
+      "engagement": 31,
+      "conversion": 35,
+      "total": 40
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
@@ -7397,7 +7331,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -7441,65 +7375,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Perdido",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 180170000,
-    "downPaymentCOP": 14413600,
+    "budgetCOP": 180940000,
+    "downPaymentCOP": 14475200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 52,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 21,
-      "intent": 83,
-      "engagement": 73,
-      "conversion": 56,
-      "total": 57
+      "fit": 22,
+      "intent": 73,
+      "engagement": 60,
+      "conversion": 60,
+      "total": 53
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (83/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "iPhone"
-      },
-      {
         "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -7543,53 +7465,47 @@ export const REAL_LEADS: Lead[] = [
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "En Calificación",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 238160000,
-    "downPaymentCOP": 19052800,
+    "budgetCOP": 238250000,
+    "downPaymentCOP": 19060000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 44,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 24,
-      "intent": 63,
-      "engagement": 36,
-      "conversion": 52,
-      "total": 45
+      "fit": 25,
+      "intent": 61,
+      "engagement": 45,
+      "conversion": 45,
+      "total": 44
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -7628,64 +7544,76 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1082",
     "name": "Pedro Ramírez Romero",
-    "email": "pedro.ramirez@outlook.com",
+    "email": "pedro.ramirez@gmail.com",
     "phone": "+57 359 473 8725",
     "city": "Ciudadela Maiporé",
     "channel": "Google Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Ganado",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 189600000,
-    "downPaymentCOP": 15168000,
+    "budgetCOP": 193080000,
+    "downPaymentCOP": 15446400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 43,
+    "matchPercentage": 49,
     "scores": {
-      "fit": 20,
-      "intent": 66,
+      "fit": 26,
+      "intent": 72,
       "engagement": 63,
-      "conversion": 53,
-      "total": 49
+      "conversion": 60,
+      "total": 55
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 16 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Promesa de compraventa firmada",
+        "details": "Firmó promesa de compraventa.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -7729,7 +7657,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ubaté",
     "channel": "Google Ads",
     "campaign": "Familia Maipore",
-    "status": "En Negociación",
+    "status": "Pre-Aprobado",
     "temperature": "Hot",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
@@ -7741,53 +7669,47 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "reserva-guayacan",
     "matchPercentage": 53,
     "scores": {
-      "fit": 24,
-      "intent": 81,
-      "engagement": 62,
-      "conversion": 49,
-      "total": 54
+      "fit": 21,
+      "intent": 84,
+      "engagement": 51,
+      "conversion": 59,
+      "total": 55
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (81/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (84/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 17 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -7826,7 +7748,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1084",
     "name": "Katherine Pardo Díaz",
-    "email": "katherine.pardo@gmail.com",
+    "email": "katherine.pardo@outlook.com",
     "phone": "+57 314 502 6810",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
@@ -7843,14 +7765,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 10,
-      "intent": 59,
-      "engagement": 48,
-      "conversion": 40,
-      "total": 39
+      "fit": 6,
+      "intent": 71,
+      "engagement": 42,
+      "conversion": 38,
+      "total": 40
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (71/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -7859,19 +7781,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
@@ -7916,16 +7838,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1085",
     "name": "Viviana Pardo Pineda",
-    "email": "viviana.pardo@hotmail.com",
+    "email": "viviana.pardo@gmail.com",
     "phone": "+57 305 955 5330",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 181710000,
-    "downPaymentCOP": 14536800,
+    "budgetCOP": 180940000,
+    "downPaymentCOP": 14475200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
@@ -7933,47 +7855,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "la-arboleda",
     "matchPercentage": 40,
     "scores": {
-      "fit": 23,
-      "intent": 55,
-      "engagement": 53,
-      "conversion": 51,
-      "total": 45
+      "fit": 22,
+      "intent": 47,
+      "engagement": 42,
+      "conversion": 42,
+      "total": 38
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (55/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (47/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 15 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -8017,7 +7921,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
+    "status": "En Negociación",
     "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 185360000,
@@ -8027,20 +7931,26 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-arrayan",
-    "matchPercentage": 47,
+    "matchPercentage": 51,
     "scores": {
       "fit": 22,
-      "intent": 72,
-      "engagement": 66,
-      "conversion": 47,
-      "total": 51
+      "intent": 80,
+      "engagement": 61,
+      "conversion": 51,
+      "total": 53
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (80/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Chrome"
+      },
       {
         "timestamp": "Hace 2 días",
         "action": "Contactado por asesor (WhatsApp/llamada)",
@@ -8051,25 +7961,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -8108,7 +8018,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1087",
     "name": "Julián Romero López",
-    "email": "julian.romero@outlook.com",
+    "email": "julian.romero@hotmail.com",
     "phone": "+57 355 491 6840",
     "city": "Fusagasugá",
     "channel": "Google Ads",
@@ -8116,23 +8026,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 222190000,
-    "downPaymentCOP": 17775200,
+    "budgetCOP": 219540000,
+    "downPaymentCOP": 17563200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 51,
+    "matchPercentage": 50,
     "scores": {
-      "fit": 23,
-      "intent": 79,
-      "engagement": 55,
-      "conversion": 55,
-      "total": 53
+      "fit": 18,
+      "intent": 81,
+      "engagement": 49,
+      "conversion": 56,
+      "total": 52
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (81/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 16 horas",
     "lastInteraction": "Hace 1 min",
@@ -8141,13 +8051,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
@@ -8159,7 +8069,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
@@ -8209,8 +8119,8 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
     "budgetCOP": 163300000,
     "downPaymentCOP": 13064000,
@@ -8219,43 +8129,55 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 51,
+    "matchPercentage": 57,
     "scores": {
       "fit": 35,
-      "intent": 67,
-      "engagement": 39,
-      "conversion": 44,
-      "total": 48
+      "intent": 79,
+      "engagement": 58,
+      "conversion": 51,
+      "total": 56
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -8294,7 +8216,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1089",
     "name": "Lina Cárdenas Pardo",
-    "email": "lina.cardenas@gmail.com",
+    "email": "lina.cardenas@outlook.com",
     "phone": "+57 311 796 6873",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -8302,35 +8224,35 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 187860000,
-    "downPaymentCOP": 15028800,
+    "budgetCOP": 191340000,
+    "downPaymentCOP": 15307200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 44,
+    "matchPercentage": 49,
     "scores": {
-      "fit": 17,
-      "intent": 70,
-      "engagement": 59,
-      "conversion": 55,
-      "total": 50
+      "fit": 23,
+      "intent": 75,
+      "engagement": 55,
+      "conversion": 50,
+      "total": 51
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (70/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "iPhone"
@@ -8339,13 +8261,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
@@ -8390,58 +8312,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1090",
     "name": "Germán Hernández Ríos",
-    "email": "german.hernandez@gmail.com",
+    "email": "german.hernandez@outlook.com",
     "phone": "+57 314 513 5941",
     "city": "Ubaté",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 162220000,
-    "downPaymentCOP": 12977600,
+    "budgetCOP": 159880000,
+    "downPaymentCOP": 12790400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 44,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 29,
-      "intent": 58,
-      "engagement": 39,
+      "fit": 16,
+      "intent": 56,
+      "engagement": 55,
       "conversion": 43,
-      "total": 43
+      "total": 41
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (56/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 19 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -8486,25 +8402,25 @@ export const REAL_LEADS: Lead[] = [
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
     "status": "Cita Agendada",
-    "temperature": "Cold",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 160600000,
-    "downPaymentCOP": 12848000,
+    "budgetCOP": 161680000,
+    "downPaymentCOP": 12934400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 20,
-      "intent": 57,
-      "engagement": 51,
-      "conversion": 35,
-      "total": 40
+      "fit": 26,
+      "intent": 63,
+      "engagement": 53,
+      "conversion": 42,
+      "total": 46
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (57/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -8513,25 +8429,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -8575,59 +8491,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 168500000,
-    "downPaymentCOP": 13480000,
+    "budgetCOP": 165560000,
+    "downPaymentCOP": 13244800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 46,
+    "matchPercentage": 42,
     "scores": {
-      "fit": 25,
-      "intent": 67,
-      "engagement": 35,
-      "conversion": 46,
-      "total": 45
+      "fit": 18,
+      "intent": 65,
+      "engagement": 36,
+      "conversion": 38,
+      "total": 40
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
         "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -8671,8 +8581,8 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 202950000,
     "downPaymentCOP": 16236000,
@@ -8683,35 +8593,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "versalles",
     "matchPercentage": 40,
     "scores": {
-      "fit": 4,
-      "intent": 63,
-      "engagement": 46,
-      "conversion": 43,
-      "total": 39
+      "fit": 10,
+      "intent": 69,
+      "engagement": 64,
+      "conversion": 45,
+      "total": 46
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
@@ -8756,58 +8672,70 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1094",
     "name": "Laura García Rincón",
-    "email": "laura.garcia@hotmail.com",
+    "email": "laura.garcia@outlook.com",
     "phone": "+57 315 338 5340",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "En Negociación",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 161500000,
-    "downPaymentCOP": 12920000,
+    "budgetCOP": 161680000,
+    "downPaymentCOP": 12934400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 42,
+    "matchPercentage": 49,
     "scores": {
-      "fit": 25,
-      "intent": 59,
-      "engagement": 29,
-      "conversion": 42,
-      "total": 40
+      "fit": 26,
+      "intent": 71,
+      "engagement": 40,
+      "conversion": 53,
+      "total": 49
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 17 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -8846,35 +8774,47 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1095",
     "name": "Laura Díaz Pineda",
-    "email": "laura.diaz@outlook.com",
+    "email": "laura.diaz@hotmail.com",
     "phone": "+57 301 699 4436",
     "city": "Ciudadela Maiporé",
     "channel": "Google Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 186700000,
-    "downPaymentCOP": 14936000,
+    "budgetCOP": 190760000,
+    "downPaymentCOP": 15260800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 40,
+    "matchPercentage": 47,
     "scores": {
-      "fit": 7,
-      "intent": 63,
-      "engagement": 32,
-      "conversion": 41,
-      "total": 37
+      "fit": 22,
+      "intent": 72,
+      "engagement": 64,
+      "conversion": 60,
+      "total": 54
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -8885,19 +8825,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -8936,7 +8876,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1096",
     "name": "Juan Gómez Gutiérrez",
-    "email": "juan.gomez@hotmail.com",
+    "email": "juan.gomez@outlook.com",
     "phone": "+57 355 060 1849",
     "city": "Ricaurte",
     "channel": "Meta Ads",
@@ -8951,31 +8891,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 10,
-      "intent": 59,
-      "engagement": 42,
-      "conversion": 42,
-      "total": 38
+      "fit": 12,
+      "intent": 69,
+      "engagement": 39,
+      "conversion": 48,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 4 días",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -9014,13 +8966,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1097",
     "name": "Johana Suárez Rojas",
-    "email": "johana.suarez@hotmail.com",
+    "email": "johana.suarez@outlook.com",
     "phone": "+57 313 183 1387",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
     "downPaymentCOP": 121600000,
@@ -9029,40 +8981,34 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 54,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 23,
-      "intent": 85,
-      "engagement": 47,
-      "conversion": 45,
-      "total": 51
+      "fit": 19,
+      "intent": 67,
+      "engagement": 39,
+      "conversion": 46,
+      "total": 44
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (85/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (67/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Móvil Chrome"
@@ -9110,7 +9056,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1098",
     "name": "Carolina Gómez Moreno",
-    "email": "carolina.gomez@gmail.com",
+    "email": "carolina.gomez@hotmail.com",
     "phone": "+57 321 592 7344",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
@@ -9118,23 +9064,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 165980000,
-    "downPaymentCOP": 13278400,
+    "budgetCOP": 169340000,
+    "downPaymentCOP": 13547200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 47,
+    "matchPercentage": 50,
     "scores": {
-      "fit": 19,
-      "intent": 75,
-      "engagement": 69,
-      "conversion": 57,
+      "fit": 27,
+      "intent": 73,
+      "engagement": 59,
+      "conversion": 60,
       "total": 54
     },
     "priority": "Muy Alta",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -9143,13 +9089,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
@@ -9158,16 +9104,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -9206,13 +9152,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1099",
     "name": "Lorena Gómez Bernal",
-    "email": "lorena.gomez@hotmail.com",
+    "email": "lorena.gomez@gmail.com",
     "phone": "+57 326 848 8779",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
     "budgetCOP": 169340000,
     "downPaymentCOP": 13547200,
@@ -9221,25 +9167,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 44,
+    "matchPercentage": 52,
     "scores": {
       "fit": 27,
-      "intent": 61,
-      "engagement": 32,
-      "conversion": 38,
-      "total": 41
+      "intent": 76,
+      "engagement": 69,
+      "conversion": 49,
+      "total": 54
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Ayer",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
@@ -9251,7 +9215,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -9295,36 +9259,30 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 168500000,
-    "downPaymentCOP": 13480000,
+    "budgetCOP": 166820000,
+    "downPaymentCOP": 13345600,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 42,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 25,
-      "intent": 59,
-      "engagement": 34,
-      "conversion": 41,
-      "total": 41
+      "fit": 21,
+      "intent": 61,
+      "engagement": 32,
+      "conversion": 31,
+      "total": 37
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -9335,13 +9293,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
@@ -9391,7 +9349,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
@@ -9401,20 +9359,26 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 52,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 22,
-      "intent": 81,
-      "engagement": 47,
-      "conversion": 54,
-      "total": 52
+      "fit": 17,
+      "intent": 72,
+      "engagement": 68,
+      "conversion": 52,
+      "total": 51
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (81/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (72/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 20 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -9425,10 +9389,10 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "iPhone"
@@ -9437,7 +9401,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -9476,12 +9440,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1102",
     "name": "Andrés Romero Reyes",
-    "email": "andres.romero@hotmail.com",
+    "email": "andres.romero@outlook.com",
     "phone": "+57 329 125 3395",
     "city": "Girardot",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
@@ -9491,37 +9455,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 42,
+    "matchPercentage": 48,
     "scores": {
       "fit": 16,
-      "intent": 67,
-      "engagement": 50,
-      "conversion": 44,
-      "total": 44
+      "intent": 79,
+      "engagement": 43,
+      "conversion": 49,
+      "total": 48
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
         "device": "iPhone"
       },
       {
-        "timestamp": "Hace 4 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "timestamp": "Ayer",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
@@ -9566,7 +9536,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1103",
     "name": "William Pardo Pineda",
-    "email": "william.pardo@gmail.com",
+    "email": "william.pardo@hotmail.com",
     "phone": "+57 325 418 5620",
     "city": "Soacha",
     "channel": "Meta Ads",
@@ -9574,23 +9544,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 173120000,
-    "downPaymentCOP": 13849600,
+    "budgetCOP": 172700000,
+    "downPaymentCOP": 13816000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 57,
+    "matchPercentage": 55,
     "scores": {
-      "fit": 36,
-      "intent": 77,
-      "engagement": 50,
-      "conversion": 61,
-      "total": 57
+      "fit": 35,
+      "intent": 75,
+      "engagement": 67,
+      "conversion": 56,
+      "total": 58
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (77/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -9599,19 +9569,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
@@ -9620,16 +9590,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -9676,23 +9646,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 171440000,
-    "downPaymentCOP": 13715200,
+    "budgetCOP": 173120000,
+    "downPaymentCOP": 13849600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 32,
-      "intent": 44,
-      "engagement": 37,
-      "conversion": 46,
-      "total": 40
+      "fit": 36,
+      "intent": 53,
+      "engagement": 36,
+      "conversion": 40,
+      "total": 42
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (44/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
@@ -9707,7 +9677,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
@@ -9758,12 +9728,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1105",
     "name": "María Vargas Moreno",
-    "email": "maria.vargas@outlook.com",
+    "email": "maria.vargas@hotmail.com",
     "phone": "+57 356 013 8147",
     "city": "Ricaurte",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 253300000,
@@ -9775,35 +9745,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "saman",
     "matchPercentage": 42,
     "scores": {
-      "fit": 10,
-      "intent": 73,
-      "engagement": 40,
-      "conversion": 51,
-      "total": 44
+      "fit": 15,
+      "intent": 68,
+      "engagement": 63,
+      "conversion": 44,
+      "total": 46
     },
     "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (68/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
@@ -9848,58 +9824,64 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1106",
     "name": "Carlos Rojas Martínez",
-    "email": "carlos.rojas@outlook.com",
+    "email": "carlos.rojas@gmail.com",
     "phone": "+57 322 177 1255",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 160780000,
-    "downPaymentCOP": 12862400,
+    "budgetCOP": 161680000,
+    "downPaymentCOP": 12934400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 43,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 21,
-      "intent": 64,
-      "engagement": 56,
-      "conversion": 52,
-      "total": 48
+      "fit": 26,
+      "intent": 69,
+      "engagement": 36,
+      "conversion": 49,
+      "total": 46
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -9938,7 +9920,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1107",
     "name": "Diana Pineda González",
-    "email": "diana.pineda@hotmail.com",
+    "email": "diana.pineda@outlook.com",
     "phone": "+57 324 202 8739",
     "city": "Ricaurte",
     "channel": "Meta Ads",
@@ -9946,20 +9928,20 @@ export const REAL_LEADS: Lead[] = [
     "status": "Perdido",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 261760000,
-    "downPaymentCOP": 20940800,
+    "budgetCOP": 258820000,
+    "downPaymentCOP": 20705600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "inari",
-    "matchPercentage": 50,
+    "matchPercentage": 46,
     "scores": {
-      "fit": 28,
+      "fit": 21,
       "intent": 71,
-      "engagement": 54,
-      "conversion": 55,
-      "total": 52
+      "engagement": 55,
+      "conversion": 48,
+      "total": 49
     },
     "priority": "Media",
     "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 4 interacciones en su recorrido.",
@@ -9971,16 +9953,16 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Móvil Chrome"
@@ -9989,7 +9971,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -10028,64 +10010,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1108",
     "name": "Daniel López Vargas",
-    "email": "daniel.lopez@outlook.com",
+    "email": "daniel.lopez@gmail.com",
     "phone": "+57 321 745 3784",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 162040000,
-    "downPaymentCOP": 12963200,
+    "budgetCOP": 161140000,
+    "downPaymentCOP": 12891200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 46,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 28,
-      "intent": 63,
-      "engagement": 37,
-      "conversion": 48,
-      "total": 45
+      "fit": 23,
+      "intent": 58,
+      "engagement": 36,
+      "conversion": 34,
+      "total": 38
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (63/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -10129,36 +10105,30 @@ export const REAL_LEADS: Lead[] = [
     "city": "Facatativá",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Pre-Aprobado",
+    "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 219540000,
-    "downPaymentCOP": 17563200,
+    "budgetCOP": 222720000,
+    "downPaymentCOP": 17817600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 46,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 18,
-      "intent": 74,
-      "engagement": 49,
-      "conversion": 48,
-      "total": 48
+      "fit": 24,
+      "intent": 72,
+      "engagement": 59,
+      "conversion": 51,
+      "total": 51
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (74/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
@@ -10169,7 +10139,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
@@ -10181,7 +10151,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -10220,43 +10190,37 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1110",
     "name": "Lorena Ruiz Castillo",
-    "email": "lorena.ruiz@outlook.com",
+    "email": "lorena.ruiz@hotmail.com",
     "phone": "+57 322 581 9123",
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 204270000,
-    "downPaymentCOP": 16341600,
+    "budgetCOP": 203610000,
+    "downPaymentCOP": 16288800,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 40,
+    "matchPercentage": 42,
     "scores": {
-      "fit": 19,
-      "intent": 54,
-      "engagement": 47,
-      "conversion": 39,
-      "total": 39
+      "fit": 17,
+      "intent": 66,
+      "engagement": 46,
+      "conversion": 45,
+      "total": 44
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Móvil Chrome"
@@ -10265,13 +10229,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -10315,8 +10279,8 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Perdido",
-    "temperature": "Hot",
+    "status": "Cita Agendada",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 161500000,
     "downPaymentCOP": 12920000,
@@ -10329,33 +10293,27 @@ export const REAL_LEADS: Lead[] = [
     "scores": {
       "fit": 25,
       "intent": 71,
-      "engagement": 62,
-      "conversion": 61,
-      "total": 54
+      "engagement": 63,
+      "conversion": 50,
+      "total": 52
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
@@ -10367,7 +10325,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -10406,41 +10364,35 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1112",
     "name": "Sofía Muñoz Hernández",
-    "email": "sofia.munoz@gmail.com",
+    "email": "sofia.munoz@hotmail.com",
     "phone": "+57 306 866 4992",
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "No VIS",
-    "budgetCOP": 530600000,
-    "downPaymentCOP": 106120000,
+    "budgetCOP": 530200000,
+    "downPaymentCOP": 106040000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 19,
-      "intent": 59,
-      "engagement": 58,
-      "conversion": 50,
-      "total": 45
+      "fit": 18,
+      "intent": 63,
+      "engagement": 47,
+      "conversion": 43,
+      "total": 43
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (59/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (63/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 21 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -10451,19 +10403,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -10507,71 +10459,59 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Ganado",
+    "status": "Pre-Aprobado",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 147110000,
-    "downPaymentCOP": 11768800,
+    "budgetCOP": 145730000,
+    "downPaymentCOP": 11658400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 75,
+    "matchPercentage": 61,
     "scores": {
-      "fit": 57,
-      "intent": 93,
-      "engagement": 78,
-      "conversion": 75,
-      "total": 76
+      "fit": 51,
+      "intent": 71,
+      "engagement": 58,
+      "conversion": 54,
+      "total": 59
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (93/100). Ya completó 7 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Promesa de compraventa firmada",
-        "details": "Firmó promesa de compraventa.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -10610,58 +10550,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1114",
     "name": "Carlos Gutiérrez Hernández",
-    "email": "carlos.gutierrez@gmail.com",
+    "email": "carlos.gutierrez@hotmail.com",
     "phone": "+57 316 419 3837",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "No VIS",
-    "budgetCOP": 533000000,
-    "downPaymentCOP": 106600000,
+    "budgetCOP": 531800000,
+    "downPaymentCOP": 106360000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 51,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 25,
-      "intent": 76,
-      "engagement": 50,
-      "conversion": 52,
-      "total": 51
+      "fit": 22,
+      "intent": 65,
+      "engagement": 33,
+      "conversion": 38,
+      "total": 41
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (76/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
@@ -10706,7 +10640,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1115",
     "name": "Patricia Bernal Hernández",
-    "email": "patricia.bernal@outlook.com",
+    "email": "patricia.bernal@gmail.com",
     "phone": "+57 327 284 3313",
     "city": "Ricaurte",
     "channel": "Meta Ads",
@@ -10723,14 +10657,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 15,
-      "intent": 53,
-      "engagement": 32,
-      "conversion": 37,
-      "total": 35
+      "fit": 6,
+      "intent": 66,
+      "engagement": 57,
+      "conversion": 51,
+      "total": 44
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
@@ -10739,25 +10673,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -10796,7 +10730,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1116",
     "name": "Yolanda Ortiz Bernal",
-    "email": "yolanda.ortiz@hotmail.com",
+    "email": "yolanda.ortiz@outlook.com",
     "phone": "+57 354 965 8873",
     "city": "Ricaurte",
     "channel": "Meta Ads",
@@ -10813,35 +10747,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "saman",
     "matchPercentage": 40,
     "scores": {
-      "fit": 15,
-      "intent": 53,
-      "engagement": 45,
-      "conversion": 40,
-      "total": 38
+      "fit": 5,
+      "intent": 46,
+      "engagement": 20,
+      "conversion": 29,
+      "total": 26
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (46/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -10880,7 +10814,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1117",
     "name": "Paola Ortiz Castillo",
-    "email": "paola.ortiz@hotmail.com",
+    "email": "paola.ortiz@outlook.com",
     "phone": "+57 322 167 4661",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -10895,13 +10829,13 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": false,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 74,
+    "matchPercentage": 79,
     "scores": {
       "fit": 99,
-      "intent": 48,
-      "engagement": 22,
-      "conversion": 62,
-      "total": 61
+      "intent": 58,
+      "engagement": 31,
+      "conversion": 66,
+      "total": 67
     },
     "priority": "Muy Alta",
     "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (99/100). Ya completó 7 interacciones en su recorrido.",
@@ -10919,37 +10853,37 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -10988,58 +10922,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1118",
     "name": "Johana Díaz Romero",
-    "email": "johana.diaz@gmail.com",
+    "email": "johana.diaz@hotmail.com",
     "phone": "+57 329 825 2435",
     "city": "Fusagasugá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 549000000,
-    "downPaymentCOP": 109800000,
+    "budgetCOP": 550600000,
+    "downPaymentCOP": 110120000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 53,
+    "matchPercentage": 59,
     "scores": {
-      "fit": 65,
-      "intent": 41,
-      "engagement": 17,
-      "conversion": 43,
-      "total": 44
+      "fit": 69,
+      "intent": 49,
+      "engagement": 27,
+      "conversion": 45,
+      "total": 50
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es capacidad de pago (65/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es capacidad de pago (69/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -11078,16 +11006,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1119",
     "name": "Diego Rodríguez Rincón",
-    "email": "diego.rodriguez@hotmail.com",
+    "email": "diego.rodriguez@outlook.com",
     "phone": "+57 302 901 5320",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 257980000,
-    "downPaymentCOP": 20638400,
+    "budgetCOP": 257140000,
+    "downPaymentCOP": 20571200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -11095,41 +11023,23 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "inari",
     "matchPercentage": 40,
     "scores": {
-      "fit": 19,
-      "intent": 53,
-      "engagement": 47,
-      "conversion": 38,
-      "total": 39
+      "fit": 17,
+      "intent": 42,
+      "engagement": 45,
+      "conversion": 43,
+      "total": 36
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (42/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
@@ -11180,31 +11090,31 @@ export const REAL_LEADS: Lead[] = [
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
     "status": "Cita Agendada",
-    "temperature": "Warm",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 168920000,
-    "downPaymentCOP": 13513600,
+    "budgetCOP": 170180000,
+    "downPaymentCOP": 13614400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 48,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 26,
-      "intent": 69,
-      "engagement": 60,
-      "conversion": 53,
-      "total": 51
+      "fit": 29,
+      "intent": 53,
+      "engagement": 48,
+      "conversion": 48,
+      "total": 44
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "iPhone"
@@ -11213,19 +11123,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -11269,11 +11179,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Perdido",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 257560000,
-    "downPaymentCOP": 20604800,
+    "budgetCOP": 260920000,
+    "downPaymentCOP": 20873600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
@@ -11281,23 +11191,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "inari",
     "matchPercentage": 40,
     "scores": {
-      "fit": 18,
-      "intent": 58,
-      "engagement": 45,
-      "conversion": 36,
-      "total": 39
+      "fit": 26,
+      "intent": 42,
+      "engagement": 37,
+      "conversion": 42,
+      "total": 37
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100).",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (42/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
@@ -11342,12 +11258,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1122",
     "name": "Daniela Delgado Muñoz",
-    "email": "daniela.delgado@hotmail.com",
+    "email": "daniela.delgado@gmail.com",
     "phone": "+57 318 447 9105",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
@@ -11359,11 +11275,11 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "reserva-guayacan",
     "matchPercentage": 40,
     "scores": {
-      "fit": 17,
+      "fit": 23,
       "intent": 44,
-      "engagement": 25,
-      "conversion": 32,
-      "total": 30
+      "engagement": 42,
+      "conversion": 39,
+      "total": 37
     },
     "priority": "Baja",
     "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (44/100).",
@@ -11375,19 +11291,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -11426,7 +11342,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1123",
     "name": "Katherine Medina Castillo",
-    "email": "katherine.medina@outlook.com",
+    "email": "katherine.medina@hotmail.com",
     "phone": "+57 302 678 9227",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
@@ -11434,8 +11350,8 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 165560000,
-    "downPaymentCOP": 13244800,
+    "budgetCOP": 167240000,
+    "downPaymentCOP": 13379200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -11443,14 +11359,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "mongui",
     "matchPercentage": 40,
     "scores": {
-      "fit": 18,
-      "intent": 39,
-      "engagement": 34,
-      "conversion": 27,
-      "total": 29
+      "fit": 22,
+      "intent": 42,
+      "engagement": 38,
+      "conversion": 40,
+      "total": 35
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (39/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (42/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
@@ -11459,19 +11375,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -11515,8 +11431,8 @@ export const REAL_LEADS: Lead[] = [
     "city": "Girardot",
     "channel": "Google Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
     "downPaymentCOP": 18880000,
@@ -11525,40 +11441,46 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 48,
+    "matchPercentage": 50,
     "scores": {
-      "fit": 16,
-      "intent": 79,
-      "engagement": 50,
-      "conversion": 57,
-      "total": 51
+      "fit": 9,
+      "intent": 91,
+      "engagement": 78,
+      "conversion": 58,
+      "total": 58
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (91/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "iPhone"
@@ -11567,7 +11489,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -11606,16 +11528,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1125",
     "name": "Yolanda Ruiz Rodríguez",
-    "email": "yolanda.ruiz@outlook.com",
+    "email": "yolanda.ruiz@hotmail.com",
     "phone": "+57 312 271 3811",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Perdido",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 237890000,
-    "downPaymentCOP": 19031200,
+    "budgetCOP": 238340000,
+    "downPaymentCOP": 19067200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -11623,29 +11545,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 21,
+      "fit": 26,
       "intent": 54,
-      "engagement": 41,
-      "conversion": 40,
-      "total": 39
+      "engagement": 51,
+      "conversion": 35,
+      "total": 41
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -11684,13 +11618,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1126",
     "name": "Ana Rincón Bernal",
-    "email": "ana.rincon@hotmail.com",
+    "email": "ana.rincon@gmail.com",
     "phone": "+57 312 343 9803",
     "city": "Girardot",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "En Calificación",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
     "downPaymentCOP": 121600000,
@@ -11699,31 +11633,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 15,
-      "intent": 60,
-      "engagement": 43,
-      "conversion": 31,
-      "total": 37
+      "fit": 22,
+      "intent": 67,
+      "engagement": 55,
+      "conversion": 47,
+      "total": 47
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (60/100).",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (67/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
         "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
@@ -11768,52 +11714,46 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1127",
     "name": "Lorena Delgado Salazar",
-    "email": "lorena.delgado@hotmail.com",
+    "email": "lorena.delgado@outlook.com",
     "phone": "+57 321 481 0369",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 238340000,
-    "downPaymentCOP": 19067200,
+    "budgetCOP": 237980000,
+    "downPaymentCOP": 19038400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 26,
-      "intent": 45,
-      "engagement": 46,
-      "conversion": 34,
-      "total": 37
+      "fit": 22,
+      "intent": 60,
+      "engagement": 47,
+      "conversion": 45,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (45/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
@@ -11858,12 +11798,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1128",
     "name": "Lina Acosta Mora",
-    "email": "lina.acosta@gmail.com",
+    "email": "lina.acosta@outlook.com",
     "phone": "+57 321 496 8366",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
@@ -11875,35 +11815,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "araucaria",
     "matchPercentage": 40,
     "scores": {
-      "fit": 14,
-      "intent": 51,
-      "engagement": 29,
-      "conversion": 25,
-      "total": 30
+      "fit": 7,
+      "intent": 48,
+      "engagement": 22,
+      "conversion": 26,
+      "total": 27
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (51/100).",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (48/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -11950,44 +11884,38 @@ export const REAL_LEADS: Lead[] = [
     "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 237710000,
-    "downPaymentCOP": 19016800,
+    "budgetCOP": 237890000,
+    "downPaymentCOP": 19031200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "karakali",
-    "matchPercentage": 42,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 19,
-      "intent": 65,
-      "engagement": 52,
-      "conversion": 37,
-      "total": 43
+      "fit": 21,
+      "intent": 45,
+      "engagement": 25,
+      "conversion": 28,
+      "total": 31
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100).",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (45/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 4 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 3 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
-      },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -12026,13 +11954,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1130",
     "name": "Paola Acosta Cárdenas",
-    "email": "paola.acosta@gmail.com",
+    "email": "paola.acosta@outlook.com",
     "phone": "+57 327 017 3215",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Perdido",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 162040000,
     "downPaymentCOP": 12963200,
@@ -12041,32 +11969,20 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 52,
+    "matchPercentage": 49,
     "scores": {
       "fit": 28,
-      "intent": 76,
-      "engagement": 58,
-      "conversion": 60,
-      "total": 56
+      "intent": 70,
+      "engagement": 49,
+      "conversion": 51,
+      "total": 50
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (70/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -12080,7 +11996,7 @@ export const REAL_LEADS: Lead[] = [
         "device": "iPhone"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "WhatsApp Web"
@@ -12089,7 +12005,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -12133,47 +12049,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Perdido",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 186500000,
-    "downPaymentCOP": 14920000,
+    "budgetCOP": 182700000,
+    "downPaymentCOP": 14616000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-arrayan",
-    "matchPercentage": 40,
+    "matchPercentage": 42,
     "scores": {
-      "fit": 25,
-      "intent": 49,
-      "engagement": 51,
-      "conversion": 43,
-      "total": 41
+      "fit": 15,
+      "intent": 68,
+      "engagement": 45,
+      "conversion": 45,
+      "total": 44
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (49/100).",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (68/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -12217,59 +12139,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 161500000,
-    "downPaymentCOP": 12920000,
+    "budgetCOP": 161140000,
+    "downPaymentCOP": 12891200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 48,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 25,
-      "intent": 71,
-      "engagement": 63,
-      "conversion": 53,
-      "total": 52
+      "fit": 23,
+      "intent": 51,
+      "engagement": 27,
+      "conversion": 38,
+      "total": 36
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (51/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -12308,70 +12224,64 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1133",
     "name": "Alejandro Ortiz García",
-    "email": "alejandro.ortiz@gmail.com",
+    "email": "alejandro.ortiz@outlook.com",
     "phone": "+57 315 984 8284",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 143660000,
-    "downPaymentCOP": 11492800,
+    "budgetCOP": 142970000,
+    "downPaymentCOP": 11437600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 54,
+    "matchPercentage": 52,
     "scores": {
-      "fit": 42,
-      "intent": 66,
-      "engagement": 59,
-      "conversion": 50,
-      "total": 54
+      "fit": 39,
+      "intent": 65,
+      "engagement": 36,
+      "conversion": 53,
+      "total": 50
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Desktop Chrome"
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -12416,25 +12326,25 @@ export const REAL_LEADS: Lead[] = [
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
     "status": "Cita Agendada",
-    "temperature": "Warm",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 186120000,
-    "downPaymentCOP": 14889600,
+    "budgetCOP": 187260000,
+    "downPaymentCOP": 14980800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-arrayan",
-    "matchPercentage": 40,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 24,
-      "intent": 56,
-      "engagement": 57,
-      "conversion": 51,
-      "total": 46
+      "fit": 27,
+      "intent": 61,
+      "engagement": 35,
+      "conversion": 41,
+      "total": 42
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (56/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -12443,25 +12353,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -12500,12 +12410,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1135",
     "name": "Fabián Gutiérrez Martínez",
-    "email": "fabian.gutierrez@outlook.com",
+    "email": "fabian.gutierrez@gmail.com",
     "phone": "+57 305 532 9991",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Perdido",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 237350000,
@@ -12517,14 +12427,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 7,
-      "intent": 72,
-      "engagement": 40,
-      "conversion": 36,
-      "total": 39
+      "fit": 12,
+      "intent": 62,
+      "engagement": 56,
+      "conversion": 35,
+      "total": 40
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (72/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 3 días",
@@ -12533,19 +12443,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -12584,16 +12494,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1136",
     "name": "Ricardo Castro Castro",
-    "email": "ricardo.castro@outlook.com",
+    "email": "ricardo.castro@hotmail.com",
     "phone": "+57 323 729 1394",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 217950000,
-    "downPaymentCOP": 17436000,
+    "budgetCOP": 219540000,
+    "downPaymentCOP": 17563200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -12601,41 +12511,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "bosque-turpial",
     "matchPercentage": 40,
     "scores": {
-      "fit": 15,
-      "intent": 53,
-      "engagement": 47,
-      "conversion": 39,
-      "total": 38
+      "fit": 18,
+      "intent": 48,
+      "engagement": 28,
+      "conversion": 36,
+      "total": 33
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (48/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -12674,7 +12578,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1137",
     "name": "Julián López Herrera",
-    "email": "julian.lopez@gmail.com",
+    "email": "julian.lopez@outlook.com",
     "phone": "+57 352 488 8885",
     "city": "Ciudadela Maiporé",
     "channel": "Google Ads",
@@ -12682,56 +12586,56 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 143430000,
-    "downPaymentCOP": 11474400,
+    "budgetCOP": 144120000,
+    "downPaymentCOP": 11529600,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 60,
+    "matchPercentage": 53,
     "scores": {
-      "fit": 41,
-      "intent": 79,
-      "engagement": 43,
-      "conversion": 52,
-      "total": 55
+      "fit": 44,
+      "intent": 62,
+      "engagement": 60,
+      "conversion": 53,
+      "total": 54
     },
     "priority": "Muy Alta",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -12770,64 +12674,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1138",
     "name": "Mónica Ospina Castro",
-    "email": "monica.ospina@hotmail.com",
+    "email": "monica.ospina@outlook.com",
     "phone": "+57 307 567 9047",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Pre-Aprobado",
+    "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 197880000,
-    "downPaymentCOP": 15830400,
+    "budgetCOP": 204040000,
+    "downPaymentCOP": 16323200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 51,
+    "matchPercentage": 53,
     "scores": {
-      "fit": 44,
-      "intent": 58,
-      "engagement": 38,
-      "conversion": 56,
-      "total": 50
+      "fit": 52,
+      "intent": 53,
+      "engagement": 40,
+      "conversion": 55,
+      "total": 51
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -12871,11 +12769,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "En Calificación",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 219010000,
-    "downPaymentCOP": 17520800,
+    "budgetCOP": 218480000,
+    "downPaymentCOP": 17478400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
@@ -12883,35 +12781,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "bosque-turpial",
     "matchPercentage": 40,
     "scores": {
-      "fit": 17,
-      "intent": 58,
-      "engagement": 38,
+      "fit": 16,
+      "intent": 50,
+      "engagement": 44,
       "conversion": 37,
-      "total": 38
+      "total": 36
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100).",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (50/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
         "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -12955,30 +12859,42 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Perdido",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 173960000,
-    "downPaymentCOP": 13916800,
+    "budgetCOP": 173540000,
+    "downPaymentCOP": 13883200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 48,
+    "matchPercentage": 55,
     "scores": {
-      "fit": 38,
-      "intent": 58,
-      "engagement": 37,
-      "conversion": 54,
-      "total": 48
+      "fit": 37,
+      "intent": 73,
+      "engagement": 56,
+      "conversion": 61,
+      "total": 57
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 21 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "iPhone"
+      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -12995,13 +12911,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -13040,46 +12956,64 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1141",
     "name": "Fabián Rincón Reyes",
-    "email": "fabian.rincon@hotmail.com",
+    "email": "fabian.rincon@outlook.com",
     "phone": "+57 327 778 3003",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 167240000,
-    "downPaymentCOP": 13379200,
+    "budgetCOP": 170600000,
+    "downPaymentCOP": 13648000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 41,
+    "matchPercentage": 55,
     "scores": {
-      "fit": 22,
-      "intent": 59,
-      "engagement": 35,
-      "conversion": 48,
-      "total": 42
+      "fit": 30,
+      "intent": 79,
+      "engagement": 61,
+      "conversion": 55,
+      "total": 56
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100).",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 22 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
@@ -13129,8 +13063,8 @@ export const REAL_LEADS: Lead[] = [
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Calificación",
+    "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 217950000,
     "downPaymentCOP": 17436000,
@@ -13139,49 +13073,37 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 44,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 12,
-      "intent": 76,
-      "engagement": 41,
-      "conversion": 52,
-      "total": 46
+      "fit": 7,
+      "intent": 52,
+      "engagement": 47,
+      "conversion": 31,
+      "total": 33
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (52/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 19 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -13220,52 +13142,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1143",
     "name": "Sebastián Álvarez García",
-    "email": "sebastian.alvarez@outlook.com",
+    "email": "sebastian.alvarez@gmail.com",
     "phone": "+57 302 137 8739",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "Perdido",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 193080000,
-    "downPaymentCOP": 15446400,
+    "budgetCOP": 191340000,
+    "downPaymentCOP": 15307200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 40,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 26,
-      "intent": 54,
+      "fit": 23,
+      "intent": 65,
       "engagement": 38,
       "conversion": 42,
-      "total": 40
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -13309,7 +13237,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ricaurte",
     "channel": "Google Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 237350000,
@@ -13321,47 +13249,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 8,
+      "fit": 4,
       "intent": 71,
-      "engagement": 43,
-      "conversion": 40,
-      "total": 41
+      "engagement": 37,
+      "conversion": 37,
+      "total": 38
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -13400,47 +13322,35 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1145",
     "name": "Javier Reyes Castillo",
-    "email": "javier.reyes@hotmail.com",
+    "email": "javier.reyes@gmail.com",
     "phone": "+57 307 427 9671",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Bogota No Vis",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Cita Agendada",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 260500000,
-    "downPaymentCOP": 20840000,
+    "budgetCOP": 260920000,
+    "downPaymentCOP": 20873600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "inari",
-    "matchPercentage": 52,
+    "matchPercentage": 46,
     "scores": {
-      "fit": 25,
-      "intent": 79,
-      "engagement": 53,
-      "conversion": 60,
-      "total": 55
+      "fit": 26,
+      "intent": 66,
+      "engagement": 52,
+      "conversion": 41,
+      "total": 46
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
-      },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
@@ -13448,22 +13358,22 @@ export const REAL_LEADS: Lead[] = [
         "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -13502,64 +13412,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1146",
     "name": "Luis Díaz Álvarez",
-    "email": "luis.diaz@hotmail.com",
+    "email": "luis.diaz@outlook.com",
     "phone": "+57 303 377 6150",
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Pre-Aprobado",
+    "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 530600000,
-    "downPaymentCOP": 106120000,
+    "budgetCOP": 531000000,
+    "downPaymentCOP": 106200000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 45,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 19,
-      "intent": 70,
-      "engagement": 61,
-      "conversion": 44,
-      "total": 48
+      "fit": 20,
+      "intent": 61,
+      "engagement": 58,
+      "conversion": 52,
+      "total": 47
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría C con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (70/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría C con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (61/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 17 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -13603,7 +13507,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Nuevo",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 529000000,
@@ -13615,18 +13519,30 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 4,
-      "intent": 43,
-      "engagement": 36,
-      "conversion": 24,
-      "total": 26
+      "fit": 12,
+      "intent": 53,
+      "engagement": 41,
+      "conversion": 33,
+      "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (43/100).",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
@@ -13637,7 +13553,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -13681,53 +13597,59 @@ export const REAL_LEADS: Lead[] = [
     "city": "Girardot",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 531800000,
-    "downPaymentCOP": 106360000,
+    "budgetCOP": 532600000,
+    "downPaymentCOP": 106520000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 42,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 22,
-      "intent": 62,
-      "engagement": 32,
-      "conversion": 34,
-      "total": 39
+      "fit": 24,
+      "intent": 63,
+      "engagement": 45,
+      "conversion": 47,
+      "total": 45
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría C con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (62/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría C con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (63/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -13771,47 +13693,35 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
-    "temperature": "Warm",
+    "status": "Cita Agendada",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 228550000,
-    "downPaymentCOP": 18284000,
+    "budgetCOP": 227490000,
+    "downPaymentCOP": 18199200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 56,
+    "matchPercentage": 46,
     "scores": {
-      "fit": 35,
-      "intent": 76,
-      "engagement": 42,
-      "conversion": 51,
-      "total": 52
+      "fit": 33,
+      "intent": 59,
+      "engagement": 32,
+      "conversion": 40,
+      "total": 42
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
@@ -13820,16 +13730,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -13868,12 +13778,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1150",
     "name": "Hernán López Peña",
-    "email": "hernan.lopez@hotmail.com",
+    "email": "hernan.lopez@gmail.com",
     "phone": "+57 329 415 3110",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 529000000,
@@ -13885,35 +13795,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 9,
-      "intent": 43,
-      "engagement": 20,
-      "conversion": 27,
-      "total": 26
+      "fit": 12,
+      "intent": 60,
+      "engagement": 34,
+      "conversion": 35,
+      "total": 36
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (43/100).",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (60/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 4 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 3 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
-      },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -13952,13 +13856,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1151",
     "name": "Paola Hernández Suárez",
-    "email": "paola.hernandez@hotmail.com",
+    "email": "paola.hernandez@outlook.com",
     "phone": "+57 307 166 2963",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Primer Hogar Chia",
-    "status": "En Negociación",
-    "temperature": "Hot",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
     "downPaymentCOP": 121600000,
@@ -13967,49 +13871,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 52,
+    "matchPercentage": 45,
     "scores": {
       "fit": 25,
-      "intent": 78,
-      "engagement": 65,
-      "conversion": 59,
-      "total": 56
+      "intent": 64,
+      "engagement": 49,
+      "conversion": 54,
+      "total": 48
     },
-    "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (78/100). Ya completó 6 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (64/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
@@ -14054,7 +13952,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1152",
     "name": "Camilo Salazar López",
-    "email": "camilo.salazar@outlook.com",
+    "email": "camilo.salazar@hotmail.com",
     "phone": "+57 352 749 8659",
     "city": "Bogotá",
     "channel": "Meta Ads",
@@ -14069,43 +13967,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 42,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 22,
+      "fit": 20,
       "intent": 61,
-      "engagement": 36,
-      "conversion": 32,
-      "total": 39
+      "engagement": 41,
+      "conversion": 49,
+      "total": 43
     },
     "priority": "Baja",
     "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -14149,35 +14047,53 @@ export const REAL_LEADS: Lead[] = [
     "city": "Girardot",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "Ganado",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 145500000,
-    "downPaymentCOP": 11640000,
+    "budgetCOP": 145040000,
+    "downPaymentCOP": 11603200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 48,
+    "matchPercentage": 59,
     "scores": {
-      "fit": 50,
-      "intent": 46,
-      "engagement": 37,
-      "conversion": 49,
-      "total": 46
+      "fit": 48,
+      "intent": 69,
+      "engagement": 63,
+      "conversion": 68,
+      "total": 62
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es capacidad de pago (50/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Promesa de compraventa firmada",
+        "details": "Firmó promesa de compraventa.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
@@ -14189,13 +14105,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -14239,41 +14155,59 @@ export const REAL_LEADS: Lead[] = [
     "city": "Soacha",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 160240000,
-    "downPaymentCOP": 12819200,
+    "budgetCOP": 160600000,
+    "downPaymentCOP": 12848000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "verde-esperanza",
-    "matchPercentage": 40,
+    "matchPercentage": 43,
     "scores": {
-      "fit": 18,
-      "intent": 54,
-      "engagement": 31,
-      "conversion": 44,
-      "total": 38
+      "fit": 20,
+      "intent": 66,
+      "engagement": 62,
+      "conversion": 49,
+      "total": 48
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
+      {
         "timestamp": "Hace 3 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -14312,12 +14246,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1155",
     "name": "Lorena Acosta Herrera",
-    "email": "lorena.acosta@outlook.com",
+    "email": "lorena.acosta@gmail.com",
     "phone": "+57 314 865 8617",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
@@ -14329,35 +14263,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "araucaria",
     "matchPercentage": 40,
     "scores": {
-      "fit": 22,
-      "intent": 38,
-      "engagement": 45,
-      "conversion": 36,
+      "fit": 19,
+      "intent": 41,
+      "engagement": 43,
+      "conversion": 35,
       "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (38/100).",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (41/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -14396,7 +14330,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1156",
     "name": "Héctor Jiménez Bernal",
-    "email": "hector.jimenez@hotmail.com",
+    "email": "hector.jimenez@outlook.com",
     "phone": "+57 315 621 7844",
     "city": "Soacha",
     "channel": "Google Ads",
@@ -14404,23 +14338,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "No VIS",
-    "budgetCOP": 531000000,
-    "downPaymentCOP": 106200000,
+    "budgetCOP": 533400000,
+    "downPaymentCOP": 106680000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 57,
+    "matchPercentage": 52,
     "scores": {
-      "fit": 20,
-      "intent": 94,
-      "engagement": 67,
-      "conversion": 63,
-      "total": 61
+      "fit": 26,
+      "intent": 77,
+      "engagement": 64,
+      "conversion": 61,
+      "total": 57
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (94/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (77/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 18 horas",
     "lastInteraction": "Hace 1 min",
@@ -14429,37 +14363,37 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -14503,41 +14437,47 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 165980000,
-    "downPaymentCOP": 13278400,
+    "budgetCOP": 167660000,
+    "downPaymentCOP": 13412800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 42,
+    "matchPercentage": 49,
     "scores": {
-      "fit": 19,
-      "intent": 64,
-      "engagement": 35,
-      "conversion": 37,
-      "total": 40
+      "fit": 23,
+      "intent": 74,
+      "engagement": 47,
+      "conversion": 56,
+      "total": 51
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (74/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
@@ -14549,7 +14489,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -14588,16 +14528,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1158",
     "name": "Julián Ramírez Ríos",
-    "email": "julian.ramirez@hotmail.com",
+    "email": "julian.ramirez@gmail.com",
     "phone": "+57 351 437 6489",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Perdido",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 161320000,
-    "downPaymentCOP": 12905600,
+    "budgetCOP": 161500000,
+    "downPaymentCOP": 12920000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -14605,14 +14545,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "verde-esperanza",
     "matchPercentage": 43,
     "scores": {
-      "fit": 24,
-      "intent": 61,
-      "engagement": 45,
-      "conversion": 39,
-      "total": 42
+      "fit": 25,
+      "intent": 60,
+      "engagement": 54,
+      "conversion": 44,
+      "total": 45
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
@@ -14621,19 +14561,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 2 días",
@@ -14695,29 +14635,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 8,
-      "intent": 57,
-      "engagement": 48,
-      "conversion": 30,
-      "total": 35
+      "fit": 11,
+      "intent": 60,
+      "engagement": 35,
+      "conversion": 45,
+      "total": 38
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (57/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
@@ -14729,7 +14669,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -14773,53 +14713,59 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 226430000,
-    "downPaymentCOP": 18114400,
+    "budgetCOP": 225900000,
+    "downPaymentCOP": 18072000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 31,
-      "intent": 48,
-      "engagement": 46,
-      "conversion": 49,
-      "total": 43
+      "fit": 30,
+      "intent": 59,
+      "engagement": 51,
+      "conversion": 43,
+      "total": 46
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (48/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (59/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -14863,7 +14809,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 529000000,
@@ -14875,18 +14821,24 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 13,
-      "intent": 57,
-      "engagement": 38,
-      "conversion": 36,
-      "total": 36
+      "fit": 7,
+      "intent": 55,
+      "engagement": 57,
+      "conversion": 44,
+      "total": 39
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (57/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (55/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 20 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "WhatsApp Web"
+      },
       {
         "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
@@ -14897,19 +14849,19 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -14948,58 +14900,64 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1162",
     "name": "Marcela Gutiérrez Peña",
-    "email": "marcela.gutierrez@hotmail.com",
+    "email": "marcela.gutierrez@gmail.com",
     "phone": "+57 323 111 3788",
     "city": "Soacha",
     "channel": "Google Ads",
     "campaign": "Familia Maipore",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 189020000,
-    "downPaymentCOP": 15121600,
+    "budgetCOP": 189600000,
+    "downPaymentCOP": 15168000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "pamplona",
-    "matchPercentage": 52,
+    "matchPercentage": 50,
     "scores": {
-      "fit": 19,
-      "intent": 85,
-      "engagement": 57,
-      "conversion": 48,
-      "total": 53
+      "fit": 20,
+      "intent": 79,
+      "engagement": 71,
+      "conversion": 58,
+      "total": 56
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (85/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -15044,13 +15002,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1163",
     "name": "Milena Cárdenas Ortiz",
-    "email": "milena.cardenas@outlook.com",
+    "email": "milena.cardenas@gmail.com",
     "phone": "+57 318 335 7939",
     "city": "Fusagasugá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 217950000,
     "downPaymentCOP": 17436000,
@@ -15059,43 +15017,49 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 40,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 12,
-      "intent": 58,
-      "engagement": 44,
-      "conversion": 43,
-      "total": 39
+      "fit": 14,
+      "intent": 76,
+      "engagement": 63,
+      "conversion": 46,
+      "total": 49
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (58/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (76/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -15134,43 +15098,37 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1164",
     "name": "Carlos Jiménez Suárez",
-    "email": "carlos.jimenez@gmail.com",
+    "email": "carlos.jimenez@hotmail.com",
     "phone": "+57 328 250 9424",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 177090000,
-    "downPaymentCOP": 14167200,
+    "budgetCOP": 184020000,
+    "downPaymentCOP": 14721600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 40,
+    "matchPercentage": 44,
     "scores": {
-      "fit": 17,
-      "intent": 52,
-      "engagement": 45,
-      "conversion": 35,
-      "total": 37
+      "fit": 26,
+      "intent": 61,
+      "engagement": 44,
+      "conversion": 38,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (52/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Móvil Chrome"
@@ -15179,100 +15137,10 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 3 días",
-        "action": "Lead capturado desde pauta",
-        "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
-      }
-    ],
-    "sofia": {
-      "fuente": null,
-      "proyectoInteresOriginal": null,
-      "esAfiliado": null,
-      "rangoEdad": null,
-      "segmento": "Desconocido",
-      "categoriaAfiliado": "Desconocida",
-      "rangoSalarial": "Desconocido",
-      "composicionFamiliar": null,
-      "profesion": null,
-      "primeraVivienda": null,
-      "motivacion": null,
-      "zonaActual": null,
-      "timeline": null,
-      "creditoPrevio": null,
-      "fuenteCuotaInicial": "no preguntado",
-      "proyectoRecomendado": [],
-      "score": null,
-      "scoreNumerico": null,
-      "briefAsesor": null,
-      "remarketingTrack": null,
-      "perfilEstadistico": "No clasificado (falta edad)",
-      "perfilEstadisticoRiesgoDesistimiento": null,
-      "datacredito": {
-        "consultado": false,
-        "puntaje": null,
-        "nivelRiesgo": null,
-        "fechaConsulta": null
-      },
-      "brochureEnviado": null,
-      "timestamp": null
-    }
-  },
-  {
-    "id": "LEAD-1165",
-    "name": "Andrés Castro Bernal",
-    "email": "andres.castro@gmail.com",
-    "phone": "+57 354 746 9681",
-    "city": "Bogotá",
-    "channel": "Google Ads",
-    "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
-    "housingInterest": "VIS",
-    "budgetCOP": 177860000,
-    "downPaymentCOP": 14228800,
-    "colsubsidioAfiliado": true,
-    "afiliacionCategoria": "Cat A",
-    "hasCajaSubsidio": true,
-    "hasMiCasaYa": true,
-    "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 44,
-    "scores": {
-      "fit": 18,
-      "intent": 69,
-      "engagement": 63,
-      "conversion": 52,
-      "total": 49
-    },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
-    "assignedAdvisor": "Carlos Rodríguez",
-    "createdAt": "Ayer",
-    "lastInteraction": "Hace 1 min",
-    "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
-        "action": "Completó formulario de perfilamiento",
-        "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
         "device": "iPhone"
@@ -15312,18 +15180,114 @@ export const REAL_LEADS: Lead[] = [
     }
   },
   {
+    "id": "LEAD-1165",
+    "name": "Andrés Castro Bernal",
+    "email": "andres.castro@hotmail.com",
+    "phone": "+57 354 746 9681",
+    "city": "Bogotá",
+    "channel": "Google Ads",
+    "campaign": "Jovenes Tocancipa",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
+    "housingInterest": "VIS",
+    "budgetCOP": 179400000,
+    "downPaymentCOP": 14352000,
+    "colsubsidioAfiliado": true,
+    "afiliacionCategoria": "Cat A",
+    "hasCajaSubsidio": true,
+    "hasMiCasaYa": true,
+    "recommendedProjectId": "la-arboleda",
+    "matchPercentage": 48,
+    "scores": {
+      "fit": 20,
+      "intent": 75,
+      "engagement": 69,
+      "conversion": 51,
+      "total": 53
+    },
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 5 interacciones en su recorrido.",
+    "assignedAdvisor": "Carlos Rodríguez",
+    "createdAt": "Ayer",
+    "lastInteraction": "Hace 1 min",
+    "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Ayer",
+        "action": "Completó formulario de perfilamiento",
+        "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Lead capturado desde pauta",
+        "details": "Ingresó por formulario de campaña paga.",
+        "device": "WhatsApp Web"
+      }
+    ],
+    "sofia": {
+      "fuente": null,
+      "proyectoInteresOriginal": null,
+      "esAfiliado": null,
+      "rangoEdad": null,
+      "segmento": "Desconocido",
+      "categoriaAfiliado": "Desconocida",
+      "rangoSalarial": "Desconocido",
+      "composicionFamiliar": null,
+      "profesion": null,
+      "primeraVivienda": null,
+      "motivacion": null,
+      "zonaActual": null,
+      "timeline": null,
+      "creditoPrevio": null,
+      "fuenteCuotaInicial": "no preguntado",
+      "proyectoRecomendado": [],
+      "score": null,
+      "scoreNumerico": null,
+      "briefAsesor": null,
+      "remarketingTrack": null,
+      "perfilEstadistico": "No clasificado (falta edad)",
+      "perfilEstadisticoRiesgoDesistimiento": null,
+      "datacredito": {
+        "consultado": false,
+        "puntaje": null,
+        "nivelRiesgo": null,
+        "fechaConsulta": null
+      },
+      "brochureEnviado": null,
+      "timestamp": null
+    }
+  },
+  {
     "id": "LEAD-1166",
     "name": "Fernando Castillo Pineda",
-    "email": "fernando.castillo@outlook.com",
+    "email": "fernando.castillo@hotmail.com",
     "phone": "+57 309 642 4699",
     "city": "Ciudadela Calle 80",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "No VIS",
-    "budgetCOP": 529000000,
-    "downPaymentCOP": 105800000,
+    "budgetCOP": 529400000,
+    "downPaymentCOP": 105880000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -15331,29 +15295,23 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "los-nogales",
     "matchPercentage": 40,
     "scores": {
-      "fit": 6,
-      "intent": 68,
-      "engagement": 43,
-      "conversion": 46,
-      "total": 41
+      "fit": 16,
+      "intent": 64,
+      "engagement": 38,
+      "conversion": 33,
+      "total": 38
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (68/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (64/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
-      },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
@@ -15365,7 +15323,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -15412,23 +15370,23 @@ export const REAL_LEADS: Lead[] = [
     "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 533800000,
-    "downPaymentCOP": 106760000,
+    "budgetCOP": 532200000,
+    "downPaymentCOP": 106440000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 41,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 27,
-      "intent": 55,
-      "engagement": 53,
-      "conversion": 51,
-      "total": 46
+      "fit": 23,
+      "intent": 73,
+      "engagement": 45,
+      "conversion": 46,
+      "total": 47
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (55/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (73/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 2 días",
@@ -15437,25 +15395,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -15494,7 +15452,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1168",
     "name": "Fabián Mora Herrera",
-    "email": "fabian.mora@outlook.com",
+    "email": "fabian.mora@gmail.com",
     "phone": "+57 308 161 1045",
     "city": "Ricaurte",
     "channel": "Meta Ads",
@@ -15511,14 +15469,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "saman",
     "matchPercentage": 40,
     "scores": {
-      "fit": 4,
-      "intent": 49,
-      "engagement": 50,
-      "conversion": 39,
-      "total": 34
+      "fit": 9,
+      "intent": 66,
+      "engagement": 54,
+      "conversion": 38,
+      "total": 41
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (49/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
     "lastInteraction": "Hace 2 días",
@@ -15527,25 +15485,25 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -15592,8 +15550,8 @@ export const REAL_LEADS: Lead[] = [
     "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 186700000,
-    "downPaymentCOP": 14936000,
+    "budgetCOP": 193080000,
+    "downPaymentCOP": 15446400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -15601,20 +15559,20 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "pamplona",
     "matchPercentage": 40,
     "scores": {
-      "fit": 4,
-      "intent": 60,
-      "engagement": 53,
-      "conversion": 40,
-      "total": 38
+      "fit": 26,
+      "intent": 41,
+      "engagement": 36,
+      "conversion": 37,
+      "total": 35
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (41/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 4 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "WhatsApp Web"
@@ -15623,7 +15581,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -15662,58 +15620,46 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1170",
     "name": "Andrés Rincón Gómez",
-    "email": "andres.rincon@hotmail.com",
+    "email": "andres.rincon@outlook.com",
     "phone": "+57 328 162 1574",
     "city": "Ricaurte",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "Perdido",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 174380000,
-    "downPaymentCOP": 13950400,
+    "budgetCOP": 171440000,
+    "downPaymentCOP": 13715200,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 50,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 39,
-      "intent": 61,
-      "engagement": 60,
-      "conversion": 45,
-      "total": 51
+      "fit": 32,
+      "intent": 42,
+      "engagement": 36,
+      "conversion": 43,
+      "total": 38
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (42/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -15752,64 +15698,52 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1171",
     "name": "Eduardo Jiménez Ruiz",
-    "email": "eduardo.jimenez@hotmail.com",
+    "email": "eduardo.jimenez@outlook.com",
     "phone": "+57 301 785 1976",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
+    "status": "Perdido",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 206580000,
-    "downPaymentCOP": 16526400,
+    "budgetCOP": 202950000,
+    "downPaymentCOP": 16236000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "versalles",
-    "matchPercentage": 46,
+    "matchPercentage": 49,
     "scores": {
-      "fit": 26,
-      "intent": 66,
-      "engagement": 50,
-      "conversion": 54,
-      "total": 49
+      "fit": 15,
+      "intent": 83,
+      "engagement": 56,
+      "conversion": 55,
+      "total": 52
     },
     "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (83/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -15848,13 +15782,13 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1172",
     "name": "Paola Rodríguez Hernández",
-    "email": "paola.rodriguez@gmail.com",
+    "email": "paola.rodriguez@hotmail.com",
     "phone": "+57 351 165 6329",
     "city": "Chía",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
     "downPaymentCOP": 18880000,
@@ -15863,37 +15797,43 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 43,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 17,
-      "intent": 69,
-      "engagement": 37,
-      "conversion": 36,
-      "total": 41
+      "fit": 16,
+      "intent": 73,
+      "engagement": 40,
+      "conversion": 47,
+      "total": 45
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (73/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
         "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Ayer",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Ayer",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "iPhone"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
@@ -15938,12 +15878,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1173",
     "name": "Laura Moreno Acosta",
-    "email": "laura.moreno@outlook.com",
+    "email": "laura.moreno@gmail.com",
     "phone": "+57 312 927 0557",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
+    "status": "Pre-Aprobado",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
@@ -15953,130 +15893,46 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "araucaria",
-    "matchPercentage": 42,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 19,
-      "intent": 64,
-      "engagement": 46,
-      "conversion": 38,
-      "total": 42
+      "fit": 16,
+      "intent": 65,
+      "engagement": 43,
+      "conversion": 47,
+      "total": 43
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (64/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (65/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Completó formulario de perfilamiento",
-        "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
-        "action": "Lead capturado desde pauta",
-        "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
-      }
-    ],
-    "sofia": {
-      "fuente": null,
-      "proyectoInteresOriginal": null,
-      "esAfiliado": null,
-      "rangoEdad": null,
-      "segmento": "Desconocido",
-      "categoriaAfiliado": "Desconocida",
-      "rangoSalarial": "Desconocido",
-      "composicionFamiliar": null,
-      "profesion": null,
-      "primeraVivienda": null,
-      "motivacion": null,
-      "zonaActual": null,
-      "timeline": null,
-      "creditoPrevio": null,
-      "fuenteCuotaInicial": "no preguntado",
-      "proyectoRecomendado": [],
-      "score": null,
-      "scoreNumerico": null,
-      "briefAsesor": null,
-      "remarketingTrack": null,
-      "perfilEstadistico": "No clasificado (falta edad)",
-      "perfilEstadisticoRiesgoDesistimiento": null,
-      "datacredito": {
-        "consultado": false,
-        "puntaje": null,
-        "nivelRiesgo": null,
-        "fechaConsulta": null
-      },
-      "brochureEnviado": null,
-      "timestamp": null
-    }
-  },
-  {
-    "id": "LEAD-1174",
-    "name": "Nicolás Acosta López",
-    "email": "nicolas.acosta@gmail.com",
-    "phone": "+57 301 589 2193",
-    "city": "Bogotá",
-    "channel": "Meta Ads",
-    "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
-    "housingInterest": "No VIS",
-    "budgetCOP": 533000000,
-    "downPaymentCOP": 106600000,
-    "colsubsidioAfiliado": true,
-    "afiliacionCategoria": "Cat C",
-    "hasCajaSubsidio": false,
-    "hasMiCasaYa": false,
-    "recommendedProjectId": "los-nogales",
-    "matchPercentage": 50,
-    "scores": {
-      "fit": 25,
-      "intent": 74,
-      "engagement": 42,
-      "conversion": 40,
-      "total": 46
-    },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría C con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (74/100). Ya completó 4 interacciones en su recorrido.",
-    "assignedAdvisor": "Carlos Rodríguez",
-    "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
-    "behaviorLogs": [
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
-      },
-      {
-        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
         "device": "Desktop Chrome"
@@ -16116,54 +15972,162 @@ export const REAL_LEADS: Lead[] = [
     }
   },
   {
-    "id": "LEAD-1175",
-    "name": "Yolanda Peña Castro",
-    "email": "yolanda.pena@hotmail.com",
-    "phone": "+57 311 155 7295",
-    "city": "Soacha",
+    "id": "LEAD-1174",
+    "name": "Nicolás Acosta López",
+    "email": "nicolas.acosta@hotmail.com",
+    "phone": "+57 301 589 2193",
+    "city": "Bogotá",
     "channel": "Meta Ads",
-    "campaign": "Bogota No Vis",
-    "status": "Cita Agendada",
-    "temperature": "Cold",
-    "housingInterest": "VIS",
-    "budgetCOP": 259660000,
-    "downPaymentCOP": 20772800,
+    "campaign": "Familia Maipore",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
+    "housingInterest": "No VIS",
+    "budgetCOP": 531400000,
+    "downPaymentCOP": 106280000,
     "colsubsidioAfiliado": true,
-    "afiliacionCategoria": "Cat A",
-    "hasCajaSubsidio": true,
-    "hasMiCasaYa": true,
-    "recommendedProjectId": "inari",
-    "matchPercentage": 42,
+    "afiliacionCategoria": "Cat C",
+    "hasCajaSubsidio": false,
+    "hasMiCasaYa": false,
+    "recommendedProjectId": "los-nogales",
+    "matchPercentage": 46,
     "scores": {
-      "fit": 23,
-      "intent": 60,
-      "engagement": 41,
+      "fit": 21,
+      "intent": 70,
+      "engagement": 57,
       "conversion": 46,
-      "total": 43
+      "total": 48
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (60/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría C con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (70/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
+      },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Hace 4 días",
+        "action": "Lead capturado desde pauta",
+        "details": "Ingresó por formulario de campaña paga.",
+        "device": "Móvil Android"
+      }
+    ],
+    "sofia": {
+      "fuente": null,
+      "proyectoInteresOriginal": null,
+      "esAfiliado": null,
+      "rangoEdad": null,
+      "segmento": "Desconocido",
+      "categoriaAfiliado": "Desconocida",
+      "rangoSalarial": "Desconocido",
+      "composicionFamiliar": null,
+      "profesion": null,
+      "primeraVivienda": null,
+      "motivacion": null,
+      "zonaActual": null,
+      "timeline": null,
+      "creditoPrevio": null,
+      "fuenteCuotaInicial": "no preguntado",
+      "proyectoRecomendado": [],
+      "score": null,
+      "scoreNumerico": null,
+      "briefAsesor": null,
+      "remarketingTrack": null,
+      "perfilEstadistico": "No clasificado (falta edad)",
+      "perfilEstadisticoRiesgoDesistimiento": null,
+      "datacredito": {
+        "consultado": false,
+        "puntaje": null,
+        "nivelRiesgo": null,
+        "fechaConsulta": null
+      },
+      "brochureEnviado": null,
+      "timestamp": null
+    }
+  },
+  {
+    "id": "LEAD-1175",
+    "name": "Yolanda Peña Castro",
+    "email": "yolanda.pena@gmail.com",
+    "phone": "+57 311 155 7295",
+    "city": "Soacha",
+    "channel": "Meta Ads",
+    "campaign": "Bogota No Vis",
+    "status": "En Negociación",
+    "temperature": "Warm",
+    "housingInterest": "VIS",
+    "budgetCOP": 260080000,
+    "downPaymentCOP": 20806400,
+    "colsubsidioAfiliado": true,
+    "afiliacionCategoria": "Cat A",
+    "hasCajaSubsidio": true,
+    "hasMiCasaYa": true,
+    "recommendedProjectId": "inari",
+    "matchPercentage": 46,
+    "scores": {
+      "fit": 24,
+      "intent": 67,
+      "engagement": 63,
+      "conversion": 45,
+      "total": 49
+    },
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 6 interacciones en su recorrido.",
+    "assignedAdvisor": "Carlos Rodríguez",
+    "createdAt": "Hace 4 días",
+    "lastInteraction": "Hace 1 min",
+    "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
         "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 3 días",
+        "action": "Completó formulario de perfilamiento",
+        "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
@@ -16208,41 +16172,35 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1176",
     "name": "Ricardo Cárdenas Bernal",
-    "email": "ricardo.cardenas@hotmail.com",
+    "email": "ricardo.cardenas@gmail.com",
     "phone": "+57 328 731 1859",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Cita Agendada",
-    "temperature": "Warm",
+    "status": "En Calificación",
+    "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 168080000,
-    "downPaymentCOP": 13446400,
+    "budgetCOP": 164720000,
+    "downPaymentCOP": 13177600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 46,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 24,
-      "intent": 68,
-      "engagement": 60,
-      "conversion": 48,
-      "total": 49
+      "fit": 16,
+      "intent": 66,
+      "engagement": 38,
+      "conversion": 36,
+      "total": 40
     },
-    "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (68/100). Ya completó 4 interacciones en su recorrido.",
+    "priority": "Baja",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
-      },
       {
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
@@ -16250,16 +16208,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -16298,46 +16256,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1177",
     "name": "Cristian Álvarez Peña",
-    "email": "cristian.alvarez@outlook.com",
+    "email": "cristian.alvarez@gmail.com",
     "phone": "+57 314 290 5017",
     "city": "Ciudadela Calle 80",
     "channel": "Google Ads",
     "campaign": "Bogota No Vis",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "Cita Agendada",
+    "temperature": "Warm",
     "housingInterest": "No VIS",
-    "budgetCOP": 529400000,
-    "downPaymentCOP": 105880000,
+    "budgetCOP": 529000000,
+    "downPaymentCOP": 105800000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": false,
     "recommendedProjectId": "los-nogales",
-    "matchPercentage": 40,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 16,
-      "intent": 59,
-      "engagement": 32,
-      "conversion": 39,
-      "total": 37
+      "fit": 6,
+      "intent": 76,
+      "engagement": 62,
+      "conversion": 48,
+      "total": 47
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (59/100).",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (76/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -16376,16 +16346,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1178",
     "name": "Fernanda Romero García",
-    "email": "fernanda.romero@hotmail.com",
+    "email": "fernanda.romero@gmail.com",
     "phone": "+57 307 471 7944",
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "En Calificación",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 204930000,
-    "downPaymentCOP": 16394400,
+    "budgetCOP": 205260000,
+    "downPaymentCOP": 16420800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -16393,29 +16363,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "versalles",
     "matchPercentage": 40,
     "scores": {
-      "fit": 21,
-      "intent": 54,
-      "engagement": 34,
-      "conversion": 41,
-      "total": 38
+      "fit": 22,
+      "intent": 47,
+      "engagement": 32,
+      "conversion": 42,
+      "total": 36
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (47/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 22 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "WhatsApp Web"
+      },
+      {
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
@@ -16465,11 +16441,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "En Calificación",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 139520000,
-    "downPaymentCOP": 11161600,
+    "budgetCOP": 138830000,
+    "downPaymentCOP": 11106400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -16477,35 +16453,41 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "la-macarena",
     "matchPercentage": 40,
     "scores": {
-      "fit": 24,
-      "intent": 49,
-      "engagement": 32,
+      "fit": 21,
+      "intent": 52,
+      "engagement": 31,
       "conversion": 40,
       "total": 37
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (49/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (52/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "iPhone"
+      },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -16544,16 +16526,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1180",
     "name": "Sandra Cárdenas Gutiérrez",
-    "email": "sandra.cardenas@hotmail.com",
+    "email": "sandra.cardenas@outlook.com",
     "phone": "+57 325 598 7725",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 179400000,
-    "downPaymentCOP": 14352000,
+    "budgetCOP": 185560000,
+    "downPaymentCOP": 14844800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -16561,35 +16543,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "la-arboleda",
     "matchPercentage": 40,
     "scores": {
-      "fit": 20,
-      "intent": 50,
-      "engagement": 47,
-      "conversion": 40,
-      "total": 39
+      "fit": 28,
+      "intent": 46,
+      "engagement": 34,
+      "conversion": 36,
+      "total": 36
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (50/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (46/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 24 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
-      },
-      {
-        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Ayer",
@@ -16634,7 +16610,7 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1181",
     "name": "Valentina Ramírez Ríos",
-    "email": "valentina.ramirez@outlook.com",
+    "email": "valentina.ramirez@hotmail.com",
     "phone": "+57 321 213 0654",
     "city": "Ubaté",
     "channel": "Meta Ads",
@@ -16642,8 +16618,8 @@ export const REAL_LEADS: Lead[] = [
     "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 160420000,
-    "downPaymentCOP": 12833600,
+    "budgetCOP": 161680000,
+    "downPaymentCOP": 12934400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -16651,14 +16627,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "verde-esperanza",
     "matchPercentage": 40,
     "scores": {
-      "fit": 19,
-      "intent": 44,
-      "engagement": 42,
-      "conversion": 37,
-      "total": 35
+      "fit": 26,
+      "intent": 54,
+      "engagement": 38,
+      "conversion": 43,
+      "total": 41
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (44/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -16667,13 +16643,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Ayer",
@@ -16723,11 +16699,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 237980000,
-    "downPaymentCOP": 19038400,
+    "budgetCOP": 238430000,
+    "downPaymentCOP": 19074400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat C",
     "hasCajaSubsidio": true,
@@ -16735,41 +16711,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "karakali",
     "matchPercentage": 40,
     "scores": {
-      "fit": 22,
-      "intent": 51,
-      "engagement": 30,
-      "conversion": 40,
-      "total": 37
+      "fit": 27,
+      "intent": 41,
+      "engagement": 21,
+      "conversion": 28,
+      "total": 30
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (51/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría C con subsidio VIS aplicable. Su señal más fuerte es intención de compra (41/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 16 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -16813,47 +16777,59 @@ export const REAL_LEADS: Lead[] = [
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Perdido",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 187870000,
-    "downPaymentCOP": 15029600,
+    "budgetCOP": 190180000,
+    "downPaymentCOP": 15214400,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat B",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 40,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 31,
-      "intent": 49,
-      "engagement": 32,
-      "conversion": 41,
-      "total": 39
+      "fit": 34,
+      "intent": 61,
+      "engagement": 45,
+      "conversion": 39,
+      "total": 45
     },
-    "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (49/100).",
+    "priority": "Media",
+    "priorityRationale": "Afiliado Categoría B con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
         "device": "iPhone"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -16892,43 +16868,55 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1184",
     "name": "Yolanda Suárez Delgado",
-    "email": "yolanda.suarez@gmail.com",
+    "email": "yolanda.suarez@outlook.com",
     "phone": "+57 326 190 8845",
     "city": "Ciudadela Maiporé",
     "channel": "Google Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "En Calificación",
-    "temperature": "Cold",
+    "status": "Pre-Aprobado",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 169340000,
-    "downPaymentCOP": 13547200,
+    "budgetCOP": 168500000,
+    "downPaymentCOP": 13480000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "mongui",
-    "matchPercentage": 40,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 27,
-      "intent": 52,
-      "engagement": 43,
-      "conversion": 36,
-      "total": 39
+      "fit": 25,
+      "intent": 71,
+      "engagement": 54,
+      "conversion": 59,
+      "total": 52
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (52/100).",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (71/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 2 días",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "WhatsApp Web"
+      },
       {
         "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Móvil Chrome"
@@ -16937,7 +16925,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -16981,7 +16969,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Cita Agendada",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "No VIS",
     "budgetCOP": 608000000,
@@ -16993,35 +16981,23 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "araucaria",
     "matchPercentage": 40,
     "scores": {
-      "fit": 14,
-      "intent": 49,
-      "engagement": 26,
-      "conversion": 24,
-      "total": 29
+      "fit": 13,
+      "intent": 46,
+      "engagement": 38,
+      "conversion": 38,
+      "total": 33
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (49/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con proyecto No VIS (sin subsidio). Su señal más fuerte es intención de compra (46/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Ayer",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
         "timestamp": "Hace 2 días",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
-      },
-      {
-        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 3 días",
@@ -17066,52 +17042,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1186",
     "name": "Sandra Hernández Cárdenas",
-    "email": "sandra.hernandez@gmail.com",
+    "email": "sandra.hernandez@outlook.com",
     "phone": "+57 323 968 1939",
     "city": "Tocancipá",
     "channel": "Google Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "Pre-Aprobado",
-    "temperature": "Warm",
+    "status": "En Negociación",
+    "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 182700000,
-    "downPaymentCOP": 14616000,
+    "budgetCOP": 184600000,
+    "downPaymentCOP": 14768000,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-arrayan",
-    "matchPercentage": 44,
+    "matchPercentage": 52,
     "scores": {
-      "fit": 12,
-      "intent": 75,
-      "engagement": 64,
-      "conversion": 45,
-      "total": 48
+      "fit": 20,
+      "intent": 84,
+      "engagement": 53,
+      "conversion": 56,
+      "total": 54
     },
-    "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (75/100). Ya completó 5 interacciones en su recorrido.",
+    "priority": "Muy Alta",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (84/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Cita agendada en sala de ventas",
+        "details": "Se agendó cita presencial en sala de ventas.",
+        "device": "Móvil Android"
+      },
       {
         "timestamp": "Hace 2 días",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 4 días",
@@ -17123,7 +17105,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -17177,34 +17159,34 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 41,
+    "matchPercentage": 40,
     "scores": {
-      "fit": 5,
-      "intent": 77,
-      "engagement": 70,
-      "conversion": 42,
-      "total": 47
+      "fit": 13,
+      "intent": 64,
+      "engagement": 59,
+      "conversion": 50,
+      "total": 45
     },
     "priority": "Media",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (77/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "iPhone"
       },
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "Desktop Chrome"
@@ -17213,7 +17195,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -17257,11 +17239,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Soacha",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Cita Agendada",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 253300000,
-    "downPaymentCOP": 20264000,
+    "budgetCOP": 253420000,
+    "downPaymentCOP": 20273600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
@@ -17269,41 +17251,35 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "saman",
     "matchPercentage": 40,
     "scores": {
-      "fit": 14,
-      "intent": 49,
-      "engagement": 38,
-      "conversion": 39,
-      "total": 35
+      "fit": 21,
+      "intent": 50,
+      "engagement": 23,
+      "conversion": 37,
+      "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (49/100). Ya completó 4 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (50/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Usó simulador de subsidio/crédito",
-        "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -17342,76 +17318,70 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1189",
     "name": "Hernán Mora Cruz",
-    "email": "hernan.mora@gmail.com",
+    "email": "hernan.mora@hotmail.com",
     "phone": "+57 359 775 5782",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Bogota No Vis",
-    "status": "Ganado",
+    "status": "En Negociación",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 253780000,
-    "downPaymentCOP": 20302400,
+    "budgetCOP": 253600000,
+    "downPaymentCOP": 20288000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 59,
+    "matchPercentage": 52,
     "scores": {
-      "fit": 39,
-      "intent": 79,
-      "engagement": 54,
-      "conversion": 63,
-      "total": 60
+      "fit": 30,
+      "intent": 74,
+      "engagement": 57,
+      "conversion": 59,
+      "total": 55
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 7 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (74/100). Ya completó 6 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 2 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
-        "action": "Promesa de compraventa firmada",
-        "details": "Firmó promesa de compraventa.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 1 min",
+        "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
-        "timestamp": "Ayer",
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "iPhone"
       }
     ],
     "sofia": {
@@ -17450,49 +17420,43 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1190",
     "name": "Mónica Pineda Ríos",
-    "email": "monica.pineda@outlook.com",
+    "email": "monica.pineda@hotmail.com",
     "phone": "+57 306 732 6334",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "Pre-Aprobado",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 184020000,
-    "downPaymentCOP": 14721600,
+    "budgetCOP": 186330000,
+    "downPaymentCOP": 14906400,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 44,
+    "matchPercentage": 41,
     "scores": {
-      "fit": 26,
-      "intent": 62,
-      "engagement": 41,
-      "conversion": 35,
-      "total": 42
+      "fit": 29,
+      "intent": 53,
+      "engagement": 52,
+      "conversion": 43,
+      "total": 44
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (62/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (53/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Hace 3 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 2 días",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "iPhone"
-      },
       {
         "timestamp": "Hace 3 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Android"
+        "device": "Móvil Chrome"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 4 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "Desktop Chrome"
@@ -17507,7 +17471,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Móvil Android"
       }
     ],
     "sofia": {
@@ -17551,11 +17515,11 @@ export const REAL_LEADS: Lead[] = [
     "city": "Ciudadela Maiporé",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "Nuevo",
+    "status": "En Calificación",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 186700000,
-    "downPaymentCOP": 14936000,
+    "budgetCOP": 189020000,
+    "downPaymentCOP": 15121600,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -17563,23 +17527,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "pamplona",
     "matchPercentage": 40,
     "scores": {
-      "fit": 8,
-      "intent": 38,
-      "engagement": 39,
-      "conversion": 23,
-      "total": 26
+      "fit": 19,
+      "intent": 52,
+      "engagement": 27,
+      "conversion": 32,
+      "total": 34
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (38/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (52/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 3 días",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Android"
+      },
+      {
+        "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 3 días",
@@ -17624,52 +17594,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1192",
     "name": "Valentina García Medina",
-    "email": "valentina.garcia@gmail.com",
+    "email": "valentina.garcia@outlook.com",
     "phone": "+57 315 492 3454",
     "city": "Ciudadela Maiporé",
     "channel": "Google Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "En Calificación",
-    "temperature": "Cold",
+    "status": "Cita Agendada",
+    "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 139520000,
-    "downPaymentCOP": 11161600,
+    "budgetCOP": 140440000,
+    "downPaymentCOP": 11235200,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-macarena",
-    "matchPercentage": 43,
+    "matchPercentage": 46,
     "scores": {
-      "fit": 24,
-      "intent": 61,
-      "engagement": 42,
-      "conversion": 43,
-      "total": 43
+      "fit": 28,
+      "intent": 64,
+      "engagement": 39,
+      "conversion": 45,
+      "total": 45
     },
-    "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (61/100).",
+    "priority": "Media",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (64/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Ayer",
+    "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
+      {
+        "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Android"
+      },
       {
         "timestamp": "Ayer",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 2 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Chrome"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -17708,16 +17684,16 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1193",
     "name": "Daniel Romero Reyes",
-    "email": "daniel.romero@gmail.com",
+    "email": "daniel.romero@hotmail.com",
     "phone": "+57 321 843 4795",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Vivienda Vis 2026",
-    "status": "En Calificación",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
-    "budgetCOP": 180170000,
-    "downPaymentCOP": 14413600,
+    "budgetCOP": 177860000,
+    "downPaymentCOP": 14228800,
     "colsubsidioAfiliado": false,
     "afiliacionCategoria": "No Afiliado",
     "hasCajaSubsidio": false,
@@ -17725,23 +17701,29 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "la-arboleda",
     "matchPercentage": 40,
     "scores": {
-      "fit": 21,
-      "intent": 56,
-      "engagement": 30,
-      "conversion": 37,
+      "fit": 18,
+      "intent": 50,
+      "engagement": 46,
+      "conversion": 36,
       "total": 37
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (56/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (50/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 21 horas",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Ayer",
@@ -17792,61 +17774,67 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1194",
     "name": "Patricia Díaz Jiménez",
-    "email": "patricia.diaz@outlook.com",
+    "email": "patricia.diaz@hotmail.com",
     "phone": "+57 313 669 2577",
     "city": "Bogotá",
     "channel": "Google Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
+    "status": "Ganado",
     "temperature": "Hot",
     "housingInterest": "VIS",
-    "budgetCOP": 182480000,
-    "downPaymentCOP": 14598400,
+    "budgetCOP": 184020000,
+    "downPaymentCOP": 14721600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "la-arboleda",
-    "matchPercentage": 53,
+    "matchPercentage": 60,
     "scores": {
-      "fit": 24,
-      "intent": 82,
-      "engagement": 65,
-      "conversion": 65,
-      "total": 59
+      "fit": 26,
+      "intent": 94,
+      "engagement": 77,
+      "conversion": 63,
+      "total": 64
     },
     "priority": "Muy Alta",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (82/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (94/100). Ya completó 7 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
     "lastInteraction": "Hace 1 min",
     "behaviorLogs": [
       {
         "timestamp": "Hace 1 min",
+        "action": "Promesa de compraventa firmada",
+        "details": "Firmó promesa de compraventa.",
+        "device": "Desktop Chrome"
+      },
+      {
+        "timestamp": "Hace 1 min",
         "action": "Cita agendada en sala de ventas",
         "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "Móvil Chrome"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Visitó landing del proyecto",
-        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Desktop Chrome"
+        "device": "WhatsApp Web"
       },
       {
         "timestamp": "Hace 2 días",
+        "action": "Visitó landing del proyecto",
+        "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
         "device": "iPhone"
@@ -17855,7 +17843,7 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 3 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Móvil Android"
+        "device": "WhatsApp Web"
       }
     ],
     "sofia": {
@@ -17894,12 +17882,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1195",
     "name": "Ricardo Castro Castro",
-    "email": "ricardo.castro@hotmail.com",
+    "email": "ricardo.castro@outlook.com",
     "phone": "+57 323 729 1394",
     "city": "Ubaté",
     "channel": "Meta Ads",
     "campaign": "Inversion Ricaurte",
-    "status": "En Negociación",
+    "status": "Cita Agendada",
     "temperature": "Warm",
     "housingInterest": "VIS",
     "budgetCOP": 236000000,
@@ -17909,37 +17897,25 @@ export const REAL_LEADS: Lead[] = [
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "reserva-guayacan",
-    "matchPercentage": 51,
+    "matchPercentage": 45,
     "scores": {
-      "fit": 24,
-      "intent": 77,
-      "engagement": 55,
-      "conversion": 54,
-      "total": 53
+      "fit": 22,
+      "intent": 67,
+      "engagement": 40,
+      "conversion": 53,
+      "total": 46
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (77/100). Ya completó 6 interacciones en su recorrido.",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 3 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Hace 2 días",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Cita agendada en sala de ventas",
-        "details": "Se agendó cita presencial en sala de ventas.",
-        "device": "WhatsApp Web"
-      },
-      {
-        "timestamp": "Ayer",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Móvil Android"
-      },
       {
         "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 2 días",
@@ -17996,46 +17972,58 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1196",
     "name": "Hernán Medina Vargas",
-    "email": "hernan.medina@hotmail.com",
+    "email": "hernan.medina@gmail.com",
     "phone": "+57 356 179 2685",
     "city": "Bogotá",
     "channel": "Meta Ads",
     "campaign": "Familia Maipore",
-    "status": "Perdido",
+    "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 221660000,
-    "downPaymentCOP": 17732800,
+    "budgetCOP": 223250000,
+    "downPaymentCOP": 17860000,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "bosque-turpial",
-    "matchPercentage": 44,
+    "matchPercentage": 47,
     "scores": {
-      "fit": 22,
-      "intent": 65,
-      "engagement": 50,
-      "conversion": 48,
-      "total": 46
+      "fit": 25,
+      "intent": 69,
+      "engagement": 65,
+      "conversion": 54,
+      "total": 52
     },
     "priority": "Media",
-    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (65/100).",
+    "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (69/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
+      {
+        "timestamp": "Ayer",
+        "action": "Contactado por asesor (WhatsApp/llamada)",
+        "details": "El asesor comercial estableció el primer contacto.",
+        "device": "Móvil Chrome"
+      },
+      {
+        "timestamp": "Ayer",
+        "action": "Usó simulador de subsidio/crédito",
+        "details": "Usó el simulador de subsidio y crédito hipotecario.",
+        "device": "Desktop Chrome"
+      },
       {
         "timestamp": "Hace 2 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "Móvil Chrome"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 3 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "Móvil Android"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
@@ -18085,7 +18073,7 @@ export const REAL_LEADS: Lead[] = [
     "city": "Chía",
     "channel": "Meta Ads",
     "campaign": "Jovenes Tocancipa",
-    "status": "En Calificación",
+    "status": "Perdido",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 256300000,
@@ -18097,14 +18085,14 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "inari",
     "matchPercentage": 40,
     "scores": {
-      "fit": 9,
-      "intent": 54,
-      "engagement": 34,
-      "conversion": 42,
-      "total": 35
+      "fit": 12,
+      "intent": 45,
+      "engagement": 43,
+      "conversion": 37,
+      "total": 33
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (54/100).",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (45/100).",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Ayer",
     "lastInteraction": "Hace 1 min",
@@ -18113,13 +18101,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 1 min",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
-        "device": "WhatsApp Web"
+        "device": "Móvil Android"
       },
       {
         "timestamp": "Hace 1 min",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Ayer",
@@ -18164,12 +18152,12 @@ export const REAL_LEADS: Lead[] = [
   {
     "id": "LEAD-1198",
     "name": "Pedro Suárez Medina",
-    "email": "pedro.suarez@outlook.com",
+    "email": "pedro.suarez@hotmail.com",
     "phone": "+57 309 285 2868",
     "city": "Tocancipá",
     "channel": "Meta Ads",
     "campaign": "Bogota No Vis",
-    "status": "Pre-Aprobado",
+    "status": "Cita Agendada",
     "temperature": "Cold",
     "housingInterest": "VIS",
     "budgetCOP": 217950000,
@@ -18181,24 +18169,18 @@ export const REAL_LEADS: Lead[] = [
     "recommendedProjectId": "bosque-turpial",
     "matchPercentage": 40,
     "scores": {
-      "fit": 5,
-      "intent": 67,
-      "engagement": 56,
-      "conversion": 48,
-      "total": 43
+      "fit": 6,
+      "intent": 66,
+      "engagement": 59,
+      "conversion": 38,
+      "total": 41
     },
     "priority": "Baja",
-    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (67/100). Ya completó 5 interacciones en su recorrido.",
+    "priorityRationale": "No afiliado, con subsidio VIS aplicable. Su señal más fuerte es intención de compra (66/100). Ya completó 4 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 1 min",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
-      {
-        "timestamp": "Hace 1 min",
-        "action": "Contactado por asesor (WhatsApp/llamada)",
-        "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
-      },
       {
         "timestamp": "Ayer",
         "action": "Usó simulador de subsidio/crédito",
@@ -18212,16 +18194,16 @@ export const REAL_LEADS: Lead[] = [
         "device": "iPhone"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "WhatsApp Web"
+        "device": "iPhone"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       }
     ],
     "sofia": {
@@ -18268,41 +18250,41 @@ export const REAL_LEADS: Lead[] = [
     "status": "Pre-Aprobado",
     "temperature": "Warm",
     "housingInterest": "VIS",
-    "budgetCOP": 253300000,
-    "downPaymentCOP": 20264000,
+    "budgetCOP": 253320000,
+    "downPaymentCOP": 20265600,
     "colsubsidioAfiliado": true,
     "afiliacionCategoria": "Cat A",
     "hasCajaSubsidio": true,
     "hasMiCasaYa": true,
     "recommendedProjectId": "saman",
-    "matchPercentage": 47,
+    "matchPercentage": 48,
     "scores": {
-      "fit": 15,
+      "fit": 16,
       "intent": 79,
-      "engagement": 48,
-      "conversion": 48,
-      "total": 48
+      "engagement": 46,
+      "conversion": 55,
+      "total": 50
     },
     "priority": "Media",
     "priorityRationale": "Afiliado Categoría A con subsidio VIS aplicable. Su señal más fuerte es intención de compra (79/100). Ya completó 5 interacciones en su recorrido.",
     "assignedAdvisor": "Carlos Rodríguez",
     "createdAt": "Hace 4 días",
-    "lastInteraction": "Hace 2 días",
+    "lastInteraction": "Ayer",
     "behaviorLogs": [
       {
-        "timestamp": "Hace 2 días",
+        "timestamp": "Ayer",
         "action": "Contactado por asesor (WhatsApp/llamada)",
         "details": "El asesor comercial estableció el primer contacto.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Android"
       },
       {
-        "timestamp": "Hace 3 días",
+        "timestamp": "Hace 2 días",
         "action": "Usó simulador de subsidio/crédito",
         "details": "Usó el simulador de subsidio y crédito hipotecario.",
         "device": "Desktop Chrome"
       },
       {
-        "timestamp": "Hace 4 días",
+        "timestamp": "Hace 3 días",
         "action": "Visitó landing del proyecto",
         "details": "Visitó la página del proyecto y revisó precios y disponibilidad.",
         "device": "WhatsApp Web"
@@ -18311,13 +18293,13 @@ export const REAL_LEADS: Lead[] = [
         "timestamp": "Hace 4 días",
         "action": "Completó formulario de perfilamiento",
         "details": "Completó los datos de perfilamiento inicial (ingresos, composición familiar, afiliación).",
-        "device": "iPhone"
+        "device": "Desktop Chrome"
       },
       {
         "timestamp": "Hace 4 días",
         "action": "Lead capturado desde pauta",
         "details": "Ingresó por formulario de campaña paga.",
-        "device": "Desktop Chrome"
+        "device": "Móvil Chrome"
       }
     ],
     "sofia": {
@@ -18362,14 +18344,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Tocancipá",
     "address": "Tocancipá, Cundinamarca",
+    "lat": 4.956077777777777,
+    "lng": -73.9139,
     "minPriceCOP": 177000000,
     "maxPriceCOP": 215000000,
-    "unitsTotal": 167,
-    "unitsAvailable": 64,
+    "unitsTotal": 111,
+    "unitsAvailable": 39,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Entrega 2026",
+    "deliveryDate": "Q4 2026",
     "description": "Proyecto VIS en Tocancipá, ideal para jóvenes y familias pequeñas que trabajan en zona norte de Bogotá. Buena valorización.",
     "features": [
       "Zonas verdes",
@@ -18385,14 +18369,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Tocancipá",
     "address": "Tocancipá, Cundinamarca",
+    "lat": 4.956179901370738,
+    "lng": -73.91425371936164,
     "minPriceCOP": 210000000,
     "maxPriceCOP": 263000000,
-    "unitsTotal": 110,
-    "unitsAvailable": 18,
+    "unitsTotal": 132,
+    "unitsAvailable": 41,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q4 2026",
+    "deliveryDate": "Q2 2027",
     "description": "Proyecto VIS en Tocancipá con alta concentración de compradores jóvenes sin grupo familiar. Perfecto para primer hogar.",
     "features": [
       "Zonas verdes",
@@ -18407,14 +18393,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ciudadela Maiporé",
     "address": "Ciudadela Maiporé, Cundinamarca",
+    "lat": 4.581600595708315,
+    "lng": -74.21470927355769,
     "minPriceCOP": 134000000,
     "maxPriceCOP": 157000000,
-    "unitsTotal": 112,
-    "unitsAvailable": 16,
+    "unitsTotal": 207,
+    "unitsAvailable": 62,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Entrega 2026",
+    "deliveryDate": "Entrega Inmediata",
     "description": "El más económico de Maiporé. Ideal para familias de ingresos básicos. Alta concentración de compradores desde Soacha y sur de Bogotá.",
     "features": [
       "Zonas verdes",
@@ -18422,7 +18410,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Zona infantil",
       "Zona BBQ"
     ],
-    "rotationAlert": true
+    "rotationAlert": false
   },
   {
     "id": "mongui",
@@ -18430,14 +18418,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ciudadela Maiporé",
     "address": "Ciudadela Maiporé, Cundinamarca",
+    "lat": 4.5801838877963466,
+    "lng": -74.21328049220614,
     "minPriceCOP": 158000000,
     "maxPriceCOP": 200000000,
-    "unitsTotal": 104,
-    "unitsAvailable": 28,
+    "unitsTotal": 129,
+    "unitsAvailable": 35,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Entrega 2026",
+    "deliveryDate": "Entrega Inmediata",
     "description": "Proyecto VIS en Maiporé con buen balance de familias monoparentales. Compradores principalmente desde Bogotá y Soacha.",
     "features": [
       "Zonas verdes",
@@ -18453,14 +18443,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ciudadela Maiporé",
     "address": "Ciudadela Maiporé, Cundinamarca",
+    "lat": 4.580265914215805,
+    "lng": -74.21602854778239,
     "minPriceCOP": 178000000,
     "maxPriceCOP": 236000000,
-    "unitsTotal": 188,
-    "unitsAvailable": 69,
+    "unitsTotal": 156,
+    "unitsAvailable": 34,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q3 2026",
+    "deliveryDate": "Q4 2026",
     "description": "Proyecto VIS en Maiporé con familias más establecidas. Compradores desde Soacha (13%) y Bogotá.",
     "features": [
       "Zonas verdes",
@@ -18476,14 +18468,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ciudadela Maiporé",
     "address": "Ciudadela Maiporé, Cundinamarca",
+    "lat": 4.577645537754165,
+    "lng": -74.21500410979772,
     "minPriceCOP": 198000000,
     "maxPriceCOP": 231000000,
-    "unitsTotal": 114,
-    "unitsAvailable": 24,
+    "unitsTotal": 103,
+    "unitsAvailable": 13,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q4 2026",
+    "deliveryDate": "Entrega 2026",
     "description": "Proyecto VIS en Maiporé. 100% de compradores ganan hasta 2 SMLV. Alto porcentaje de afiliados (71%). Ideal para madres cabeza de hogar.",
     "features": [
       "Zonas verdes",
@@ -18491,7 +18485,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Parqueadero",
       "Zona infantil"
     ],
-    "rotationAlert": false
+    "rotationAlert": true
   },
   {
     "id": "inari",
@@ -18499,14 +18493,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Chía",
     "address": "Chía, Cundinamarca",
+    "lat": 4.861251648333311,
+    "lng": -74.03195434303221,
     "minPriceCOP": 250000000,
     "maxPriceCOP": 292000000,
-    "unitsTotal": 93,
-    "unitsAvailable": 17,
+    "unitsTotal": 252,
+    "unitsAvailable": 34,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Entrega 2026",
+    "deliveryDate": "Q1 2027",
     "description": "Proyecto en Chía, zona de alta valorización. Mayoría de compradores jóvenes sin grupo familiar. Cercanía a Bogotá por Autopista Norte.",
     "features": [
       "Zonas verdes",
@@ -18515,7 +18511,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Zona BBQ",
       "Gimnasio"
     ],
-    "rotationAlert": false
+    "rotationAlert": true
   },
   {
     "id": "reserva-guayacan",
@@ -18523,14 +18519,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Girardot",
     "address": "Girardot, Cundinamarca",
+    "lat": 4.304765516800344,
+    "lng": -74.8085613648783,
     "minPriceCOP": 236000000,
     "maxPriceCOP": 236000000,
-    "unitsTotal": 230,
-    "unitsAvailable": 53,
+    "unitsTotal": 155,
+    "unitsAvailable": 67,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q2 2027",
+    "deliveryDate": "Entrega Inmediata",
     "description": "Proyecto en Girardot con amenities de clima cálido (piscina). Ideal para inversión o segunda vivienda. Alta proporción de familias ampliadas.",
     "features": [
       "Piscina",
@@ -18547,14 +18545,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ricaurte",
     "address": "Ricaurte, Cundinamarca",
+    "lat": 4.283201711429472,
+    "lng": -74.82317419382343,
     "minPriceCOP": 253000000,
     "maxPriceCOP": 255000000,
-    "unitsTotal": 209,
-    "unitsAvailable": 89,
+    "unitsTotal": 156,
+    "unitsAvailable": 28,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q2 2027",
+    "deliveryDate": "Entrega 2026",
     "description": "Proyecto en Ricaurte (tierra caliente). El más alto % de afiliados (77%). Perfil de familias establecidas. Clima cálido con piscina.",
     "features": [
       "Piscina",
@@ -18570,14 +18570,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ricaurte",
     "address": "Ricaurte, Cundinamarca",
+    "lat": 4.28501413274131,
+    "lng": -74.82608529777485,
     "minPriceCOP": 128000000,
     "maxPriceCOP": 202000000,
-    "unitsTotal": 182,
-    "unitsAvailable": 17,
+    "unitsTotal": 91,
+    "unitsAvailable": 34,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q2 2027",
+    "deliveryDate": "Q3 2026",
     "description": "Proyecto económico en Ricaurte. Clima cálido. Compradores mayoritariamente desde Bogotá (50%). Opción de inversión.",
     "features": [
       "Piscina",
@@ -18585,7 +18587,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Salón comunal",
       "Zona infantil"
     ],
-    "rotationAlert": true
+    "rotationAlert": false
   },
   {
     "id": "karakali",
@@ -18593,14 +18595,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ricaurte",
     "address": "Ricaurte, Cundinamarca",
+    "lat": 4.28485866263053,
+    "lng": -74.82496039270823,
     "minPriceCOP": 236000000,
     "maxPriceCOP": 245000000,
-    "unitsTotal": 182,
-    "unitsAvailable": 26,
+    "unitsTotal": 145,
+    "unitsAvailable": 39,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q4 2026",
+    "deliveryDate": "Q1 2027",
     "description": "Proyecto premium en Ricaurte. Mayoría jóvenes sin grupo familiar con ingresos sobre 2 SMLV. Alta proporción de no afiliados.",
     "features": [
       "Piscina",
@@ -18609,7 +18613,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Zona BBQ",
       "Gimnasio"
     ],
-    "rotationAlert": true
+    "rotationAlert": false
   },
   {
     "id": "araucaria",
@@ -18617,14 +18621,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "No VIS",
     "municipality": "Ciudadela Calle 80",
     "address": "Ciudadela Calle 80, Cundinamarca",
+    "lat": 4.7096657682322105,
+    "lng": -74.12045941284018,
     "minPriceCOP": 608000000,
     "maxPriceCOP": 608000000,
-    "unitsTotal": 119,
-    "unitsAvailable": 34,
+    "unitsTotal": 153,
+    "unitsAvailable": 45,
     "subsidyApplicable": false,
     "cajaSubsidioAmountCOP": 0,
     "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q1 2027",
+    "deliveryDate": "Entrega Inmediata",
     "description": "Proyecto No VIS en Bogotá (Calle 80). El más costoso. Perfil de ingresos altos, muchos no afiliados (62%). Zona urbana consolidada.",
     "features": [
       "Zonas verdes",
@@ -18642,14 +18648,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "No VIS",
     "municipality": "Ciudadela Calle 80",
     "address": "Ciudadela Calle 80, Cundinamarca",
+    "lat": 4.710323560160979,
+    "lng": -74.12185850318333,
     "minPriceCOP": 523000000,
     "maxPriceCOP": 563000000,
-    "unitsTotal": 181,
-    "unitsAvailable": 40,
+    "unitsTotal": 139,
+    "unitsAvailable": 39,
     "subsidyApplicable": false,
     "cajaSubsidioAmountCOP": 0,
     "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Entrega 2026",
+    "deliveryDate": "Q2 2027",
     "description": "Proyecto No VIS en Bogotá (Calle 80). Perfil de familias establecidas con buenos ingresos. Mayoría no afiliados (60%). Zona Engativá.",
     "features": [
       "Zonas verdes",
@@ -18666,14 +18674,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Bogotá",
     "address": "Bogotá, Cundinamarca",
+    "lat": 4.610282721367536,
+    "lng": -74.08314228599599,
     "minPriceCOP": 164000000,
     "maxPriceCOP": 241000000,
-    "unitsTotal": 117,
-    "unitsAvailable": 32,
+    "unitsTotal": 196,
+    "unitsAvailable": 11,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Entrega 2026",
+    "deliveryDate": "Q2 2027",
     "description": "Proyecto VIS en Bogotá (San Cristóbal). 90% gana hasta 2 SMLV. Alto % de madres cabeza de hogar. El proyecto más accesible en Bogotá.",
     "features": [
       "Zonas verdes",
@@ -18681,7 +18691,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Parqueadero",
       "Zona infantil"
     ],
-    "rotationAlert": false
+    "rotationAlert": true
   },
   {
     "id": "verde-esperanza",
@@ -18689,14 +18699,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ubaté",
     "address": "Ubaté, Cundinamarca",
+    "lat": 5.307742611862581,
+    "lng": -73.81589083614166,
     "minPriceCOP": 157000000,
     "maxPriceCOP": 175000000,
-    "unitsTotal": 125,
-    "unitsAvailable": 25,
+    "unitsTotal": 140,
+    "unitsAvailable": 50,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q1 2027",
+    "deliveryDate": "Q3 2026",
     "description": "Proyecto VIS en Ubaté. 99% financia con Colsubsidio. Compradores de empresas locales (flores, minas). Perfil muy básico.",
     "features": [
       "Zonas verdes",
@@ -18711,14 +18723,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ricaurte",
     "address": "Ricaurte, Cundinamarca",
+    "lat": 4.282301942603606,
+    "lng": -74.82387555076922,
     "minPriceCOP": 281000000,
     "maxPriceCOP": 281000000,
-    "unitsTotal": 123,
-    "unitsAvailable": 43,
+    "unitsTotal": 189,
+    "unitsAvailable": 32,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q3 2026",
+    "deliveryDate": "Q2 2027",
     "description": "Proyecto nuevo en Ricaurte. Pocos datos aún. Perfil joven. Clima cálido con piscina.",
     "features": [
       "Piscina",
@@ -18733,21 +18747,23 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ciudadela Maiporé",
     "address": "Ciudadela Maiporé, Cundinamarca",
+    "lat": 4.578290784013823,
+    "lng": -74.21523585419882,
     "minPriceCOP": 198000000,
     "maxPriceCOP": 213000000,
-    "unitsTotal": 232,
-    "unitsAvailable": 37,
+    "unitsTotal": 227,
+    "unitsAvailable": 30,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q2 2027",
+    "deliveryDate": "Q1 2027",
     "description": "Proyecto VIS en Maiporé. Perfil medio, familias mixtas.",
     "features": [
       "Zonas verdes",
       "Salón comunal",
       "Parqueadero"
     ],
-    "rotationAlert": false
+    "rotationAlert": true
   },
   {
     "id": "zarzal",
@@ -18755,14 +18771,16 @@ export const REAL_PROJECTS: HousingProject[] = [
     "type": "VIS",
     "municipality": "Ciudadela Maiporé",
     "address": "Ciudadela Maiporé, Cundinamarca",
+    "lat": 4.581305255888325,
+    "lng": -74.21549999999999,
     "minPriceCOP": 180000000,
     "maxPriceCOP": 220000000,
-    "unitsTotal": 208,
-    "unitsAvailable": 26,
+    "unitsTotal": 147,
+    "unitsAvailable": 32,
     "subsidyApplicable": true,
     "cajaSubsidioAmountCOP": 39000000,
     "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
-    "deliveryDate": "Q3 2026",
+    "deliveryDate": "Entrega Inmediata",
     "description": "Proyecto VIS en Maiporé. Nuevo lanzamiento.",
     "features": [
       "Zonas verdes",
@@ -18770,7 +18788,7 @@ export const REAL_PROJECTS: HousingProject[] = [
       "Parqueadero",
       "Zona infantil"
     ],
-    "rotationAlert": true
+    "rotationAlert": false
   }
 ] as HousingProject[];
 
@@ -18780,11 +18798,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1001",
     "leadName": "Daniela Mora Reyes",
     "projectName": "Samán",
-    "unitCode": "Torre 1 - Apt 263",
+    "unitCode": "Torre 3 - Apt 269",
     "valueCOP": 254000000,
     "stage": "Cita Sala",
-    "probability": 28,
-    "closingDate": "26 de Agosto 2026",
+    "probability": 47,
+    "closingDate": "30 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -18792,11 +18810,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1002",
     "leadName": "Ana Rincón Mora",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre Norte - Apt 474",
+    "unitCode": "Torre 3 - Apt 220",
     "valueCOP": 236500000,
-    "stage": "Promesa Firmada",
-    "probability": 59,
-    "closingDate": "17 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 40,
+    "closingDate": "13 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -18804,23 +18822,35 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1003",
     "leadName": "Santiago Rojas Vargas",
     "projectName": "Samán",
-    "unitCode": "Torre 2 - Apt 430",
+    "unitCode": "Torre 2 - Apt 339",
     "valueCOP": 254000000,
-    "stage": "Cita Sala",
-    "probability": 46,
-    "closingDate": "1 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 48,
+    "closingDate": "20 de Agosto 2026",
     "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1006",
+    "leadId": "LEAD-1006",
+    "leadName": "Paola Cruz Rincón",
+    "projectName": "Los Nogales",
+    "unitCode": "Torre A - Apt 485",
+    "valueCOP": 543000000,
+    "stage": "Cita Sala",
+    "probability": 27,
+    "closingDate": "8 de Agosto 2026",
+    "subsidyStatus": "Sin Subsidio"
   },
   {
     "id": "deal-LEAD-1008",
     "leadId": "LEAD-1008",
     "leadName": "Ángela Reyes Castro",
     "projectName": "Versalles",
-    "unitCode": "Torre A - Apt 177",
+    "unitCode": "Torre 2 - Apt 147",
     "valueCOP": 214500000,
     "stage": "Promesa Firmada",
-    "probability": 60,
-    "closingDate": "12 de Agosto 2026",
+    "probability": 69,
+    "closingDate": "18 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -18828,10 +18858,22 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1009",
     "leadName": "Valentina Moreno Rincón",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 1 - Apt 440",
+    "unitCode": "Torre 3 - Apt 443",
     "valueCOP": 202500000,
-    "stage": "Cita Sala",
-    "probability": 45,
+    "stage": "Pre-Aprobado",
+    "probability": 61,
+    "closingDate": "24 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1010",
+    "leadId": "LEAD-1010",
+    "leadName": "Camila Hernández Jiménez",
+    "projectName": "La Arboleda",
+    "unitCode": "Torre 2 - Apt 163",
+    "valueCOP": 202500000,
+    "stage": "Pre-Aprobado",
+    "probability": 42,
     "closingDate": "18 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
@@ -18840,10 +18882,10 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1011",
     "leadName": "Juan Hernández Ospina",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 3 - Apt 275",
+    "unitCode": "Torre 2 - Apt 404",
     "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 35,
+    "stage": "Pre-Aprobado",
+    "probability": 54,
     "closingDate": "6 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
@@ -18852,11 +18894,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1012",
     "leadName": "Javier Romero Ruiz",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 1 - Apt 328",
+    "unitCode": "Torre 2 - Apt 198",
     "valueCOP": 202500000,
     "stage": "Pre-Aprobado",
-    "probability": 58,
-    "closingDate": "26 de Agosto 2026",
+    "probability": 50,
+    "closingDate": "15 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -18864,11 +18906,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1013",
     "leadName": "Yolanda Cárdenas Cárdenas",
     "projectName": "Pamplona I",
-    "unitCode": "Torre 3 - Apt 253",
+    "unitCode": "Torre Norte - Apt 493",
     "valueCOP": 207000000,
     "stage": "Cita Sala",
-    "probability": 37,
-    "closingDate": "13 de Agosto 2026",
+    "probability": 30,
+    "closingDate": "20 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -18876,23 +18918,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1014",
     "leadName": "Adriana Herrera Vargas",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre 1 - Apt 317",
+    "unitCode": "Torre 3 - Apt 270",
     "valueCOP": 166000000,
-    "stage": "Cierre Exitoso",
-    "probability": 62,
-    "closingDate": "5 de Agosto 2026",
-    "subsidyStatus": "Aprobado Mi Casa Ya"
+    "stage": "Cita Sala",
+    "probability": 45,
+    "closingDate": "17 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
   },
   {
     "id": "deal-LEAD-1015",
     "leadId": "LEAD-1015",
     "leadName": "Santiago Cárdenas Gómez",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 2 - Apt 432",
+    "unitCode": "Torre Norte - Apt 439",
     "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 32,
-    "closingDate": "18 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 52,
+    "closingDate": "15 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -18900,11 +18942,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1018",
     "leadName": "Juan García Álvarez",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 1 - Apt 305",
+    "unitCode": "Torre A - Apt 376",
     "valueCOP": 202500000,
-    "stage": "Pre-Aprobado",
-    "probability": 57,
-    "closingDate": "28 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 59,
+    "closingDate": "14 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -18912,47 +18954,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1020",
     "leadName": "Santiago Cárdenas Gómez",
     "projectName": "Versalles",
-    "unitCode": "Torre B - Apt 227",
+    "unitCode": "Torre B - Apt 354",
     "valueCOP": 214500000,
-    "stage": "Pre-Aprobado",
-    "probability": 56,
-    "closingDate": "11 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1021",
-    "leadId": "LEAD-1021",
-    "leadName": "Javier Gómez Romero",
-    "projectName": "Pamplona I",
-    "unitCode": "Torre 2 - Apt 478",
-    "valueCOP": 207000000,
     "stage": "Cita Sala",
-    "probability": 42,
-    "closingDate": "16 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
+    "probability": 36,
+    "closingDate": "13 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1022",
     "leadId": "LEAD-1022",
     "leadName": "Yolanda Rojas Sánchez",
     "projectName": "Karakalí",
-    "unitCode": "Torre Norte - Apt 262",
+    "unitCode": "Torre A - Apt 215",
     "valueCOP": 240500000,
     "stage": "Pre-Aprobado",
-    "probability": 44,
-    "closingDate": "9 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1023",
-    "leadId": "LEAD-1023",
-    "leadName": "Andrés Torres Pardo",
-    "projectName": "La Macarena",
-    "unitCode": "Torre 1 - Apt 353",
-    "valueCOP": 145500000,
-    "stage": "Pre-Aprobado",
-    "probability": 43,
-    "closingDate": "2 de Agosto 2026",
+    "probability": 52,
+    "closingDate": "27 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -18960,35 +18978,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1024",
     "leadName": "Mónica Ospina Castro",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 486",
+    "unitCode": "Torre 1 - Apt 473",
     "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 42,
+    "stage": "Promesa Firmada",
+    "probability": 53,
     "closingDate": "11 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
-  },
-  {
-    "id": "deal-LEAD-1026",
-    "leadId": "LEAD-1026",
-    "leadName": "Tatiana Herrera Rodríguez",
-    "projectName": "Monguí",
-    "unitCode": "Torre B - Apt 387",
-    "valueCOP": 179000000,
-    "stage": "Pre-Aprobado",
-    "probability": 55,
-    "closingDate": "9 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1027",
     "leadId": "LEAD-1027",
     "leadName": "Nicolás Ríos González",
     "projectName": "INARI",
-    "unitCode": "Torre 3 - Apt 446",
+    "unitCode": "Torre 3 - Apt 390",
     "valueCOP": 271000000,
     "stage": "Cita Sala",
-    "probability": 45,
-    "closingDate": "26 de Agosto 2026",
+    "probability": 48,
+    "closingDate": "30 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -18996,11 +19002,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1028",
     "leadName": "Daniel Moreno Medina",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 450",
+    "unitCode": "Torre Norte - Apt 226",
     "valueCOP": 543000000,
-    "stage": "Promesa Firmada",
-    "probability": 50,
-    "closingDate": "27 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 38,
+    "closingDate": "29 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -19008,11 +19014,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1029",
     "leadName": "Katherine Jiménez Ríos",
     "projectName": "La Macarena",
-    "unitCode": "Torre 3 - Apt 127",
+    "unitCode": "Torre 1 - Apt 494",
     "valueCOP": 145500000,
     "stage": "Cierre Exitoso",
-    "probability": 68,
-    "closingDate": "6 de Agosto 2026",
+    "probability": 62,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19020,35 +19026,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1030",
     "leadName": "Diego Gutiérrez González",
     "projectName": "Monguí",
-    "unitCode": "Torre 3 - Apt 303",
+    "unitCode": "Torre Norte - Apt 101",
     "valueCOP": 179000000,
     "stage": "Promesa Firmada",
     "probability": 59,
-    "closingDate": "25 de Agosto 2026",
+    "closingDate": "3 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1031",
-    "leadId": "LEAD-1031",
-    "leadName": "Ana Torres Díaz",
-    "projectName": "Los Nogales",
-    "unitCode": "Torre B - Apt 434",
-    "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 32,
-    "closingDate": "18 de Agosto 2026",
-    "subsidyStatus": "Sin Subsidio"
   },
   {
     "id": "deal-LEAD-1032",
     "leadId": "LEAD-1032",
     "leadName": "Lina Rincón Romero",
     "projectName": "INARI",
-    "unitCode": "Torre B - Apt 488",
+    "unitCode": "Torre A - Apt 254",
     "valueCOP": 271000000,
     "stage": "Cita Sala",
-    "probability": 50,
-    "closingDate": "26 de Agosto 2026",
+    "probability": 43,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19056,11 +19050,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1033",
     "leadName": "Andrés Rincón Muñoz",
     "projectName": "Pamplona I",
-    "unitCode": "Torre 3 - Apt 281",
+    "unitCode": "Torre 3 - Apt 415",
     "valueCOP": 207000000,
     "stage": "Promesa Firmada",
-    "probability": 62,
-    "closingDate": "5 de Agosto 2026",
+    "probability": 53,
+    "closingDate": "16 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19068,11 +19062,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1034",
     "leadName": "Tatiana Jiménez Álvarez",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 458",
+    "unitCode": "Torre 2 - Apt 126",
     "valueCOP": 543000000,
     "stage": "Pre-Aprobado",
-    "probability": 52,
-    "closingDate": "20 de Agosto 2026",
+    "probability": 50,
+    "closingDate": "3 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -19080,11 +19074,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1035",
     "leadName": "Sofía Castillo Vargas",
     "projectName": "Samán",
-    "unitCode": "Torre Norte - Apt 421",
+    "unitCode": "Torre B - Apt 477",
     "valueCOP": 254000000,
-    "stage": "Promesa Firmada",
-    "probability": 50,
-    "closingDate": "4 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 52,
+    "closingDate": "9 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19092,10 +19086,10 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1036",
     "leadName": "Héctor Ospina García",
     "projectName": "Los Nogales",
-    "unitCode": "Torre A - Apt 127",
+    "unitCode": "Torre 3 - Apt 363",
     "valueCOP": 543000000,
     "stage": "Cita Sala",
-    "probability": 48,
+    "probability": 52,
     "closingDate": "23 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
@@ -19104,11 +19098,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1037",
     "leadName": "Adriana Suárez Rojas",
     "projectName": "La Macarena",
-    "unitCode": "Torre 2 - Apt 298",
+    "unitCode": "Torre 3 - Apt 407",
     "valueCOP": 145500000,
-    "stage": "Promesa Firmada",
-    "probability": 60,
-    "closingDate": "24 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 53,
+    "closingDate": "28 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19116,11 +19110,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1038",
     "leadName": "Lorena López Rojas",
     "projectName": "La Macarena",
-    "unitCode": "Torre 1 - Apt 300",
+    "unitCode": "Torre Norte - Apt 174",
     "valueCOP": 145500000,
     "stage": "Promesa Firmada",
-    "probability": 60,
-    "closingDate": "25 de Agosto 2026",
+    "probability": 59,
+    "closingDate": "4 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19128,23 +19122,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1039",
     "leadName": "Hernán Pardo Acosta",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 1 - Apt 277",
+    "unitCode": "Torre Norte - Apt 155",
     "valueCOP": 236500000,
     "stage": "Cita Sala",
-    "probability": 45,
-    "closingDate": "3 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1040",
-    "leadId": "LEAD-1040",
-    "leadName": "Fernando Ospina Ruiz",
-    "projectName": "Versalles",
-    "unitCode": "Torre Norte - Apt 483",
-    "valueCOP": 214500000,
-    "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "12 de Agosto 2026",
+    "probability": 30,
+    "closingDate": "18 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19152,47 +19134,35 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1041",
     "leadName": "Mauricio Moreno Suárez",
     "projectName": "Karakalí",
-    "unitCode": "Torre 2 - Apt 476",
+    "unitCode": "Torre B - Apt 153",
     "valueCOP": 240500000,
-    "stage": "Cierre Exitoso",
-    "probability": 59,
-    "closingDate": "7 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 80,
+    "closingDate": "9 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1042",
-    "leadId": "LEAD-1042",
-    "leadName": "Mónica Peña Ruiz",
-    "projectName": "La Arboleda",
-    "unitCode": "Torre B - Apt 350",
-    "valueCOP": 202500000,
-    "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "6 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
   },
   {
     "id": "deal-LEAD-1043",
     "leadId": "LEAD-1043",
     "leadName": "Mónica Ríos Mora",
     "projectName": "Samán",
-    "unitCode": "Torre B - Apt 112",
+    "unitCode": "Torre 2 - Apt 301",
     "valueCOP": 254000000,
     "stage": "Cierre Exitoso",
-    "probability": 74,
-    "closingDate": "31 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
+    "probability": 86,
+    "closingDate": "10 de Agosto 2026",
+    "subsidyStatus": "Aprobado Mi Casa Ya"
   },
   {
-    "id": "deal-LEAD-1044",
-    "leadId": "LEAD-1044",
-    "leadName": "Sandra Delgado Medina",
-    "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre B - Apt 491",
-    "valueCOP": 236000000,
+    "id": "deal-LEAD-1045",
+    "leadId": "LEAD-1045",
+    "leadName": "Tatiana Medina Rojas",
+    "projectName": "Samán",
+    "unitCode": "Torre 2 - Apt 363",
+    "valueCOP": 254000000,
     "stage": "Cita Sala",
-    "probability": 35,
-    "closingDate": "21 de Agosto 2026",
+    "probability": 47,
+    "closingDate": "7 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19200,11 +19170,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1046",
     "leadName": "Marcela Hernández Delgado",
     "projectName": "Versalles",
-    "unitCode": "Torre B - Apt 418",
+    "unitCode": "Torre 1 - Apt 161",
     "valueCOP": 214500000,
     "stage": "Promesa Firmada",
-    "probability": 68,
-    "closingDate": "4 de Agosto 2026",
+    "probability": 65,
+    "closingDate": "10 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19212,11 +19182,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1047",
     "leadName": "Camilo Rodríguez Ruiz",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 2 - Apt 268",
+    "unitCode": "Torre A - Apt 410",
     "valueCOP": 202500000,
-    "stage": "Pre-Aprobado",
-    "probability": 48,
-    "closingDate": "3 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 39,
+    "closingDate": "14 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19224,59 +19194,35 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1048",
     "leadName": "Adriana Ríos Torres",
     "projectName": "Araucaria",
-    "unitCode": "Torre Norte - Apt 249",
+    "unitCode": "Torre A - Apt 112",
     "valueCOP": 608000000,
     "stage": "Pre-Aprobado",
-    "probability": 52,
-    "closingDate": "22 de Agosto 2026",
+    "probability": 57,
+    "closingDate": "10 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
-  },
-  {
-    "id": "deal-LEAD-1049",
-    "leadId": "LEAD-1049",
-    "leadName": "Tatiana Reyes Moreno",
-    "projectName": "Bosque de Turpial",
-    "unitCode": "Torre A - Apt 298",
-    "valueCOP": 236500000,
-    "stage": "Pre-Aprobado",
-    "probability": 47,
-    "closingDate": "16 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1050",
     "leadId": "LEAD-1050",
     "leadName": "Paola Rodríguez Hernández",
     "projectName": "Araucaria",
-    "unitCode": "Torre 2 - Apt 456",
+    "unitCode": "Torre Norte - Apt 296",
     "valueCOP": 608000000,
     "stage": "Pre-Aprobado",
-    "probability": 43,
-    "closingDate": "28 de Agosto 2026",
+    "probability": 48,
+    "closingDate": "2 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
-    "id": "deal-LEAD-1051",
-    "leadId": "LEAD-1051",
-    "leadName": "Johana Romero Acosta",
-    "projectName": "Versalles",
-    "unitCode": "Torre A - Apt 304",
-    "valueCOP": 214500000,
-    "stage": "Cita Sala",
-    "probability": 44,
-    "closingDate": "17 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1053",
-    "leadId": "LEAD-1053",
-    "leadName": "Javier Romero Ruiz",
-    "projectName": "Karakalí",
-    "unitCode": "Torre A - Apt 166",
-    "valueCOP": 240500000,
-    "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "5 de Agosto 2026",
+    "id": "deal-LEAD-1052",
+    "leadId": "LEAD-1052",
+    "leadName": "Mauricio Moreno Suárez",
+    "projectName": "La Arboleda",
+    "unitCode": "Torre 1 - Apt 477",
+    "valueCOP": 202500000,
+    "stage": "Cierre Exitoso",
+    "probability": 66,
+    "closingDate": "11 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19284,23 +19230,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1054",
     "leadName": "Yolanda Cárdenas Cárdenas",
     "projectName": "Pamplona I",
-    "unitCode": "Torre A - Apt 450",
+    "unitCode": "Torre B - Apt 124",
     "valueCOP": 207000000,
-    "stage": "Cita Sala",
-    "probability": 48,
-    "closingDate": "15 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1055",
-    "leadId": "LEAD-1055",
-    "leadName": "David Muñoz Ruiz",
-    "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre A - Apt 448",
-    "valueCOP": 166000000,
-    "stage": "Cita Sala",
-    "probability": 38,
-    "closingDate": "12 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 57,
+    "closingDate": "20 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19308,47 +19242,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1056",
     "leadName": "Camila López Cárdenas",
     "projectName": "Karakalí",
-    "unitCode": "Torre Norte - Apt 412",
+    "unitCode": "Torre Norte - Apt 102",
     "valueCOP": 240500000,
     "stage": "Cita Sala",
-    "probability": 41,
-    "closingDate": "2 de Agosto 2026",
+    "probability": 33,
+    "closingDate": "22 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1057",
-    "leadId": "LEAD-1057",
-    "leadName": "Germán González Castillo",
-    "projectName": "Monguí",
-    "unitCode": "Torre B - Apt 436",
-    "valueCOP": 179000000,
-    "stage": "Pre-Aprobado",
-    "probability": 51,
-    "closingDate": "7 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
   },
   {
     "id": "deal-LEAD-1059",
     "leadId": "LEAD-1059",
     "leadName": "Claudia Torres García",
     "projectName": "Bosque de Arrayán",
-    "unitCode": "Torre B - Apt 314",
+    "unitCode": "Torre 3 - Apt 405",
     "valueCOP": 196000000,
     "stage": "Cita Sala",
-    "probability": 30,
-    "closingDate": "11 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1060",
-    "leadId": "LEAD-1060",
-    "leadName": "Diana Pineda González",
-    "projectName": "Karakalí",
-    "unitCode": "Torre A - Apt 106",
-    "valueCOP": 240500000,
-    "stage": "Cita Sala",
-    "probability": 43,
-    "closingDate": "5 de Agosto 2026",
+    "probability": 48,
+    "closingDate": "2 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19356,11 +19266,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1061",
     "leadName": "José Moreno Díaz",
     "projectName": "Versalles",
-    "unitCode": "Torre B - Apt 288",
+    "unitCode": "Torre Norte - Apt 142",
     "valueCOP": 214500000,
     "stage": "Pre-Aprobado",
-    "probability": 49,
-    "closingDate": "11 de Agosto 2026",
+    "probability": 42,
+    "closingDate": "2 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19368,11 +19278,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1062",
     "leadName": "Fernando Reyes Sánchez",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre B - Apt 399",
+    "unitCode": "Torre B - Apt 298",
     "valueCOP": 236500000,
     "stage": "Cita Sala",
-    "probability": 45,
-    "closingDate": "27 de Agosto 2026",
+    "probability": 51,
+    "closingDate": "22 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19380,11 +19290,47 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1063",
     "leadName": "Andrés Moreno Herrera",
     "projectName": "Versalles",
-    "unitCode": "Torre Norte - Apt 177",
+    "unitCode": "Torre Norte - Apt 150",
     "valueCOP": 214500000,
+    "stage": "Cita Sala",
+    "probability": 36,
+    "closingDate": "11 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
+  },
+  {
+    "id": "deal-LEAD-1064",
+    "leadId": "LEAD-1064",
+    "leadName": "Lina Cárdenas Pardo",
+    "projectName": "Karakalí",
+    "unitCode": "Torre 2 - Apt 432",
+    "valueCOP": 240500000,
+    "stage": "Cita Sala",
+    "probability": 47,
+    "closingDate": "5 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
+  },
+  {
+    "id": "deal-LEAD-1065",
+    "leadId": "LEAD-1065",
+    "leadName": "Lina Muñoz Vargas",
+    "projectName": "INARI",
+    "unitCode": "Torre 1 - Apt 238",
+    "valueCOP": 271000000,
+    "stage": "Cita Sala",
+    "probability": 56,
+    "closingDate": "5 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
+  },
+  {
+    "id": "deal-LEAD-1066",
+    "leadId": "LEAD-1066",
+    "leadName": "Juliana Díaz Herrera",
+    "projectName": "Reserva de Guayacán",
+    "unitCode": "Torre A - Apt 181",
+    "valueCOP": 236000000,
     "stage": "Pre-Aprobado",
-    "probability": 52,
-    "closingDate": "3 de Septiembre 2026",
+    "probability": 44,
+    "closingDate": "10 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19392,11 +19338,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1067",
     "leadName": "Martha Salazar López",
     "projectName": "Araucaria",
-    "unitCode": "Torre 1 - Apt 152",
+    "unitCode": "Torre 3 - Apt 160",
     "valueCOP": 608000000,
     "stage": "Cita Sala",
-    "probability": 50,
-    "closingDate": "8 de Agosto 2026",
+    "probability": 29,
+    "closingDate": "27 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -19404,11 +19350,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1068",
     "leadName": "Carlos Rojas Martínez",
     "projectName": "La Macarena",
-    "unitCode": "Torre 3 - Apt 237",
+    "unitCode": "Torre 1 - Apt 162",
     "valueCOP": 145500000,
     "stage": "Pre-Aprobado",
-    "probability": 47,
-    "closingDate": "1 de Septiembre 2026",
+    "probability": 55,
+    "closingDate": "4 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19416,11 +19362,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1069",
     "leadName": "Cristian Delgado Gutiérrez",
     "projectName": "Samán",
-    "unitCode": "Torre 2 - Apt 421",
+    "unitCode": "Torre B - Apt 481",
     "valueCOP": 254000000,
-    "stage": "Promesa Firmada",
-    "probability": 58,
-    "closingDate": "15 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 40,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19428,47 +19374,47 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1070",
     "leadName": "Patricia Díaz Jiménez",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre 2 - Apt 276",
+    "unitCode": "Torre 3 - Apt 379",
     "valueCOP": 236000000,
-    "stage": "Cita Sala",
-    "probability": 48,
-    "closingDate": "12 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 49,
+    "closingDate": "5 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1071",
-    "leadId": "LEAD-1071",
-    "leadName": "Miguel Sánchez Muñoz",
-    "projectName": "Bosque de Turpial",
-    "unitCode": "Torre B - Apt 364",
-    "valueCOP": 236500000,
+    "id": "deal-LEAD-1072",
+    "leadId": "LEAD-1072",
+    "leadName": "Milena Mora Bernal",
+    "projectName": "Araucaria",
+    "unitCode": "Torre Norte - Apt 333",
+    "valueCOP": 608000000,
     "stage": "Cita Sala",
-    "probability": 38,
-    "closingDate": "26 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
+    "probability": 42,
+    "closingDate": "21 de Agosto 2026",
+    "subsidyStatus": "Sin Subsidio"
   },
   {
     "id": "deal-LEAD-1073",
     "leadId": "LEAD-1073",
     "leadName": "Alejandro Salazar Torres",
     "projectName": "Karakalí",
-    "unitCode": "Torre 3 - Apt 127",
+    "unitCode": "Torre A - Apt 199",
     "valueCOP": 240500000,
-    "stage": "Pre-Aprobado",
-    "probability": 53,
-    "closingDate": "30 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
+    "stage": "Cierre Exitoso",
+    "probability": 64,
+    "closingDate": "15 de Agosto 2026",
+    "subsidyStatus": "Aprobado Mi Casa Ya"
   },
   {
     "id": "deal-LEAD-1074",
     "leadId": "LEAD-1074",
     "leadName": "Luis Moreno Salazar",
     "projectName": "La Arboleda",
-    "unitCode": "Torre Norte - Apt 472",
+    "unitCode": "Torre 1 - Apt 378",
     "valueCOP": 202500000,
-    "stage": "Pre-Aprobado",
-    "probability": 60,
-    "closingDate": "4 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 48,
+    "closingDate": "26 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19476,11 +19422,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1075",
     "leadName": "Julián Mora Ruiz",
     "projectName": "La Macarena",
-    "unitCode": "Torre 1 - Apt 414",
+    "unitCode": "Torre A - Apt 380",
     "valueCOP": 145500000,
     "stage": "Promesa Firmada",
-    "probability": 52,
-    "closingDate": "10 de Agosto 2026",
+    "probability": 55,
+    "closingDate": "17 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19488,11 +19434,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1076",
     "leadName": "Alejandro Ortiz García",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre A - Apt 330",
+    "unitCode": "Torre Norte - Apt 369",
     "valueCOP": 166000000,
-    "stage": "Promesa Firmada",
-    "probability": 56,
-    "closingDate": "26 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 59,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19500,11 +19446,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1077",
     "leadName": "Diana Pineda González",
     "projectName": "Versalles",
-    "unitCode": "Torre Norte - Apt 429",
+    "unitCode": "Torre Norte - Apt 380",
     "valueCOP": 214500000,
-    "stage": "Promesa Firmada",
-    "probability": 56,
-    "closingDate": "15 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 52,
+    "closingDate": "29 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19512,10 +19458,10 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1078",
     "leadName": "Natalia Ramírez Pardo",
     "projectName": "La Macarena",
-    "unitCode": "Torre A - Apt 397",
+    "unitCode": "Torre Norte - Apt 272",
     "valueCOP": 145500000,
     "stage": "Pre-Aprobado",
-    "probability": 54,
+    "probability": 56,
     "closingDate": "9 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
@@ -19524,59 +19470,35 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1079",
     "leadName": "Diego Rincón Peña",
     "projectName": "La Arboleda",
-    "unitCode": "Torre Norte - Apt 397",
+    "unitCode": "Torre B - Apt 498",
     "valueCOP": 202500000,
     "stage": "Cita Sala",
-    "probability": 52,
-    "closingDate": "20 de Agosto 2026",
+    "probability": 35,
+    "closingDate": "12 de Agosto 2026",
     "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1080",
-    "leadId": "LEAD-1080",
-    "leadName": "Julián Ortiz Gómez",
-    "projectName": "La Arboleda",
-    "unitCode": "Torre Norte - Apt 155",
-    "valueCOP": 202500000,
-    "stage": "Promesa Firmada",
-    "probability": 56,
-    "closingDate": "13 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1081",
-    "leadId": "LEAD-1081",
-    "leadName": "Juan Gómez Ramírez",
-    "projectName": "Karakalí",
-    "unitCode": "Torre 3 - Apt 220",
-    "valueCOP": 240500000,
-    "stage": "Cita Sala",
-    "probability": 52,
-    "closingDate": "24 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1082",
     "leadId": "LEAD-1082",
     "leadName": "Pedro Ramírez Romero",
     "projectName": "Pamplona I",
-    "unitCode": "Torre A - Apt 430",
+    "unitCode": "Torre 2 - Apt 455",
     "valueCOP": 207000000,
-    "stage": "Pre-Aprobado",
-    "probability": 53,
+    "stage": "Cierre Exitoso",
+    "probability": 60,
     "closingDate": "7 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
+    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1083",
     "leadId": "LEAD-1083",
     "leadName": "Fabián Castro Suárez",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre B - Apt 296",
+    "unitCode": "Torre 2 - Apt 137",
     "valueCOP": 236000000,
-    "stage": "Promesa Firmada",
-    "probability": 49,
-    "closingDate": "6 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 59,
+    "closingDate": "26 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19584,35 +19506,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1084",
     "leadName": "Katherine Pardo Díaz",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 3 - Apt 295",
+    "unitCode": "Torre 3 - Apt 213",
     "valueCOP": 543000000,
     "stage": "Cita Sala",
-    "probability": 40,
-    "closingDate": "14 de Agosto 2026",
+    "probability": 38,
+    "closingDate": "12 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
-  },
-  {
-    "id": "deal-LEAD-1085",
-    "leadId": "LEAD-1085",
-    "leadName": "Viviana Pardo Pineda",
-    "projectName": "La Arboleda",
-    "unitCode": "Torre 1 - Apt 330",
-    "valueCOP": 202500000,
-    "stage": "Pre-Aprobado",
-    "probability": 51,
-    "closingDate": "19 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1086",
     "leadId": "LEAD-1086",
     "leadName": "Diego Jiménez Torres",
     "projectName": "Bosque de Arrayán",
-    "unitCode": "Torre 3 - Apt 331",
+    "unitCode": "Torre Norte - Apt 375",
     "valueCOP": 196000000,
-    "stage": "Pre-Aprobado",
-    "probability": 47,
-    "closingDate": "22 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 51,
+    "closingDate": "11 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19620,11 +19530,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1087",
     "leadName": "Julián Romero López",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 1 - Apt 349",
+    "unitCode": "Torre A - Apt 375",
     "valueCOP": 236500000,
     "stage": "Pre-Aprobado",
-    "probability": 55,
-    "closingDate": "2 de Septiembre 2026",
+    "probability": 56,
+    "closingDate": "13 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19632,11 +19542,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1088",
     "leadName": "Adriana Pardo Salazar",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre B - Apt 368",
+    "unitCode": "Torre B - Apt 217",
     "valueCOP": 166000000,
-    "stage": "Cita Sala",
-    "probability": 44,
-    "closingDate": "7 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 51,
+    "closingDate": "16 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19644,67 +19554,19 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1089",
     "leadName": "Lina Cárdenas Pardo",
     "projectName": "Pamplona I",
-    "unitCode": "Torre 2 - Apt 194",
+    "unitCode": "Torre A - Apt 221",
     "valueCOP": 207000000,
     "stage": "Pre-Aprobado",
-    "probability": 55,
-    "closingDate": "29 de Agosto 2026",
+    "probability": 50,
+    "closingDate": "11 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1090",
-    "leadId": "LEAD-1090",
-    "leadName": "Germán Hernández Ríos",
-    "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre A - Apt 189",
-    "valueCOP": 166000000,
-    "stage": "Cita Sala",
-    "probability": 43,
-    "closingDate": "19 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
   },
   {
     "id": "deal-LEAD-1091",
     "leadId": "LEAD-1091",
     "leadName": "Andrés Peña Romero",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre Norte - Apt 149",
-    "valueCOP": 166000000,
-    "stage": "Cita Sala",
-    "probability": 35,
-    "closingDate": "23 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1092",
-    "leadId": "LEAD-1092",
-    "leadName": "Javier Sánchez Vargas",
-    "projectName": "Monguí",
-    "unitCode": "Torre 1 - Apt 282",
-    "valueCOP": 179000000,
-    "stage": "Pre-Aprobado",
-    "probability": 46,
-    "closingDate": "17 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1093",
-    "leadId": "LEAD-1093",
-    "leadName": "Diana Castro Álvarez",
-    "projectName": "Versalles",
-    "unitCode": "Torre A - Apt 312",
-    "valueCOP": 214500000,
-    "stage": "Cita Sala",
-    "probability": 43,
-    "closingDate": "6 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1094",
-    "leadId": "LEAD-1094",
-    "leadName": "Laura García Rincón",
-    "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre A - Apt 396",
+    "unitCode": "Torre Norte - Apt 356",
     "valueCOP": 166000000,
     "stage": "Cita Sala",
     "probability": 42,
@@ -19712,39 +19574,75 @@ export const REAL_DEALS: Deal[] = [
     "subsidyStatus": "En Verificación"
   },
   {
+    "id": "deal-LEAD-1092",
+    "leadId": "LEAD-1092",
+    "leadName": "Javier Sánchez Vargas",
+    "projectName": "Monguí",
+    "unitCode": "Torre 3 - Apt 356",
+    "valueCOP": 179000000,
+    "stage": "Cita Sala",
+    "probability": 38,
+    "closingDate": "29 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1093",
+    "leadId": "LEAD-1093",
+    "leadName": "Diana Castro Álvarez",
+    "projectName": "Versalles",
+    "unitCode": "Torre 1 - Apt 378",
+    "valueCOP": 214500000,
+    "stage": "Pre-Aprobado",
+    "probability": 45,
+    "closingDate": "10 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1094",
+    "leadId": "LEAD-1094",
+    "leadName": "Laura García Rincón",
+    "projectName": "Verde Esperanza El Dorado",
+    "unitCode": "Torre 3 - Apt 193",
+    "valueCOP": 166000000,
+    "stage": "Promesa Firmada",
+    "probability": 53,
+    "closingDate": "31 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
     "id": "deal-LEAD-1095",
     "leadId": "LEAD-1095",
     "leadName": "Laura Díaz Pineda",
     "projectName": "Pamplona I",
-    "unitCode": "Torre A - Apt 161",
+    "unitCode": "Torre 2 - Apt 258",
     "valueCOP": 207000000,
-    "stage": "Cita Sala",
-    "probability": 41,
-    "closingDate": "16 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 60,
+    "closingDate": "14 de Agosto 2026",
     "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1097",
-    "leadId": "LEAD-1097",
-    "leadName": "Johana Suárez Rojas",
-    "projectName": "Araucaria",
-    "unitCode": "Torre A - Apt 466",
-    "valueCOP": 608000000,
-    "stage": "Pre-Aprobado",
-    "probability": 45,
-    "closingDate": "17 de Agosto 2026",
-    "subsidyStatus": "Sin Subsidio"
   },
   {
     "id": "deal-LEAD-1098",
     "leadId": "LEAD-1098",
     "leadName": "Carolina Gómez Moreno",
     "projectName": "Monguí",
-    "unitCode": "Torre 3 - Apt 412",
+    "unitCode": "Torre A - Apt 226",
     "valueCOP": 179000000,
     "stage": "Pre-Aprobado",
-    "probability": 57,
-    "closingDate": "9 de Agosto 2026",
+    "probability": 60,
+    "closingDate": "15 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1099",
+    "leadId": "LEAD-1099",
+    "leadName": "Lorena Gómez Bernal",
+    "projectName": "Monguí",
+    "unitCode": "Torre 2 - Apt 316",
+    "valueCOP": 179000000,
+    "stage": "Promesa Firmada",
+    "probability": 49,
+    "closingDate": "27 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19752,11 +19650,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1100",
     "leadName": "Ana Torres Álvarez",
     "projectName": "Monguí",
-    "unitCode": "Torre 1 - Apt 417",
+    "unitCode": "Torre B - Apt 480",
     "valueCOP": 179000000,
-    "stage": "Pre-Aprobado",
-    "probability": 41,
-    "closingDate": "13 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 31,
+    "closingDate": "28 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19764,11 +19662,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1101",
     "leadName": "Ángela Reyes Castro",
     "projectName": "Araucaria",
-    "unitCode": "Torre 2 - Apt 389",
+    "unitCode": "Torre A - Apt 467",
     "valueCOP": 608000000,
-    "stage": "Cita Sala",
-    "probability": 54,
-    "closingDate": "22 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 52,
+    "closingDate": "27 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -19776,11 +19674,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1102",
     "leadName": "Andrés Romero Reyes",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre Norte - Apt 151",
+    "unitCode": "Torre 3 - Apt 212",
     "valueCOP": 236000000,
-    "stage": "Cita Sala",
-    "probability": 44,
-    "closingDate": "28 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 49,
+    "closingDate": "8 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19788,11 +19686,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1103",
     "leadName": "William Pardo Pineda",
     "projectName": "Monguí",
-    "unitCode": "Torre 2 - Apt 288",
+    "unitCode": "Torre 1 - Apt 294",
     "valueCOP": 179000000,
     "stage": "Promesa Firmada",
-    "probability": 61,
-    "closingDate": "31 de Agosto 2026",
+    "probability": 56,
+    "closingDate": "22 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19800,11 +19698,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1104",
     "leadName": "Yolanda Bernal Torres",
     "projectName": "Monguí",
-    "unitCode": "Torre 3 - Apt 233",
+    "unitCode": "Torre 2 - Apt 376",
     "valueCOP": 179000000,
     "stage": "Cita Sala",
-    "probability": 46,
-    "closingDate": "30 de Agosto 2026",
+    "probability": 40,
+    "closingDate": "20 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19812,11 +19710,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1105",
     "leadName": "María Vargas Moreno",
     "projectName": "Samán",
-    "unitCode": "Torre 2 - Apt 143",
+    "unitCode": "Torre Norte - Apt 304",
     "valueCOP": 254000000,
-    "stage": "Cita Sala",
-    "probability": 51,
-    "closingDate": "16 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 44,
+    "closingDate": "31 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19824,11 +19722,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1106",
     "leadName": "Carlos Rojas Martínez",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre B - Apt 229",
+    "unitCode": "Torre 3 - Apt 349",
     "valueCOP": 166000000,
-    "stage": "Cita Sala",
-    "probability": 52,
-    "closingDate": "22 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 49,
+    "closingDate": "19 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19836,11 +19734,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1108",
     "leadName": "Daniel López Vargas",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre B - Apt 318",
+    "unitCode": "Torre 1 - Apt 444",
     "valueCOP": 166000000,
-    "stage": "Pre-Aprobado",
-    "probability": 48,
-    "closingDate": "18 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 34,
+    "closingDate": "2 de Septiembre 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19848,23 +19746,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1109",
     "leadName": "Diana Hernández Bernal",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 2 - Apt 167",
+    "unitCode": "Torre A - Apt 424",
     "valueCOP": 236500000,
-    "stage": "Pre-Aprobado",
-    "probability": 48,
-    "closingDate": "18 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 51,
+    "closingDate": "16 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1110",
-    "leadId": "LEAD-1110",
-    "leadName": "Lorena Ruiz Castillo",
-    "projectName": "Versalles",
-    "unitCode": "Torre 2 - Apt 331",
-    "valueCOP": 214500000,
+    "id": "deal-LEAD-1111",
+    "leadId": "LEAD-1111",
+    "leadName": "David Jiménez Peña",
+    "projectName": "Verde Esperanza El Dorado",
+    "unitCode": "Torre 3 - Apt 287",
+    "valueCOP": 166000000,
     "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "6 de Agosto 2026",
+    "probability": 50,
+    "closingDate": "8 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19872,11 +19770,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1112",
     "leadName": "Sofía Muñoz Hernández",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 456",
+    "unitCode": "Torre B - Apt 324",
     "valueCOP": 543000000,
-    "stage": "Pre-Aprobado",
-    "probability": 50,
-    "closingDate": "26 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 43,
+    "closingDate": "10 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -19884,11 +19782,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1113",
     "leadName": "Fernanda Rojas González",
     "projectName": "La Macarena",
-    "unitCode": "Torre A - Apt 123",
+    "unitCode": "Torre A - Apt 484",
     "valueCOP": 145500000,
-    "stage": "Cierre Exitoso",
-    "probability": 75,
-    "closingDate": "20 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 54,
+    "closingDate": "7 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -19896,11 +19794,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1114",
     "leadName": "Carlos Gutiérrez Hernández",
     "projectName": "Los Nogales",
-    "unitCode": "Torre B - Apt 175",
+    "unitCode": "Torre Norte - Apt 201",
     "valueCOP": 543000000,
-    "stage": "Pre-Aprobado",
-    "probability": 52,
-    "closingDate": "20 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 38,
+    "closingDate": "14 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -19908,11 +19806,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1115",
     "leadName": "Patricia Bernal Hernández",
     "projectName": "Karakalí",
-    "unitCode": "Torre Norte - Apt 437",
+    "unitCode": "Torre Norte - Apt 314",
     "valueCOP": 240500000,
     "stage": "Cita Sala",
-    "probability": 37,
-    "closingDate": "16 de Agosto 2026",
+    "probability": 51,
+    "closingDate": "26 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19920,47 +19818,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1117",
     "leadName": "Paola Ortiz Castillo",
     "projectName": "La Macarena",
-    "unitCode": "Torre Norte - Apt 188",
+    "unitCode": "Torre B - Apt 129",
     "valueCOP": 145500000,
     "stage": "Cierre Exitoso",
-    "probability": 62,
-    "closingDate": "15 de Agosto 2026",
+    "probability": 66,
+    "closingDate": "28 de Agosto 2026",
     "subsidyStatus": "Aprobado Mi Casa Ya"
-  },
-  {
-    "id": "deal-LEAD-1118",
-    "leadId": "LEAD-1118",
-    "leadName": "Johana Díaz Romero",
-    "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 263",
-    "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 43,
-    "closingDate": "29 de Agosto 2026",
-    "subsidyStatus": "Sin Subsidio"
-  },
-  {
-    "id": "deal-LEAD-1119",
-    "leadId": "LEAD-1119",
-    "leadName": "Diego Rodríguez Rincón",
-    "projectName": "INARI",
-    "unitCode": "Torre Norte - Apt 347",
-    "valueCOP": 271000000,
-    "stage": "Pre-Aprobado",
-    "probability": 38,
-    "closingDate": "31 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1120",
     "leadId": "LEAD-1120",
     "leadName": "Lorena Gómez Reyes",
     "projectName": "Monguí",
-    "unitCode": "Torre 3 - Apt 465",
+    "unitCode": "Torre 3 - Apt 295",
     "valueCOP": 179000000,
     "stage": "Cita Sala",
-    "probability": 53,
-    "closingDate": "3 de Agosto 2026",
+    "probability": 48,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -19968,47 +19842,59 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1124",
     "leadName": "Camilo Álvarez Ortiz",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre 1 - Apt 450",
+    "unitCode": "Torre 3 - Apt 405",
     "valueCOP": 236000000,
-    "stage": "Pre-Aprobado",
-    "probability": 57,
-    "closingDate": "6 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 58,
+    "closingDate": "20 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
-    "id": "deal-LEAD-1127",
-    "leadId": "LEAD-1127",
-    "leadName": "Lorena Delgado Salazar",
+    "id": "deal-LEAD-1125",
+    "leadId": "LEAD-1125",
+    "leadName": "Yolanda Ruiz Rodríguez",
     "projectName": "Karakalí",
-    "unitCode": "Torre B - Apt 178",
+    "unitCode": "Torre A - Apt 435",
     "valueCOP": 240500000,
     "stage": "Cita Sala",
-    "probability": 34,
-    "closingDate": "28 de Agosto 2026",
+    "probability": 35,
+    "closingDate": "29 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1130",
-    "leadId": "LEAD-1130",
-    "leadName": "Paola Acosta Cárdenas",
-    "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre B - Apt 427",
-    "valueCOP": 166000000,
-    "stage": "Promesa Firmada",
-    "probability": 60,
-    "closingDate": "13 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
+    "id": "deal-LEAD-1126",
+    "leadId": "LEAD-1126",
+    "leadName": "Ana Rincón Bernal",
+    "projectName": "Araucaria",
+    "unitCode": "Torre Norte - Apt 408",
+    "valueCOP": 608000000,
+    "stage": "Pre-Aprobado",
+    "probability": 47,
+    "closingDate": "7 de Agosto 2026",
+    "subsidyStatus": "Sin Subsidio"
+  },
+  {
+    "id": "deal-LEAD-1131",
+    "leadId": "LEAD-1131",
+    "leadName": "Hernán Medina Vargas",
+    "projectName": "Bosque de Arrayán",
+    "unitCode": "Torre Norte - Apt 277",
+    "valueCOP": 196000000,
+    "stage": "Cita Sala",
+    "probability": 45,
+    "closingDate": "10 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1132",
     "leadId": "LEAD-1132",
     "leadName": "Carolina Vargas Suárez",
     "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre 3 - Apt 329",
+    "unitCode": "Torre 2 - Apt 323",
     "valueCOP": 166000000,
-    "stage": "Pre-Aprobado",
-    "probability": 53,
-    "closingDate": "7 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 38,
+    "closingDate": "23 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20016,11 +19902,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1133",
     "leadName": "Alejandro Ortiz García",
     "projectName": "La Macarena",
-    "unitCode": "Torre A - Apt 230",
+    "unitCode": "Torre Norte - Apt 341",
     "valueCOP": 145500000,
-    "stage": "Promesa Firmada",
-    "probability": 50,
-    "closingDate": "1 de Septiembre 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 53,
+    "closingDate": "16 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20028,35 +19914,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1134",
     "leadName": "Cristian Castro Acosta",
     "projectName": "Bosque de Arrayán",
-    "unitCode": "Torre 3 - Apt 406",
+    "unitCode": "Torre Norte - Apt 452",
     "valueCOP": 196000000,
     "stage": "Cita Sala",
-    "probability": 51,
-    "closingDate": "8 de Agosto 2026",
+    "probability": 41,
+    "closingDate": "28 de Agosto 2026",
     "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1136",
-    "leadId": "LEAD-1136",
-    "leadName": "Ricardo Castro Castro",
-    "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 1 - Apt 300",
-    "valueCOP": 236500000,
-    "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "22 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1137",
     "leadId": "LEAD-1137",
     "leadName": "Julián López Herrera",
     "projectName": "La Macarena",
-    "unitCode": "Torre A - Apt 421",
+    "unitCode": "Torre A - Apt 284",
     "valueCOP": 145500000,
     "stage": "Pre-Aprobado",
-    "probability": 52,
-    "closingDate": "5 de Agosto 2026",
+    "probability": 53,
+    "closingDate": "4 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20064,23 +19938,59 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1138",
     "leadName": "Mónica Ospina Castro",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 3 - Apt 424",
+    "unitCode": "Torre B - Apt 418",
     "valueCOP": 202500000,
-    "stage": "Pre-Aprobado",
-    "probability": 56,
-    "closingDate": "19 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 55,
+    "closingDate": "25 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1142",
-    "leadId": "LEAD-1142",
-    "leadName": "William Bernal Castro",
+    "id": "deal-LEAD-1139",
+    "leadId": "LEAD-1139",
+    "leadName": "Juan Gómez Ramírez",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 2 - Apt 167",
+    "unitCode": "Torre Norte - Apt 497",
     "valueCOP": 236500000,
-    "stage": "Pre-Aprobado",
-    "probability": 52,
-    "closingDate": "31 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 37,
+    "closingDate": "20 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
+  },
+  {
+    "id": "deal-LEAD-1140",
+    "leadId": "LEAD-1140",
+    "leadName": "Sofía Castillo Vargas",
+    "projectName": "Monguí",
+    "unitCode": "Torre A - Apt 135",
+    "valueCOP": 179000000,
+    "stage": "Promesa Firmada",
+    "probability": 61,
+    "closingDate": "3 de Septiembre 2026",
+    "subsidyStatus": "Aprobado Caja"
+  },
+  {
+    "id": "deal-LEAD-1141",
+    "leadId": "LEAD-1141",
+    "leadName": "Fabián Rincón Reyes",
+    "projectName": "Monguí",
+    "unitCode": "Torre A - Apt 150",
+    "valueCOP": 179000000,
+    "stage": "Promesa Firmada",
+    "probability": 55,
+    "closingDate": "19 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1143",
+    "leadId": "LEAD-1143",
+    "leadName": "Sebastián Álvarez García",
+    "projectName": "Pamplona I",
+    "unitCode": "Torre A - Apt 236",
+    "valueCOP": 207000000,
+    "stage": "Cita Sala",
+    "probability": 42,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20088,11 +19998,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1144",
     "leadName": "Héctor Salazar López",
     "projectName": "Karakalí",
-    "unitCode": "Torre A - Apt 355",
+    "unitCode": "Torre Norte - Apt 281",
     "valueCOP": 240500000,
-    "stage": "Pre-Aprobado",
-    "probability": 40,
-    "closingDate": "14 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 37,
+    "closingDate": "28 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20100,11 +20010,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1145",
     "leadName": "Javier Reyes Castillo",
     "projectName": "INARI",
-    "unitCode": "Torre 1 - Apt 239",
+    "unitCode": "Torre A - Apt 283",
     "valueCOP": 271000000,
-    "stage": "Promesa Firmada",
-    "probability": 60,
-    "closingDate": "11 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 41,
+    "closingDate": "27 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20112,11 +20022,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1146",
     "leadName": "Luis Díaz Álvarez",
     "projectName": "Los Nogales",
-    "unitCode": "Torre Norte - Apt 158",
+    "unitCode": "Torre B - Apt 256",
     "valueCOP": 543000000,
-    "stage": "Pre-Aprobado",
-    "probability": 44,
-    "closingDate": "18 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 52,
+    "closingDate": "24 de Agosto 2026",
+    "subsidyStatus": "Sin Subsidio"
+  },
+  {
+    "id": "deal-LEAD-1147",
+    "leadId": "LEAD-1147",
+    "leadName": "Tatiana Torres Castillo",
+    "projectName": "Los Nogales",
+    "unitCode": "Torre 2 - Apt 301",
+    "valueCOP": 543000000,
+    "stage": "Cita Sala",
+    "probability": 33,
+    "closingDate": "15 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20124,11 +20046,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1148",
     "leadName": "Sofía Torres González",
     "projectName": "Los Nogales",
-    "unitCode": "Torre B - Apt 374",
+    "unitCode": "Torre A - Apt 317",
     "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 34,
-    "closingDate": "4 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 47,
+    "closingDate": "14 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20136,11 +20058,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1149",
     "leadName": "Javier Reyes González",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 2 - Apt 166",
+    "unitCode": "Torre Norte - Apt 330",
     "valueCOP": 236500000,
-    "stage": "Promesa Firmada",
-    "probability": 51,
-    "closingDate": "26 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 40,
+    "closingDate": "22 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20148,11 +20070,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1151",
     "leadName": "Paola Hernández Suárez",
     "projectName": "Araucaria",
-    "unitCode": "Torre 3 - Apt 292",
+    "unitCode": "Torre Norte - Apt 197",
     "valueCOP": 608000000,
-    "stage": "Promesa Firmada",
-    "probability": 59,
-    "closingDate": "13 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 54,
+    "closingDate": "6 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20160,11 +20082,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1152",
     "leadName": "Camilo Salazar López",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre 1 - Apt 388",
+    "unitCode": "Torre Norte - Apt 325",
     "valueCOP": 236000000,
     "stage": "Cita Sala",
-    "probability": 32,
-    "closingDate": "2 de Agosto 2026",
+    "probability": 49,
+    "closingDate": "23 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20172,11 +20094,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1153",
     "leadName": "Daniela Medina Herrera",
     "projectName": "La Macarena",
-    "unitCode": "Torre A - Apt 265",
+    "unitCode": "Torre A - Apt 434",
     "valueCOP": 145500000,
-    "stage": "Cita Sala",
+    "stage": "Cierre Exitoso",
+    "probability": 68,
+    "closingDate": "6 de Agosto 2026",
+    "subsidyStatus": "Aprobado Mi Casa Ya"
+  },
+  {
+    "id": "deal-LEAD-1154",
+    "leadId": "LEAD-1154",
+    "leadName": "Johana Rodríguez Martínez",
+    "projectName": "Verde Esperanza El Dorado",
+    "unitCode": "Torre 1 - Apt 466",
+    "valueCOP": 166000000,
+    "stage": "Pre-Aprobado",
     "probability": 49,
-    "closingDate": "3 de Agosto 2026",
+    "closingDate": "1 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20184,11 +20118,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1156",
     "leadName": "Héctor Jiménez Bernal",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 307",
+    "unitCode": "Torre 3 - Apt 307",
     "valueCOP": 543000000,
     "stage": "Promesa Firmada",
-    "probability": 63,
-    "closingDate": "29 de Agosto 2026",
+    "probability": 61,
+    "closingDate": "17 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20196,23 +20130,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1157",
     "leadName": "Milena Castro Romero",
     "projectName": "Monguí",
-    "unitCode": "Torre Norte - Apt 265",
+    "unitCode": "Torre A - Apt 176",
     "valueCOP": 179000000,
-    "stage": "Cita Sala",
-    "probability": 37,
-    "closingDate": "20 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1158",
-    "leadId": "LEAD-1158",
-    "leadName": "Julián Ramírez Ríos",
-    "projectName": "Verde Esperanza El Dorado",
-    "unitCode": "Torre 2 - Apt 431",
-    "valueCOP": 166000000,
-    "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "20 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 56,
+    "closingDate": "22 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20220,11 +20142,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1159",
     "leadName": "David Peña Salazar",
     "projectName": "Los Nogales",
-    "unitCode": "Torre A - Apt 231",
+    "unitCode": "Torre 2 - Apt 391",
     "valueCOP": 543000000,
     "stage": "Cita Sala",
-    "probability": 30,
-    "closingDate": "12 de Agosto 2026",
+    "probability": 45,
+    "closingDate": "7 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20232,11 +20154,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1160",
     "leadName": "Javier Reyes González",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre B - Apt 326",
+    "unitCode": "Torre 3 - Apt 355",
     "valueCOP": 236500000,
-    "stage": "Cita Sala",
-    "probability": 49,
-    "closingDate": "7 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 43,
+    "closingDate": "11 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20244,11 +20166,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1161",
     "leadName": "Sandra Ruiz Acosta",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 1 - Apt 225",
+    "unitCode": "Torre B - Apt 223",
     "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 36,
-    "closingDate": "22 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 44,
+    "closingDate": "13 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20256,11 +20178,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1162",
     "leadName": "Marcela Gutiérrez Peña",
     "projectName": "Pamplona I",
-    "unitCode": "Torre 2 - Apt 214",
+    "unitCode": "Torre B - Apt 150",
     "valueCOP": 207000000,
-    "stage": "Pre-Aprobado",
-    "probability": 48,
-    "closingDate": "9 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 58,
+    "closingDate": "11 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20268,23 +20190,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1163",
     "leadName": "Milena Cárdenas Ortiz",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre Norte - Apt 489",
+    "unitCode": "Torre A - Apt 439",
     "valueCOP": 236500000,
-    "stage": "Cita Sala",
-    "probability": 43,
-    "closingDate": "24 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1164",
-    "leadId": "LEAD-1164",
-    "leadName": "Carlos Jiménez Suárez",
-    "projectName": "La Arboleda",
-    "unitCode": "Torre 3 - Apt 349",
-    "valueCOP": 202500000,
-    "stage": "Cita Sala",
-    "probability": 35,
-    "closingDate": "5 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 46,
+    "closingDate": "23 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20292,35 +20202,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1165",
     "leadName": "Andrés Castro Bernal",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 1 - Apt 400",
+    "unitCode": "Torre A - Apt 106",
     "valueCOP": 202500000,
-    "stage": "Cita Sala",
-    "probability": 52,
-    "closingDate": "18 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 51,
+    "closingDate": "16 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1166",
-    "leadId": "LEAD-1166",
-    "leadName": "Fernando Castillo Pineda",
-    "projectName": "Los Nogales",
-    "unitCode": "Torre 2 - Apt 170",
-    "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 46,
-    "closingDate": "3 de Agosto 2026",
-    "subsidyStatus": "Sin Subsidio"
   },
   {
     "id": "deal-LEAD-1167",
     "leadId": "LEAD-1167",
     "leadName": "Fabián Cruz Muñoz",
     "projectName": "Los Nogales",
-    "unitCode": "Torre 2 - Apt 379",
+    "unitCode": "Torre 2 - Apt 176",
     "valueCOP": 543000000,
     "stage": "Cita Sala",
-    "probability": 51,
-    "closingDate": "24 de Agosto 2026",
+    "probability": 46,
+    "closingDate": "31 de Julio 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20328,35 +20226,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1168",
     "leadName": "Fabián Mora Herrera",
     "projectName": "Samán",
-    "unitCode": "Torre 2 - Apt 460",
+    "unitCode": "Torre A - Apt 243",
     "valueCOP": 254000000,
     "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "11 de Agosto 2026",
-    "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1170",
-    "leadId": "LEAD-1170",
-    "leadName": "Andrés Rincón Gómez",
-    "projectName": "Monguí",
-    "unitCode": "Torre 3 - Apt 101",
-    "valueCOP": 179000000,
-    "stage": "Cita Sala",
-    "probability": 45,
-    "closingDate": "2 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
-  },
-  {
-    "id": "deal-LEAD-1171",
-    "leadId": "LEAD-1171",
-    "leadName": "Eduardo Jiménez Ruiz",
-    "projectName": "Versalles",
-    "unitCode": "Torre 1 - Apt 197",
-    "valueCOP": 214500000,
-    "stage": "Pre-Aprobado",
-    "probability": 54,
-    "closingDate": "3 de Agosto 2026",
+    "probability": 38,
+    "closingDate": "18 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20364,11 +20238,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1172",
     "leadName": "Paola Rodríguez Hernández",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre B - Apt 477",
+    "unitCode": "Torre B - Apt 401",
     "valueCOP": 236000000,
-    "stage": "Cita Sala",
-    "probability": 36,
-    "closingDate": "27 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 47,
+    "closingDate": "19 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20376,11 +20250,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1173",
     "leadName": "Laura Moreno Acosta",
     "projectName": "Araucaria",
-    "unitCode": "Torre 1 - Apt 140",
+    "unitCode": "Torre 2 - Apt 416",
     "valueCOP": 608000000,
-    "stage": "Cita Sala",
-    "probability": 38,
-    "closingDate": "8 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 47,
+    "closingDate": "19 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20388,11 +20262,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1174",
     "leadName": "Nicolás Acosta López",
     "projectName": "Los Nogales",
-    "unitCode": "Torre B - Apt 214",
+    "unitCode": "Torre A - Apt 324",
     "valueCOP": 543000000,
-    "stage": "Cita Sala",
-    "probability": 40,
-    "closingDate": "21 de Agosto 2026",
+    "stage": "Pre-Aprobado",
+    "probability": 46,
+    "closingDate": "6 de Agosto 2026",
     "subsidyStatus": "Sin Subsidio"
   },
   {
@@ -20400,70 +20274,82 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1175",
     "leadName": "Yolanda Peña Castro",
     "projectName": "INARI",
-    "unitCode": "Torre Norte - Apt 255",
+    "unitCode": "Torre A - Apt 124",
     "valueCOP": 271000000,
-    "stage": "Cita Sala",
-    "probability": 46,
-    "closingDate": "12 de Agosto 2026",
+    "stage": "Promesa Firmada",
+    "probability": 45,
+    "closingDate": "25 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1176",
-    "leadId": "LEAD-1176",
-    "leadName": "Ricardo Cárdenas Bernal",
-    "projectName": "Monguí",
-    "unitCode": "Torre 1 - Apt 210",
-    "valueCOP": 179000000,
+    "id": "deal-LEAD-1177",
+    "leadId": "LEAD-1177",
+    "leadName": "Cristian Álvarez Peña",
+    "projectName": "Los Nogales",
+    "unitCode": "Torre 2 - Apt 238",
+    "valueCOP": 543000000,
     "stage": "Cita Sala",
     "probability": 48,
-    "closingDate": "23 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
+    "closingDate": "20 de Agosto 2026",
+    "subsidyStatus": "Sin Subsidio"
   },
   {
-    "id": "deal-LEAD-1180",
-    "leadId": "LEAD-1180",
-    "leadName": "Sandra Cárdenas Gutiérrez",
-    "projectName": "La Arboleda",
-    "unitCode": "Torre Norte - Apt 315",
-    "valueCOP": 202500000,
+    "id": "deal-LEAD-1178",
+    "leadId": "LEAD-1178",
+    "leadName": "Fernanda Romero García",
+    "projectName": "Versalles",
+    "unitCode": "Torre 1 - Apt 130",
+    "valueCOP": 214500000,
     "stage": "Cita Sala",
-    "probability": 40,
-    "closingDate": "11 de Agosto 2026",
+    "probability": 42,
+    "closingDate": "15 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
-    "id": "deal-LEAD-1182",
-    "leadId": "LEAD-1182",
-    "leadName": "Fernando Ramírez Cruz",
-    "projectName": "Karakalí",
-    "unitCode": "Torre B - Apt 302",
-    "valueCOP": 240500000,
+    "id": "deal-LEAD-1179",
+    "leadId": "LEAD-1179",
+    "leadName": "Ana Romero Ospina",
+    "projectName": "La Macarena",
+    "unitCode": "Torre 2 - Apt 482",
+    "valueCOP": 145500000,
     "stage": "Cita Sala",
     "probability": 40,
-    "closingDate": "24 de Agosto 2026",
+    "closingDate": "28 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1183",
+    "leadId": "LEAD-1183",
+    "leadName": "Felipe Rojas Delgado",
+    "projectName": "La Arboleda",
+    "unitCode": "Torre A - Apt 276",
+    "valueCOP": 202500000,
+    "stage": "Pre-Aprobado",
+    "probability": 39,
+    "closingDate": "8 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1185",
-    "leadId": "LEAD-1185",
-    "leadName": "Santiago Rodríguez Hernández",
-    "projectName": "Araucaria",
-    "unitCode": "Torre B - Apt 463",
-    "valueCOP": 608000000,
-    "stage": "Cita Sala",
-    "probability": 24,
-    "closingDate": "3 de Agosto 2026",
-    "subsidyStatus": "Sin Subsidio"
+    "id": "deal-LEAD-1184",
+    "leadId": "LEAD-1184",
+    "leadName": "Yolanda Suárez Delgado",
+    "projectName": "Monguí",
+    "unitCode": "Torre B - Apt 312",
+    "valueCOP": 179000000,
+    "stage": "Pre-Aprobado",
+    "probability": 59,
+    "closingDate": "2 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
   },
   {
     "id": "deal-LEAD-1186",
     "leadId": "LEAD-1186",
     "leadName": "Sandra Hernández Cárdenas",
     "projectName": "Bosque de Arrayán",
-    "unitCode": "Torre Norte - Apt 453",
+    "unitCode": "Torre 1 - Apt 493",
     "valueCOP": 196000000,
-    "stage": "Pre-Aprobado",
-    "probability": 45,
+    "stage": "Promesa Firmada",
+    "probability": 56,
     "closingDate": "7 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
@@ -20472,47 +20358,47 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1187",
     "leadName": "Juan Torres Medina",
     "projectName": "Samán",
-    "unitCode": "Torre Norte - Apt 233",
+    "unitCode": "Torre Norte - Apt 498",
     "valueCOP": 254000000,
     "stage": "Cita Sala",
-    "probability": 42,
-    "closingDate": "2 de Agosto 2026",
+    "probability": 50,
+    "closingDate": "23 de Agosto 2026",
     "subsidyStatus": "En Verificación"
-  },
-  {
-    "id": "deal-LEAD-1188",
-    "leadId": "LEAD-1188",
-    "leadName": "Martha Delgado Pardo",
-    "projectName": "Samán",
-    "unitCode": "Torre 2 - Apt 244",
-    "valueCOP": 254000000,
-    "stage": "Cita Sala",
-    "probability": 39,
-    "closingDate": "25 de Agosto 2026",
-    "subsidyStatus": "Aprobado Caja"
   },
   {
     "id": "deal-LEAD-1189",
     "leadId": "LEAD-1189",
     "leadName": "Hernán Mora Cruz",
     "projectName": "Samán",
-    "unitCode": "Torre A - Apt 143",
+    "unitCode": "Torre 1 - Apt 320",
     "valueCOP": 254000000,
-    "stage": "Cierre Exitoso",
-    "probability": 63,
-    "closingDate": "1 de Septiembre 2026",
+    "stage": "Promesa Firmada",
+    "probability": 59,
+    "closingDate": "21 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
-    "id": "deal-LEAD-1190",
-    "leadId": "LEAD-1190",
-    "leadName": "Mónica Pineda Ríos",
+    "id": "deal-LEAD-1192",
+    "leadId": "LEAD-1192",
+    "leadName": "Valentina García Medina",
+    "projectName": "La Macarena",
+    "unitCode": "Torre 1 - Apt 130",
+    "valueCOP": 145500000,
+    "stage": "Cita Sala",
+    "probability": 45,
+    "closingDate": "27 de Agosto 2026",
+    "subsidyStatus": "En Verificación"
+  },
+  {
+    "id": "deal-LEAD-1193",
+    "leadId": "LEAD-1193",
+    "leadName": "Daniel Romero Reyes",
     "projectName": "La Arboleda",
-    "unitCode": "Torre 1 - Apt 422",
+    "unitCode": "Torre Norte - Apt 416",
     "valueCOP": 202500000,
-    "stage": "Pre-Aprobado",
-    "probability": 35,
-    "closingDate": "23 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 36,
+    "closingDate": "29 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20520,11 +20406,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1194",
     "leadName": "Patricia Díaz Jiménez",
     "projectName": "La Arboleda",
-    "unitCode": "Torre Norte - Apt 151",
+    "unitCode": "Torre B - Apt 409",
     "valueCOP": 202500000,
-    "stage": "Promesa Firmada",
-    "probability": 65,
-    "closingDate": "12 de Agosto 2026",
+    "stage": "Cierre Exitoso",
+    "probability": 63,
+    "closingDate": "4 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20532,11 +20418,23 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1195",
     "leadName": "Ricardo Castro Castro",
     "projectName": "Reserva de Guayacán",
-    "unitCode": "Torre A - Apt 347",
+    "unitCode": "Torre A - Apt 299",
     "valueCOP": 236000000,
-    "stage": "Promesa Firmada",
+    "stage": "Cita Sala",
+    "probability": 53,
+    "closingDate": "26 de Agosto 2026",
+    "subsidyStatus": "Aprobado Caja"
+  },
+  {
+    "id": "deal-LEAD-1196",
+    "leadId": "LEAD-1196",
+    "leadName": "Hernán Medina Vargas",
+    "projectName": "Bosque de Turpial",
+    "unitCode": "Torre A - Apt 262",
+    "valueCOP": 236500000,
+    "stage": "Pre-Aprobado",
     "probability": 54,
-    "closingDate": "19 de Agosto 2026",
+    "closingDate": "10 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   },
   {
@@ -20544,11 +20442,11 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1198",
     "leadName": "Pedro Suárez Medina",
     "projectName": "Bosque de Turpial",
-    "unitCode": "Torre 3 - Apt 158",
+    "unitCode": "Torre 3 - Apt 379",
     "valueCOP": 236500000,
-    "stage": "Pre-Aprobado",
-    "probability": 48,
-    "closingDate": "7 de Agosto 2026",
+    "stage": "Cita Sala",
+    "probability": 38,
+    "closingDate": "20 de Agosto 2026",
     "subsidyStatus": "En Verificación"
   },
   {
@@ -20556,27 +20454,16 @@ export const REAL_DEALS: Deal[] = [
     "leadId": "LEAD-1199",
     "leadName": "Laura Peña Romero",
     "projectName": "Samán",
-    "unitCode": "Torre B - Apt 477",
+    "unitCode": "Torre 3 - Apt 432",
     "valueCOP": 254000000,
     "stage": "Pre-Aprobado",
-    "probability": 48,
-    "closingDate": "10 de Agosto 2026",
+    "probability": 55,
+    "closingDate": "14 de Agosto 2026",
     "subsidyStatus": "Aprobado Caja"
   }
 ] as Deal[];
 
 export const REAL_TASKS: Task[] = [
-  {
-    "id": "task-LEAD-1002",
-    "title": "Enviar cotización formal y agendar firma",
-    "leadName": "Ana Rincón Mora",
-    "leadPhone": "+57 304 849 5745",
-    "type": "Enviar Cotización",
-    "dueDate": "Hoy",
-    "dueTime": "08:30 AM",
-    "completed": false,
-    "priority": "Alta"
-  },
   {
     "id": "task-LEAD-1008",
     "title": "Enviar cotización formal y agendar firma",
@@ -20584,15 +20471,26 @@ export const REAL_TASKS: Task[] = [
     "leadPhone": "+57 323 248 2565",
     "type": "Enviar Cotización",
     "dueDate": "Hoy",
-    "dueTime": "09:15 AM",
-    "completed": true,
+    "dueTime": "08:30 AM",
+    "completed": false,
     "priority": "Alta"
   },
   {
-    "id": "task-LEAD-1012",
+    "id": "task-LEAD-1009",
     "title": "Enviar cotización formal y agendar firma",
-    "leadName": "Javier Romero Ruiz",
-    "leadPhone": "+57 359 991 3412",
+    "leadName": "Valentina Moreno Rincón",
+    "leadPhone": "+57 302 871 3077",
+    "type": "Enviar Cotización",
+    "dueDate": "Hoy",
+    "dueTime": "09:15 AM",
+    "completed": false,
+    "priority": "Alta"
+  },
+  {
+    "id": "task-LEAD-1018",
+    "title": "Enviar cotización formal y agendar firma",
+    "leadName": "Juan García Álvarez",
+    "leadPhone": "+57 325 028 8055",
     "type": "Enviar Cotización",
     "dueDate": "Hoy",
     "dueTime": "10:00 AM",
@@ -20600,10 +20498,10 @@ export const REAL_TASKS: Task[] = [
     "priority": "Alta"
   },
   {
-    "id": "task-LEAD-1028",
+    "id": "task-LEAD-1024",
     "title": "Enviar cotización formal y agendar firma",
-    "leadName": "Daniel Moreno Medina",
-    "leadPhone": "+57 322 446 4073",
+    "leadName": "Mónica Ospina Castro",
+    "leadPhone": "+57 307 567 9047",
     "type": "Enviar Cotización",
     "dueDate": "Hoy",
     "dueTime": "11:30 AM",
@@ -20629,28 +20527,6 @@ export const REAL_TASKS: Task[] = [
     "type": "Enviar Cotización",
     "dueDate": "Hoy",
     "dueTime": "03:15 PM",
-    "completed": true,
-    "priority": "Alta"
-  },
-  {
-    "id": "task-LEAD-1035",
-    "title": "Enviar cotización formal y agendar firma",
-    "leadName": "Sofía Castillo Vargas",
-    "leadPhone": "+57 317 222 0513",
-    "type": "Enviar Cotización",
-    "dueDate": "Hoy",
-    "dueTime": "04:00 PM",
-    "completed": true,
-    "priority": "Alta"
-  },
-  {
-    "id": "task-LEAD-1037",
-    "title": "Enviar cotización formal y agendar firma",
-    "leadName": "Adriana Suárez Rojas",
-    "leadPhone": "+57 352 796 9486",
-    "type": "Enviar Cotización",
-    "dueDate": "Hoy",
-    "dueTime": "04:45 PM",
     "completed": false,
     "priority": "Alta"
   },
@@ -20661,8 +20537,19 @@ export const REAL_TASKS: Task[] = [
     "leadPhone": "+57 358 537 4270",
     "type": "Enviar Cotización",
     "dueDate": "Hoy",
-    "dueTime": "08:30 AM",
+    "dueTime": "04:00 PM",
     "completed": false,
+    "priority": "Alta"
+  },
+  {
+    "id": "task-LEAD-1041",
+    "title": "Enviar cotización formal y agendar firma",
+    "leadName": "Mauricio Moreno Suárez",
+    "leadPhone": "+57 313 688 3353",
+    "type": "Enviar Cotización",
+    "dueDate": "Hoy",
+    "dueTime": "04:45 PM",
+    "completed": true,
     "priority": "Alta"
   },
   {
@@ -20670,6 +20557,17 @@ export const REAL_TASKS: Task[] = [
     "title": "Enviar cotización formal y agendar firma",
     "leadName": "Marcela Hernández Delgado",
     "leadPhone": "+57 321 347 1527",
+    "type": "Enviar Cotización",
+    "dueDate": "Hoy",
+    "dueTime": "08:30 AM",
+    "completed": false,
+    "priority": "Alta"
+  },
+  {
+    "id": "task-LEAD-1074",
+    "title": "Enviar cotización formal y agendar firma",
+    "leadName": "Luis Moreno Salazar",
+    "leadPhone": "+57 308 005 5957",
     "type": "Enviar Cotización",
     "dueDate": "Hoy",
     "dueTime": "09:15 AM",

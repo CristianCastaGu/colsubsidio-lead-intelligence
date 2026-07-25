@@ -487,15 +487,44 @@ const IMAGE_BY_LOCATION = {
 };
 const DELIVERY_DATES = ['Entrega Inmediata', 'Q4 2026', 'Q1 2027', 'Q2 2027', 'Entrega 2026', 'Q3 2026'];
 
+// Real municipality-level coordinates (Cundinamarca / Bogotá) — the source data only has
+// a location name, not a geocoded address, so this is the town/macro-project center, not
+// the exact property. Good enough to place a real, correctly-located pin on a map.
+const COORDS_BY_LOCATION = {
+  'Ciudadela Maiporé': { lat: 4.5794, lng: -74.2144 }, // Soacha
+  Tocancipá: { lat: 4.9575, lng: -73.9139 },
+  Chía: { lat: 4.8600, lng: -74.0335 },
+  Girardot: { lat: 4.3028, lng: -74.8092 },
+  Ricaurte: { lat: 4.2836, lng: -74.8244 },
+  'Ciudadela Calle 80': { lat: 4.7110, lng: -74.1200 }, // Bogotá, corredor Av. Calle 80
+  Bogotá: { lat: 4.6097, lng: -74.0817 },
+  Ubaté: { lat: 5.3097, lng: -73.8151 },
+};
+
+// Deterministic small offset (~100-250m) so multiple projects sharing the same macro
+// location (e.g. seven stages within "Ciudadela Maiporé") don't render as one single
+// overlapping pin on the map. Seeded by id, not random, so it's stable across re-runs.
+function jitterFor(id) {
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) >>> 0;
+  const angle = (hash % 360) * (Math.PI / 180);
+  const distance = 0.0012 + (hash % 100) / 90000;
+  return { dLat: Math.cos(angle) * distance, dLng: Math.sin(angle) * distance };
+}
+
 const realProjects = proyectos.map((p) => {
   const unitsTotal = 80 + Math.floor(Math.random() * 180);
   const unitsAvailable = Math.max(2, Math.round(unitsTotal * (0.05 + Math.random() * 0.4)));
+  const baseCoord = COORDS_BY_LOCATION[p.ubicacion] || COORDS_BY_LOCATION['Ciudadela Maiporé'];
+  const jitter = jitterFor(p.id);
   return {
     id: p.id,
     name: p.nombre,
     type: p.vis ? 'VIS' : 'No VIS',
     municipality: p.ubicacion,
     address: `${p.ubicacion}, Cundinamarca`,
+    lat: baseCoord.lat + jitter.dLat,
+    lng: baseCoord.lng + jitter.dLng,
     minPriceCOP: p.rango_precio_min * 1_000_000,
     maxPriceCOP: p.rango_precio_max * 1_000_000,
     unitsTotal,
