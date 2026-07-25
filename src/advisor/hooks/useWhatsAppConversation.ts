@@ -88,6 +88,31 @@ export function useWhatsAppConversation(telefono: string | null) {
     [telefono]
   );
 
+  // Endpoint aún no confirmado por Iván (ver lib/sofiaClient.ts) — si no existe
+  // del lado de Sofía, esto devuelve ok:false y el error se muestra explícito
+  // en vez de fingir que el chat volvió al agente.
+  const devolverAgente = useCallback(
+    async (): Promise<SendResult> => {
+      if (!telefono) return { ok: false, mensaje: 'Este lead no tiene un número de WhatsApp registrado.' };
+      try {
+        const res = await fetch('/api/devolver-agente', {
+          method: 'POST',
+          headers: JSON_HEADERS,
+          body: JSON.stringify({ telefono }),
+        });
+        const data = await res.json();
+        if (data.ok) {
+          setModoHumano(false);
+          setAsesorAsignado(null);
+        }
+        return data;
+      } catch {
+        return { ok: false, mensaje: 'No se pudo conectar con el Agente Sofía (WhatsApp).' };
+      }
+    },
+    [telefono]
+  );
+
   const sendMessage = useCallback(
     async (mensaje: string, asesor: string): Promise<SendResult> => {
       if (!telefono) return { ok: false, mensaje: 'Este lead no tiene un número de WhatsApp registrado.' };
@@ -114,5 +139,5 @@ export function useWhatsAppConversation(telefono: string | null) {
     [telefono]
   );
 
-  return { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion };
+  return { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion, devolverAgente };
 }

@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import { fetchSofiaLeads, retomarConversacion, enviarMensajeAsesor, fetchConversacion } from "./lib/sofiaClient";
+import { fetchSofiaLeads, retomarConversacion, devolverAgente, enviarMensajeAsesor, fetchConversacion } from "./lib/sofiaClient";
 
 dotenv.config();
 
@@ -211,6 +211,18 @@ app.post("/api/retomar-conversacion", async (req, res) => {
     res.status(status).json(data);
   } catch (error) {
     console.error("Error retomando conversación con el Agente Sofía:", error);
+    res.status(502).json({ ok: false, mensaje: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
+  }
+});
+
+// Devuelve el chat a Sofía tras un "Retomar chat" — endpoint aún no confirmado
+// por Iván (ver lib/sofiaClient.ts). Falla explícito (502) si no existe todavía.
+app.post("/api/devolver-agente", async (req, res) => {
+  try {
+    const { status, data } = await devolverAgente(req.body);
+    res.status(status).json(data);
+  } catch (error) {
+    console.error("Error devolviendo la conversación al Agente Sofía:", error);
     res.status(502).json({ ok: false, mensaje: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
   }
 });

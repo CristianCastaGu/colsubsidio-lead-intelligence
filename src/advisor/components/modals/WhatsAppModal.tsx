@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { X, MessageSquare, Send, Copy, Loader2, AlertTriangle, UserCheck, Bot } from 'lucide-react';
+import { X, MessageSquare, Send, Copy, Loader2, AlertTriangle, UserCheck, Bot, Mic } from 'lucide-react';
 import { Lead, HousingProject } from '../../types';
 import { normalizePhoneForWhatsApp } from '../../data/phone';
 import { useWhatsAppConversation } from '../../hooks/useWhatsAppConversation';
@@ -29,17 +29,20 @@ const TEMPLATES: Record<string, (lead: Lead, project: HousingProject) => string>
 
 export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, lead, projects, advisorName }) => {
   const telefono = useMemo(() => (lead ? normalizePhoneForWhatsApp(lead.phone) : null), [lead]);
-  const { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion } =
+  const { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion, devolverAgente } =
     useWhatsAppConversation(isOpen ? telefono : null);
 
   const [messageText, setMessageText] = useState('');
   const [sendError, setSendError] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+  const [switchingMode, setSwitchingMode] = useState(false);
+  const [audioNotice, setAudioNotice] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMessageText('');
     setSendError(null);
+    setAudioNotice(false);
   }, [lead?.id]);
 
   useEffect(() => {
@@ -73,8 +76,18 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, l
 
   const handleRetomar = async () => {
     setSendError(null);
+    setSwitchingMode(true);
     const result = await retomarConversacion(advisorName);
     if (!result.ok) setSendError(result.mensaje || 'No se pudo retomar la conversación.');
+    setSwitchingMode(false);
+  };
+
+  const handleDevolver = async () => {
+    setSendError(null);
+    setSwitchingMode(true);
+    const result = await devolverAgente();
+    if (!result.ok) setSendError(result.mensaje || 'No se pudo devolver la conversación a Sofía.');
+    setSwitchingMode(false);
   };
 
   return (
@@ -123,10 +136,21 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, l
                 {modoHumano ? <UserCheck className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
                 {modoHumano ? `Modo humano — atendido por ${asesorAsignado || advisorName}` : 'Sofía está atendiendo esta conversación automáticamente'}
               </span>
-              {!modoHumano && (
+              {modoHumano ? (
+                <button
+                  onClick={handleDevolver}
+                  disabled={switchingMode}
+                  title="Dejar que Sofía siga atendiendo automáticamente"
+                  className="text-[10px] font-bold underline hover:no-underline cursor-pointer shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  Devolver a Sofía
+                </button>
+              ) : (
                 <button
                   onClick={handleRetomar}
-                  className="text-[10px] font-bold underline hover:no-underline cursor-pointer shrink-0"
+                  disabled={switchingMode}
+                  title="Tomar tú la conversación en vez de Sofía"
+                  className="text-[10px] font-bold underline hover:no-underline cursor-pointer shrink-0 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Retomar chat
                 </button>
@@ -186,6 +210,12 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, l
                 </p>
               )}
 
+              {audioNotice && (
+                <p className="text-[11px] text-amber-700 font-semibold flex items-center gap-1">
+                  <AlertTriangle className="w-3 h-3" /> El envío de audio todavía no está conectado — pendiente de que Sofía/Iván habiliten un endpoint para recibir notas de voz.
+                </p>
+              )}
+
               <div className="flex items-end gap-2">
                 <textarea
                   value={messageText}
@@ -193,6 +223,13 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, l
                   placeholder="Escribe tu mensaje…"
                   className="flex-1 text-xs p-2.5 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#003DA5]/20 h-16 resize-none"
                 />
+                <button
+                  onClick={() => setAudioNotice(true)}
+                  title="Enviar audio (próximamente)"
+                  className="p-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg border border-slate-300 transition-colors cursor-pointer shrink-0"
+                >
+                  <Mic className="w-4 h-4" />
+                </button>
                 <button
                   onClick={handleCopy}
                   title="Copiar texto"

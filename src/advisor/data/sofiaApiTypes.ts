@@ -70,6 +70,13 @@ export interface RetomarConversacionResponse {
   telefono: string;
 }
 
+// Endpoint aún no confirmado por Iván — ver lib/sofiaClient.ts.
+export interface DevolverAgenteResponse {
+  ok: boolean;
+  mensaje?: string;
+  telefono?: string;
+}
+
 export interface EnviarMensajeResponse {
   ok: boolean;
   mensaje?: string; // presente cuando falla el envío
