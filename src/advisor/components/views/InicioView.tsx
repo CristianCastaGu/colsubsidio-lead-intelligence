@@ -131,6 +131,12 @@ export const InicioView: React.FC<InicioViewProps> = ({
   // Default selected lead for the detail panel modal (null by default)
   const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null);
 
+  // "Operación Comercial del Día" and "Alerta de Inventario" both live as floating
+  // buttons now instead of a permanent sidebar — the leads table always gets full
+  // width to show every column and its action buttons uncut. Shared state keeps
+  // only one popover open at a time.
+  const [activeFloatingPanel, setActiveFloatingPanel] = useState<'tasks' | 'inventory' | null>(null);
+
   const activeSelectedLead = useMemo(() => {
     if (!selectedLeadId) return null;
     return leads.find((l) => l.id === selectedLeadId) || null;
@@ -259,9 +265,9 @@ export const InicioView: React.FC<InicioViewProps> = ({
         </motion.div>
       </div>
 
-      {/* 2 + 4. TWO-COLUMN WORKSPACE: leads table (wide) alongside the day's operation (sidebar) */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-start">
-      <div className="xl:col-span-2 space-y-4">
+      {/* 2. LEADS TABLE — full width now that "Operación Comercial del Día" and the
+          inventory alert both live as floating buttons instead of a sidebar column. */}
+      <div className="space-y-4">
       <div className="px-1">
         <h2 className="text-xl sm:text-2xl font-extrabold text-[#003DA5] tracking-tight font-display">
           Leads que Requieren Atención Comercial
@@ -590,6 +596,7 @@ export const InicioView: React.FC<InicioViewProps> = ({
       </div>
 
       {/* 3. FLOATING BUBBLE MODAL: DETAILED LEAD INTELLIGENCE — no backdrop dimming,
+
           the page stays fully visible/normal behind it; click outside the card to close.
           Rendered via a portal straight into <body>: this view's own wrapper div has the
           animate-fadeIn entrance (a transform-based CSS animation), and ANY ancestor with
@@ -920,98 +927,151 @@ export const InicioView: React.FC<InicioViewProps> = ({
         document.body
       )}
 
-      {/* 4. TAREAS COMERCIALES DEL DÍA & ALERTA DE INVENTARIOS — right-hand sidebar
-          alongside the leads table, matching the reference two-column workspace layout */}
-      <div className="xl:col-span-1 space-y-4">
-        <div className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs space-y-3">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-            <div className="flex items-center gap-2.5">
-              <CheckSquare className="w-4 h-4 text-[#003DA5]" />
-              <h2 className="text-sm font-extrabold text-slate-900 font-display">Operación Comercial del Día</h2>
-            </div>
-            <span className="text-[10px] font-black bg-[#FFD200] text-[#003DA5] px-2.5 py-0.5 rounded-full shadow-2xs">
-              Hoy
-            </span>
-          </div>
-
-          <div className="flex items-center justify-between pt-1">
-            <p className="text-xs font-bold text-slate-800">Tareas pendientes asignadas</p>
-            <span className="text-[10px] text-slate-500 font-medium">Clic para completar</span>
-          </div>
-
-          <div className="space-y-2">
-            {tasks.slice(0, 6).map((task) => (
-              <div
-                key={task.id}
-                onClick={() => onToggleTaskComplete(task.id)}
-                className={`p-3 rounded-xl border text-xs transition-all cursor-pointer flex items-start gap-2.5 ${
-                  task.completed
-                    ? 'bg-slate-50 border-slate-200 opacity-60'
-                    : 'bg-white border-slate-200 hover:border-[#003DA5] shadow-2xs hover:shadow-xs'
-                }`}
-              >
-                <input
-                  type="checkbox"
-                  checked={task.completed}
-                  onChange={() => {}}
-                  className="mt-0.5 rounded border-slate-300 text-[#003DA5] focus:ring-[#003DA5] cursor-pointer"
-                />
-                <div className="flex-1 min-w-0">
-                  <p
-                    className={`font-bold truncate ${
-                      task.completed ? 'line-through text-slate-400' : 'text-slate-900'
-                    }`}
-                  >
-                    {task.title}
-                  </p>
-                  <div className="flex items-center gap-2 text-[10px] text-slate-500 mt-1">
-                    <span className="font-extrabold text-[#003DA5] truncate">{task.leadName}</span>
-                    <span>•</span>
-                    <span className="shrink-0">{task.dueTime}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {tasks.length > 6 && (
-            <button
-              onClick={() => onNavigateToView('inicio')}
-              className="text-xs text-[#003DA5] font-extrabold hover:underline flex items-center gap-1 cursor-pointer pt-1"
-            >
-              <span>Ver todas las tareas ({tasks.length})</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
-          )}
-        </div>
-
-        {/* Inventory Push Alert Box — with modern architectural housing towers illustration */}
-        <div className="relative p-4 bg-gradient-to-br from-amber-50/90 via-amber-100/50 to-orange-50/60 border border-amber-200/80 rounded-2xl space-y-2.5 overflow-hidden shadow-2xs">
-          <img
-            src="/housing_buildings.jpg"
-            alt="Ilustración Proyectos de Vivienda"
-            className="absolute bottom-0 right-0 w-36 h-32 object-contain object-bottom pointer-events-none select-none mix-blend-multiply"
-          />
-
-          <div className="relative z-10 max-w-[70%]">
-            <div className="flex items-center gap-2 text-amber-950 font-black text-xs mb-1">
-              <Building2 className="w-4 h-4 text-amber-600 shrink-0" />
-              <span>Alerta de Inventario Vivienda</span>
-            </div>
-            <p className="text-xs text-slate-700 leading-relaxed font-medium">
-              <strong>Altos de Mosquera</strong> tiene 85 unidades VIS disponibles. Se activó bonificación comercial para cierres este mes.
-            </p>
-          </div>
+      {/* 4. FLOATING WORKSPACE BUTTONS — "Operación Comercial del Día" and the inventory
+          alert both live here now, as buttons that pop their content open on demand,
+          same pattern for both. Portaled to <body>: this view's own wrapper div has the
+          animate-fadeIn entrance (a transform-based CSS animation), and any ancestor
+          with a transform becomes the containing block for position:fixed descendants —
+          without the portal these would be "fixed" to that div, not the real viewport. */}
+      {createPortal(
+        <>
+          {/* Tasks trigger — stacked directly above inventory trigger */}
           <button
-            onClick={() => onNavigateToView('proyectos')}
-            className="relative z-10 text-xs text-[#003DA5] font-extrabold hover:underline flex items-center gap-1 cursor-pointer pt-1"
+            onClick={() => setActiveFloatingPanel((p) => (p === 'tasks' ? null : 'tasks'))}
+            aria-label="Operación Comercial del Día"
+            title="Operación Comercial del Día"
+            className="fixed bottom-24 right-6 z-50 w-14 h-14 rounded-full bg-[#003DA5] hover:bg-blue-700 text-white shadow-xl flex items-center justify-center cursor-pointer transition-all hover:scale-105"
           >
-            <span>Ver catálogo de proyectos</span>
-            <ChevronRight className="w-3.5 h-3.5" />
+            <CheckSquare className="w-6 h-6" />
+            {pendingTasksCount > 0 && (
+              <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#FFD200] text-[#003DA5] text-[10px] font-black ring-2 ring-white flex items-center justify-center">
+                {pendingTasksCount}
+              </span>
+            )}
           </button>
-        </div>
-      </div>
-      </div>
+
+          {/* Inventory alert trigger */}
+          <button
+            onClick={() => setActiveFloatingPanel((p) => (p === 'inventory' ? null : 'inventory'))}
+            aria-label="Alerta de Inventario Vivienda"
+            title="Alerta de Inventario Vivienda"
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#003DA5] hover:bg-blue-700 text-white shadow-xl flex items-center justify-center cursor-pointer transition-all hover:scale-105"
+          >
+            <Building2 className="w-6 h-6" />
+            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#FFD200] ring-2 ring-white" />
+          </button>
+
+          <AnimatePresence>
+            {activeFloatingPanel && (
+              <>
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setActiveFloatingPanel(null)}
+                />
+
+                {activeFloatingPanel === 'tasks' && (
+                  <motion.div
+                    onClick={(e) => e.stopPropagation()}
+                    initial={{ opacity: 0, scale: 0.95, y: 12 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 12 }}
+                    transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                    className="fixed bottom-40 right-6 left-6 sm:left-auto z-50 w-auto sm:w-96 max-h-[70vh] overflow-y-auto custom-scrollbar bg-white rounded-2xl border border-slate-200/80 shadow-2xl p-5 space-y-3"
+                  >
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                      <div className="flex items-center gap-2.5">
+                        <CheckSquare className="w-4 h-4 text-[#003DA5]" />
+                        <h2 className="text-sm font-extrabold text-slate-900 font-display">Operación Comercial del Día</h2>
+                      </div>
+                      <span className="text-[10px] font-black bg-[#FFD200] text-[#003DA5] px-2.5 py-0.5 rounded-full shadow-2xs">
+                        Hoy
+                      </span>
+                    </div>
+
+                    <div className="flex items-center justify-between pt-1">
+                      <p className="text-xs font-bold text-slate-800">Tareas pendientes asignadas</p>
+                      <span className="text-[10px] text-slate-500 font-medium">Clic para completar</span>
+                    </div>
+
+                    <div className="space-y-2">
+                      {tasks.map((task) => (
+                        <div
+                          key={task.id}
+                          onClick={() => onToggleTaskComplete(task.id)}
+                          className={`p-3 rounded-xl border text-xs transition-all cursor-pointer flex items-start gap-2.5 ${
+                            task.completed
+                              ? 'bg-slate-50 border-slate-200 opacity-60'
+                              : 'bg-white border-slate-200 hover:border-[#003DA5] shadow-2xs hover:shadow-xs'
+                          }`}
+                        >
+                          <input
+                            type="checkbox"
+                            checked={task.completed}
+                            onChange={() => {}}
+                            className="mt-0.5 rounded border-slate-300 text-[#003DA5] focus:ring-[#003DA5] cursor-pointer"
+                          />
+                          <div className="flex-1 min-w-0">
+                            <p
+                              className={`font-bold truncate ${
+                                task.completed ? 'line-through text-slate-400' : 'text-slate-900'
+                              }`}
+                            >
+                              {task.title}
+                            </p>
+                            <div className="flex items-center gap-2 text-[10px] text-slate-500 mt-1">
+                              <span className="font-extrabold text-[#003DA5] truncate">{task.leadName}</span>
+                              <span>•</span>
+                              <span className="shrink-0">{task.dueTime}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {activeFloatingPanel === 'inventory' && (
+                  <motion.div
+                    onClick={(e) => e.stopPropagation()}
+                    initial={{ opacity: 0, scale: 0.95, y: 12 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 12 }}
+                    transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                    className="fixed bottom-40 right-6 left-6 sm:left-auto z-50 w-auto sm:w-80 p-4 bg-gradient-to-br from-amber-50/95 via-amber-100/60 to-orange-50/70 border border-amber-200/80 rounded-2xl space-y-2.5 overflow-hidden shadow-2xl"
+                  >
+                    <img
+                      src="/housing_buildings.jpg"
+                      alt="Ilustración Proyectos de Vivienda"
+                      className="absolute bottom-0 right-0 w-36 h-32 object-contain object-bottom pointer-events-none select-none mix-blend-multiply"
+                    />
+
+                    <div className="relative z-10 max-w-[70%]">
+                      <div className="flex items-center gap-2 text-amber-950 font-black text-xs mb-1">
+                        <Building2 className="w-4 h-4 text-amber-600 shrink-0" />
+                        <span>Alerta de Inventario Vivienda</span>
+                      </div>
+                      <p className="text-xs text-slate-700 leading-relaxed font-medium">
+                        <strong>Altos de Mosquera</strong> tiene 85 unidades VIS disponibles. Se activó bonificación comercial para cierres este mes.
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => {
+                        onNavigateToView('proyectos');
+                        setActiveFloatingPanel(null);
+                      }}
+                      className="relative z-10 text-xs text-[#003DA5] font-extrabold hover:underline flex items-center gap-1 cursor-pointer pt-1"
+                    >
+                      <span>Ver catálogo de proyectos</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+                  </motion.div>
+                )}
+              </>
+            )}
+          </AnimatePresence>
+        </>,
+        document.body
+      )}
     </div>
   );
 };
