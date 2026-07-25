@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
+import { fetchSofiaLeads, retomarConversacion, enviarMensajeAsesor, fetchConversacion } from "./lib/sofiaClient";
 
 dotenv.config();
 
@@ -183,46 +184,31 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-// Proxy for the live Agente Sofía (WhatsApp) leads feed. Runs server-to-server
-// (no browser involved), so ngrok's browser-warning interstitial never triggers —
-// that page only intercepts requests carrying a real browser User-Agent, and it
-// blocks the CORS preflight a direct browser fetch with a custom header would need.
-// If Iván's ngrok tunnel URL changes, update it here only.
-const SOFIA_LEADS_API_URL = "https://pyromania-oversweet-unburned.ngrok-free.dev/api/leads";
+// Proxies for the live Agente Sofía (WhatsApp) backend — shared logic lives in
+// lib/sofiaClient.ts so this local dev server and the Vercel serverless
+// functions in api/ (which serve these same routes in production) never drift
+// apart. Runs server-to-server (no browser involved), so ngrok's
+// browser-warning interstitial never triggers — that page only intercepts
+// requests carrying a real browser User-Agent, and it blocks the CORS
+// preflight a direct browser fetch with a custom header would need.
 
 app.get("/api/sofia-leads", async (req, res) => {
   try {
-    const response = await fetch(SOFIA_LEADS_API_URL, {
-      headers: { "ngrok-skip-browser-warning": "true" },
-    });
-    if (!response.ok) {
-      res.status(502).json({ error: `Agente Sofía respondió ${response.status}` });
-      return;
-    }
-    const data = await response.json();
-    res.json(data);
+    const { status, data } = await fetchSofiaLeads();
+    res.status(status).json(data);
   } catch (error) {
     console.error("Error consultando el Agente Sofía:", error);
     res.status(502).json({ error: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
   }
 });
 
-// ----------------------------------------------------------------------------
 // Handoff a asesor humano — el asesor retoma la conversación real de WhatsApp
 // que el lead ya tuvo con Sofía, en vez de abrirle un chat nuevo desde el
-// número personal del asesor. Mismo patrón de proxy server-to-server que arriba.
-// ----------------------------------------------------------------------------
-const SOFIA_BASE_URL = "https://pyromania-oversweet-unburned.ngrok-free.dev";
-
+// número personal del asesor.
 app.post("/api/retomar-conversacion", async (req, res) => {
   try {
-    const response = await fetch(`${SOFIA_BASE_URL}/api/retomar-conversacion`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" },
-      body: JSON.stringify(req.body),
-    });
-    const data = await response.json();
-    res.status(response.status).json(data);
+    const { status, data } = await retomarConversacion(req.body);
+    res.status(status).json(data);
   } catch (error) {
     console.error("Error retomando conversación con el Agente Sofía:", error);
     res.status(502).json({ ok: false, mensaje: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
@@ -231,13 +217,8 @@ app.post("/api/retomar-conversacion", async (req, res) => {
 
 app.post("/api/enviar-mensaje-asesor", async (req, res) => {
   try {
-    const response = await fetch(`${SOFIA_BASE_URL}/api/enviar-mensaje-asesor`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "ngrok-skip-browser-warning": "true" },
-      body: JSON.stringify(req.body),
-    });
-    const data = await response.json();
-    res.status(response.status).json(data);
+    const { status, data } = await enviarMensajeAsesor(req.body);
+    res.status(status).json(data);
   } catch (error) {
     console.error("Error enviando mensaje por WhatsApp vía Agente Sofía:", error);
     res.status(502).json({ ok: false, mensaje: "No se pudo conectar con el Agente Sofía (WhatsApp)." });
@@ -246,11 +227,8 @@ app.post("/api/enviar-mensaje-asesor", async (req, res) => {
 
 app.get("/api/conversacion/:telefono", async (req, res) => {
   try {
-    const response = await fetch(`${SOFIA_BASE_URL}/api/conversacion/${encodeURIComponent(req.params.telefono)}`, {
-      headers: { "ngrok-skip-browser-warning": "true" },
-    });
-    const data = await response.json();
-    res.status(response.status).json(data);
+    const { status, data } = await fetchConversacion(req.params.telefono);
+    res.status(status).json(data);
   } catch (error) {
     console.error("Error consultando la conversación de WhatsApp:", error);
     res.status(502).json({ ok: false, history: [], modoHumano: false, asesorAsignado: null, ultimaActividad: null });
