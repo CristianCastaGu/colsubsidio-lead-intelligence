@@ -264,3 +264,5 @@ La aplicacion esta disponible en [colsubsidio-lead-intelligence.vercel.app](http
 
 - Informe de Buyer Personas para Marketing: cuatro segmentos historicos con señales, canales, fricciones, financiacion y activacion recomendada.
 - Handoff bidireccional en WhatsApp: el asesor puede retomar una conversacion o devolverla a Sofia.
+
+- Simulador local de Sofia: demo autocontenida de perfilamiento y cotizacion, sin depender del canal real de WhatsApp.

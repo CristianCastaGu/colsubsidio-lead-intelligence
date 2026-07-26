@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Search, MessageCircle, Target, Briefcase, Sparkles, ArrowRight } from 'lucide-react';
+import { Search, MessageCircle, Target, Briefcase, Sparkles, ArrowRight, PlayCircle } from 'lucide-react';
 
 interface RoleSelectorProps {
   onSelectRole: (role: 'buyer' | 'advisor') => void;
@@ -67,7 +67,7 @@ const BadgeEmblem: React.FC = () => (
   </svg>
 );
 
-export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
+export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole, onOpenSimulator }) => {
   return (
     <div
       className="min-h-screen w-full font-sans flex flex-col"
@@ -120,7 +120,7 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {/* Comprador card */}
             <motion.button
               onClick={() => onSelectRole('buyer')}
@@ -180,14 +180,43 @@ export const RoleSelector: React.FC<RoleSelectorProps> = ({ onSelectRole }) => {
                 <h2 className="font-display text-xl font-bold text-slate-900">Soy Asesor Comercial</h2>
                 <div className="flex flex-wrap gap-2 text-[11px] text-slate-500">
                   <span className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-full">
-                    <Briefcase size={12} /> Pipeline comercial
+                    <Briefcase size={12} /> WhatsApp real (Meta)
                   </span>
                   <span className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-full">
-                    <Target size={12} /> Score 360
+                    <Target size={12} /> Nathalia e Iván
                   </span>
                 </div>
                 <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 group-hover:text-[#B38A00] transition-colors">
                   Entrar como asesor
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </motion.button>
+            {/* Simulador card: local and safe for demos, without sending messages to WhatsApp */}
+            <motion.button
+              onClick={onOpenSimulator}
+              className="group text-left bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#003DA5] transition-shadow overflow-hidden flex flex-col"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
+              whileHover={{ y: -4, transition: { type: 'spring', stiffness: 300, damping: 20 } }}
+            >
+              <div className="h-28 w-full relative overflow-hidden bg-[#10243A]">
+                <div className="absolute inset-0 opacity-40" style={{ backgroundImage: 'radial-gradient(#FFD200 1px, transparent 1px)', backgroundSize: '18px 18px' }} />
+                <div className="absolute inset-0 flex items-center justify-center gap-3 text-[#FFD200]">
+                  <MessageCircle size={34} strokeWidth={1.6} />
+                  <div className="h-9 w-px bg-[#FFD200]/50" />
+                  <PlayCircle size={34} strokeWidth={1.6} />
+                </div>
+              </div>
+              <div className="p-8 pt-6 flex flex-col gap-5 flex-1">
+                <h2 className="font-display text-xl font-bold text-slate-900">Simulador de Sofía</h2>
+                <div className="flex flex-wrap gap-2 text-[11px] text-slate-500">
+                  <span className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-full"><Sparkles size={12} /> Demo sin WhatsApp</span>
+                  <span className="inline-flex items-center gap-1 bg-slate-100 px-2.5 py-1 rounded-full"><Target size={12} /> Perfil y cotización</span>
+                </div>
+                <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-slate-900 group-hover:text-[#003DA5] transition-colors">
+                  Probar simulador
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>

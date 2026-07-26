@@ -10,7 +10,7 @@ export default function App() {
   const [role, setRole] = useState<Role>('selector');
 
   if (role === 'selector') {
-    return <RoleSelector onSelectRole={setRole} />;
+    return <RoleSelector onSelectRole={setRole} onOpenSimulator={() => window.location.assign('/simulador-sofia/index.html')} />;
   }
 
   return (

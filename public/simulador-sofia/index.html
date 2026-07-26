@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulador · Sofía — Agente de vivienda Colsubsidio</title>
+<meta name="description" content="Simulador del agente conversacional Sofía. Escribe como un interesado y observa en vivo cómo el sistema lo perfila, cambia de guion y calcula su plan de pagos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#10243A;      /* azul tinta, base institucional */
+  --tinta-2:#1C3B57;
+  --lienzo:#EDF0F3;     /* gris azulado claro, lectura técnica */
+  --superficie:#FFFFFF;
+  --ambar:#C8912A;      /* el dorado de la caja, apagado */
+  --ambar-luz:#FBF2DC;
+  --verde:#1F6B4A;
+  --verde-luz:#E4F0EA;
+  --rojo:#A32B2B;
+  --rojo-luz:#F8E9E9;
+  --gris:#5D6B7A;
+  --linea:#D5DCE4;
+  --wa-fondo:#0B141A;
+  --wa-burbuja:#202C33;
+  --wa-mia:#005C4B;
+  --r:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',system-ui,sans-serif;
+  background:var(--lienzo); color:var(--tinta);
+  line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+.envoltorio{max-width:1340px;margin:0 auto;padding:0 20px}
+
+/* ── Cabecera ─────────────────────────────────────── */
+header{background:var(--tinta);color:#fff;padding:26px 0 22px}
+.marca{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.marca h1{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-weight:800; font-size:clamp(28px,4vw,40px);
+  letter-spacing:-.02em; line-height:1;
+}
+.marca .etiqueta{
+  font-family:'IBM Plex Mono',monospace; font-size:11px;
+  letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ambar); border:1px solid rgba(200,145,42,.45);
+  padding:4px 9px; border-radius:3px;
+}
+.bajada{margin-top:10px;max-width:70ch;color:#B9C6D4;font-size:15px}
+.bajada b{color:#fff;font-weight:600}
+
+/* ── Selector de perfil ───────────────────────────── */
+.perfiles{background:var(--tinta);padding:0 0 24px}
+.perfiles-tit{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:#8397AA;margin:20px 0 10px;
+}
+.fichas{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.ficha{
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r); padding:13px 14px; cursor:pointer; text-align:left;
+  color:#fff; font-family:inherit; transition:border-color .15s, background .15s;
+}
+.ficha:hover{background:rgba(255,255,255,.09);border-color:rgba(200,145,42,.5)}
+.ficha[aria-pressed="true"]{background:var(--ambar);border-color:var(--ambar);color:#10243A}
+.ficha .n{font-weight:700;font-size:14.5px;display:block;margin-bottom:3px}
+.ficha .d{font-size:12.5px;opacity:.78;line-height:1.35}
+.ficha[aria-pressed="true"] .d{opacity:.85}
+
+/* ── Rejilla principal ────────────────────────────── */
+.tablero{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:22px;padding:26px 0 60px;align-items:start}
+@media(max-width:980px){.tablero{grid-template-columns:1fr}}
+
+/* ── Teléfono ─────────────────────────────────────── */
+.telefono{
+  background:var(--wa-fondo); border-radius:16px; overflow:hidden;
+  box-shadow:0 18px 44px rgba(16,36,58,.22); position:sticky; top:16px;
+}
+@media(max-width:980px){.telefono{position:static}}
+.wa-barra{background:#1F2C34;padding:11px 14px;display:flex;align-items:center;gap:11px}
+.wa-av{width:34px;height:34px;border-radius:50%;background:var(--ambar);color:#10243A;
+  display:grid;place-items:center;font-weight:700;font-size:14px}
+.wa-nom{color:#E9EDF0;font-size:14.5px;font-weight:600;line-height:1.2}
+.wa-est{color:#8696A0;font-size:11.5px}
+.wa-hilo{height:452px;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;gap:8px;
+  background:var(--wa-fondo)}
+.wa-hilo::-webkit-scrollbar{width:6px}
+.wa-hilo::-webkit-scrollbar-thumb{background:#33434E;border-radius:3px}
+.burbuja{max-width:82%;padding:8px 11px;border-radius:8px;font-size:14px;line-height:1.45;
+  color:#E9EDF0;white-space:pre-wrap;word-wrap:break-word;animation:surge .22s ease-out}
+@keyframes surge{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.b-sofia{background:var(--wa-burbuja);align-self:flex-start;border-top-left-radius:2px}
+.b-lead{background:var(--wa-mia);align-self:flex-end;border-top-right-radius:2px}
+.hora{display:block;font-size:10.5px;color:#8696A0;text-align:right;margin-top:3px}
+.escribiendo{display:flex;gap:4px;padding:11px 13px;background:var(--wa-burbuja);
+  border-radius:8px;align-self:flex-start;width:fit-content}
+.escribiendo i{width:6px;height:6px;border-radius:50%;background:#8696A0;animation:pt 1.1s infinite}
+.escribiendo i:nth-child(2){animation-delay:.16s}.escribiendo i:nth-child(3){animation-delay:.32s}
+@keyframes pt{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
+.wa-pie{background:#1F2C34;padding:10px}
+.sugerencias{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+.sug{background:rgba(200,145,42,.16);border:1px solid rgba(200,145,42,.4);color:#E4C88A;
+  border-radius:14px;padding:5px 11px;font-size:12.2px;cursor:pointer;font-family:inherit;
+  transition:background .15s}
+.sug:hover{background:rgba(200,145,42,.3)}
+.entrada{display:flex;gap:8px}
+.entrada input{flex:1;background:#2A3942;border:none;border-radius:18px;padding:10px 14px;
+  color:#E9EDF0;font-size:14px;font-family:inherit}
+.entrada input:focus{outline:2px solid var(--ambar);outline-offset:1px}
+.entrada button{background:var(--ambar);border:none;border-radius:50%;width:38px;height:38px;
+  cursor:pointer;color:#10243A;font-size:16px;flex-shrink:0}
+.entrada button:hover{filter:brightness(1.08)}
+
+/* ── Panel del sistema ────────────────────────────── */
+.panel{display:flex;flex-direction:column;gap:14px}
+.panel-cab{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.panel-cab h2{font-family:'Bricolage Grotesque',sans-serif;font-size:21px;letter-spacing:-.01em}
+.panel-cab p{font-size:13px;color:var(--gris);max-width:56ch}
+
+.tarjeta{background:var(--superficie);border:1px solid var(--linea);border-radius:var(--r);overflow:hidden}
+.t-cab{padding:11px 15px;border-bottom:1px solid var(--linea);display:flex;
+  align-items:center;justify-content:space-between;gap:10px;background:#F7F9FB}
+.t-tit{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--gris);font-weight:600}
+.t-cuerpo{padding:15px}
+
+.senales{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:9px}
+.senal{border:1px solid var(--linea);border-radius:7px;padding:9px 11px;background:#FBFCFD}
+.senal.viva{border-color:var(--ambar);background:var(--ambar-luz)}
+.senal .k{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gris);display:block;margin-bottom:3px}
+.senal .v{font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+.senal .v.vacio{color:#A9B4C0;font-weight:400;font-style:italic}
+
+.arq{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.arq-nom{font-family:'Bricolage Grotesque',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.pastilla{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;padding:3px 9px;border-radius:11px;font-weight:600}
+.p-alta{background:var(--verde-luz);color:var(--verde)}
+.p-media{background:var(--ambar-luz);color:#8A6314}
+.p-baja{background:#EEF1F4;color:var(--gris)}
+.arq-motivo{font-size:12.5px;color:var(--gris);margin-top:7px;font-family:'IBM Plex Mono',monospace}
+.arq-datos{display:flex;gap:18px;margin-top:11px;padding-top:11px;border-top:1px solid var(--linea);flex-wrap:wrap}
+.arq-dato .k{font-size:10.5px;color:var(--gris);text-transform:uppercase;letter-spacing:.08em;
+  font-family:'IBM Plex Mono',monospace}
+.arq-dato .v{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* Signature: lo que resalta contra lo que calla */
+.dos-columnas{display:grid;grid-template-columns:1fr 1fr;gap:0}
+@media(max-width:620px){.dos-columnas{grid-template-columns:1fr}}
+.col{padding:14px 15px}
+.col+.col{border-left:1px solid var(--linea)}
+@media(max-width:620px){.col+.col{border-left:none;border-top:1px solid var(--linea)}}
+.col h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;margin-bottom:9px;font-weight:600}
+.col.si h4{color:var(--verde)}
+.col.no h4{color:var(--rojo)}
+.col ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.col li{font-size:13.2px;padding-left:16px;position:relative;line-height:1.4}
+.col.si li::before{content:'+';position:absolute;left:0;color:var(--verde);font-weight:700}
+.col.no li{color:var(--gris);text-decoration:line-through;text-decoration-color:rgba(163,43,43,.4)}
+.col.no li::before{content:'\00d7';position:absolute;left:0;color:var(--rojo);font-weight:700;text-decoration:none}
+
+.objecion{padding:13px 15px;background:#FBFCFD;border-top:1px solid var(--linea);font-size:13.2px}
+.objecion b{display:block;font-size:10.5px;font-family:'IBM Plex Mono',monospace;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--gris);margin-bottom:5px;font-weight:600}
+
+/* Cotización */
+.cot-filas{display:flex;flex-direction:column}
+.cot-fila{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:8px 0;border-bottom:1px dashed var(--linea);font-size:13.5px}
+.cot-fila:last-child{border-bottom:none}
+.cot-fila .v{font-family:'IBM Plex Mono',monospace;font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+.cot-fila.destacada{font-size:15px;padding-top:11px}
+.cot-fila.destacada .v{font-size:19px;color:var(--tinta)}
+.veredicto{margin-top:13px;padding:13px 15px;border-radius:8px;font-size:13.4px;line-height:1.5}
+.v-ok{background:var(--verde-luz);border-left:3px solid var(--verde)}
+.v-no{background:var(--rojo-luz);border-left:3px solid var(--rojo)}
+.veredicto b{display:block;margin-bottom:4px;font-size:13.8px}
+.v-ok b{color:var(--verde)} .v-no b{color:var(--rojo)}
+.barra{height:6px;background:#E3E8ED;border-radius:3px;overflow:hidden;margin:9px 0 6px}
+.barra i{display:block;height:100%;border-radius:3px;transition:width .5s ease}
+
+.espera{padding:26px 15px;text-align:center;color:#9BA7B4;font-size:13.4px;font-style:italic}
+
+/* Pie */
+footer{background:var(--tinta);color:#8397AA;padding:26px 0;font-size:13px}
+footer a{color:var(--ambar);text-decoration:none;border-bottom:1px solid rgba(200,145,42,.4)}
+.nota-pie{max-width:78ch;line-height:1.6}
+.reiniciar{background:none;border:1px solid var(--linea);color:var(--gris);border-radius:6px;
+  padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit}
+.reiniciar:hover{border-color:var(--gris);color:var(--tinta)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:focus-visible{outline:2px solid var(--ambar);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="envoltorio">
+    <div class="marca">
+      <h1>Sofía</h1>
+      <span class="etiqueta">Simulador</span>
+    </div>
+    <p class="bajada">
+      Escribe como si fueras un interesado en comprar vivienda. A la derecha vas a ver, en vivo,
+      <b>lo que el sistema entiende de ti</b>: qué señales extrae de tus palabras, en qué perfil de
+      comprador te ubica, qué decide resaltarte y <b>qué decide callarte</b>.
+    </p>
+  </div>
+</header>
+
+<section class="perfiles">
+  <div class="envoltorio">
+    <p class="perfiles-tit">Empieza como uno de estos, o escribe lo que quieras</p>
+    <div class="fichas" id="fichas"></div>
+  </div>
+</section>
+
+<main class="envoltorio">
+  <div class="tablero">
+
+    <!-- Teléfono -->
+    <div class="telefono">
+      <div class="wa-barra">
+        <div class="wa-av">S</div>
+        <div>
+          <div class="wa-nom">Sofía · Colsubsidio Vivienda</div>
+          <div class="wa-est" id="estado">en línea</div>
+        </div>
+      </div>
+      <div class="wa-hilo" id="hilo"></div>
+      <div class="wa-pie">
+        <div class="sugerencias" id="sugerencias"></div>
+        <form class="entrada" id="forma">
+          <input id="campo" type="text" placeholder="Escribe un mensaje" autocomplete="off" aria-label="Mensaje para Sofía">
+          <button type="submit" aria-label="Enviar">↑</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Panel -->
+    <div class="panel">
+      <div class="panel-cab">
+        <div>
+          <h2>Lo que el sistema entiende</h2>
+          <p>Todo lo de abajo lo calcula el servidor con reglas explícitas, no la IA. Es el mismo código que corre en producción.</p>
+        </div>
+        <button class="reiniciar" id="reiniciar">Reiniciar conversación</button>
+      </div>
+
+      <div class="tarjeta">
+        <div class="t-cab"><span class="t-tit">Señales extraídas de tus mensajes</span></div>
+        <div class="t-cuerpo"><div class="senales" id="senales"></div></div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="t-cab"><span class="t-tit">Perfil detectado</span></div>
+        <div class="t-cuerpo" id="perfil"></div>
+      </div>
+
+      <div class="tarjeta" id="tarjeta-guion">
+        <div class="t-cab"><span class="t-tit">Guion aplicado</span></div>
+        <div id="guion"></div>
+      </div>
+
+      <div class="tarjeta">
+        <div class="t-cab"><span class="t-tit">Plan de pagos</span></div>
+        <div class="t-cuerpo" id="cotizacion"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="envoltorio">
+    <p class="nota-pie">
+      Simulación con fines de evaluación. El clasificador, el cotizador y la normativa son el código real
+      del proyecto, portados al navegador; las respuestas de Sofía aquí se componen a partir del guion y
+      de las cifras calculadas, sin llamar al modelo de lenguaje. Los proyectos y precios provienen del
+      catálogo del reto. Ningún dato que escribas sale de tu navegador.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════════════════
+   LÓGICA REAL DEL SISTEMA, PORTADA AL NAVEGADOR
+   Las constantes y fórmulas son idénticas a las de producción.
+   ══════════════════════════════════════════════════════════════ */
+
+const SMLV = 1750905;
+const SEPARACION_FIJA = 500000;
+const CARGA_MAXIMA_SANA = 0.40;
+const UMBRAL_PREMIUM = 400;           // millones
+const CIUDADES_TOPE_ALTO = ['bogota','medellin','cali','barranquilla','bucaramanga','cartagena','cucuta','pereira'];
+
+const TABLA_SUBSIDIO = [
+  { hastaSMLV: 2, subsidioSMLV: 30 },
+  { hastaSMLV: 4, subsidioSMLV: 20 },
+  { hastaSMLV: Infinity, subsidioSMLV: 0 },
+];
+
+const PROYECTOS = [
+  { nombre:'Reserva de Guayacán', ciudad:'Girardot', precio:175400000, entrega:'2028-01', hab:1, m2:43.53 },
+  { nombre:'INARI',               ciudad:'Bogotá',   precio:239500000, entrega:'2028-06', hab:2, m2:53.40 },
+  { nombre:'La Macarena',         ciudad:'Bogotá',   precio:236000000, entrega:'2027-12', hab:2, m2:52.98, edge:true },
+  { nombre:'Bosque de Arrayán',   ciudad:'Soacha',   precio:198000000, entrega:'2028-03', hab:3, m2:58.10, edge:true },
+  { nombre:'Los Nogales',         ciudad:'Bogotá',   precio:573281000, entrega:'2028-09', hab:3, m2:74.85 },
+];
+
+function sinTildes(t){return String(t||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
+
+/* ── Extractores ─────────────────────────────────── */
+function normalizarNumero(str){
+  const t=String(str||'').trim().replace(/^[.,]+/,'').replace(/[.,]+$/,'');
+  if(!t) return null;
+  if(/^\d{1,3}(?:[.,]\d{3})+$/.test(t)) return parseInt(t.replace(/[.,]/g,''),10);
+  if(/^\d+[.,]\d{1,2}$/.test(t)) return parseFloat(t.replace(',','.'));
+  if(/^\d+$/.test(t)) return parseInt(t,10);
+  return null;
+}
+const PALABRAS={un:1,uno:1,una:1,dos:2,tres:3,cuatro:4,cinco:5,seis:6,siete:7,ocho:8,nueve:9,diez:10,
+  once:11,doce:12,trece:13,catorce:14,quince:15,dieciseis:16,diecisiete:17,dieciocho:18,
+  diecinueve:19,veinte:20};
+const CENTENAS={cien:100,ciento:100,doscientos:200,trescientos:300,cuatrocientos:400,quinientos:500,
+  seiscientos:600,setecientos:700,ochocientos:800,novecientos:900};
+
+function numeroDesdePalabras(f){
+  const t=sinTildes(f).toLowerCase().trim();
+  let m=t.match(/^([a-z]+)\s+(?:punto|coma)\s+([a-z]+)$/);
+  if(m&&PALABRAS[m[1]]!==undefined&&PALABRAS[m[2]]!==undefined) return PALABRAS[m[1]]+PALABRAS[m[2]]/10;
+  if(/^([a-z]+)\s+y\s+medio$/.test(t)){const e=PALABRAS[t.split(/\s+/)[0]];if(e!==undefined)return e+0.5}
+  return PALABRAS[t]!==undefined?PALABRAS[t]:null;
+}
+
+function extraerIngresos(texto){
+  const t=sinTildes(texto).toLowerCase();
+  const ctx=t.match(/\b(?:gano|ganamos|gana|devengo|devengamos|recibo|recibimos|ingresos?|sueldo|salario|entre los dos|entre ambos)\b.{0,70}/);
+  if(!ctx) return null;
+  const f=ctx[0];
+  const cm=f.match(/((?:\d+(?:[.,]\d+)*)|(?:[a-z]+(?:\s+(?:punto|coma|y)\s+[a-z]+)?))\s*(?:millones?|millon|m\b)/);
+  if(cm){
+    const crudo=cm[1].trim();
+    let base=/^\d/.test(crudo)?normalizarNumero(crudo):numeroDesdePalabras(crudo);
+    if(base!==null&&base>0&&base<100){
+      let total=base*1e6;
+      const resto=f.slice(f.indexOf(cm[0])+cm[0].length);
+      const cola=resto.match(/^\s+(y\s+medio|[a-z]+)(?:\s+mil)?\b/);
+      if(cola){const c=cola[1].trim();
+        if(/^y\s+medio$/.test(c)) total+=500000;
+        else if(CENTENAS[c]) total+=CENTENAS[c]*1000;}
+      return Math.round(total);
+    }
+  }
+  const sn=f.match(/\$?\s*(\d[\d.,]*)/);
+  if(sn){const n=normalizarNumero(sn[1]);
+    if(n===null) return null;
+    if(n>=100000) return Math.round(n);
+    if(n>0&&n<100) return Math.round(n*1e6);}
+  return null;
+}
+
+function extraerEdad(texto){
+  const t=sinTildes(texto).toLowerCase();
+  const m=t.match(/\b(?:tengo|cumpl[oi]|voy a cumplir)\s+(\d{2})\b/)||t.match(/\b(\d{2})\s*a[nñ]os\b/);
+  if(!m) return null;
+  const e=parseInt(m[1],10);
+  return e>=18&&e<=90?e:null;
+}
+
+function extraerComposicion(texto){
+  const t=sinTildes(texto).toLowerCase();
+  const h=t.match(/\b(\d+|un|una|dos|tres|cuatro)\s+(?:hij[oa]s?|ni[nñ][oa]s?)\b/);
+  if(h){const p={un:1,una:1,dos:2,tres:3,cuatro:4};
+    const n=p[h[1]]??parseInt(h[1],10);return{texto:`con ${n} hijos`,grupo:2+n}}
+  if(/\b(?:tengo|tenemos)\s+hij[oa]s\b/.test(t)) return{texto:'con hijos',grupo:3};
+  if(/\bno tengo hij[oa]s\b/.test(t)) return null;
+  if(/\b(?:vivo|vivir[ia]a|estar[ia]a)\s+sol[oa]\b|\bsoy solter[oa]\b|\bvivo sol[oa]\b/.test(t)) return{texto:'vive solo',grupo:1};
+  if(/\bcon mi\s+(?:esposa|esposo|pareja|novia|novio|mujer|marido)\b|\bvivo con mi pareja\b/.test(t)) return{texto:'vive en pareja',grupo:2};
+  return null;
+}
+
+function detectarProyecto(texto){
+  const t=sinTildes(texto).toLowerCase();
+  const genericas=new Set(['reserva','bosque','los','las','del','de','la','el']);
+  let mejor=null,largo=0;
+  for(const p of PROYECTOS){
+    const n=sinTildes(p.nombre).toLowerCase();
+    if(n.length>3&&t.includes(n)) return p;
+    for(const tok of n.split(/[^a-z0-9]+/)){
+      if(tok.length>=4&&!genericas.has(tok)&&t.includes(tok)&&tok.length>largo){mejor=p;largo=tok.length}
+    }
+  }
+  return mejor;
+}
+
+/* ── Clasificador ────────────────────────────────── */
+function clasificar(s){
+  const precioM = s.proyecto ? s.proyecto.precio/1e6 : null;
+  if(precioM && precioM>=UMBRAL_PREMIUM)
+    return{id:'premium-no-vis',confianza:'alta',motivo:`proyecto de ~${Math.round(precioM)}M (≥ ${UMBRAL_PREMIUM}M)`};
+  if(!s.edad)
+    return{id:'neutral',confianza:'baja',motivo:'todavía no se conoce la edad'};
+  if(s.grupo&&s.grupo>=3&&s.edad<=45)
+    return{id:'familia-joven-consolidada',confianza:'alta',motivo:`edad ${s.edad} con grupo familiar de ${s.grupo}`};
+  if(s.edad<=35)
+    return{id:'joven-independiente',confianza:s.grupo?'alta':'media',
+      motivo:`edad ${s.edad}${s.grupo?` con grupo de ${s.grupo}`:' (grupo familiar aún desconocido)'}`};
+  return{id:'adulto-establecido',confianza:s.grupo?'alta':'media',
+    motivo:`edad ${s.edad}${s.grupo?` con grupo de ${s.grupo}`:' (grupo familiar aún desconocido)'}`};
+}
+
+/* ── Cotizador ───────────────────────────────────── */
+function topeVIS(ciudad){
+  const c=sinTildes(ciudad).toLowerCase();
+  return CIUDADES_TOPE_ALTO.some(g=>c.includes(g))
+    ? {smlv:150,valor:150*SMLV} : {smlv:135,valor:135*SMLV};
+}
+function calcularSubsidio(ingresos,precio,ciudad){
+  const tope=topeVIS(ciudad);
+  if(precio>tope.valor) return{aplica:false,valor:0,smlv:0,
+    motivo:`el inmueble supera el tope VIS de ${tope.smlv} SMLV para ${ciudad}`};
+  const enSMLV=ingresos/SMLV;
+  const tramo=TABLA_SUBSIDIO.find(t=>enSMLV<=t.hastaSMLV);
+  if(!tramo||!tramo.subsidioSMLV) return{aplica:false,valor:0,smlv:0,
+    motivo:'los ingresos superan los 4 salarios mínimos'};
+  return{aplica:true,valor:Math.round(tramo.subsidioSMLV*SMLV),smlv:tramo.subsidioSMLV,motivo:null};
+}
+function cotizar(proyecto,ingresos){
+  if(!proyecto||!ingresos) return null;
+  const hoy=new Date();
+  const [a,m]=proyecto.entrega.split('-').map(Number);
+  const plazo=(a-hoy.getFullYear())*12+((m-1)-hoy.getMonth());
+  if(plazo<=1) return{cotizable:false,motivo:'la fecha de entrega ya pasó o está muy próxima'};
+
+  const P=proyecto.precio;
+  const sub=calcularSubsidio(ingresos,P,proyecto.ciudad);
+  let regimen,cuota,financiacion,separacion;
+
+  if(sub.aplica){
+    regimen='con-subsidio';
+    cuota=(P-sub.valor)/(plazo+1);
+    financiacion=cuota; separacion=cuota;
+  }else{
+    regimen='sin-subsidio';
+    const ci=P*0.30;
+    cuota=(ci-SEPARACION_FIJA)/(plazo-1);
+    financiacion=P*0.70; separacion=SEPARACION_FIJA;
+  }
+  const carga=cuota/ingresos;
+  return{cotizable:true,regimen,precio:P,plazo,subsidio:sub,
+    cuota:Math.round(cuota),financiacion:Math.round(financiacion),
+    separacion:Math.round(separacion),carga,viable:carga<=CARGA_MAXIMA_SANA};
+}
+
+/* ══════════════════════════════════════════════════
+   GUIONES POR ARQUETIPO — datos reales del proyecto
+   ══════════════════════════════════════════════════ */
+const GUIONES={
+  'joven-independiente':{
+    nombre:'Joven Independiente', participacion:'34,0 %', desistimiento:'13,1 %',
+    trabajo:'Dejar de pagar arriendo y tener su primer patrimonio. No está formando una familia.',
+    resaltar:['La cuota comparada con el arriendo que ya paga','Cesantías como cuota inicial',
+      'Coworking, gimnasio, terraza','Movilidad y qué hay alrededor'],
+    callar:['Zona infantil y guardería','Colegios cercanos','«espacio para cuando crezca la familia»'],
+    objecion:'No creo que me alcance ni que me lo aprueben. Es miedo a la negación, no falta de interés.',
+    tono:'Rápido y directo. Cifras concretas, cero paternalismo.',
+  },
+  'familia-joven-consolidada':{
+    nombre:'Familia Joven Consolidada', participacion:'14,8 %', desistimiento:'11,4 %',
+    trabajo:'Espacio y seguridad para los hijos. La decisión se toma entre dos.',
+    resaltar:['Habitaciones y metraje real','Zona infantil, parques, salón social',
+      'Seguridad del conjunto','Colegios cercanos y rutas'],
+    callar:['Coworking y vida nocturna','Discurso de inversión como argumento principal','Urgencia agresiva'],
+    objecion:'El desarraigo: cambiar a los niños de colegio, alejarse de los abuelos.',
+    tono:'Cálido y proyectivo. Hablar en «ustedes».',
+  },
+  'adulto-establecido':{
+    nombre:'Adulto Establecido', participacion:'21,2 %', desistimiento:'10,6 %',
+    trabajo:'Consolidar. Dejar de arrendar en definitiva, o invertir. Sabe lo que hace.',
+    resaltar:['Valorización de la zona','Solidez y trayectoria del constructor',
+      'Entorno ya consolidado','Plazos de crédito concretos'],
+    callar:['Storytelling largo de amenities','Explicar cómo funciona un crédito hipotecario',
+      'Tratarlo como comprador primerizo'],
+    objecion:'El plazo del crédito frente a su edad.',
+    tono:'De par a par. Más dato que adjetivo. Respuestas cortas.',
+  },
+  'premium-no-vis':{
+    nombre:'Comprador Premium / No VIS', participacion:'7,3 %', desistimiento:'20,4 %',
+    trabajo:'El problema no es convencerlo: es que se retracta al doble. Hay que quitar fricción financiera ANTES de enamorarlo.',
+    resaltar:['Acabados y especificaciones','Exclusividad real: pocas unidades',
+      'Claridad financiera total desde el inicio','Acompañamiento en la preaprobación'],
+    callar:['Urgencia y escasez','Presión de cierre de cualquier tipo',
+      'Lenguaje de subsidio y VIS','Superlativos vacíos'],
+    objecion:'No la va a decir en voz alta. Es la magnitud del crédito. Por eso desiste después, no durante.',
+    tono:'Sobrio y pausado. Sin urgencia: cada empujón sube la probabilidad de que se retracte.',
+  },
+  'neutral':{
+    nombre:'Sin perfil determinado', participacion:'—', desistimiento:'—',
+    trabajo:'Todavía no se sabe con quién se está hablando.',
+    resaltar:['Averiguar la edad','Averiguar con quién viviría'],
+    callar:['Asumir que tiene hijos','Asumir que compra en pareja','Usar «ustedes»'],
+    objecion:'Aún no se conoce.',
+    tono:'Cálido y abierto, sin suponer situación de vida.',
+  },
+};
+
+/* ── Perfiles de arranque ────────────────────────── */
+const PRESETS=[
+  {id:'joven', n:'Joven que paga arriendo', d:'27 años, vive solo, gana 4,5 millones',
+   sugerencias:['Hola, vi el anuncio de Reserva de Guayacán','Tengo 27 años y vivo solo',
+     'Gano cuatro millones quinientos mil','¿Me puedes cotizar?','¿Qué tiene el conjunto?']},
+  {id:'familia', n:'Familia con hijos', d:'38 años, pareja y dos hijos, 6 millones',
+   sugerencias:['Hola, me interesa La Macarena','Tengo 38 años y tenemos 2 hijos',
+     'Entre los dos ganamos seis millones','¿Me puedes cotizar?','¿Cómo es la zona?']},
+  {id:'adulto', n:'Comprador que ya sabe', d:'44 años, busca inversión, 11 millones',
+   sugerencias:['Buenas, quiero información de INARI','Tengo 44 años','Gano once millones',
+     'Cotíceme por favor','¿Cómo va la valorización de la zona?']},
+  {id:'premium', n:'Comprador de gama alta', d:'36 años, proyecto No VIS de 573 millones',
+   sugerencias:['Hola, me interesa Los Nogales','Tengo 36 años','Gano dieciocho millones',
+     '¿Me cotizas?','¿Cuándo entregan?']},
+  {id:'bajo', n:'Ingreso bajo con subsidio', d:'31 años, gana 2,5 millones',
+   sugerencias:['Hola, quiero saber de Bosque de Arrayán','Tengo 31 años y tengo 1 hijo',
+     'Gano dos millones y medio','¿Me puedes cotizar?','¿Aplico a subsidio?']},
+];
+
+/* ══════════════════════════════════════════════════
+   ESTADO Y RENDER
+   ══════════════════════════════════════════════════ */
+let S={edad:null,grupo:null,composicion:null,ingresos:null,proyecto:null,arquetipoPrevio:null,saludo:false};
+
+const $=id=>document.getElementById(id);
+const cop=n=>'$'+Math.round(n).toLocaleString('es-CO');
+const hora=()=>new Date().toLocaleTimeString('es-CO',{hour:'2-digit',minute:'2-digit'});
+
+function burbuja(texto,quien){
+  const d=document.createElement('div');
+  d.className='burbuja '+(quien==='sofia'?'b-sofia':'b-lead');
+  d.innerHTML=texto.replace(/&/g,'&amp;').replace(/</g,'&lt;')+`<span class="hora">${hora()}</span>`;
+  $('hilo').appendChild(d);
+  $('hilo').scrollTop=$('hilo').scrollHeight;
+}
+function escribiendo(on){
+  const h=$('hilo'); const v=document.querySelector('.escribiendo');
+  if(on&&!v){const d=document.createElement('div');d.className='escribiendo';
+    d.innerHTML='<i></i><i></i><i></i>';h.appendChild(d);h.scrollTop=h.scrollHeight;
+    $('estado').textContent='escribiendo…';}
+  if(!on&&v){v.remove();$('estado').textContent='en línea';}
+}
+
+/* ── Composición de la respuesta de Sofía ────────── */
+function responder(mensaje){
+  const g=GUIONES[clasificar(S).id];
+  const partes=[];
+
+  if(!S.saludo){
+    S.saludo=true;
+    partes.push(S.proyecto
+      ? `¡Hola! Qué bueno que te interesó ${S.proyecto.nombre} 🏠 Es un proyecto en ${S.proyecto.ciudad}, desde ${S.proyecto.m2} m² y ${S.proyecto.hab} ${S.proyecto.hab===1?'habitación':'habitaciones'}.`
+      : '¡Hola! Soy Sofía, del equipo de vivienda de Colsubsidio. Cuéntame, ¿qué proyecto te llamó la atención?');
+  }
+
+  const pideCotizacion=/cotiz|cuota|cuánto|cuanto (me )?(sale|vale|cuesta)|precio|plan de pago|financia/i.test(mensaje);
+  const cot=cotizar(S.proyecto,S.ingresos);
+
+  if(pideCotizacion){
+    if(!S.proyecto) partes.push('Para cotizarte necesito saber cuál proyecto te interesa. ¿Cuál miramos?');
+    else if(!S.ingresos) partes.push('Con gusto. Para darte una cifra que sirva, ¿cuánto suman los ingresos del hogar al mes?');
+    else if(!cot||!cot.cotizable) partes.push('Ese proyecto necesita que un asesor arme el plan de pagos contigo. ¿Te coordino que te llamen?');
+    else if(!cot.viable){
+      partes.push(`Te soy honesta: la cuota de ${S.proyecto.nombre} quedaría en ${cop(cot.cuota)} al mes, y con lo que me contaste de tus ingresos eso te apretaría demasiado.`);
+      const alt=PROYECTOS.filter(p=>p.precio<S.proyecto.precio).sort((a,b)=>b.precio-a.precio)[0];
+      if(alt) partes.push(`Prefiero mostrarte ${alt.nombre}, en ${alt.ciudad}, que se ajusta mejor. ¿Lo miramos?`);
+      else partes.push('Déjame conectarte con un asesor para armar un plan a tu medida.');
+    }else{
+      partes.push(cot.subsidio.aplica
+        ? `Listo. Con tus ingresos podrías acceder a un subsidio de ${cop(cot.subsidio.valor)} (${cot.subsidio.smlv} SMLV), y la cuota quedaría alrededor de ${cop(cot.cuota)} al mes durante ${cot.plazo} meses.`
+        : `Listo. La separación es de ${cop(cot.separacion)}, la cuota inicial queda en ${cop(cot.cuota)} mensuales por ${cot.plazo-1} meses, y el 70 % restante (${cop(cot.financiacion)}) va a crédito hipotecario.`);
+      partes.push('Es una estimación: el asesor te confirma la cifra exacta con tus documentos.');
+    }
+  }else{
+    if(!S.edad) partes.push('Cuéntame, ¿cuántos años tienes? Así te oriento con opciones que le sirvan a tu momento de vida.');
+    else if(!S.composicion) partes.push('¿Y vivirías solo o con alguien más? Eso me ayuda a mostrarte lo que de verdad te sirve.');
+    else if(!S.ingresos) partes.push('¿Cuánto suman los ingresos del hogar al mes? Con eso te digo si aplicas a subsidio.');
+    else partes.push(`Te cuento lo que más te puede servir: ${g.resaltar.slice(0,2).join(' y ').toLowerCase()}. ¿Quieres que te cotice?`);
+  }
+  return partes.join('\n\n');
+}
+
+/* ── Actualización del panel ─────────────────────── */
+function pintarSenales(){
+  const items=[
+    ['Edad', S.edad?S.edad+' años':null],
+    ['Con quién vive', S.composicion],
+    ['Ingresos del hogar', S.ingresos?cop(S.ingresos):null],
+    ['Proyecto', S.proyecto?S.proyecto.nombre:null],
+  ];
+  $('senales').innerHTML=items.map(([k,v])=>
+    `<div class="senal${v?' viva':''}"><span class="k">${k}</span>
+     <span class="v${v?'':' vacio'}">${v||'sin declarar'}</span></div>`).join('');
+}
+
+function pintarPerfil(){
+  const a=clasificar(S), g=GUIONES[a.id];
+  const clase=a.confianza==='alta'?'p-alta':a.confianza==='media'?'p-media':'p-baja';
+  $('perfil').innerHTML=`
+    <div class="arq">
+      <span class="arq-nom">${g.nombre}</span>
+      <span class="pastilla ${clase}">confianza ${a.confianza}</span>
+    </div>
+    <p class="arq-motivo">→ ${a.motivo}</p>
+    <div class="arq-datos">
+      <div class="arq-dato"><span class="k">Del histórico</span><div class="v">${g.participacion}</div></div>
+      <div class="arq-dato"><span class="k">Se retracta</span><div class="v">${g.desistimiento}</div></div>
+    </div>`;
+  return a;
+}
+
+function pintarGuion(a){
+  const g=GUIONES[a.id];
+  $('guion').innerHTML=`
+    <div class="dos-columnas">
+      <div class="col si"><h4>Le resalta</h4><ul>${g.resaltar.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div class="col no"><h4>Le calla</h4><ul>${g.callar.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+    </div>
+    <div class="objecion"><b>Objeción real de este perfil</b>${g.objecion}</div>
+    <div class="objecion"><b>Tono</b>${g.tono}</div>`;
+}
+
+function pintarCotizacion(){
+  const c=cotizar(S.proyecto,S.ingresos);
+  const caja=$('cotizacion');
+  if(!c){
+    const falta=[];
+    if(!S.proyecto) falta.push('el proyecto');
+    if(!S.ingresos) falta.push('los ingresos del hogar');
+    caja.innerHTML=`<p class="espera">Sin ${falta.join(' ni ')} no se cotiza.<br>
+      El sistema prefiere remitir a un asesor antes que estimar.</p>`;
+    return;
+  }
+  if(!c.cotizable){caja.innerHTML=`<p class="espera">${c.motivo}. No se cotiza.</p>`;return}
+
+  const pct=Math.min(c.carga*100,100);
+  const color=c.viable?'var(--verde)':'var(--rojo)';
+  const filas=[
+    ['Régimen aplicado', c.regimen==='con-subsidio'?'Con subsidio':'Sin subsidio'],
+    ['Precio del inmueble', cop(c.precio)],
+    ['Subsidio', c.subsidio.aplica?`${cop(c.subsidio.valor)} · ${c.subsidio.smlv} SMLV`:'No aplica'],
+    ['Plazo hasta la entrega', c.plazo+' meses'],
+    ['Separación', cop(c.separacion)],
+  ];
+  if(c.regimen==='sin-subsidio') filas.push(['A crédito hipotecario (70 %)', cop(c.financiacion)]);
+
+  caja.innerHTML=`
+    <div class="cot-filas">
+      ${filas.map(([k,v])=>`<div class="cot-fila"><span>${k}</span><span class="v">${v}</span></div>`).join('')}
+      <div class="cot-fila destacada"><span><b>Cuota mensual</b></span><span class="v">${cop(c.cuota)}</span></div>
+    </div>
+    <div class="barra"><i style="width:${pct}%;background:${color}"></i></div>
+    <div class="cot-fila" style="border:none;padding-top:0">
+      <span style="font-size:12.5px;color:var(--gris)">Carga sobre el ingreso declarado</span>
+      <span class="v" style="color:${color}">${Math.round(c.carga*100)} %</span>
+    </div>
+    <div class="veredicto ${c.viable?'v-ok':'v-no'}">
+      <b>${c.viable?'Plan viable · Sofía lo presenta':'Plan no viable · Sofía no lo cierra'}</b>
+      ${c.viable
+        ? 'La cuota queda dentro del umbral sobre el ingreso declarado.'
+        : `La cuota supera el umbral del ${CARGA_MAXIMA_SANA*100} % del ingreso. Sofía ofrece una tipología de menor valor o pasa a un asesor, aunque eso le cueste el cierre.`}
+    </div>
+    ${!c.subsidio.aplica&&c.subsidio.motivo?`<p style="font-size:12.4px;color:var(--gris);margin-top:9px">Sin subsidio: ${c.subsidio.motivo}.</p>`:''}`;
+}
+
+function actualizarPanel(){
+  pintarSenales();
+  const a=pintarPerfil();
+  pintarGuion(a);
+  pintarCotizacion();
+  if(S.arquetipoPrevio&&S.arquetipoPrevio!==a.id){
+    const t=$('tarjeta-guion');
+    t.style.transition='box-shadow .4s'; t.style.boxShadow='0 0 0 3px rgba(200,145,42,.5)';
+    setTimeout(()=>t.style.boxShadow='none',1200);
+  }
+  S.arquetipoPrevio=a.id;
+}
+
+/* ── Ciclo de mensaje ────────────────────────────── */
+function enviar(texto){
+  if(!texto.trim()) return;
+  burbuja(texto,'lead');
+
+  const e=extraerEdad(texto); if(e) S.edad=e;
+  const c=extraerComposicion(texto); if(c){S.composicion=c.texto;S.grupo=c.grupo}
+  const i=extraerIngresos(texto); if(i) S.ingresos=i;
+  const p=detectarProyecto(texto); if(p) S.proyecto=p;
+
+  actualizarPanel();
+  escribiendo(true);
+  const r=responder(texto);
+  setTimeout(()=>{escribiendo(false);burbuja(r,'sofia');},700+Math.min(r.length*7,900));
+}
+
+/* ── Arranque ────────────────────────────────────── */
+function pintarSugerencias(lista){
+  $('sugerencias').innerHTML=lista.map(s=>`<button class="sug" type="button">${s}</button>`).join('');
+  document.querySelectorAll('.sug').forEach(b=>b.onclick=()=>{
+    enviar(b.textContent); b.remove();
+  });
+}
+
+function reiniciar(preset){
+  S={edad:null,grupo:null,composicion:null,ingresos:null,proyecto:null,arquetipoPrevio:null,saludo:false};
+  $('hilo').innerHTML='';
+  burbuja('¡Hola! Soy Sofía, del equipo de vivienda de Colsubsidio 🏠\nCuéntame en qué te puedo ayudar.','sofia');
+  pintarSugerencias(preset?preset.sugerencias:['Hola, vi el anuncio','Tengo 30 años','Gano cinco millones','¿Me cotizas?']);
+  actualizarPanel();
+}
+
+$('fichas').innerHTML=PRESETS.map(p=>
+  `<button class="ficha" type="button" data-id="${p.id}" aria-pressed="false">
+     <span class="n">${p.n}</span><span class="d">${p.d}</span></button>`).join('');
+
+document.querySelectorAll('.ficha').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.ficha').forEach(x=>x.setAttribute('aria-pressed','false'));
+  b.setAttribute('aria-pressed','true');
+  reiniciar(PRESETS.find(p=>p.id===b.dataset.id));
+  $('campo').focus();
+});
+
+$('forma').onsubmit=ev=>{ev.preventDefault();enviar($('campo').value);$('campo').value=''};
+$('reiniciar').onclick=()=>{
+  document.querySelectorAll('.ficha').forEach(x=>x.setAttribute('aria-pressed','false'));
+  reiniciar(null);
+};
+
+reiniciar(null);
+</script>
+</body>
+</html>
