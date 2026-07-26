@@ -28,6 +28,15 @@ interface Score360ViewProps {
   onOpenWhatsAppModal: (lead: Lead) => void;
 }
 
+/** Splits a rationale/brief paragraph into its individual sentences so it can render
+ * as scannable bullets instead of one dense block of prose. */
+function splitIntoFacts(text: string): string[] {
+  return text
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
 /** One label/value tag for the Sofía profile grid — renders a muted "—" for anything not yet captured. */
 const SofiaField: React.FC<{ label: string; value: React.ReactNode }> = ({ label, value }) => {
   const isEmpty = value === null || value === undefined || value === '';
@@ -185,9 +194,14 @@ export const Score360View: React.FC<Score360ViewProps> = ({
                   Contacto &lt; 15 min
                 </span>
               </div>
-              <p className="text-xs text-slate-700 leading-relaxed font-medium">
-                "{currentLead.priorityRationale}"
-              </p>
+              <ul className="space-y-1.5">
+                {splitIntoFacts(currentLead.priorityRationale).map((fact, i) => (
+                  <li key={i} className="flex items-start gap-2 text-xs text-slate-700 font-medium leading-relaxed">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                    <span>{fact}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
