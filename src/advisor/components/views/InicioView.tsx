@@ -32,7 +32,7 @@ import {
   Star,
   Share2
 } from 'lucide-react';
-import { Lead, Task, HousingProject } from '../../types';
+import { Lead, LeadTemperature, Task, HousingProject } from '../../types';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
 import {
   getLeadEscalation,
@@ -86,6 +86,18 @@ export const InicioView: React.FC<InicioViewProps> = ({
   onToggleTaskComplete,
 }) => {
   const [selectedProjectFilter, setSelectedProjectFilter] = useState<string>('todos');
+  // Empty set = no temperature filter applied (show all)
+  const [temperatureFilter, setTemperatureFilter] = useState<Set<LeadTemperature>>(new Set());
+  const [onlyActiveConversation, setOnlyActiveConversation] = useState(false);
+
+  const toggleTemperatureFilter = (temp: LeadTemperature) => {
+    setTemperatureFilter((prev) => {
+      const next = new Set(prev);
+      if (next.has(temp)) next.delete(temp);
+      else next.add(temp);
+      return next;
+    });
+  };
 
   // Quick search (moved here from the top app header, next to "+ Nuevo Lead")
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -144,8 +156,14 @@ export const InicioView: React.FC<InicioViewProps> = ({
     if (selectedProjectFilter !== 'todos') {
       list = list.filter((l) => l.recommendedProjectId === selectedProjectFilter);
     }
+    if (temperatureFilter.size > 0) {
+      list = list.filter((l) => temperatureFilter.has(l.temperature));
+    }
+    if (onlyActiveConversation) {
+      list = list.filter((l) => isSofiaProfileComplete(l));
+    }
     return list;
-  }, [leads, selectedProjectFilter]);
+  }, [leads, selectedProjectFilter, temperatureFilter, onlyActiveConversation]);
 
   // Default selected lead for the detail panel modal (null by default)
   const [selectedLeadId, setSelectedLeadId] = useState<string | null>(null);
@@ -426,6 +444,41 @@ export const InicioView: React.FC<InicioViewProps> = ({
               <span>+ Nuevo Lead</span>
             </button>
           </div>
+
+          {/* Temperature Filter — multi-select toggle pills */}
+          <div className="flex items-center gap-1 shrink-0">
+            {(
+              [
+                { temp: 'Hot' as LeadTemperature, label: '🔥 Hot', active: 'bg-amber-100 text-amber-900 border-amber-300' },
+                { temp: 'Warm' as LeadTemperature, label: 'Warm', active: 'bg-blue-100 text-[#003DA5] border-blue-300' },
+                { temp: 'Cold' as LeadTemperature, label: 'Cold', active: 'bg-slate-200 text-slate-700 border-slate-400' },
+              ]
+            ).map(({ temp, label, active }) => (
+              <button
+                key={temp}
+                type="button"
+                onClick={() => toggleTemperatureFilter(temp)}
+                aria-pressed={temperatureFilter.has(temp)}
+                className={`text-[11px] font-bold px-2.5 py-1.5 rounded-lg border transition-colors cursor-pointer ${
+                  temperatureFilter.has(temp) ? active : 'bg-white text-slate-400 border-slate-200 hover:border-slate-300'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
+          {/* Active Conversation Filter */}
+          <label className="flex items-center gap-1.5 text-[11px] font-bold text-slate-600 shrink-0 cursor-pointer bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 hover:border-[#003DA5]/40 transition-colors">
+            <input
+              type="checkbox"
+              checked={onlyActiveConversation}
+              onChange={(e) => setOnlyActiveConversation(e.target.checked)}
+              className="rounded border-slate-300 text-[#003DA5] focus:ring-[#003DA5] cursor-pointer"
+            />
+            <WhatsAppIcon className="w-3.5 h-3.5 fill-emerald-600" />
+            <span>Con conversación activa</span>
+          </label>
 
           {/* Project Filter */}
           <div className="flex items-center gap-2 shrink-0">

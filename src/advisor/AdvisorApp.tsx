@@ -10,6 +10,9 @@ import {
 } from './data/mockData';
 import { useSofiaLeads } from './hooks/useSofiaLeads';
 import { mergeSofiaLeads, defaultSofiaProfile } from './data/sofiaMapper';
+import { loadDiscoveredLeads, saveDiscoveredLeads } from './data/localLeadsStore';
+
+const DISCOVERED_CAMPAIGN_TAG = 'Búsqueda manual por teléfono';
 
 // Layout Components
 import { Header } from './components/Header';
@@ -36,9 +39,20 @@ export default function AdvisorApp() {
   const [currentView, setCurrentView] = useState<ViewType>('inicio');
   const [advisorName, setAdvisorName] = useState<string>('Carlos Rodríguez');
 
-  // Main Data States
-  const [leads, setLeads] = useState<Lead[]>(MOCK_LEADS);
+  // Main Data States — leads found by manual phone lookup are restored from
+  // localStorage so they survive a reload instead of only living in memory.
+  const [leads, setLeads] = useState<Lead[]>(() => {
+    const discovered = loadDiscoveredLeads();
+    if (discovered.length === 0) return MOCK_LEADS;
+    const discoveredIds = new Set(discovered.map((l) => l.id));
+    return [...discovered, ...MOCK_LEADS.filter((l) => !discoveredIds.has(l.id))];
+  });
   const [projects] = useState(MOCK_PROJECTS);
+
+  // Keep the persisted copy in sync whenever a phone-lookup lead is added/updated.
+  useEffect(() => {
+    saveDiscoveredLeads(leads.filter((l) => l.campaign === DISCOVERED_CAMPAIGN_TAG));
+  }, [leads]);
 
   // Agente Sofía (WhatsApp) — leads en vivo, integrados al CRM sin bloquear el resto de la app.
   const { rawLeads: sofiaRawLeads, status: sofiaStatus } = useSofiaLeads();
