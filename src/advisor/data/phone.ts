@@ -14,3 +14,17 @@ export function normalizePhoneForWhatsApp(phone: string): string | null {
   if (digits.length < 10) return null;
   return digits;
 }
+
+/**
+ * Same target format as normalizePhoneForWhatsApp, but for phone numbers an advisor
+ * types in by hand (e.g. a "buscar por teléfono" box) rather than ones already stored
+ * on a Lead. People type local numbers without the country code, so a bare 10-digit
+ * Colombian mobile number gets "57" prepended — everything else is treated as already
+ * including its country code.
+ */
+export function normalizePhoneForLookup(input: string): string | null {
+  const digits = input.replace(/\D/g, '');
+  if (digits.length === 10) return `57${digits}`;
+  if (digits.length >= 11 && digits.length <= 13) return digits;
+  return null;
+}

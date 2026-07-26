@@ -1,5 +1,5 @@
 import { Lead, HousingProject, SofiaProfile } from '../types';
-import { SofiaApiLead } from './sofiaApiTypes';
+import { SofiaApiLead, ConversacionLeadInfo } from './sofiaApiTypes';
 
 /** The "not profiled by Sofía yet" state — same shape scripts/generate-analytics.cjs
  * uses for the 200 synthetic leads. Also used when the advisor creates a lead by hand
@@ -31,6 +31,102 @@ export function defaultSofiaProfile(): SofiaProfile {
     datacredito: { consultado: false, puntaje: null, nivelRiesgo: null, fechaConsulta: null },
     brochureEnviado: null,
     timestamp: null,
+  };
+}
+
+/** Ad-hoc placeholder for "open the WhatsApp conversation for a phone number that
+ * isn't in the leads table yet" — happens when Sofía has a real chat for a number
+ * but it hasn't made it into /api/leads yet (a gap on Sofía's side, not ours). Not
+ * added to the CRM leads list; it only exists to satisfy WhatsAppModal's props so
+ * the advisor can see the real conversation immediately instead of waiting on that
+ * fix. The name shown updates once the chat loads real history. */
+export function buildAdHocLeadFromPhone(phone: string, projects: HousingProject[]): Lead {
+  return {
+    id: `adhoc-${phone}`,
+    name: 'Contacto WhatsApp (fuera del directorio)',
+    email: 'No disponible (canal WhatsApp)',
+    phone,
+    city: 'No especificado',
+    channel: 'WhatsApp Directo',
+    campaign: 'Búsqueda manual por teléfono',
+    status: 'Nuevo',
+    temperature: 'Warm',
+    housingInterest: 'VIS',
+    budgetCOP: 200_000_000,
+    downPaymentCOP: 20_000_000,
+    colsubsidioAfiliado: false,
+    afiliacionCategoria: 'No Afiliado',
+    hasCajaSubsidio: false,
+    hasMiCasaYa: false,
+    recommendedProjectId: projects[0]?.id ?? '',
+    matchPercentage: 0,
+    scores: { fit: 0, intent: 0, engagement: 0, conversion: 0, total: 0 },
+    priority: 'Media',
+    priorityRationale: 'Lead buscado manualmente por teléfono — aún no está en el directorio de leads.',
+    assignedAdvisor: '',
+    createdAt: 'Ahora',
+    lastInteraction: 'Ahora',
+    behaviorLogs: [],
+    sofia: defaultSofiaProfile(),
+  };
+}
+
+/** A phone lookup (see buildAdHocLeadFromPhone) that turned out to have a real
+ * conversation — promotes it into a full CRM lead using whatever /api/conversacion
+ * returned in `leadInfo` (a lighter shape than /api/leads, see ConversacionLeadInfo).
+ * This is what makes a manually-looked-up number actually show up in the leads
+ * table instead of only being visible inside the WhatsApp modal. */
+export function mapConversacionLeadInfoToLead(
+  leadInfo: ConversacionLeadInfo,
+  telefono: string,
+  projects: HousingProject[]
+): Lead {
+  const project = leadInfo.proyecto_interes
+    ? projects.find((p) => p.name.toLowerCase() === leadInfo.proyecto_interes!.toLowerCase())
+    : undefined;
+  const budgetCOP = project ? Math.round((project.minPriceCOP + project.maxPriceCOP) / 2) : 200_000_000;
+  const createdLabel = leadInfo.fecha_ingreso ? relativeLabel(leadInfo.fecha_ingreso) : 'Hace un momento';
+
+  return {
+    id: leadInfo.lead_id || leadInfo.id || `adhoc-${telefono}`,
+    name: leadInfo.nombre || 'Contacto WhatsApp (fuera del directorio)',
+    email: 'No disponible (canal WhatsApp)',
+    phone: formatSofiaPhone(telefono),
+    city: 'No especificado',
+    channel: leadInfo.fuente || 'WhatsApp Directo',
+    campaign: 'Búsqueda manual por teléfono',
+    status: 'Nuevo',
+    temperature: 'Warm',
+    housingInterest: project?.type ?? 'VIS',
+    budgetCOP,
+    downPaymentCOP: Math.round(budgetCOP * 0.1),
+    colsubsidioAfiliado: false,
+    afiliacionCategoria: 'No Afiliado',
+    hasCajaSubsidio: false,
+    hasMiCasaYa: false,
+    recommendedProjectId: project?.id ?? projects[0]?.id ?? '',
+    matchPercentage: 0,
+    scores: { fit: 0, intent: 0, engagement: 0, conversion: 0, total: 0 },
+    priority: 'Media',
+    priorityRationale: 'Encontrado por búsqueda manual de teléfono — Sofía ya tenía una conversación real con este número.',
+    assignedAdvisor: '',
+    createdAt: createdLabel,
+    lastInteraction: createdLabel,
+    behaviorLogs: [
+      {
+        timestamp: createdLabel,
+        action: 'Encontrado por búsqueda manual de teléfono',
+        details: 'La conversación ya existía en Sofía; el lead no había llegado todavía a /api/leads.',
+        device: 'WhatsApp',
+      },
+    ],
+    sofia: {
+      ...defaultSofiaProfile(),
+      fuente: leadInfo.fuente ?? null,
+      proyectoInteresOriginal: leadInfo.proyecto_interes ?? null,
+      perfilEstadistico: leadInfo.perfilActual || 'No clasificado (falta edad)',
+      timestamp: leadInfo.fecha_ingreso ?? null,
+    },
   };
 }
 

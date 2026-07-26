@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { ConversacionResponse, ConversationMessage } from '../data/sofiaApiTypes';
+import { ConversacionResponse, ConversacionLeadInfo, ConversationMessage } from '../data/sofiaApiTypes';
 
 const POLL_MS = 7000;
 const JSON_HEADERS = { 'Content-Type': 'application/json' };
@@ -22,6 +22,7 @@ export function useWhatsAppConversation(telefono: string | null) {
   const [history, setHistory] = useState<ConversationMessage[]>([]);
   const [modoHumano, setModoHumano] = useState(false);
   const [asesorAsignado, setAsesorAsignado] = useState<string | null>(null);
+  const [leadInfo, setLeadInfo] = useState<ConversacionLeadInfo | null>(null);
   const [loading, setLoading] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [sending, setSending] = useState(false);
@@ -38,6 +39,7 @@ export function useWhatsAppConversation(telefono: string | null) {
         setHistory(data.history || []);
         setModoHumano(Boolean(data.modoHumano));
         setAsesorAsignado(data.asesorAsignado ?? null);
+        setLeadInfo(data.leadInfo ?? null);
         setLoadError(null);
       } else {
         setLoadError('No se pudo cargar la conversación de WhatsApp.');
@@ -54,6 +56,7 @@ export function useWhatsAppConversation(telefono: string | null) {
     setHistory([]);
     setModoHumano(false);
     setAsesorAsignado(null);
+    setLeadInfo(null);
     setLoadError(null);
 
     if (!telefono) return;
@@ -139,5 +142,5 @@ export function useWhatsAppConversation(telefono: string | null) {
     [telefono]
   );
 
-  return { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion, devolverAgente };
+  return { history, modoHumano, asesorAsignado, leadInfo, loading, loadError, sending, sendMessage, retomarConversacion, devolverAgente };
 }

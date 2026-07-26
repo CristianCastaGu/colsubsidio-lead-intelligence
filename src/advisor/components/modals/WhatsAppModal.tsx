@@ -3,6 +3,7 @@ import { X, MessageSquare, Send, Copy, Loader2, AlertTriangle, UserCheck, Bot, M
 import { Lead, HousingProject } from '../../types';
 import { normalizePhoneForWhatsApp } from '../../data/phone';
 import { useWhatsAppConversation } from '../../hooks/useWhatsAppConversation';
+import { mapConversacionLeadInfoToLead } from '../../data/sofiaMapper';
 
 interface WhatsAppModalProps {
   isOpen: boolean;
@@ -10,6 +11,10 @@ interface WhatsAppModalProps {
   lead: Lead | null;
   projects: HousingProject[];
   advisorName: string;
+  /** Fires once when a phone-lookup lead (id starts with "adhoc-") turns out to have
+   * a real conversation with a real name — lets the parent register it as a proper
+   * row in the leads table instead of it only existing inside this modal. */
+  onLeadDiscovered?: (lead: Lead) => void;
 }
 
 const TEMPLATES: Record<string, (lead: Lead, project: HousingProject) => string> = {
@@ -27,9 +32,9 @@ const TEMPLATES: Record<string, (lead: Lead, project: HousingProject) => string>
     `¿Nos regalas un momento para revisar los detalles por aquí?`,
 };
 
-export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, lead, projects, advisorName }) => {
+export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, lead, projects, advisorName, onLeadDiscovered }) => {
   const telefono = useMemo(() => (lead ? normalizePhoneForWhatsApp(lead.phone) : null), [lead]);
-  const { history, modoHumano, asesorAsignado, loading, loadError, sending, sendMessage, retomarConversacion, devolverAgente } =
+  const { history, modoHumano, asesorAsignado, leadInfo, loading, loadError, sending, sendMessage, retomarConversacion, devolverAgente } =
     useWhatsAppConversation(isOpen ? telefono : null);
 
   const [messageText, setMessageText] = useState('');
@@ -38,6 +43,7 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, l
   const [switchingMode, setSwitchingMode] = useState(false);
   const [audioNotice, setAudioNotice] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const discoveredRef = useRef<string | null>(null);
 
   useEffect(() => {
     setMessageText('');
@@ -48,6 +54,16 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({ isOpen, onClose, l
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
   }, [history.length]);
+
+  // A phone-lookup lead (not in the leads table yet) turned out to have a real
+  // conversation — promote it to a real row instead of leaving it modal-only.
+  useEffect(() => {
+    if (!lead || !lead.id.startsWith('adhoc-') || !telefono || !leadInfo?.nombre || !onLeadDiscovered) return;
+    const signature = `${leadInfo.lead_id || leadInfo.id || telefono}:${leadInfo.nombre}`;
+    if (discoveredRef.current === signature) return;
+    discoveredRef.current = signature;
+    onLeadDiscovered(mapConversacionLeadInfoToLead(leadInfo, telefono, projects));
+  }, [lead, telefono, leadInfo, projects, onLeadDiscovered]);
 
   if (!isOpen || !lead) return null;
 

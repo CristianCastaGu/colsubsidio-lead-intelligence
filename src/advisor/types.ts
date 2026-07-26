@@ -8,6 +8,7 @@ export type ViewType =
   | 'campanas'
   | 'remarketing'
   | 'paneles'
+  | 'perfilamiento'
   | 'configuracion';
 
 export type LeadStatus = 'Nuevo' | 'En Calificación' | 'Cita Agendada' | 'Pre-Aprobado' | 'En Negociación' | 'Ganado' | 'Perdido';

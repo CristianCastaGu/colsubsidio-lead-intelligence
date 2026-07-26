@@ -55,9 +55,24 @@ export interface ConversationMessage {
   timestamp?: string;
 }
 
+// Lighter, separate shape from SofiaApiLead — verified against the live payload,
+// /api/conversacion/:telefono returns different field names (proyecto_interes,
+// perfilActual, cambiosDePerfil) than /api/leads does, not a subset of it.
+export interface ConversacionLeadInfo {
+  id?: string;
+  lead_id?: string;
+  nombre?: string;
+  telefono?: string;
+  proyecto_interes?: string;
+  fuente?: string;
+  fecha_ingreso?: string;
+  perfilActual?: string;
+  cambiosDePerfil?: Array<{ arquetipo: string; confianza: string; razon: string; turno: number; ts: string }>;
+}
+
 export interface ConversacionResponse {
   ok: boolean;
-  leadInfo?: Partial<SofiaApiLead>;
+  leadInfo?: ConversacionLeadInfo;
   history: ConversationMessage[];
   modoHumano: boolean;
   asesorAsignado: string | null;

@@ -43,6 +43,8 @@ import {
   sortLeadsForInicio,
   isSofiaProfileComplete
 } from '../../utils/leadIntelligence';
+import { buildAdHocLeadFromPhone } from '../../data/sofiaMapper';
+import { normalizePhoneForLookup } from '../../data/phone';
 
 // Signature moment for this dashboard: the KPI counts (the thing the advisor actually
 // looks at first each morning) animate into being on load instead of just appearing.
@@ -112,6 +114,17 @@ export const InicioView: React.FC<InicioViewProps> = ({
         .slice(0, 3)
     : [];
   const hasSearchMatches = matchingLeads.length > 0 || matchingProjects.length > 0;
+
+  // Fallback for numbers Sofía already has a real conversation with but that haven't
+  // made it into /api/leads yet (a gap on Sofía's side) — lets the advisor open the
+  // real chat directly by phone instead of waiting for that lead to show up as a row.
+  const phoneLookupCandidate = normalizePhoneForLookup(searchQuery.trim());
+  const handlePhoneLookup = () => {
+    if (!phoneLookupCandidate) return;
+    onOpenWhatsAppModal(buildAdHocLeadFromPhone(phoneLookupCandidate, projects));
+    setSearchQuery('');
+    setIsSearchFocused(false);
+  };
 
   const handleSearchSelectLead = (lead: Lead) => {
     onSelectLeadForScore360(lead);
@@ -371,9 +384,32 @@ export const InicioView: React.FC<InicioViewProps> = ({
                     </div>
                   )}
 
-                  {!hasSearchMatches && (
+                  {!hasSearchMatches && !phoneLookupCandidate && (
                     <div className="p-4 text-center text-slate-500 text-xs">
                       No se encontraron leads ni proyectos para <span className="font-bold text-slate-800">"{searchQuery}"</span>
+                    </div>
+                  )}
+
+                  {/* Fallback: this looks like a phone number but no lead in the table has it —
+                      let the advisor open Sofía's real conversation directly by number anyway. */}
+                  {!matchingLeads.length && phoneLookupCandidate && (
+                    <div className="p-2 border-t border-slate-100">
+                      <button
+                        onMouseDown={handlePhoneLookup}
+                        className="w-full text-left p-2.5 hover:bg-emerald-50 rounded-lg flex items-center gap-2.5 group transition-colors cursor-pointer"
+                      >
+                        <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                          <WhatsAppIcon className="w-3.5 h-3.5 fill-current" />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="font-bold text-slate-900 group-hover:text-emerald-700 truncate">
+                            Buscar conversación de WhatsApp para +{phoneLookupCandidate}
+                          </p>
+                          <p className="text-[11px] text-slate-500">
+                            No está en el directorio — abre el chat real si Sofía ya habló con este número.
+                          </p>
+                        </div>
+                      </button>
                     </div>
                   )}
                 </div>

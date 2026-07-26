@@ -25,6 +25,7 @@ import { Score360View } from './components/views/Score360View';
 import { CampanasView } from './components/views/CampanasView';
 import { RemarketingView } from './components/views/RemarketingView';
 import { PanelesView } from './components/views/PanelesView';
+import { PerfilamientoView } from './components/views/PerfilamientoView';
 import { ConfiguracionView } from './components/views/ConfiguracionView';
 
 // Modals
@@ -68,6 +69,20 @@ export default function AdvisorApp() {
   const handleOpenWhatsAppModalByLeadName = (leadName: string) => {
     const found = leads.find((l) => l.name === leadName) || leads[0];
     handleOpenWhatsAppModal(found);
+  };
+
+  // A "buscar por teléfono" lookup turned out to have a real Sofía conversation —
+  // register it as a proper row in the leads table (dedupe by id in case the
+  // 7s poll inside the modal reports the same discovery more than once).
+  const handleLeadDiscovered = (discovered: Lead) => {
+    setLeads((prev) => {
+      const idx = prev.findIndex((l) => l.id === discovered.id || l.phone === discovered.phone);
+      if (idx === -1) return [discovered, ...prev];
+      const next = [...prev];
+      next[idx] = discovered;
+      return next;
+    });
+    setWhatsAppModalLead(discovered);
   };
 
   const handleSelectLeadForScore360 = (lead: Lead) => {
@@ -235,6 +250,10 @@ export default function AdvisorApp() {
             <PanelesView />
           )}
 
+          {currentView === 'perfilamiento' && (
+            <PerfilamientoView leads={leads} />
+          )}
+
           {currentView === 'configuracion' && <ConfiguracionView />}
         </div>
         </main>
@@ -254,6 +273,7 @@ export default function AdvisorApp() {
         lead={whatsAppModalLead}
         projects={projects}
         advisorName={advisorName}
+        onLeadDiscovered={handleLeadDiscovered}
       />
     </div>
   );

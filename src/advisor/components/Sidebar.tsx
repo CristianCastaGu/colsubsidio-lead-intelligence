@@ -9,6 +9,7 @@ import {
   Megaphone,
   Repeat,
   BarChart3,
+  Layers,
   Settings,
   ShieldCheck,
   Sparkles
@@ -64,6 +65,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'campanas', label: 'Campañas & Contenido', icon: Megaphone },
     { id: 'remarketing', label: 'Remarketing IA', icon: Repeat },
     { id: 'paneles', label: 'Paneles & Analítica', icon: BarChart3 },
+    { id: 'perfilamiento', label: 'Perfilamiento Estadístico', icon: Layers },
     { id: 'configuracion', label: 'Configuración', icon: Settings },
   ];
 
