@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "fecha_investigacion": "2026-07-25",
+    "descripcion": "Normativa de vivienda, topes VIS/VIP y subsidios vigentes en Colombia y Bogota en 2026. Investigado con fuentes publicas (MinVivienda, Secretaria Distrital del Habitat, prensa del sector). REVISAR antes de cada demo: los montos cambian con el SMLV y las convocatorias distritales abren y cierran.",
+    "advertencia_para_sofia": "Todos estos montos son ORIENTATIVOS. Sofia nunca los presenta como garantizados. Los subsidios distritales dependen de convocatorias con cupos limitados: se informan como posibilidad a explorar con el asesor, JAMAS como algo que el lead ya tiene."
+  },
+
+  "smlv_2026": 1750905,
+  "smlv_2026_nota": "Subio 23,7% frente a 2025. Con auxilio de transporte queda alrededor de $2.000.000.",
+
+  "topes_vivienda_2026": {
+    "vip": {
+      "smlv": 90,
+      "valor": 157581450,
+      "descripcion": "Vivienda de Interes Prioritario"
+    },
+    "vis_general": {
+      "smlv": 135,
+      "valor": 236372175,
+      "descripcion": "Tope VIS en la mayoria del pais, incluidos los municipios de Cundinamarca (Soacha, Zipaquira, Tocancipa, Madrid, Mosquera, Cajica, etc.)"
+    },
+    "vis_ciudades_grandes": {
+      "smlv": 150,
+      "valor": 262635750,
+      "descripcion": "Tope VIS en ciudades de mas de un millon de habitantes",
+      "ciudades": ["Bogota", "Medellin", "Cali", "Barranquilla", "Bucaramanga", "Cartagena", "Cucuta", "Pereira"]
+    },
+    "vis_renovacion_urbana": {
+      "smlv": 175,
+      "valor": 306408375,
+      "descripcion": "Grandes ciudades con planes de renovacion urbana por actualizacion de POT"
+    },
+    "alerta_normativa": "En enero de 2026 el Ministerio de Vivienda abrio consulta publica sobre un decreto que unificaria el tope VIS en 135 SMLV para TODO el pais y desindexaria los precios del salario minimo (quedarian fijados en pesos desde la separacion). A la fecha de esta investigacion seguia en borrador, no aprobado. Si se aprueba, los proyectos de Bogota entre 135 y 150 SMLV dejarian de ser VIS. VERIFICAR ESTADO ANTES DEL PITCH."
+  },
+
+  "subsidio_caja_compensacion": {
+    "nombre": "Subsidio Familiar de Vivienda (SFV)",
+    "aplica_a": "Vivienda NUEVA, VIS o VIP unicamente. No aplica a vivienda usada ni arriendo.",
+    "tramos": [
+      { "hasta_smlv": 2, "hasta_pesos": 3501810, "subsidio_smlv": 30, "subsidio_valor": 52527150 },
+      { "hasta_smlv": 4, "hasta_pesos": 7003620, "subsidio_smlv": 20, "subsidio_valor": 35018100 },
+      { "hasta_smlv": null, "hasta_pesos": null, "subsidio_smlv": 0, "subsidio_valor": 0, "nota": "Por encima de 4 SMLV no aplica subsidio de caja, pero si accede a credito preferencial" }
+    ],
+    "requisitos": [
+      "Estar afiliado a la caja (empleado, independiente o pensionado aportante)",
+      "Ningun miembro del hogar puede ser propietario de vivienda en Colombia",
+      "Los ingresos sumados de todos los que viviran en la casa no pueden superar 4 SMLV ($7.003.620)",
+      "No haber recibido un subsidio de vivienda antes"
+    ],
+    "nota_discrepancia": "Circulan cifras ligeramente distintas en prensa ($52.406.460, $42.705.000). La cifra correcta es 30 x SMLV = $52.527.150, que es exactamente lo que arroja el cotizador oficial de Colsubsidio."
+  },
+
+  "mi_casa_ya": {
+    "estado": "SUSPENDIDO",
+    "detalle": "Tras la Circular 012 del 16 de diciembre de 2024 y anuncios posteriores del Gobierno, las postulaciones y nuevas asignaciones quedaron suspendidas por falta de presupuesto. En 2026 no hay nuevas asignaciones; la concurrencia solo aplica a hogares que ya tenian subsidio preasignado antes de la suspension.",
+    "instruccion_sofia": "NUNCA mencionarlo como opcion activa. Si el lead lo menciona por su cuenta, aclarar con tacto que no esta vigente y redirigir a las alternativas que SI existen (caja de compensacion y programas distritales)."
+  },
+
+  "programas_distritales_bogota": {
+    "plan": "Mi Casa en Bogota",
+    "entidad": "Secretaria Distrital del Habitat",
+    "web": "https://habitatbogota.gov.co",
+    "meta_2026": "11.948 subsidios de adquisicion de vivienda proyectados para la ciudad",
+    "por_que_importa": "Mi Casa Ya se cayo, pero Bogota reforzo su oferta propia. La mayoria de leads no sabe que estos programas existen. Para un proyecto en Bogota, esto puede ser la diferencia entre un cierre financiero imposible y uno viable.",
+    "programas": [
+      {
+        "nombre": "Oferta Preferente",
+        "que_es": "La Secretaria separa unidades VIS y VIP en proyectos seleccionados y asigna subsidio para cuota inicial a hogares de menores ingresos.",
+        "monto": "Desde $17.509.050 hasta $52.527.150 en 2026",
+        "ingresos_max": 7003620,
+        "ojo": "NO aplica a cualquier proyecto de Bogota, solo a las viviendas previamente separadas por la Secretaria. Hay que verificar si el proyecto especifico esta en la lista.",
+        "como_se_accede": "Convocatorias virtuales y ferias de vivienda que publica la Secretaria en su web y redes"
+      },
+      {
+        "nombre": "Reactiva tu Compra",
+        "que_es": "Auxilio para familias que ya casi cierran pero les falta el ultimo empujon para escriturar.",
+        "monto": "Hasta $13.026.733 en 2026, pagado en 12 cuotas mensuales de hasta $1.085.561",
+        "ingresos_max": 7003620,
+        "nota": "Algunas fuentes de prensa reportan hasta $20.962.584 (12 SMLV). La cifra de la Alcaldia es $13.026.733. Usar la de la Alcaldia y aclarar que el asesor confirma."
+      },
+      {
+        "nombre": "Reduce tu Cuota",
+        "que_es": "Alivio a la cuota mensual del credito hipotecario o leasing habitacional para VIS o VIP en Bogota. El Distrito le paga directo a la entidad financiera y la familia ve el descuento en su cuota.",
+        "monto": "$21.010.860 en 2026, distribuido en 48 cuotas mensuales",
+        "impacto": "Segun la Alcaldia, cerca de 35% de ahorro en la cuota mensual del credito durante cuatro anos. El porcentaje real depende del monto, la tasa y el plazo.",
+        "cupos_2026": 4000,
+        "por_que_es_clave": "Es el unico programa que ataca la CUOTA MENSUAL y no la cuota inicial. Para un lead cuya barrera es el flujo de caja mes a mes, este es el que mueve la aguja."
+      },
+      {
+        "nombre": "Ahorro para mi Casa",
+        "que_es": "Apoyo para el arriendo mientras el hogar ahorra para comprar",
+        "ingresos_max": 7003620
+      },
+      {
+        "nombre": "Mejora tu Casa",
+        "que_es": "Mejoramiento de vivienda existente, hasta 15 SMLV en zona urbana y 22 en rural"
+      }
+    ],
+    "reglas_de_concurrencia": [
+      "Oferta Preferente y Reactiva tu Compra NO son concurrentes entre si",
+      "Un subsidio distrital SI se puede sumar a uno de caja de compensacion (Colsubsidio)",
+      "Reduce tu Cuota SI se puede sumar a Oferta Preferente o a Reactiva tu Compra",
+      "Para acumular ciertos apoyos locales el hogar debe estar por debajo de 2 SMLV de ingresos"
+    ]
+  },
+
+  "colsubsidio_datos_publicos": {
+    "trayectoria": "Mas de 21.000 soluciones habitacionales urbanas y rurales en mas de seis decadas, a traves de 95 iniciativas en Bogota y 16 municipios de Cundinamarca, con mas de 20 entidades publicas y privadas",
+    "portafolio": "Mas de 80 proyectos en Bogota y Cundinamarca. Via alianzas con constructoras: 52 en Bogota y 37 en Cundinamarca",
+    "precio_vis_desde": 149182800,
+    "area_vis_desde_m2": 31,
+    "certificacion_edge": {
+      "que_es": "Construccion sostenible, mas de 20% de ahorro en facturas de agua y energia",
+      "proyectos": ["La Macarena", "Bosques de Arrayan"]
+    },
+    "certificaciones_calidad": ["Mongui", "Pamplona I", "Bosques de Turpial"],
+    "huella_carbono": "Disminucion del 45% en impacto ambiental por uso de materiales certificados",
+    "municipios_cundinamarca": ["Soacha", "Tocancipa", "Chia", "Ricaurte", "Girardot", "Zipaquira", "Madrid", "Cajica", "La Calera", "Fusagasuga", "Mosquera", "Villeta", "Ubate"],
+    "feria_de_vivienda": {
+      "separacion_desde": 200000,
+      "nota": "En feria se puede separar desde $200.000, distinto del valor de separacion estandar de $500.000 del cotizador. Si el lead vio publicidad de la feria, no contradecirlo: aclarar que el valor depende del canal y la fecha."
+    },
+    "acompanamiento_social": {
+      "nombre_en_web_publica": "PerteneSer",
+      "alerta": "La web publica de Colsubsidio a julio de 2026 sigue llamando al programa PerteneSer, no Convive. Si Sofia dice solo Convive y el lead lo googlea, no encuentra nada. Decir 'PerteneSer, ahora Convive' hasta confirmar cual es el nombre vigente de cara al publico.",
+      "que_hace": "Acompanamiento desde antes de la compra y despues de la entrega: educacion financiera, herramientas de convivencia, apropiacion del nuevo entorno"
+    },
+    "url_proyectos": "https://www.colsubsidio.com/vivienda/proyectos/{ciudad}/{slug}"
+  }
+}

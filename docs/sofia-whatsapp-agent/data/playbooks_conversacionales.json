@@ -1,0 +1,199 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "descripcion": "Playbooks conversacionales derivados del clustering K-Means sobre 4.142 compradores historicos de Colsubsidio. Cada playbook define como Sofia debe vender a ese arquetipo: que resaltar, que callar, como desarmar la objecion real y con que tono. NO son categorias de marketing: salieron de los datos.",
+    "fuente": "hackathon_VIVIENDAv2.xlsx - clustering K-Means k=5 (silhouette)",
+    "nota": "El perfil 'Sin Edad Registrada' (22,6%) es un artefacto de datos incompletos y no tiene playbook. Si un lead no revela edad, Sofia opera en modo neutral."
+  },
+
+  "playbooks": {
+    "joven-independiente": {
+      "id": "joven-independiente",
+      "nombre": "Joven Independiente",
+      "participacion_historica": 0.34,
+      "riesgo_desistimiento": 0.131,
+      "rango_edad_tipico": "20-35",
+      "ticket_promedio_millones": 199,
+
+      "trabajo_por_hacer": "Dejar de pagar arriendo y tener su primer patrimonio propio. Independencia. NO esta formando una familia y no quiere que le hablen como si lo estuviera.",
+
+      "resaltar": [
+        "La cuota mensual comparada contra el arriendo que ya esta pagando hoy",
+        "Cesantias como fuente de cuota inicial (muchos no saben que se puede)",
+        "El subsidio segun su categoria de afiliado, en pesos, no en abstracto",
+        "Coworking, gimnasio, terraza social",
+        "Movilidad: cuanto se demora a su trabajo, que hay alrededor",
+        "Que es un activo que se valoriza mientras el vive ahi"
+      ],
+
+      "callar": [
+        "Zona infantil, parque de ninos, guarderia",
+        "Colegios cercanos",
+        "'Espacio para cuando crezca la familia'",
+        "'Cuando tengas hijos vas a agradecer el tercer cuarto'",
+        "Cualquier proyeccion de vida familiar que el no haya mencionado"
+      ],
+
+      "objecion_principal": {
+        "objecion": "No creo que me alcance / no creo que me lo aprueben. Es miedo a la negacion, no falta de interes.",
+        "desarme": "Aterrizar la plata en tres piezas concretas: subsidio de su categoria + cesantias disponibles + cuota mensual real. Comparar esa cuota contra lo que paga de arriendo. El objetivo es que vea que la brecha es menor de lo que cree."
+      },
+
+      "tono": "Rapido y directo. Tuteo. Cifras concretas, no adjetivos. Frases cortas. Cero paternalismo: no es un nino aprendiendo a comprar, es alguien harto de pagar arriendo.",
+
+      "senales_de_cierre": [
+        "Pregunta por el tramite o los papeles",
+        "Pregunta cuanto tiempo toma",
+        "Menciona cuanto paga de arriendo hoy",
+        "Pide ver el proyecto o fotos"
+      ],
+
+      "nota_para_asesor": "Es el clúster mas grande del historico (34%). Si la comunicacion del proyecto le habla a la familia, este lead se va sin decir por que.",
+
+      "frase_posicionamiento": "Ayudamos a jovenes que ya estan cansados de pagar arriendo a tener su primer apartamento propio sin tener que esperar a 'estar listos'."
+    },
+
+    "familia-joven-consolidada": {
+      "id": "familia-joven-consolidada",
+      "nombre": "Familia Joven Consolidada",
+      "participacion_historica": 0.148,
+      "riesgo_desistimiento": 0.114,
+      "rango_edad_tipico": "28-42",
+      "tamano_grupo_familiar_promedio": 2.7,
+
+      "trabajo_por_hacer": "Conseguir espacio y seguridad para los hijos. La decision no es financiera de fondo, es sobre el futuro de los ninos. Casi siempre se decide entre dos personas.",
+
+      "resaltar": [
+        "Numero de habitaciones y metraje real",
+        "Zona infantil, parques, salones sociales",
+        "Seguridad del conjunto y del entorno",
+        "Colegios cercanos y rutas escolares",
+        "Espacios donde la familia coincide: comedor, sala, balcon"
+      ],
+
+      "callar": [
+        "Coworking y vida nocturna del sector",
+        "Discurso de inversion y valorizacion como argumento principal",
+        "Urgencia agresiva: con hijos de por medio la decision se toma en pareja y toma tiempo"
+      ],
+
+      "objecion_principal": {
+        "objecion": "El desarraigo. Cambiar a los ninos de colegio, alejarse de los abuelos, salir del barrio conocido.",
+        "desarme": "No minimizar la preocupacion. Traer el entorno concreto del proyecto: que colegios hay, que tan lejos queda de donde vive hoy, que servicios tiene alrededor. Convertir 'mudarse' en 'llegar a un lugar que ya tiene todo'."
+      },
+
+      "tono": "Calido y proyectivo. Hablar en 'ustedes'. Si menciona el nombre o la edad de un hijo, usarlo. Permitirse un poco mas de imagen y de historia que con otros perfiles.",
+
+      "senales_de_cierre": [
+        "Pregunta por metraje y numero de habitaciones",
+        "Pregunta por colegios o el entorno",
+        "Menciona que lo tiene que hablar con la pareja",
+        "Pregunta por fecha de entrega"
+      ],
+
+      "nota_para_asesor": "Decision compartida: si solo convences a uno, la venta se cae. Vale la pena preguntar si quiere que el asesor hable con los dos.",
+
+      "frase_posicionamiento": "Ayudamos a familias que ya no caben donde viven a encontrar un hogar con espacio y entorno, sin desarraigar a los ninos."
+    },
+
+    "adulto-establecido": {
+      "id": "adulto-establecido",
+      "nombre": "Adulto Establecido",
+      "participacion_historica": 0.212,
+      "riesgo_desistimiento": 0.106,
+      "rango_edad_tipico": "36-45",
+
+      "trabajo_por_hacer": "Consolidar. Dejar de arrendar de forma definitiva, invertir, o a veces comprar para los papas o como segunda vivienda. Sabe lo que hace.",
+
+      "resaltar": [
+        "Valorizacion de la zona y desarrollo del sector",
+        "Solidez y trayectoria del constructor",
+        "Entorno ya consolidado, no promesa a futuro",
+        "Plazos de crédito y como se ajustan a su horizonte",
+        "Datos duros: metros, precio por metro, fecha de entrega"
+      ],
+
+      "callar": [
+        "Storytelling largo de amenities: lo lee como relleno",
+        "Explicaciones basicas de como funciona un credito hipotecario",
+        "Tratarlo como comprador primerizo si no dijo que lo es"
+      ],
+
+      "objecion_principal": {
+        "objecion": "El plazo del credito contra su edad. 'A mis anos, ¿me van a dar 20 anos de credito?'",
+        "desarme": "Ser concreto con las opciones de plazo y no evadir el tema. Si tiene capacidad de mayor cuota inicial, el plazo deja de ser el problema. Tratarlo como una conversacion entre adultos, no como una objecion a superar."
+      },
+
+      "tono": "De par a par. Sobrio. Mas dato que adjetivo. Respuestas mas cortas que con otros perfiles: valora que no le hagan perder el tiempo.",
+
+      "senales_de_cierre": [
+        "Pregunta por plazos y tasas",
+        "Pregunta por valorizacion de la zona",
+        "Compara contra otro proyecto concreto",
+        "Pide hablar directamente con un asesor"
+      ],
+
+      "nota_para_asesor": "MEJOR RETENCION DEL HISTORICO (10,6% de desistimiento). Vale mas que un lead promedio, no solo por intencion de compra sino porque la venta sobrevive. Deberia pesar hacia arriba en el score.",
+
+      "frase_posicionamiento": "Ayudamos a compradores que ya saben lo que quieren a cerrar sin que les hagan perder el tiempo explicandoles lo obvio."
+    },
+
+    "premium-no-vis": {
+      "id": "premium-no-vis",
+      "nombre": "Comprador Premium / No VIS",
+      "participacion_historica": 0.073,
+      "riesgo_desistimiento": 0.204,
+      "ticket_promedio_millones": 621,
+      "paga_de_contado": 0.178,
+
+      "estrategia_invertida": true,
+
+      "trabajo_por_hacer": "Estilo de vida y calidad. PERO el problema con este perfil NO es convencerlo: es que se retracta al doble que cualquier otro (20,4%). El playbook no es vender mas fuerte, es quitar friccion financiera ANTES de enamorarlo.",
+
+      "movimiento_clave": "Averiguar temprano y con naturalidad si va con credito o de contado. El 17,8% paga de contado y ese grupo practicamente no se cae. Si va con credito, hablar de preaprobacion ANTES del storytelling, no despues.",
+
+      "resaltar": [
+        "Acabados, especificaciones tecnicas, calidad de materiales",
+        "Exclusividad real: numero de unidades, diseno, privacidad",
+        "Claridad financiera total desde el primer momento",
+        "Acompanamiento en la preaprobacion del credito"
+      ],
+
+      "callar": [
+        "Urgencia y escasez ('quedan pocas unidades', 'el precio sube el mes que viene')",
+        "Presion de cierre de cualquier tipo",
+        "Lenguaje de subsidio y VIS: no aplica y lo desconecta",
+        "Exageracion y superlativos vacios"
+      ],
+
+      "objecion_principal": {
+        "objecion": "No la va a decir en voz alta. La objecion real es la magnitud del credito y la duda silenciosa de si se sobre-extendio. Por eso desiste despues, no durante.",
+        "desarme": "Sacar el tema de la financiacion a la superficie temprano y con tranquilidad. Ofrecer acompanamiento en la preaprobacion. Nombrar el elefante baja la ansiedad que despues se convierte en desistimiento."
+      },
+
+      "tono": "Sobrio y pausado. Sin urgencia. Sin superlativos. La presion lo espanta: cada empujon sube la probabilidad de que se retracte.",
+
+      "senales_de_alarma": [
+        "Premium + credito + timeline largo (+12 meses) = riesgo alto de desistimiento, marcar en el dashboard",
+        "Evita hablar de plata o cambia de tema cuando surge",
+        "Entusiasmo muy alto en el primer contacto sin preguntas financieras"
+      ],
+
+      "nota_para_asesor": "HIPOTESIS, no causa comprobada: el clustering muestra la correlacion entre perfil premium y desistimiento, no el porque. La hipotesis de trabajo es friccion con el credito hipotecario alto. Presentarlo asi, no como conclusion.",
+
+      "frase_posicionamiento": "Ayudamos a compradores de alto valor a decidir con toda la informacion financiera sobre la mesa, sin presion y sin sorpresas despues de firmar."
+    }
+  },
+
+  "modo_neutral": {
+    "id": "neutral",
+    "nombre": "Sin perfil determinado",
+    "cuando_aplica": "Todavia no se conoce la edad ni la composicion familiar del lead, o el lead no encaja en ningun arquetipo con confianza suficiente.",
+    "instruccion": "Conversar de forma calida y abierta sin asumir situacion de vida. No hablar de hijos, ni de pareja, ni de vida familiar hasta que el lead lo mencione. Priorizar averiguar edad y con quien viviria, que son las dos variables que abren el perfil. No inventar amenities dirigidas a un perfil que todavia no se conoce.",
+    "prohibido": [
+      "Asumir que el lead tiene o quiere hijos",
+      "Asumir que compra en pareja",
+      "Usar 'ustedes' antes de saber si hay mas de una persona"
+    ]
+  }
+}
