@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+import { motion, AnimatePresence } from 'motion/react';
 import {
   Target,
   Sparkles,
@@ -16,7 +18,8 @@ import {
   ChevronDown,
   Award,
   Bot,
-  CreditCard
+  CreditCard,
+  X
 } from 'lucide-react';
 import { Lead, HousingProject } from '../../types';
 
@@ -62,6 +65,7 @@ export const Score360View: React.FC<Score360ViewProps> = ({
 
   const [notesList, setNotesList] = useState<string[]>(currentLead.notes || []);
   const [newNote, setNewNote] = useState('');
+  const [behaviorHistoryOpen, setBehaviorHistoryOpen] = useState(false);
 
   const handleAddNote = (e: React.FormEvent) => {
     e.preventDefault();
@@ -301,29 +305,6 @@ export const Score360View: React.FC<Score360ViewProps> = ({
             </div>
           </div>
 
-          {/* BEHAVIOR TIMELINE / LOGS */}
-          <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs space-y-4">
-            <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2 border-b border-slate-100 pb-2">
-              <Clock className="w-4 h-4 text-[#003DA5]" />
-              <span>Historial de Comportamiento Digital</span>
-            </h3>
-
-            <div className="relative border-l-2 border-slate-200 ml-3 pl-4 space-y-4 text-xs">
-              {currentLead.behaviorLogs.map((log, idx) => (
-                <div key={idx} className="relative">
-                  <div className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-[#003DA5] ring-4 ring-white"></div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-900">{log.action}</span>
-                    <span className="text-[10px] text-slate-400">{log.timestamp}</span>
-                  </div>
-                  <p className="text-slate-600 mt-0.5">{log.details}</p>
-                  <span className="inline-block mt-1 text-[10px] bg-slate-100 text-slate-500 px-1.5 py-0.2 rounded border border-slate-200">
-                    💻 {log.device}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* RIGHT 1 COL: RECOMMENDED PROJECT MATCH & ADVISOR NOTES */}
@@ -486,6 +467,84 @@ export const Score360View: React.FC<Score360ViewProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Floating "Historial de Comportamiento Digital" button — same pattern as the
+          Home's floating panels (Operación Comercial / Alerta de Inventario): keeps
+          this dense page uncluttered, opens the full timeline on demand instead of
+          taking up permanent vertical space. Portaled to <body> for the same reason
+          as those: this view's own animate-fadeIn wrapper has a transform, which
+          would otherwise trap position:fixed to that ancestor instead of the viewport. */}
+      {createPortal(
+        <>
+          <button
+            onClick={() => setBehaviorHistoryOpen((v) => !v)}
+            aria-label="Historial de Comportamiento Digital"
+            title="Historial de Comportamiento Digital"
+            className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#003DA5] hover:bg-blue-700 text-white shadow-xl flex items-center justify-center cursor-pointer transition-all hover:scale-105"
+          >
+            <Clock className="w-6 h-6" />
+            {currentLead.behaviorLogs.length > 0 && (
+              <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#FFD200] text-[#003DA5] text-[10px] font-black ring-2 ring-white flex items-center justify-center">
+                {currentLead.behaviorLogs.length}
+              </span>
+            )}
+          </button>
+
+          <AnimatePresence>
+            {behaviorHistoryOpen && (
+              <>
+                <div
+                  className="fixed inset-0 z-40"
+                  onClick={() => setBehaviorHistoryOpen(false)}
+                />
+                <motion.div
+                  onClick={(e) => e.stopPropagation()}
+                  initial={{ opacity: 0, scale: 0.95, y: 12 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 12 }}
+                  transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                  className="fixed bottom-24 right-6 left-6 sm:left-auto z-50 w-auto sm:w-96 max-h-[70vh] overflow-y-auto custom-scrollbar bg-white rounded-2xl border border-slate-200/80 shadow-2xl p-5 space-y-4"
+                >
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-2">
+                    <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-[#003DA5]" />
+                      <span>Historial de Comportamiento Digital</span>
+                    </h3>
+                    <button
+                      onClick={() => setBehaviorHistoryOpen(false)}
+                      className="w-6 h-6 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition-colors cursor-pointer shrink-0"
+                      title="Cerrar"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+
+                  {currentLead.behaviorLogs.length === 0 ? (
+                    <p className="text-xs text-slate-400 italic">Sin actividad registrada todavía para este lead.</p>
+                  ) : (
+                    <div className="relative border-l-2 border-slate-200 ml-3 pl-4 space-y-4 text-xs">
+                      {currentLead.behaviorLogs.map((log, idx) => (
+                        <div key={idx} className="relative">
+                          <div className="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-[#003DA5] ring-4 ring-white"></div>
+                          <div className="flex items-center justify-between">
+                            <span className="font-bold text-slate-900">{log.action}</span>
+                            <span className="text-[10px] text-slate-400">{log.timestamp}</span>
+                          </div>
+                          <p className="text-slate-600 mt-0.5">{log.details}</p>
+                          <span className="inline-block mt-1 text-[10px] bg-slate-100 text-slate-500 px-1.5 py-0.2 rounded border border-slate-200">
+                            💻 {log.device}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
+        </>,
+        document.body
+      )}
     </div>
   );
 };
