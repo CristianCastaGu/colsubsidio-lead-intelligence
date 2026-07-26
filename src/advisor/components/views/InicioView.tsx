@@ -24,7 +24,13 @@ import {
   User,
   ShieldCheck,
   Target,
-  Info
+  Info,
+  Calendar,
+  Flag,
+  PieChart,
+  MapPin,
+  Star,
+  Share2
 } from 'lucide-react';
 import { Lead, Task, HousingProject } from '../../types';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
@@ -607,318 +613,333 @@ export const InicioView: React.FC<InicioViewProps> = ({
         <AnimatePresence>
         {activeSelectedLead && escalation && financial && intent && nextAction && pendingData && (
           <div
-            className="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6"
+            className="fixed inset-0 z-50 overflow-y-auto p-4 sm:p-6 bg-slate-950/40 backdrop-blur-xs flex items-center justify-center"
             onClick={() => setSelectedLeadId(null)}
           >
-            {/* Floating Bubble Card — top-aligned with margin instead of flex-centered,
-                so tall content is fully reachable by scroll instead of getting clipped. */}
             <motion.div
               onClick={(e) => e.stopPropagation()}
               initial={{ opacity: 0, scale: 0.95, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 16 }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="relative bg-white text-slate-900 rounded-3xl border border-slate-200 shadow-2xl max-w-4xl w-full mx-auto my-6 sm:my-10 p-6 sm:p-8 overflow-hidden space-y-6"
+              className="relative bg-white text-slate-900 rounded-3xl border border-slate-200/90 shadow-2xl max-w-5xl w-full mx-auto my-auto p-6 sm:p-8 overflow-hidden space-y-5"
             >
-              {/* Close Button */}
-              <button
-                onClick={() => setSelectedLeadId(null)}
-                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition-all cursor-pointer hover:scale-110 z-20"
-                title="Cerrar ventana flotante"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              {/* Panel Header */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4 pr-10">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-800 font-black flex items-center justify-center text-base shrink-0">
+              {/* Top Header */}
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 border-b border-slate-100 pb-4">
+                <div className="flex items-start gap-3.5">
+                  {/* Avatar */}
+                  <div className="w-12 h-12 rounded-full bg-[#FFF4B8] border-2 border-[#FFD200] text-amber-950 font-black flex items-center justify-center text-sm shrink-0 shadow-2xs">
                     {activeSelectedLead.name.slice(0, 2).toUpperCase()}
                   </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-lg font-black text-slate-900 font-sans tracking-tight">{activeSelectedLead.name}</h3>
-                      {escalation.active && (
-                        <span className="text-[10px] bg-amber-50 text-amber-800 font-black px-2.5 py-0.5 rounded-full border border-amber-200 flex items-center gap-1">
-                          <Zap className="w-3 h-3 fill-amber-800" />
-                          <span>Auto-Resaltado por Sofía</span>
-                        </span>
-                      )}
+
+                  <div className="space-y-1.5">
+                    <div>
+                      <h3 className="text-xl font-extrabold text-[#003DA5] font-display tracking-tight flex items-center gap-2">
+                        {activeSelectedLead.name}
+                      </h3>
+                      <p className="text-xs text-slate-500 font-medium">
+                        {activeSelectedLead.city} • {activeSelectedLead.channel || 'Google Ads'} • Actualizado: {activeSelectedLead.lastInteraction || 'Hace 1 min'}
+                      </p>
                     </div>
-                    <p className="text-xs text-slate-500 font-medium mt-0.5">
-                      {activeSelectedLead.city} • {activeSelectedLead.channel} • Actualizado: {activeSelectedLead.lastInteraction}
-                    </p>
+
+                    {/* Pill Badges under Name */}
+                    <div className="flex flex-wrap items-center gap-2 pt-0.5">
+                      <span className="text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                        {activeSelectedLead.sofia.categoriaAfiliado && activeSelectedLead.sofia.categoriaAfiliado !== 'Desconocida'
+                          ? `Cat ${activeSelectedLead.sofia.categoriaAfiliado} - Afiliado Colsubsidio`
+                          : activeSelectedLead.afiliacionCategoria || 'Afiliado Colsubsidio'}
+                      </span>
+
+                      <span className="text-xs font-bold bg-blue-50 text-[#003DA5] border border-blue-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
+                        <MapPin className="w-3.5 h-3.5 text-[#003DA5]" />
+                        {activeSelectedLead.city}
+                      </span>
+
+                      <span className="text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 px-3 py-1 rounded-full flex items-center gap-1.5 shadow-2xs">
+                        <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-500" />
+                        Score 360: {activeSelectedLead.scores.total}/100
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                {/* Actions & Close Button */}
+                <div className="flex items-center gap-2 shrink-0">
                   <button
                     onClick={() => {
                       onOpenWhatsAppModal(activeSelectedLead);
                       setSelectedLeadId(null);
                     }}
-                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 px-3.5 py-2 rounded-xl text-xs font-black flex items-center gap-2 transition-all cursor-pointer border border-emerald-200"
+                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-extrabold border border-emerald-300 px-4 py-2 rounded-xl flex items-center gap-2 text-xs transition-all cursor-pointer shadow-2xs hover:scale-105"
                   >
-                    <WhatsAppIcon className="w-4 h-4 fill-emerald-800" />
+                    <WhatsAppIcon className="w-4 h-4 fill-emerald-600" />
                     <span>Abrir WhatsApp</span>
                   </button>
+
                   <button
                     onClick={() => {
                       onSelectLeadForScore360(activeSelectedLead);
                       setSelectedLeadId(null);
                     }}
-                    className="bg-white hover:bg-blue-50 text-[#003DA5] px-3.5 py-2 rounded-xl text-xs font-black transition-all cursor-pointer flex items-center gap-1.5 border border-[#003DA5]/30"
+                    className="bg-blue-50 hover:bg-blue-100 text-[#003DA5] font-extrabold border border-blue-300 px-4 py-2 rounded-xl flex items-center gap-1.5 text-xs transition-all cursor-pointer shadow-2xs hover:scale-105"
                   >
                     <span>Ver Score 360</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
+
+                  <button
+                    onClick={() => setSelectedLeadId(null)}
+                    className="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-700 flex items-center justify-center transition-all cursor-pointer border border-slate-200 hover:scale-105"
+                    title="Cerrar"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
                 </div>
               </div>
 
-              {/* 3 CARDS GRID (Previabilidad, Intención, Proyectos) */}
+              {/* Middle Row: 3 Equal Cards Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Card A: Previabilidad Financiera */}
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
-                        <ShieldCheck className="w-4 h-4" />
+                {/* Card 1: Previabilidad Financiera */}
+                <div className="bg-slate-50/70 border border-slate-200/90 rounded-2xl p-4.5 space-y-3.5 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <ShieldCheck className="w-4.5 h-4.5 text-amber-500" />
+                        <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
+                          Previabilidad Financiera
+                        </h4>
                       </div>
-                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
-                        Previabilidad Financiera
-                      </h4>
+                      <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-amber-100/80 text-amber-900 border border-amber-300">
+                        {financial.label}
+                      </span>
                     </div>
-                    <span
-                      className={`text-[10px] font-black px-2.5 py-0.5 rounded-full border shrink-0 ${
-                        financial.status === 'potencialmente_viable'
-                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                          : 'bg-amber-50 text-amber-800 border-amber-200'
-                      }`}
-                    >
-                      {financial.label}
-                    </span>
-                  </div>
 
-                  {/* Positive Signals */}
-                  <div className="space-y-1.5 text-xs">
-                    <p className="text-[11px] text-emerald-700 font-extrabold">Señales Positivas</p>
-                    {financial.positiveSignals.length > 0 ? (
-                      financial.positiveSignals.map((sig, i) => (
-                        <div key={i} className="flex items-start gap-2 text-slate-700 font-medium">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                          <span>{sig}</span>
-                        </div>
-                      ))
-                    ) : (
-                      <p className="text-slate-400 italic">Sin señales financieras confirmadas</p>
-                    )}
-                  </div>
-
-                  {/* Pending Alerts */}
-                  <div className="space-y-1.5 text-xs pt-2 border-t border-slate-200">
-                    <p className="text-[11px] text-amber-700 font-extrabold">Pendientes por Validar</p>
-                    {financial.pendingAlerts.map((alt, i) => (
-                      <div key={i} className="flex items-start gap-2 text-slate-700 font-medium">
-                        <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
-                        <span>{alt}</span>
+                    {/* Positive Signals */}
+                    <div className="space-y-1.5 text-xs">
+                      <p className="text-[11px] text-emerald-700 font-extrabold">Señales Positivas</p>
+                      <div className="flex items-start gap-2 text-slate-700 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span>Afiliado Colsubsidio (Cat {activeSelectedLead.sofia.categoriaAfiliado || 'B'})<br /><span className="text-[11px] text-slate-500">Aplica a subsidios de vivienda</span></span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Card B: Intención de Compra */}
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-lg bg-blue-100 text-[#003DA5] flex items-center justify-center shrink-0">
-                        <Target className="w-4 h-4" />
-                      </div>
-                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
-                        Intención de Compra
-                      </h4>
-                    </div>
-                    <span
-                      className={`text-[10px] font-black px-2.5 py-0.5 rounded-full border shrink-0 ${
-                        intent.status === 'alta'
-                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                          : 'bg-blue-50 text-[#003DA5] border-blue-200'
-                      }`}
-                    >
-                      Intención {intent.label}
-                    </span>
-                  </div>
-
-                  <div className="space-y-2 text-xs">
-                    <div>
-                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Horizonte temporal</p>
-                      <p className="text-slate-900 font-extrabold">{activeSelectedLead.sofia.timeline || 'No informado'}</p>
                     </div>
 
-                    <div>
-                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Motivación principal</p>
-                      <p className="text-slate-700 font-medium">{activeSelectedLead.sofia.motivacion || 'Sin motivación registrada'}</p>
-                    </div>
-
-                    <div className="pt-2 border-t border-slate-200">
-                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Perfil Estadístico & Desistimiento</p>
-                      <p className="text-slate-700 font-semibold">{activeSelectedLead.sofia.perfilEstadistico}</p>
-                      {activeSelectedLead.sofia.perfilEstadisticoRiesgoDesistimiento !== null && (
-                        <p
-                          className="text-[11px] text-amber-700 font-bold mt-0.5"
-                          title="Estimación histórica basada en el perfil estadístico del lead"
-                        >
-                          Riesgo histórico desistimiento: {activeSelectedLead.sofia.perfilEstadisticoRiesgoDesistimiento}%
-                        </p>
+                    {/* Pending Alerts */}
+                    <div className="space-y-1.5 text-xs pt-2 border-t border-slate-200/80">
+                      <p className="text-[11px] text-amber-800 font-extrabold">Pendientes por Validar</p>
+                      {financial.pendingAlerts.length > 0 ? (
+                        financial.pendingAlerts.map((alt, i) => (
+                          <div key={i} className="flex items-start gap-2 text-slate-700 font-medium">
+                            <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                            <span>{alt}</span>
+                          </div>
+                        ))
+                      ) : (
+                        <>
+                          <div className="flex items-start gap-2 text-slate-700 font-medium">
+                            <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                            <span>No se conoce el origen de la cuota inicial (ahorro/cesantías)</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-slate-700 font-medium">
+                            <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                            <span>Rango salarial exacto sin confirmar</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-slate-700 font-medium">
+                            <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                            <span>Experiencia crediticia previa no informada</span>
+                          </div>
+                          <div className="flex items-start gap-2 text-slate-700 font-medium">
+                            <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                            <span>DataCrédito: No consultado</span>
+                          </div>
+                        </>
                       )}
                     </div>
                   </div>
+
+                  {/* Bottom Amber Box */}
+                  <div className="bg-amber-50/90 border border-amber-200/90 rounded-xl p-3 space-y-1 text-xs">
+                    <div className="flex items-center gap-1.5 font-bold text-amber-900">
+                      <HelpCircle className="w-3.5 h-3.5 text-amber-600" />
+                      <span>Acción sugerida</span>
+                    </div>
+                    <p className="text-[11px] text-amber-950 font-medium leading-tight">
+                      Validar ingresos, origen de recursos y consultar historial en DataCrédito
+                    </p>
+                  </div>
                 </div>
 
-                {/* Card C: Proyecto de Interés y Recomendación */}
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-lg bg-blue-100 text-[#003DA5] flex items-center justify-center shrink-0">
-                        <Building2 className="w-4 h-4" />
+                {/* Card 2: Intención de Compra */}
+                <div className="bg-slate-50/70 border border-slate-200/90 rounded-2xl p-4.5 space-y-3.5 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Target className="w-4.5 h-4.5 text-[#003DA5]" />
+                        <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
+                          Intención de Compra
+                        </h4>
                       </div>
-                      <h4 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                      <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-blue-100/80 text-[#003DA5] border border-blue-200">
+                        Intención {intent.label}
+                      </span>
+                    </div>
+
+                    <div className="space-y-3 text-xs">
+                      <div className="flex items-start gap-2.5">
+                        <Calendar className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-[11px] text-slate-500 font-bold">Horizonte temporal</p>
+                          <p className="text-slate-900 font-extrabold">{activeSelectedLead.sofia.timeline || 'No informado'}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <Flag className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-[11px] text-slate-500 font-bold">Motivación principal</p>
+                          <p className="text-slate-900 font-extrabold">{activeSelectedLead.sofia.motivacion || 'Sin motivación registrada'}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2.5">
+                        <PieChart className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-[11px] text-slate-500 font-bold">Perfil estadístico</p>
+                          <p className="text-slate-900 font-extrabold">{activeSelectedLead.sofia.perfilEstadistico || 'No clasificado (falta edad)'}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Blue Box */}
+                  <div className="bg-blue-50/90 border border-blue-200/90 rounded-xl p-3 space-y-1 text-xs">
+                    <div className="flex items-center gap-1.5 font-bold text-[#003DA5]">
+                      <HelpCircle className="w-3.5 h-3.5 text-[#003DA5]" />
+                      <span>Acción sugerida</span>
+                    </div>
+                    <p className="text-[11px] text-[#002B75] font-medium leading-tight">
+                      Descubrir motivación y definir horizonte de compra para priorizar seguimiento
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 3: Proyectos & Recomendación */}
+                <div className="bg-slate-50/70 border border-slate-200/90 rounded-2xl p-4.5 space-y-3.5 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <Building2 className="w-4.5 h-4.5 text-purple-600" />
+                      <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
                         Proyectos & Recomendación
                       </h4>
                     </div>
-                  </div>
 
-                  <div className="space-y-2 text-xs">
-                    <div>
-                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Interés Original en Pauta</p>
-                      <p className="text-slate-900 font-black">{activeSelectedLead.sofia.proyectoInteresOriginal || 'No especificado'}</p>
-                    </div>
+                    <div className="space-y-3 text-xs">
+                      <div>
+                        <p className="text-[11px] text-slate-500 font-bold">Interés original en pauta</p>
+                        <p className="text-slate-900 font-extrabold">{activeSelectedLead.sofia.proyectoInteresOriginal || 'No especificado'}</p>
+                      </div>
 
-                    <div>
-                      <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Recomendado por Sofía</p>
-                      {activeSelectedLead.sofia.proyectoRecomendado.length > 0 ? (
-                        <div className="space-y-1 mt-0.5">
-                          <span className="inline-block bg-blue-100 text-[#003DA5] font-extrabold px-2.5 py-0.5 rounded-full">
+                      <div>
+                        <p className="text-[11px] text-slate-500 font-bold">Recomendado por Sofía</p>
+                        {activeSelectedLead.sofia.proyectoRecomendado.length > 0 ? (
+                          <span className="inline-block bg-purple-100 text-purple-900 font-extrabold px-2.5 py-0.5 rounded-full mt-1">
                             1º {activeSelectedLead.sofia.proyectoRecomendado[0]}
                           </span>
-                          {activeSelectedLead.sofia.proyectoRecomendado[1] && (
-                            <span className="block text-[11px] text-slate-500 font-medium">
-                              2º {activeSelectedLead.sofia.proyectoRecomendado[1]}
-                            </span>
-                          )}
-                        </div>
-                      ) : (
-                        <p className="text-slate-400 italic">Sin recomendación específica aún</p>
-                      )}
-                    </div>
-
-                    {/* Brochure Link */}
-                    {activeSelectedLead.sofia.brochureEnviado && (
-                      <div className="pt-2 border-t border-slate-200">
-                        <a
-                          href={activeSelectedLead.sofia.brochureEnviado}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs text-[#003DA5] hover:text-blue-700 font-extrabold underline"
-                        >
-                          <ExternalLink className="w-3.5 h-3.5" />
-                          <span>Ver Brochure Digital Enviado</span>
-                        </a>
+                        ) : (
+                          <p className="text-slate-500 italic mt-0.5">Sin recomendación específica aún</p>
+                        )}
                       </div>
-                    )}
+                    </div>
+                  </div>
+
+                  {/* Bottom Purple Box */}
+                  <div className="bg-purple-50/90 border border-purple-200/90 rounded-xl p-3 space-y-1 text-xs">
+                    <div className="flex items-center gap-1.5 font-bold text-purple-900">
+                      <HelpCircle className="w-3.5 h-3.5 text-purple-700" />
+                      <span>Acción sugerida</span>
+                    </div>
+                    <p className="text-[11px] text-purple-950 font-medium leading-tight">
+                      Asesorar y recomendar proyectos según perfil e interés detectado
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* PRÓXIMA MEJOR ACCIÓN & DATOS CRÍTICOS PENDIENTES */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                {/* Próxima mejor acción (2 cols) */}
-                <div className="md:col-span-2 relative bg-blue-50 border border-blue-100 rounded-2xl p-4.5 space-y-2.5 overflow-hidden">
-                  <WhatsAppIcon className="absolute -bottom-4 -right-4 w-24 h-24 text-[#003DA5]/10 fill-current pointer-events-none" />
-                  <div className="relative flex items-center gap-2">
-                    <Sparkles className="w-4.5 h-4.5 text-amber-500" />
-                    <h4 className="text-xs font-black text-[#003DA5] uppercase tracking-wider">
-                      Próxima Mejor Acción Sugerida
+              {/* Bottom Row: 2 Unequal Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                {/* Left Card: PRÓXIMA MEJOR ACCIÓN (2 cols) */}
+                <div className="md:col-span-2 bg-emerald-50/60 border border-emerald-200/90 rounded-2xl p-5 relative overflow-hidden flex items-center justify-between gap-4">
+                  <div className="space-y-2.5 relative z-10 max-w-[65%]">
+                    <div className="flex items-center gap-2 text-emerald-800 font-black text-xs uppercase tracking-wider">
+                      <WhatsAppIcon className="w-4 h-4 fill-emerald-700" />
+                      <span>Próxima Mejor Acción</span>
+                    </div>
+                    <h4 className="text-base font-extrabold text-emerald-950 font-display">
+                      Iniciar conversación en WhatsApp con Sofía
                     </h4>
-                  </div>
-                  <p className="relative text-sm font-black text-[#003DA5]">{nextAction.action}</p>
-                  <p className="relative text-xs text-slate-600 font-medium">{nextAction.objective}</p>
-                  <div className="relative flex items-center gap-2 pt-1">
+                    <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                      Completa el perfilamiento conversacional para conocer mejor al lead y agilizar su calificación.
+                    </p>
                     <button
                       onClick={() => {
                         onOpenWhatsAppModal(activeSelectedLead);
                         setSelectedLeadId(null);
                       }}
-                      className="bg-[#003DA5] hover:bg-blue-700 text-white text-xs font-extrabold px-3.5 py-1.5 rounded-xl transition-all cursor-pointer shadow-sm hover:scale-105"
+                      className="bg-[#00875A] hover:bg-[#00704A] text-white font-extrabold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 shadow-xs hover:scale-105 transition-all cursor-pointer"
                     >
-                      {nextAction.followUpAction}
+                      <WhatsAppIcon className="w-4 h-4 fill-white" />
+                      <span>Enviar plantilla de bienvenida vía WhatsApp</span>
                     </button>
                   </div>
+
+                  {/* Smartphone graphic on right side of card */}
+                  <img
+                    src="/whatsapp_phone_illustration.jpg"
+                    alt="WhatsApp Contacto"
+                    className="w-32 h-32 object-contain pointer-events-none mix-blend-multiply shrink-0 relative z-10"
+                  />
                 </div>
 
-                {/* Datos críticos pendientes (1 col) */}
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-2">
-                  <div className="flex items-center gap-1.5 text-amber-700">
-                    <HelpCircle className="w-4 h-4 shrink-0" />
-                    <h4 className="text-xs font-extrabold uppercase tracking-wider">Datos por Confirmar</h4>
-                  </div>
-                  <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
-                    {pendingData.length > 0 ? (
-                      pendingData.map((d, i) => (
-                        <li key={i} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
-                          <span>{d}</span>
-                        </li>
-                      ))
-                    ) : (
-                      <li className="text-emerald-700 font-bold">¡Perfil conversacional completo!</li>
-                    )}
-                  </ul>
-                </div>
-              </div>
+                {/* Right Card: INFORMACIÓN GENERAL DEL LEAD (1 col) */}
+                <div className="bg-slate-50/70 border border-slate-200/90 rounded-2xl p-4.5 space-y-3">
+                  <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider border-b border-slate-200/80 pb-2">
+                    Información General del Lead
+                  </h4>
 
-              {/* BRIEF DEL ASESOR (SOFÍA) */}
-              {activeSelectedLead.sofia.briefAsesor && (
-                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4.5 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-emerald-600" />
-                      <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider">
-                        Brief Comercial Generado por Sofía (WhatsApp)
-                      </h4>
+                  <div className="space-y-2.5 text-xs font-medium">
+                    <div className="flex items-center justify-between">
+                      <span className="flex items-center gap-2 text-slate-500">
+                        <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                        Fecha de creación
+                      </span>
+                      <span className="font-extrabold text-slate-900">{activeSelectedLead.createdDate || '12 may 2025'}</span>
                     </div>
-                    <button
-                      onClick={() => setBriefExpanded(!briefExpanded)}
-                      className="text-[11px] text-[#003DA5] hover:text-blue-700 font-bold underline cursor-pointer"
-                    >
-                      {briefExpanded ? 'Ver menos' : 'Ver completo'}
-                    </button>
-                  </div>
-                  <p
-                    className={`text-xs text-slate-600 leading-relaxed italic ${
-                      !briefExpanded ? 'line-clamp-2' : ''
-                    }`}
-                  >
-                    "{activeSelectedLead.sofia.briefAsesor}"
-                  </p>
-                </div>
-              )}
 
-              {/* Helper Footer Note */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-4 border-t border-slate-100 text-[11px] text-slate-500">
-                <span className="flex items-center gap-1.5">
-                  <Info className="w-3.5 h-3.5 shrink-0" />
-                  La información se actualiza automáticamente con cada interacción o cambio relevante.
-                </span>
-                <span>
-                  ¿Necesitas ayuda?{' '}
-                  <button
-                    type="button"
-                    onClick={() => onNavigateToView('configuracion')}
-                    className="text-[#003DA5] font-bold underline hover:text-blue-700 cursor-pointer"
-                  >
-                    Ver guía rápida
-                  </button>
-                </span>
+                    <div className="flex items-center justify-between">
+                      <span className="flex items-center gap-2 text-slate-500">
+                        <Clock className="w-3.5 h-3.5 text-slate-400" />
+                        Última actividad
+                      </span>
+                      <span className="font-extrabold text-slate-900">{activeSelectedLead.lastInteraction || 'Hace 1 min'}</span>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="flex items-center gap-2 text-slate-500">
+                        <Share2 className="w-3.5 h-3.5 text-slate-400" />
+                        Fuente
+                      </span>
+                      <span className="font-extrabold text-slate-900">{activeSelectedLead.channel || 'Google Ads'}</span>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <span className="flex items-center gap-2 text-slate-500">
+                        <User className="w-3.5 h-3.5 text-slate-400" />
+                        Asesor asignado
+                      </span>
+                      <span className="font-extrabold text-slate-900">{advisorName || 'Carlos Rodríguez'}</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
