@@ -337,7 +337,6 @@ export const InicioView: React.FC<InicioViewProps> = ({
                             <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700">
                               Score {lead.scores.total}
                             </span>
-                            {lead.temperature === 'Hot' && <span className="text-xs">🔥</span>}
                           </div>
                         </button>
                       ))}
@@ -489,11 +488,29 @@ export const InicioView: React.FC<InicioViewProps> = ({
                       </span>
                     </td>
 
-                    {/* Score 360 */}
+                    {/* Score 360 with horizontal battery progress bar */}
                     <td className="py-3 px-3.5">
-                      <span className="font-black text-slate-900 text-xs">
-                        {lead.scores.total}/100
-                      </span>
+                      <div className="flex flex-col items-start gap-1">
+                        <span className="font-black text-slate-900 text-xs tracking-tight">
+                          {lead.scores.total}/100
+                        </span>
+                        {/* Horizontal progress meter bar */}
+                        <div
+                          className="w-14 h-1.5 bg-slate-200/80 rounded-full overflow-hidden border border-slate-300/40"
+                          title={`Score 360: ${lead.scores.total}/100`}
+                        >
+                          <div
+                            className={`h-full rounded-full transition-all duration-500 ${
+                              lead.scores.total >= 60
+                                ? 'bg-gradient-to-r from-amber-400 to-amber-500'
+                                : lead.scores.total >= 40
+                                ? 'bg-gradient-to-r from-blue-500 to-[#003DA5]'
+                                : 'bg-slate-400'
+                            }`}
+                            style={{ width: `${Math.min(100, Math.max(0, lead.scores.total))}%` }}
+                          />
+                        </div>
+                      </div>
                     </td>
 
                     {/* Financial Previability */}
