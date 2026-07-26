@@ -252,3 +252,15 @@ Proyecto privado de Colsubsidio. Todos los derechos reservados.
 <p align="center">
   Desarrollado con ❤️ para <strong>Colsubsidio Vivienda</strong>
 </p>
+
+
+---
+
+## Demo en Vercel
+
+La aplicacion esta disponible en [colsubsidio-lead-intelligence.vercel.app](https://colsubsidio-lead-intelligence.vercel.app/). Los cambios enviados a la rama main activan un nuevo despliegue en Vercel.
+
+## Ultima actualizacion funcional
+
+- Informe de Buyer Personas para Marketing: cuatro segmentos historicos con señales, canales, fricciones, financiacion y activacion recomendada.
+- Handoff bidireccional en WhatsApp: el asesor puede retomar una conversacion o devolverla a Sofia.

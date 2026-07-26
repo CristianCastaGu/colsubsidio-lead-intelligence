@@ -1,342 +1,51 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import {
-  Layers,
-  Target,
-  Sparkles,
-  Lightbulb,
-  AlertTriangle,
-  ArrowRight,
-  Users,
-  ShieldAlert,
-} from 'lucide-react';
+﻿import React, { useMemo, useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
+import { BarChart3, Building2, ChevronDown, CircleDollarSign, CreditCard, HeartHandshake, Layers, Lightbulb, MapPin, Megaphone, ShieldAlert, Target, TrendingDown, Users } from 'lucide-react';
 import { Lead } from '../../types';
 import { isSofiaProfileComplete } from '../../utils/leadIntelligence';
-import { STATUS } from '../analytics/palette';
 import { ChartCard } from '../analytics/ChartCard';
 
-interface PerfilamientoViewProps {
-  leads: Lead[];
+interface PerfilamientoViewProps { leads: Lead[]; }
+type Risk = 'Alto' | 'Medio' | 'Bajo';
+interface Persona {
+  key: string; name: string; shortName: string; tagline: string; sample: string; risk: Risk; desistimiento: string;
+  age: string; city: string; profession: string; income: string; family: string; priceRange: string; medianPrice: string;
+  funding: { bank: string; colsubsidio: string; cash: string }; partnerCompany: string; wants: string; friction: string;
+  motivations: string; objections: string; channels: string[]; decision: string; message: string; marketingAction: string;
 }
 
-// ---- Contenido de la metodología real (hackathon Colsubsidio × 30X, 4,142 compradores
-// históricos). Referencia fija para Marketing: no depende de los leads actuales del CRM,
-// es el resultado del clustering K-Means que hoy usa Sofía para clasificar leads nuevos. ----
-
-const SILHOUETTE_SCORES: { k: number; score: number; best?: boolean }[] = [
-  { k: 3, score: 0.218 },
-  { k: 4, score: 0.243 },
-  { k: 5, score: 0.265, best: true },
-  { k: 6, score: 0.26 },
-  { k: 7, score: 0.251 },
-  { k: 8, score: 0.255 },
+const PERSONAS: Persona[] = [
+  { key: 'Comprador Premium / No VIS', name: 'Daniel Restrepo', shortName: 'Profesional patrimonial', tagline: 'El profesional que consolida patrimonio', sample: '304 compradores históricos · 7,3%', risk: 'Alto', desistimiento: '20,4%', age: '34 años', city: 'Bogotá · Engativá / Calle 80', profession: 'Profesional o ejecutivo medio-alto', income: 'Categoría C · superior a 4 SMLV', family: 'Solo/a o pareja sin hijos', priceRange: '$439M — $1.025M', medianPrice: '$591M', funding: { bank: '73%', colsubsidio: '9,2%', cash: '17,8%' }, partnerCompany: '12,2%', wants: 'Consolidar patrimonio con una vivienda que refleje su nivel de vida y funcione como activo de inversión.', friction: 'La incertidumbre económica y la aprobación de un crédito alto hacen que compare más antes de avanzar.', motivations: 'Estatus, ubicación estratégica, amenities, seguridad y valorización.', objections: 'Cuota alta, aprobación total del banco y complejidad del proceso hipotecario.', channels: ['Instagram', 'LinkedIn', 'WhatsApp'], decision: 'Más largo que el promedio: compara alternativas y financiación bancaria.', message: 'Acompañamiento cercano para dar el salto a una vivienda de mayor nivel, con claridad financiera en cada etapa.', marketingAction: 'Priorizar simulación financiera y asesor de crédito desde el primer contacto; comunicar valorización y beneficios diferenciales del proyecto.' },
+  { key: 'Joven Independiente', name: 'Camila Torres', shortName: 'Primer hogar', tagline: 'La joven que da su primer paso de independencia', sample: '1.407 compradores históricos · 34%', risk: 'Medio', desistimiento: '13,1%', age: '27 años', city: 'Bogotá, Soacha, Chía y Tocancipá', profession: 'Profesional junior o técnico', income: 'Categoría A · hasta 2 SMLV', family: 'Soltera o pareja sin hijos', priceRange: '$108M — $439M', medianPrice: '$195M', funding: { bank: '54,6%', colsubsidio: '45,1%', cash: '0,3%' }, partnerCompany: '20,4%', wants: 'Independizarse, dejar el arriendo y sentir que su hogar ya es propio.', friction: 'Es su primera compra: cuota inicial, crédito y subsidios pueden sentirse confusos.', motivations: 'Independencia, conexión con el trabajo, autonomía y primer patrimonio.', objections: 'Si el salario alcanza, si aplica a subsidio y si debe asumir un compromiso de largo plazo.', channels: ['Instagram', 'TikTok', 'WhatsApp'], decision: 'Puede pensar durante meses, pero avanza rápido cuando entiende que sí puede comprar.', message: 'Tu primera vivienda sin perderte en el proceso: claridad desde la primera pregunta hasta la firma.', marketingAction: 'Campañas educativas de subsidio y cuota inicial con calculadoras simples; usar testimonios y contenido corto de “primer hogar”.' },
+  { key: 'Familia Joven Consolidada', name: 'Diana Martínez', shortName: 'Hogar para crecer', tagline: 'La mamá que busca estabilidad para su familia', sample: '614 compradores históricos · 14,8%', risk: 'Medio', desistimiento: '11,4%', age: '35 años', city: 'Bogotá y Soacha · zona Maiporé', profession: 'Empleada o independiente con estabilidad laboral', income: 'Categoría A/B · hasta 2 SMLV', family: 'Hogar de ~3 personas', priceRange: '$108M — $676M', medianPrice: '$188M', funding: { bank: '57%', colsubsidio: '42%', cash: '1%' }, partnerCompany: '13,8%', wants: 'Estabilidad, espacio y un entorno seguro en el que su familia pueda crecer.', friction: 'Tiene poco tiempo para investigar y necesita confiar en la seguridad de la zona y el presupuesto.', motivations: 'Zona infantil, colegios cercanos, seguridad, espacio y subsidios para la cuota inicial.', objections: 'Cuota mensual ajustada y seguridad real del barrio para sus hijos.', channels: ['Facebook', 'WhatsApp', 'Referidos'], decision: 'Moderada: avanza con determinación cuando siente seguridad para la familia.', message: 'Un hogar seguro, con espacio para crecer y una cuota inicial más alcanzable para tu familia.', marketingAction: 'Mostrar mapa de entorno, zonas infantiles y colegios; usar WhatsApp con asesoría breve y concreta para ahorrar tiempo.' },
+  { key: 'Adulto Establecido', name: 'Roberto Sánchez', shortName: 'Compra eficiente', tagline: 'El adulto que ya tiene su vida organizada', sample: '879 compradores históricos · 21,2%', risk: 'Bajo', desistimiento: '10,6%', age: '47 años', city: 'Bogotá y municipios cercanos', profession: 'Empleado o independiente con trayectoria estable', income: 'Categoría A/B · ahorro acumulado', family: 'Pocos o ningún dependiente directo', priceRange: '$108M — $555M', medianPrice: '$192M', funding: { bank: '58,1%', colsubsidio: '40,6%', cash: '1,3%' }, partnerCompany: '11,7%', wants: 'Tranquilidad y una vivienda bien ubicada para la siguiente etapa o como inversión de largo plazo.', friction: 'No tolera trámites lentos ni información poco clara.', motivations: 'Confianza, ubicación, relación precio-valor y proceso directo.', objections: 'Principalmente plazos de entrega y detalles administrativos.', channels: ['Facebook', 'WhatsApp', 'Sala de ventas'], decision: 'Rápida: evalúa información y decide con seguridad.', message: 'Una compra simple, directa y respaldada por la confianza de Colsubsidio.', marketingAction: 'Ruta comercial ágil: ficha clara, cita prioritaria y seguimiento puntual de fechas y documentación.' },
 ];
 
-type RiskLevel = 'high' | 'mid' | 'low';
-
-interface ClusterDef {
-  name: string;
-  pct: string;
-  desistimiento: string;
-  risk: RiskLevel;
-  edad: string;
-  vivienda: string;
-  familia: string;
-  guia: string;
-  isDataArtifact?: boolean;
-}
-
-const CLUSTERS: ClusterDef[] = [
-  {
-    name: 'Comprador Premium / No VIS',
-    pct: '7.3% de los compradores históricos',
-    desistimiento: '20.4% desistimiento',
-    risk: 'high',
-    edad: '~34 años',
-    vivienda: '$621M',
-    familia: 'Sin grupo',
-    guia: 'Mayor riesgo de arrepentimiento — probablemente fricción con crédito de montos altos. Reforzar tranquilidad sobre financiación y conectar rápido con asesor de crédito.',
-  },
-  {
-    name: 'Joven Independiente',
-    pct: '34.0% de los compradores históricos — el más grande',
-    desistimiento: '13.1% desistimiento',
-    risk: 'mid',
-    edad: '27-28 años',
-    vivienda: '$199M',
-    familia: 'Sin grupo',
-    guia: 'Buscan independencia o primer hogar. Usar amenities de vida social, seguridad, y motivar con la idea del primer paso de independencia.',
-  },
-  {
-    name: 'Familia Joven Consolidada',
-    pct: '14.8% de los compradores históricos',
-    desistimiento: '11.4% desistimiento',
-    risk: 'mid',
-    edad: '~35 años',
-    vivienda: '$196M',
-    familia: '2.7 personas',
-    guia: 'Destacar zona infantil, colegios cercanos, espacio para la familia. Buena retención — decisión ya bastante consolidada.',
-  },
-  {
-    name: 'Adulto Establecido',
-    pct: '21.2% de los compradores históricos',
-    desistimiento: '10.6% desistimiento — el mejor',
-    risk: 'low',
-    edad: '46-47 años',
-    vivienda: '$199M',
-    familia: '0.8 personas',
-    guia: 'El segmento más seguro de cerrar. Puede ser más directa y eficiente, sin necesidad de mucha persuasión adicional.',
-  },
-  {
-    name: 'Perfil Sin Edad Registrada',
-    pct: '22.6% de los compradores históricos — dato incompleto',
-    desistimiento: '14.9% desistimiento',
-    risk: 'mid',
-    edad: 'Sin dato',
-    vivienda: '$199M',
-    familia: 'Sin grupo',
-    guia: 'Artefacto de calidad de datos del sistema histórico, no un comportamiento real. Se excluye al clasificar leads nuevos — un lead de WhatsApp siempre da su edad en la conversación.',
-    isDataArtifact: true,
-  },
+const METHOD = [
+  ['Limpieza', 'Se corrigieron escalas de precios, formatos de edad y más de 35 canales de llegada se agruparon en 6 categorías.'],
+  ['Codificación', 'Edad, valor de vivienda y tamaño familiar se escalaron; las variables categóricas se codificaron para el análisis.'],
+  ['Clustering', 'K-Means se probó de k=3 a k=8. El punto de mayor separación fue k=5 (silhouette score 0,265).'],
+  ['Aplicación', 'Marketing traduce los patrones en segmentos; Sofía usa los perfiles válidos para ajustar la conversación del lead.'],
 ];
-
-const RISK_STYLES: Record<RiskLevel, { badge: string; bar: string; text: string }> = {
-  high: { badge: 'bg-red-50 text-red-700 border-red-200', bar: STATUS.critical, text: 'text-red-600' },
-  mid: { badge: 'bg-amber-50 text-amber-800 border-amber-200', bar: STATUS.warning, text: 'text-amber-700' },
-  low: { badge: 'bg-emerald-50 text-emerald-800 border-emerald-200', bar: STATUS.good, text: 'text-emerald-700' },
+const RISK_STYLE: Record<Risk, { accent: string; soft: string; badge: string; label: string }> = {
+  Alto: { accent: '#d94b45', soft: 'bg-red-50', badge: 'bg-red-50 text-red-700 border-red-200', label: 'Requiere contención financiera' },
+  Medio: { accent: '#bf7a00', soft: 'bg-amber-50', badge: 'bg-amber-50 text-amber-800 border-amber-200', label: 'Nutrir y resolver dudas' },
+  Bajo: { accent: '#16866b', soft: 'bg-emerald-50', badge: 'bg-emerald-50 text-emerald-700 border-emerald-200', label: 'Acelerar el cierre' },
 };
 
-const METODOLOGIA_STEPS = [
-  { num: '01', title: 'Limpieza', desc: 'Se corrigió escala de precios, formatos de edad inconsistentes, y se agruparon 35+ canales de llegada en 6 categorías.' },
-  { num: '02', title: 'Codificación', desc: 'Variables numéricas escaladas (edad, valor vivienda, tamaño familiar) + categóricas con one-hot encoding.' },
-  { num: '03', title: 'Clustering', desc: 'K-Means probado con k=3 a k=8, evaluado con silhouette score para encontrar la separación óptima.' },
-  { num: '04', title: 'Interpretación', desc: 'Cada cluster se perfiló por edad, valor de vivienda, tamaño familiar, canal, y tasa de desistimiento real.' },
-];
-
-const FLUJO_STEPS = [
-  'Sofía conversa y descubre edad, familia, y proyecto de interés',
-  'El servidor clasifica al lead contra los 4 perfiles válidos (cálculo determinístico, no lo adivina la IA)',
-  'Sofía ajusta su estrategia en vivo (ej. más refuerzo en financiación si es perfil premium)',
-  'El asesor ve el perfil asignado en Score 360° y prioriza según el riesgo de desistimiento',
-];
-
-const LIMITACIONES = [
-  <>La clasificación de leads nuevos usa solo <strong className="text-slate-800 font-semibold">3 variables observables</strong> (edad, tamaño de vivienda, tamaño familiar) — las variables internas de Colsubsidio (segmento, categoría, pirámide) no están disponibles para un lead externo.</>,
-  <>Con solo 3 dimensiones, casos límite pueden clasificar de forma contraintuitiva — ej. un adulto de 42 años sin hijos puede caer en "Joven Independiente" en vez de "Adulto Establecido", porque en los datos reales la ausencia de grupo familiar correlaciona fuerte con edad joven.</>,
-  <>El tamaño de muestra varía por perfil (el cluster premium tiene 304 registros vs. 1,407 del más grande) — las conclusiones del cluster premium, aunque claras, tienen menos robustez estadística.</>,
-];
+function FundingBar({ persona }: { persona: Persona }) {
+  return <div><div className="flex h-2 overflow-hidden rounded-full bg-slate-100"><div className="bg-[#234fba]" style={{ width: persona.funding.bank }} /><div className="bg-[#12a68a]" style={{ width: persona.funding.colsubsidio }} /><div className="bg-[#f5bf21]" style={{ width: persona.funding.cash }} /></div><div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[10px] text-slate-500"><span><i className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-[#234fba]" />Banco <b className="text-slate-700">{persona.funding.bank}</b></span><span><i className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-[#12a68a]" />Colsubsidio <b className="text-slate-700">{persona.funding.colsubsidio}</b></span><span><i className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-[#f5bf21]" />Contado <b className="text-slate-700">{persona.funding.cash}</b></span></div></div>;
+}
 
 export const PerfilamientoView: React.FC<PerfilamientoViewProps> = ({ leads }) => {
-  // Only leads that have genuinely gone through Sofía's WhatsApp profiling carry a real
-  // perfilEstadistico — the 200 paid-ads leads deliberately haven't (different channel,
-  // see sofiaMapper.ts). This section is intentionally small right now; it grows as more
-  // real WhatsApp conversations come in, and never fabricates a classification we don't have.
-  const profiledLeads = leads.filter(
-    (l) => isSofiaProfileComplete(l) && l.sofia.perfilEstadistico && l.sofia.perfilEstadistico !== 'No clasificado (falta edad)'
-  );
-  const distribution = new Map<string, number>();
-  profiledLeads.forEach((l) => {
-    distribution.set(l.sofia.perfilEstadistico, (distribution.get(l.sofia.perfilEstadistico) || 0) + 1);
-  });
-
-  return (
-    <div className="space-y-6 animate-fadeIn">
-      {/* HEADER */}
-      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2">
-            <Layers className="w-5 h-5 text-[#003DA5]" />
-            <h1 className="text-lg font-black text-slate-900 font-sans tracking-tight">Perfilamiento Estadístico</h1>
-          </div>
-          <p className="text-xs text-slate-500 max-w-2xl">
-            Recurso de referencia para Marketing y estrategia comercial: los 5 perfiles reales de comprador que encontramos
-            analizando 4,142 registros históricos de Colsubsidio, y cómo Sofía los usa hoy para ajustar su conversación.
-          </p>
-        </div>
-        <div className="bg-blue-50 border border-blue-200 text-[#003DA5] font-bold text-xs px-3 py-1.5 rounded-xl shrink-0">
-          4,142 compradores históricos analizados
-        </div>
-      </div>
-
-      {/* OBJETIVO */}
-      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs">
-        <p className="text-sm text-slate-700 leading-relaxed">
-          <strong className="text-[#003DA5]">Objetivo:</strong> en vez de asumir cómo se comportan los compradores, dejamos que
-          los datos reales de 4,142 compradores históricos de Colsubsidio nos dijeran qué perfiles existen realmente — y qué
-          tan probable es que cada uno se arrepienta de la compra. Las categorías del dataset original venían codificadas para
-          forzar un análisis genuino, sin reciclar supuestos previos sobre los afiliados.
-        </p>
-      </div>
-
-      {/* METODOLOGÍA */}
-      <ChartCard icon={<Target className="w-4 h-4 text-[#003DA5]" />} title="Metodología" subtitle="4 pasos, de datos crudos a perfiles interpretables">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {METODOLOGIA_STEPS.map((step) => (
-            <div key={step.num} className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-              <span className="font-mono text-[11px] text-[#003DA5] font-bold">{step.num}</span>
-              <h4 className="text-sm font-bold text-slate-900 mt-1">{step.title}</h4>
-              <p className="text-[11px] text-slate-500 mt-1 leading-relaxed">{step.desc}</p>
-            </div>
-          ))}
-        </div>
-      </ChartCard>
-
-      {/* SILHOUETTE SCORE CHART */}
-      <ChartCard
-        icon={<Sparkles className="w-4 h-4 text-[#003DA5]" />}
-        title="Silhouette score por número de clusters (k)"
-        subtitle="Más alto es mejor separación entre grupos — k=5 fue el punto óptimo"
-      >
-        <div className="flex items-end gap-3 h-36 px-2">
-          {SILHOUETTE_SCORES.map((row) => (
-            <div key={row.k} className="flex-1 flex flex-col items-center justify-end h-full">
-              <span className={`font-mono text-[11px] mb-1 ${row.best ? 'text-[#003DA5] font-bold' : 'text-slate-400'}`}>
-                {row.score.toFixed(3)}
-              </span>
-              <motion.div
-                initial={{ height: 0 }}
-                animate={{ height: `${(row.score / 0.265) * 100}%` }}
-                transition={{ duration: 0.5, delay: row.k * 0.05, ease: 'easeOut' }}
-                className="w-full rounded-t-md"
-                style={{ backgroundColor: row.best ? '#003DA5' : '#cde2fb' }}
-              />
-              <span className={`text-[11px] mt-1.5 ${row.best ? 'text-[#003DA5] font-bold' : 'text-slate-500'}`}>
-                k={row.k}{row.best ? ' ✓' : ''}
-              </span>
-            </div>
-          ))}
-        </div>
-      </ChartCard>
-
-      {/* LOS 5 PERFILES */}
-      <div className="space-y-3">
-        <h2 className="text-sm font-extrabold text-slate-500 uppercase tracking-wider px-1">Los 5 perfiles encontrados</h2>
-        {CLUSTERS.map((cluster) => {
-          const style = RISK_STYLES[cluster.risk];
-          return (
-            <div
-              key={cluster.name}
-              className={`relative bg-white rounded-xl border border-slate-200 shadow-xs p-5 overflow-hidden ${cluster.isDataArtifact ? 'opacity-90' : ''}`}
-            >
-              <div className="absolute top-0 left-0 w-1.5 h-full" style={{ backgroundColor: style.bar }} />
-              <div className="pl-3">
-                <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
-                  <div>
-                    <h3 className="text-base font-black text-slate-900">{cluster.name}</h3>
-                    <p className="text-[11px] text-slate-500 mt-0.5">{cluster.pct}</p>
-                  </div>
-                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border shrink-0 ${style.badge}`}>
-                    {cluster.desistimiento}
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-3 gap-2.5 mb-3">
-                  <div className="bg-slate-50 rounded-lg p-2.5">
-                    <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wide block">Edad típica</span>
-                    <span className="text-sm font-bold text-slate-800">{cluster.edad}</span>
-                  </div>
-                  <div className="bg-slate-50 rounded-lg p-2.5">
-                    <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wide block">Vivienda típica</span>
-                    <span className="text-sm font-bold text-slate-800">{cluster.vivienda}</span>
-                  </div>
-                  <div className="bg-slate-50 rounded-lg p-2.5">
-                    <span className="text-[9px] text-slate-500 font-bold uppercase tracking-wide block">Grupo familiar</span>
-                    <span className="text-sm font-bold text-slate-800">{cluster.familia}</span>
-                  </div>
-                </div>
-
-                <p className="text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-                  <strong className="text-slate-800 font-semibold">
-                    {cluster.isDataArtifact ? 'Nota: ' : 'Guía para Sofía: '}
-                  </strong>
-                  {cluster.guia}
-                </p>
-
-                {/* Real cross-reference against our current CRM leads — only shown for the
-                    4 clusters actually used to classify live leads */}
-                {!cluster.isDataArtifact && (
-                  <div className="mt-3 pt-3 border-t border-slate-100 flex items-center gap-2">
-                    <Users className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                    <span className="text-[11px] text-slate-500">
-                      En tu CRM ahora mismo:{' '}
-                      <strong className="text-slate-800">
-                        {distribution.get(cluster.name) || 0} lead{(distribution.get(cluster.name) || 0) === 1 ? '' : 's'}
-                      </strong>{' '}
-                      clasificado{(distribution.get(cluster.name) || 0) === 1 ? '' : 's'} en este perfil por Sofía.
-                    </span>
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* CROSS-REFERENCE CALLOUT */}
-      <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
-        <Users className="w-4 h-4 text-[#003DA5] shrink-0 mt-0.5" />
-        <p className="text-xs text-[#003DA5] leading-relaxed">
-          <strong>{profiledLeads.length}</strong> de tus {leads.length} leads actuales ya tienen un perfil estadístico real asignado
-          por Sofía. Los leads capturados por pauta paga (Meta/Google Ads) todavía no pasan por este perfilamiento — solo ocurre
-          cuando el lead conversa con Sofía por WhatsApp. Esta cifra crece a medida que más leads hablan con el agente.
-        </p>
-      </div>
-
-      {/* HALLAZGO PRINCIPAL */}
-      <div className="bg-gradient-to-br from-red-50 via-amber-50/40 to-transparent border border-red-200 rounded-xl p-6 text-center">
-        <Lightbulb className="w-7 h-7 text-red-500 mx-auto mb-2" />
-        <h3 className="text-base font-black text-red-700">Vivienda premium = casi el doble de riesgo de arrepentimiento</h3>
-        <p className="text-xs text-slate-700 max-w-xl mx-auto mt-2 leading-relaxed">
-          Los compradores que van hacia proyectos No VIS (Araucaria, Los Nogales) se retractan de la compra a una tasa mucho
-          mayor que el resto — probablemente por fricción con el crédito hipotecario en montos altos. Esto se tradujo directo
-          en el comportamiento de Sofía.
-        </p>
-        <div className="flex items-center justify-center gap-10 mt-5">
-          <div>
-            <div className="font-mono text-3xl font-black text-red-600">20.4%</div>
-            <div className="text-[10px] text-slate-500 mt-1">Premium / No VIS</div>
-          </div>
-          <div>
-            <div className="font-mono text-3xl font-black text-emerald-600">10.6%</div>
-            <div className="text-[10px] text-slate-500 mt-1">Adulto Establecido</div>
-          </div>
-        </div>
-      </div>
-
-      {/* CÓMO SE USA EN PRODUCCIÓN */}
-      <ChartCard icon={<ArrowRight className="w-4 h-4 text-[#003DA5]" />} title="Cómo se usa en producción" subtitle="De la conversación con Sofía a la acción del asesor">
-        <div className="flex flex-col sm:flex-row items-stretch gap-2">
-          {FLUJO_STEPS.map((step, idx) => (
-            <React.Fragment key={idx}>
-              <div className="flex-1 bg-slate-50 border border-slate-200 rounded-lg p-3 text-center">
-                <span className="font-mono text-[10px] text-[#003DA5] font-bold block mb-1">{idx + 1}</span>
-                <p className="text-[11px] text-slate-700 leading-snug">{step}</p>
-              </div>
-              {idx < FLUJO_STEPS.length - 1 && (
-                <div className="hidden sm:flex items-center justify-center text-slate-300">
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
-      </ChartCard>
-
-      {/* LIMITACIONES HONESTAS */}
-      <ChartCard icon={<AlertTriangle className="w-4 h-4 text-amber-600" />} title="Limitaciones honestas" subtitle="Para usar este análisis con criterio, no como verdad absoluta">
-        <ul className="space-y-2.5">
-          {LIMITACIONES.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-2.5 text-xs text-slate-600 leading-relaxed">
-              <ShieldAlert className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </ChartCard>
-
-      <p className="text-center text-[10px] text-slate-400 font-mono tracking-wide pb-2">
-        Hackathon Colsubsidio × 30X — Reto Vivienda — Análisis sobre 4,142 compradores reales
-      </p>
-    </div>
-  );
+  const [openPersona, setOpenPersona] = useState(PERSONAS[0].key);
+  const profiledLeads = leads.filter((lead) => isSofiaProfileComplete(lead) && lead.sofia.perfilEstadistico && lead.sofia.perfilEstadistico !== 'No clasificado (falta edad)');
+  const distribution = useMemo(() => { const result = new Map<string, number>(); profiledLeads.forEach((lead) => result.set(lead.sofia.perfilEstadistico, (result.get(lead.sofia.perfilEstadistico) || 0) + 1)); return result; }, [profiledLeads]);
+  return <div className="space-y-6 animate-fadeIn pb-6">
+    <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs"><div className="border-b border-slate-100 bg-gradient-to-r from-[#f7faff] via-white to-[#fffdf4] px-5 py-6 sm:px-7"><div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"><div className="max-w-3xl"><div className="mb-3 flex items-center gap-2 text-[#003da5]"><Layers className="h-5 w-5" /><span className="text-xs font-extrabold uppercase tracking-[0.12em]">Informe para Marketing</span></div><h1 className="font-display text-2xl font-extrabold tracking-tight text-slate-950 sm:text-3xl">Buyer personas que orientan cada campaña</h1><p className="mt-2 text-sm leading-relaxed text-slate-600">Cuatro arquetipos construidos con clustering estadístico sobre compradores históricos de Colsubsidio. Úsalos para decidir mensaje, canal, prioridad comercial y tipo de acompañamiento.</p></div><div className="shrink-0 rounded-xl border border-blue-200 bg-blue-50 px-3 py-2 text-center text-xs font-bold text-[#003da5]">4.142 compradores<br />históricos analizados</div></div></div><div className="grid divide-y divide-slate-100 sm:grid-cols-3 sm:divide-x sm:divide-y-0"><div className="px-5 py-4"><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Personas accionables</p><p className="mt-1 text-2xl font-black text-slate-900">4</p></div><div className="px-5 py-4"><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Mayor oportunidad</p><p className="mt-1 text-sm font-bold text-slate-900">Joven independiente · 34%</p></div><div className="px-5 py-4"><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Señal de alerta</p><p className="mt-1 text-sm font-bold text-slate-900">Premium / No VIS · 20,4% desistimiento</p></div></div></section>
+    <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs sm:p-6"><div className="flex items-start gap-3"><Target className="mt-0.5 h-5 w-5 shrink-0 text-[#003da5]" /><div><h2 className="font-display text-base font-extrabold text-slate-900">Cómo leer este informe</h2><p className="mt-1 text-sm leading-relaxed text-slate-600">No representa personas individuales ni reemplaza la decisión comercial. Resume patrones observados para que Marketing construya hipótesis, pruebe mensajes y entregue mejores señales a Ventas.</p></div></div><div className="mt-5 grid gap-3 md:grid-cols-4">{METHOD.map(([title, description], index) => <div key={title} className="rounded-xl border border-slate-200 bg-slate-50/70 p-4"><span className="font-mono text-[10px] font-bold text-[#003da5]">0{index + 1}</span><h3 className="mt-1 text-sm font-bold text-slate-900">{title}</h3><p className="mt-1 text-xs leading-relaxed text-slate-500">{description}</p></div>)}</div></section>
+    <section><div className="mb-3 flex flex-col gap-1 px-1 sm:flex-row sm:items-end sm:justify-between"><div><h2 className="font-display text-lg font-extrabold text-slate-950">Fichas de activación comercial</h2><p className="text-xs text-slate-500">Abre un perfil para ver sus señales, argumentos y recomendación de campaña.</p></div><span className="text-xs font-medium text-slate-500">Basado en Buyer Personas — Sofía</span></div><div className="space-y-3">{PERSONAS.map((persona) => { const style = RISK_STYLE[persona.risk]; const open = openPersona === persona.key; const matching = distribution.get(persona.key) || 0; return <article key={persona.key} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xs transition-shadow hover:shadow-sm"><button type="button" onClick={() => setOpenPersona(open ? '' : persona.key)} className="group flex w-full items-center gap-3 p-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003da5] focus-visible:ring-inset sm:p-5" aria-expanded={open}><div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${style.soft}`}><Users className="h-5 w-5" style={{ color: style.accent }} /></div><div className="min-w-0 flex-1"><div className="flex flex-wrap items-center gap-x-2 gap-y-1"><h3 className="font-display text-base font-extrabold text-slate-900">{persona.name}</h3><span className="text-xs font-medium text-slate-400">· {persona.shortName}</span></div><p className="mt-0.5 truncate text-xs text-slate-500">{persona.tagline} · {persona.sample}</p></div><div className="hidden text-right sm:block"><p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Desistimiento</p><p className="text-lg font-black" style={{ color: style.accent }}>{persona.desistimiento}</p></div><span className={`hidden rounded-full border px-2.5 py-1 text-[10px] font-bold md:inline-flex ${style.badge}`}>{style.label}</span><ChevronDown className={`h-5 w-5 shrink-0 text-slate-400 transition-transform duration-200 ${open ? 'rotate-180' : 'group-hover:translate-y-0.5'}`} /></button><AnimatePresence initial={false}>{open && <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.22, ease: 'easeOut' }} className="overflow-hidden"><div className="border-t border-slate-100 px-4 pb-5 pt-4 sm:px-5"><div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">{[['Edad y ciudad', `${persona.age} · ${persona.city}`, MapPin], ['Perfil laboral', `${persona.profession} · ${persona.income}`, Building2], ['Hogar', persona.family, HeartHandshake], ['Vivienda típica', `${persona.priceRange} · mediana ${persona.medianPrice}`, CircleDollarSign]].map(([label, text, Icon]) => { const CardIcon = Icon as React.ComponentType<{ className?: string }>; return <div key={label as string} className="rounded-xl bg-slate-50 p-3"><div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400"><CardIcon className="h-3.5 w-3.5" />{label as string}</div><p className="mt-1.5 text-xs font-medium leading-relaxed text-slate-700">{text as string}</p></div>; })}</div><div className="mt-4 grid gap-3 lg:grid-cols-3"><div className="rounded-xl border border-slate-200 p-4"><div className="flex items-center gap-2"><CreditCard className="h-4 w-4 text-[#003da5]" /><h4 className="text-xs font-bold text-slate-900">Cómo financia</h4></div><div className="mt-3"><FundingBar persona={persona} /></div><p className="mt-3 border-t border-slate-100 pt-3 text-[11px] text-slate-500">{persona.partnerCompany} trabaja en empresa aliada prioritaria.</p></div><div className="rounded-xl border border-slate-200 p-4"><div className="flex items-center gap-2"><Lightbulb className="h-4 w-4 text-[#bf7a00]" /><h4 className="text-xs font-bold text-slate-900">Motivación y fricción</h4></div><p className="mt-3 text-xs leading-relaxed text-slate-700"><b>Busca:</b> {persona.wants}</p><p className="mt-2 text-xs leading-relaxed text-slate-600"><b>Fricción:</b> {persona.friction}</p></div><div className="rounded-xl border border-slate-200 p-4"><div className="flex items-center gap-2"><Megaphone className="h-4 w-4 text-[#16866b]" /><h4 className="text-xs font-bold text-slate-900">Activación recomendada</h4></div><p className="mt-3 text-xs leading-relaxed text-slate-700">{persona.marketingAction}</p><div className="mt-3 flex flex-wrap gap-1.5">{persona.channels.map((channel) => <span key={channel} className="rounded-full bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600">{channel}</span>)}</div></div></div><div className="mt-4 grid gap-3 lg:grid-cols-[1.15fr_.85fr]"><div className="rounded-xl border border-blue-100 bg-[#f6f9ff] p-4"><div className="flex items-center gap-2"><Megaphone className="h-4 w-4 text-[#003da5]" /><h4 className="text-xs font-bold text-[#003da5]">Mensaje de campaña sugerido</h4></div><p className="mt-2 text-sm font-medium leading-relaxed text-slate-800">“{persona.message}”</p><p className="mt-3 text-[11px] leading-relaxed text-slate-600"><b>Objeción que debe resolver:</b> {persona.objections}</p></div><div className="rounded-xl border border-slate-200 bg-white p-4"><div className="flex items-center gap-2"><TrendingDown className="h-4 w-4" style={{ color: style.accent }} /><h4 className="text-xs font-bold text-slate-900">Señal para Ventas</h4></div><p className="mt-2 text-xs leading-relaxed text-slate-600"><b>Decisión:</b> {persona.decision}</p><p className="mt-2 text-xs leading-relaxed text-slate-600"><b>Leads CRM en este perfil:</b> {matching || 'Aún sin coincidencias verificadas por Sofía'}.</p></div></div></div></motion.div>}</AnimatePresence></article>; })}</div></section>
+    <ChartCard icon={<BarChart3 className="h-4 w-4 text-[#003da5]" />} title="Uso en la operación" subtitle="Conexión entre la segmentación histórica y las conversaciones actuales"><div className="grid gap-3 md:grid-cols-3"><div className="rounded-xl bg-slate-50 p-4"><Users className="h-4 w-4 text-[#003da5]" /><p className="mt-2 text-sm font-black text-slate-900">{profiledLeads.length} leads perfilados</p><p className="mt-1 text-xs leading-relaxed text-slate-500">de {leads.length} en el CRM tienen un perfil estadístico confirmado por Sofía.</p></div><div className="rounded-xl bg-slate-50 p-4"><Megaphone className="h-4 w-4 text-[#003da5]" /><p className="mt-2 text-sm font-black text-slate-900">Marketing activa</p><p className="mt-1 text-xs leading-relaxed text-slate-500">mensajes, creatividades y secuencias por fricción, motivación y canal de cada perfil.</p></div><div className="rounded-xl bg-slate-50 p-4"><Target className="h-4 w-4 text-[#003da5]" /><p className="mt-2 text-sm font-black text-slate-900">Ventas prioriza</p><p className="mt-1 text-xs leading-relaxed text-slate-500">la siguiente acción del asesor según intención, capacidad y riesgo de desistimiento.</p></div></div></ChartCard>
+    <div className="flex gap-3 rounded-2xl border border-amber-200 bg-amber-50/60 p-4"><ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" /><p className="text-xs leading-relaxed text-amber-950"><b>Lectura responsable:</b> los perfiles son patrones históricos, no reglas para decidir sobre una persona. La segmentación debe validarse con los datos conversacionales de Sofía y el criterio del equipo comercial.</p></div>
+  </div>;
 };
