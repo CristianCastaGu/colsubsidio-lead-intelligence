@@ -5,16 +5,12 @@ import {
   Filter,
   Download,
   Phone,
-  MessageSquare,
-  Sparkles,
-  Flame,
-  CheckCircle2,
-  MoreVertical,
-  Target,
-  UserPlus
+  UserPlus,
+  Zap
 } from 'lucide-react';
 import { Lead, LeadStatus, LeadTemperature, HousingCategory } from '../../types';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
+import { getLeadEscalation } from '../../utils/leadIntelligence';
 
 interface LeadsViewProps {
   leads: Lead[];
@@ -168,121 +164,166 @@ export const LeadsView: React.FC<LeadsViewProps> = ({
         </div>
       </div>
 
-      {/* LEADS TABLE */}
-      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-xs">
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead>
-              <tr className="border-b border-slate-200 bg-slate-50 text-slate-500 uppercase tracking-wider text-[10px] font-bold">
-                <th className="py-3 px-4">Nombre / Contacto</th>
-                <th className="py-3 px-4">Afiliación Colsubsidio</th>
-                <th className="py-3 px-4">Interés & Presupuesto</th>
-                <th className="py-3 px-4">Score 360</th>
-                <th className="py-3 px-4">Estado Comercial</th>
-                <th className="py-3 px-4 text-right">Acción</th>
+      {/* LEADS TABLE — same visual language as the Home leads table: temperature-colored
+          avatars, pill badges, sticky header, and the same action button styling. */}
+      <div className="border border-slate-200/80 rounded-xl shadow-2xs overflow-hidden">
+        <div className="overflow-x-auto max-h-[640px] overflow-y-auto custom-scrollbar relative">
+          <table className="w-full text-left text-xs border-collapse">
+            <thead className="sticky top-0 z-10 bg-slate-100 border-b border-slate-200 text-slate-700 uppercase tracking-wider text-[10px] font-extrabold shadow-2xs">
+              <tr>
+                <th className="py-3 px-3.5 bg-slate-100">Nombre / Contacto</th>
+                <th className="py-3 px-3.5 bg-slate-100">Afiliación Colsubsidio</th>
+                <th className="py-3 px-3.5 bg-slate-100">Interés & Presupuesto</th>
+                <th className="py-3 px-3.5 bg-slate-100">Score 360</th>
+                <th className="py-3 px-3.5 bg-slate-100">Estado Comercial</th>
+                <th className="py-3 px-3.5 text-right bg-slate-100">Acción</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-medium">
-              {filteredLeads.map((lead) => (
-                <tr key={lead.id} className="hover:bg-slate-50/80 transition-colors group">
-                  {/* Name & Contact */}
-                  <td className="py-3 px-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-[#003DA5] text-[#FFD200] font-extrabold text-xs flex items-center justify-center shrink-0">
-                        {lead.name.slice(0, 2).toUpperCase()}
+            <tbody className="divide-y divide-slate-100 font-medium bg-white">
+              {filteredLeads.map((lead) => {
+                const leadEsc = getLeadEscalation(lead);
+                return (
+                  <tr
+                    key={lead.id}
+                    className={`transition-all group border-l-4 ${
+                      leadEsc.active
+                        ? 'bg-[#FFD200]/15 hover:bg-[#FFD200]/25 border-l-[#FFD200]'
+                        : 'border-l-transparent hover:border-l-[#003DA5]/40 hover:bg-slate-50 hover:shadow-[inset_0_0_0_1px_rgba(0,61,165,0.08)]'
+                    }`}
+                  >
+                    {/* Name & Contact */}
+                    <td className="py-3 px-3.5">
+                      <div className="flex items-center gap-2.5">
+                        <div
+                          className={`relative w-8 h-8 rounded-full flex items-center justify-center font-black text-[10px] shrink-0 border-2 shadow-2xs ${
+                            lead.temperature === 'Hot'
+                              ? 'bg-[#FFF4B8] text-amber-900 border-[#FFD200]'
+                              : lead.temperature === 'Warm'
+                              ? 'bg-blue-50 text-[#003DA5] border-[#003DA5]'
+                              : 'bg-slate-100 text-slate-700 border-slate-300'
+                          }`}
+                          title={`Temperatura: ${lead.temperature}`}
+                        >
+                          {lead.name.slice(0, 2).toUpperCase()}
+                          {leadEsc.active && (
+                            <span
+                              className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#FFD200] border border-white flex items-center justify-center shadow-xs"
+                              title={leadEsc.reasons.join(' • ')}
+                            >
+                              <Zap className="w-2 h-2 text-amber-900 fill-amber-900" />
+                            </span>
+                          )}
+                        </div>
+                        <div className="min-w-0">
+                          <button
+                            onClick={() => onSelectLeadForScore360(lead)}
+                            className="font-extrabold text-slate-900 group-hover:text-[#003DA5] hover:underline text-left block truncate cursor-pointer"
+                          >
+                            {lead.name}
+                          </button>
+                          <p className="text-[10px] text-slate-500 truncate">
+                            {lead.phone} • {lead.email}
+                          </p>
+                        </div>
                       </div>
-                      <div>
+                    </td>
+
+                    {/* Afiliación */}
+                    <td className="py-3 px-3.5">
+                      <span className="text-[10px] text-[#003DA5] font-extrabold bg-[#003DA5]/10 px-2 py-0.5 rounded-md border border-[#003DA5]/20 inline-block whitespace-nowrap">
+                        {lead.colsubsidioAfiliado ? lead.afiliacionCategoria : 'No Afiliado'}
+                      </span>
+                      <p className="text-[10px] text-slate-500 mt-1">
+                        Subsidio: {lead.hasCajaSubsidio ? 'Aprobado ($39M)' : 'En trámite'}
+                      </p>
+                    </td>
+
+                    {/* Housing Interest & Budget */}
+                    <td className="py-3 px-3.5">
+                      <span className="text-[11px] font-extrabold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-300 inline-block">
+                        {lead.housingInterest}
+                      </span>
+                      <p className="text-[10px] text-slate-600 mt-1">
+                        Budget: ${(lead.budgetCOP / 1000000).toFixed(0)}M COP
+                      </p>
+                    </td>
+
+                    {/* Score 360 with horizontal battery progress bar */}
+                    <td className="py-3 px-3.5">
+                      <div className="flex flex-col items-start gap-1">
                         <button
                           onClick={() => onSelectLeadForScore360(lead)}
-                          className="font-bold text-slate-900 group-hover:text-[#003DA5] hover:underline text-left block"
+                          className="font-black text-slate-900 text-xs hover:text-[#003DA5] cursor-pointer"
                         >
-                          {lead.name}
+                          {lead.scores.total}/100
                         </button>
-                        <p className="text-[11px] text-slate-500">
-                          {lead.phone} • {lead.email}
-                        </p>
+                        {/* Horizontal progress meter bar */}
+                        <div
+                          className="w-14 h-1.5 bg-slate-200/80 rounded-full overflow-hidden border border-slate-300/40"
+                          title={`Score 360: ${lead.scores.total}/100`}
+                        >
+                          <div
+                            className={`h-full rounded-full transition-all duration-500 ${
+                              lead.scores.total >= 60
+                                ? 'bg-gradient-to-r from-amber-400 to-amber-500'
+                                : lead.scores.total >= 40
+                                ? 'bg-gradient-to-r from-blue-500 to-[#003DA5]'
+                                : 'bg-slate-400'
+                            }`}
+                            style={{ width: `${Math.min(100, Math.max(0, lead.scores.total))}%` }}
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </td>
+                    </td>
 
-                  {/* Afiliación */}
-                  <td className="py-3 px-4">
-                    <span className="font-semibold text-slate-800 block">
-                      {lead.colsubsidioAfiliado ? lead.afiliacionCategoria : 'No Afiliado'}
-                    </span>
-                    <span className="text-[10px] text-slate-500">
-                      Subsidio: {lead.hasCajaSubsidio ? 'Aprobado ($39M)' : 'En trámite'}
-                    </span>
-                  </td>
-
-                  {/* Housing Interest & Budget */}
-                  <td className="py-3 px-4">
-                    <span className="font-extrabold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                      {lead.housingInterest}
-                    </span>
-                    <p className="text-[11px] text-slate-600 mt-1">
-                      Budget: ${(lead.budgetCOP / 1000000).toFixed(0)}M COP
-                    </p>
-                  </td>
-
-                  {/* Score 360 */}
-                  <td className="py-3 px-4">
-                    <button
-                      onClick={() => onSelectLeadForScore360(lead)}
-                      className="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-[#003DA5]/10 px-2.5 py-1 rounded-lg border border-slate-200 cursor-pointer transition-colors"
-                    >
-                      <Target className="w-3.5 h-3.5 text-[#003DA5]" />
-                      <span className="font-extrabold text-slate-900">{lead.scores.total}/100</span>
-                      {lead.temperature === 'Hot' && <span className="text-[10px]">🔥</span>}
-                    </button>
-                  </td>
-
-                  {/* Status Dropdown Select */}
-                  <td className="py-3 px-4">
-                    <select
-                      value={lead.status}
-                      onChange={(e) => onUpdateLeadStatus(lead.id, e.target.value as LeadStatus)}
-                      className="bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-[#003DA5]/20 cursor-pointer"
-                    >
-                      <option value="Nuevo">Nuevo</option>
-                      <option value="En Calificación">En Calificación</option>
-                      <option value="Cita Agendada">Cita Agendada</option>
-                      <option value="Pre-Aprobado">Pre-Aprobado</option>
-                      <option value="En Negociación">En Negociación</option>
-                      <option value="Ganado">Ganado (Promesa)</option>
-                      <option value="Perdido">Perdido</option>
-                    </select>
-                  </td>
-
-                  {/* Action Buttons */}
-                  <td className="py-3 px-4 text-right">
-                    <div className="flex items-center justify-end gap-1.5">
-                      <button
-                        onClick={() => onOpenWhatsAppModal(lead)}
-                        className="p-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg border border-[#25D366]/30 cursor-pointer transition-colors flex items-center justify-center"
-                        title="Enviar WhatsApp"
+                    {/* Status Dropdown Select */}
+                    <td className="py-3 px-3.5">
+                      <select
+                        value={lead.status}
+                        onChange={(e) => onUpdateLeadStatus(lead.id, e.target.value as LeadStatus)}
+                        className="bg-slate-50 border border-slate-200 text-[11px] font-bold text-slate-700 rounded-lg px-2 py-1 focus:outline-none focus:ring-2 focus:ring-[#003DA5]/20 cursor-pointer"
                       >
-                        <WhatsAppIcon className="w-4 h-4 fill-[#25D366]" />
-                      </button>
+                        <option value="Nuevo">Nuevo</option>
+                        <option value="En Calificación">En Calificación</option>
+                        <option value="Cita Agendada">Cita Agendada</option>
+                        <option value="Pre-Aprobado">Pre-Aprobado</option>
+                        <option value="En Negociación">En Negociación</option>
+                        <option value="Ganado">Ganado (Promesa)</option>
+                        <option value="Perdido">Perdido</option>
+                      </select>
+                    </td>
 
-                      <button
-                        onClick={() => alert(`Iniciando llamada comercial a ${lead.name} (${lead.phone})`)}
-                        className="p-1.5 bg-[#003DA5]/10 hover:bg-[#003DA5]/20 text-[#003DA5] rounded-lg border border-[#003DA5]/20 cursor-pointer transition-colors flex items-center justify-center"
-                        title="Llamar directamente"
-                      >
-                        <Phone className="w-4 h-4 text-[#003DA5]" />
-                      </button>
+                    {/* Action Buttons */}
+                    <td className="py-3 px-3.5 text-right">
+                      <div className="flex items-center justify-end gap-1.5">
+                        <button
+                          onClick={() => onOpenWhatsAppModal(lead)}
+                          className="p-1.5 bg-[#25D366]/10 hover:bg-[#25D366]/20 text-[#25D366] rounded-lg transition-all border border-[#25D366]/30 cursor-pointer flex items-center justify-center hover:scale-105"
+                          title="Enviar WhatsApp"
+                        >
+                          <WhatsAppIcon className="w-4 h-4 fill-[#25D366]" />
+                        </button>
 
-                      <button
-                        onClick={() => onSelectLeadForScore360(lead)}
-                        className="bg-[#003DA5]/10 hover:bg-[#003DA5]/20 text-[#003DA5] px-2.5 py-1 rounded-lg font-bold text-[11px] border border-[#003DA5]/20 cursor-pointer transition-colors"
-                      >
-                        Score 360
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              ))}
+                        <button
+                          onClick={() => alert(`Iniciando llamada comercial a ${lead.name} (${lead.phone})`)}
+                          className="p-1.5 bg-[#003DA5]/10 hover:bg-[#003DA5]/20 text-[#003DA5] rounded-lg transition-all border border-[#003DA5]/20 cursor-pointer flex items-center justify-center hover:scale-105"
+                          title="Llamar directamente"
+                        >
+                          <Phone className="w-4 h-4 text-[#003DA5]" />
+                        </button>
+
+                        <button
+                          onClick={() => onSelectLeadForScore360(lead)}
+                          className="text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-800 font-extrabold px-2.5 py-1 rounded-lg border border-slate-200 transition-all hover:scale-105"
+                          title="Ver perfil completo 360"
+                        >
+                          Score 360
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
